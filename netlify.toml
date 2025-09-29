@@ -1,1 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# If you're using a React/Vite single-page app, keep this redirect
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
