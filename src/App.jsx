@@ -12,7 +12,7 @@ export default function App() {
       {/* Video */}
       <div style={{position:"relative",paddingTop:"56.25%",maxWidth:900,margin:"0 auto 1rem"}}>
         <iframe
-          src={`https://www.youtube.com/embed/${YT_ID}?rel=0&modestbranding=1`}
+          src={`https://www.youtube.com/embed/YRVuuAGMHTQ?rel=0&modestbranding=1`}
           title="Messed Up Game Live"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
@@ -37,7 +37,6 @@ export default function App() {
           textAlign: "left",
         }}
       >
-        {/* Required for Netlify */}
         <input type="hidden" name="form-name" value="live-signup" />
         <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
