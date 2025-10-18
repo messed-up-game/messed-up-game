@@ -1,6 +1,10 @@
-// src/App.jsx
-import React from 'react';
-
-export default function App() {
-  return <h1>Messed Up Game — It works!</h1>;
-}
+<a
+  href="https://streamyard.com/abc123xyz"  // <-- put your real StreamYard link here
+  target="_blank"
+  rel="noopener noreferrer"
+  style={styles.cta}
+  role="button"
+  aria-label="Join the game now"
+>
+  Join Now
+</a>
