@@ -2,14 +2,14 @@
   command = "npm run build"
   publish = "dist"
 
-# Pretty /join link → StreamYard (replace with your real invite)
+# Pretty /join link → StreamYard (your real invite)
 [[redirects]]
   from = "/join"
-  to = "https://streamyard.com/YOUR-REAL-INVITE"
+  to = "https://streamyard.com/yifxpdcaf9"
   status = 302
   force = true
 
-# Force HTTP → HTTPS on both hosts
+# Force HTTP → HTTPS
 [[redirects]]
   from = "http://messedupgame.com/*"
   to = "https://messedupgame.com/:splat"
@@ -21,14 +21,4 @@
   to = "https://messedupgame.com/:splat"
   status = 301
   force = true
-
-# Optional helpful headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-  Cache-Control = "public, max-age=600"
-  X-Frame-Options = "DENY"
-  X-Content-Type-Options = "nosniff"
-  Referrer-Policy = "strict-origin-when-cross-origin"
-
 
