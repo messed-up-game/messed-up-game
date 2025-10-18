@@ -2,6 +2,13 @@
   command = "npm run build"
   publish = "dist"
 
+# Pretty /join link → StreamYard (replace with your real invite)
+[[redirects]]
+  from = "/join"
+  to = "https://streamyard.com/YOUR-REAL-INVITE"
+  status = 302
+  force = true
+
 # Force HTTP → HTTPS on both hosts
 [[redirects]]
   from = "http://messedupgame.com/*"
@@ -15,12 +22,6 @@
   status = 301
   force = true
 
-# SPA fallback (keep if the app is a single-page app)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # Optional helpful headers
 [[headers]]
   for = "/*"
@@ -29,4 +30,5 @@
   X-Frame-Options = "DENY"
   X-Content-Type-Options = "nosniff"
   Referrer-Policy = "strict-origin-when-cross-origin"
+
 
