@@ -2,23 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
-# Pretty /join link → StreamYard (your real invite)
+# /join → StreamYard (must come before any catch-all if you add one later)
 [[redirects]]
   from = "/join"
   to = "https://streamyard.com/yifxpdcaf9"
   status = 302
-  force = true
-
-# Force HTTP → HTTPS
-[[redirects]]
-  from = "http://messedupgame.com/*"
-  to = "https://messedupgame.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.messedupgame.com/*"
-  to = "https://messedupgame.com/:splat"
-  status = 301
   force = true
 
