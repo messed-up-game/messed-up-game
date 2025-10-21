@@ -2,17 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[build.environment]
-  NODE_VERSION = "20"
-
-# Optional: pretty /join link
-[[redirects]]
-  from = "/join"
-  to = "https://streamyard.com/yifxpdcaf9"
-  status = 302
-  force = true
-
-# SPA catch-all (MUST be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
