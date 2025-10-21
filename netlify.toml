@@ -5,17 +5,16 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Pretty /join link → StreamYard (put specific routes BEFORE the catch-all)
+# Keep specific routes BEFORE the catch-all (optional)
 [[redirects]]
   from = "/join"
   to = "https://streamyard.com/yifxpdcaf9"
   status = 302
   force = true
 
-# Single Page App catch-all (MUST be last)
+# Single Page App catch-all (MUST be last, status 200 is critical)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
 
