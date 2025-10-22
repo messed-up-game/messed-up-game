@@ -1,5 +1,4 @@
 export default function App() {
-  return "Messed Up Game — OK";
+  return <h1>Messed Up Game — it works!</h1>;
 }
 
-}
