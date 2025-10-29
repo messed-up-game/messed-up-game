@@ -5,7 +5,16 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Let Let's Encrypt ACME files pass through (prevents 404 on /.well-known/*)
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.well-known/:splat"
+  status = 200
+  force = true
+
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
