@@ -1,6 +1,6 @@
 
 
-// src/App.jsx — single-file version with YouTube Live + signup form
+// src/App.jsx — single-file version with YouTube Live + signup form 
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw"; // your channel
 
