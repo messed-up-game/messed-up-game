@@ -1,6 +1,4 @@
-
-
-// src/App.jsx — single-file version with YouTube Live + signup form 
+// src/App.jsx — YouTube Live + signup form (updated copy)
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw"; // your channel
 
@@ -67,15 +65,15 @@ export default function App() {
         </div>
       </section>
 
-      {/* SIMPLE SIGNUP (Netlify Forms) */}
-      <section id="signup" style={{ maxWidth: 700, margin: "40px auto 80px", padding: "0 16px" }}>
-       <h2 style={{ textAlign: "center", marginBottom: 12 }}>
-  The First 5 people that enter will be entered on the list to play against Wildman Tom B! The Winner and all players will receive a deck of the Messed Up Game cards (14.95 value) and the Winner will be entered to play in the playoffs and the Opportunity to win the Grand Prize of $500.00!  All Games are recorded and the video is available within a few days for everyone to see!  Sponsorship opportunities available!
-</h2>
- 
-        <p style={{ textAlign: "center", marginBottom: 20 }}>
-          First 5 to sign up play live! Winner gets a deck of the Messed Up Game cards 🎉
-        </p>
+      {/* SIGNUP (Netlify Forms) */}
+      <section id="signup" style={{ maxWidth: 900, margin: "40px auto 80px", padding: "0 16px" }}>
+        <h2 style={{ textAlign: "center", marginBottom: 12 }}>
+          The First 5 people that enter will be entered on the list to play against Wildman Tom B!
+          The Winner and all players will receive a deck of the Messed Up Game cards ($14.95 value),
+          and the Winner will be entered to play in the playoffs with the opportunity to win the
+          Grand Prize of $500.00! All games are recorded and the video is available within a few
+          days for everyone to see! Sponsorship opportunities available!
+        </h2>
 
         <form
           name="live-signup"
@@ -118,8 +116,8 @@ export default function App() {
             Note (optional)
             <textarea
               name="note"
-              placeholder="Anything we should know?"
               rows={4}
+              placeholder="Good luck! Tom will reply within a few minutes with the invitation code and approximate start time (usually within five minutes)."
               style={{ width: "100%", padding: 12, borderRadius: 8, border: "1px solid #ccc" }}
             />
           </label>
@@ -140,7 +138,3 @@ export default function App() {
     </>
   );
 }
-
-
-
-
