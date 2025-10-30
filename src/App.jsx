@@ -69,7 +69,10 @@ export default function App() {
 
       {/* SIMPLE SIGNUP (Netlify Forms) */}
       <section id="signup" style={{ maxWidth: 700, margin: "40px auto 80px", padding: "0 16px" }}>
-        <h2 style={{ textAlign: "center", marginBottom: 12 }}>Sign up to play</h2>
+       <h2 style={{ textAlign: "center", marginBottom: 12 }}>
+  The First 5 people that enter will be entered on the list to play against Wildman Tom B! The Winner and all players will receive a deck of the Messed Up Game cards (14.95 value) and the Winner will be entered to play in the playoffs and the Opportunity to win the Grand Prize of $500.00!  All Games are recorded and the video is available within a few days for everyone to see!  Sponsorship opportunities available!
+</h2>
+ 
         <p style={{ textAlign: "center", marginBottom: 20 }}>
           First 5 to sign up play live! Winner gets a deck of the Messed Up Game cards 🎉
         </p>
