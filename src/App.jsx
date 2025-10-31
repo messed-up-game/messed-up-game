@@ -36,13 +36,13 @@ export default function App() {
           {/* Buttons */}
           <div>
             <a
-              href="https://www.youtube.com/@Messedupgame/live"
-              target="_blank"
-              rel="noreferrer"
-              style={{ ...button, background: "#e11", color: "white" }}
-            >
-              ▶️ Watch on YouTube
-            </a>
+  href="https://www.youtube.com/@Messedupgame"
+  target="_blank"
+  rel="noreferrer"
+  style={{ ...button, background: "#e11", color: "white" }}
+>
+  ▶️ Watch on YouTube
+</a>
            <a
   href="#signup"
   className="cta"
