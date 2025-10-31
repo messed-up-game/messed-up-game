@@ -44,7 +44,7 @@ export default function App() {
               ▶️ Watch on YouTube
             </a>
             <a href="#signup" style={{ ...button, background: "white", color: "#111" }}>
-              ✍️ Join the Game
+              ✍️ Sign up to play live with Tom B
             </a>
           </div>
         </div>
