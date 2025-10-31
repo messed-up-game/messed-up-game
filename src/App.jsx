@@ -1,6 +1,7 @@
 // src/App.jsx — YouTube Live + signup form (updated copy)
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw"; // your channel
+const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
 
   const heroStyles = {
     minHeight: "60vh",
