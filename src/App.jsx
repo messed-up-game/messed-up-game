@@ -2,6 +2,9 @@
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw"; // your channel
 const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
+<a href={CHANNEL_URL} target="_blank" rel="noreferrer" style={{ ...button, background: "#e11", color: "white" }}>
+  ▶️ Watch on YouTube
+</a>
 
   const heroStyles = {
     minHeight: "60vh",
