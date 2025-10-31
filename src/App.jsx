@@ -1,9 +1,8 @@
-// src/App.jsx — YouTube Live + signup form (updated copy)
+// src/App.jsx — Featured video + signup
 export default function App() {
-  const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw"; // your channel
-const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
-<a href={CHANNEL_URL} target="_blank" rel="noreferrer" style={{ ...button, background: "#e11", color: "white" }}>
-  ▶️ Watch on YouTube
+  const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
+  const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
+  const FEATURE_VIDEO_ID = "YRVuuAGMHTQ"; // your specific video
 
   const heroStyles = {
     minHeight: "60vh",
@@ -39,31 +38,38 @@ const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
           {/* Buttons */}
           <div>
             <a
-  href="https://www.youtube.com/@Messedupgame"
-  target="_blank"
-  rel="noreferrer"
-  style={{ ...button, background: "#e11", color: "white" }}
->
-  ▶️ Watch on YouTube
-</a>
-           <a
-  href="#signup"
-  className="cta"
-  style={{ ...button, background: "white", color: "#111" }}
->
-  ✍️ Sign up to play live with Tom B
-</a>
+              href={CHANNEL_URL}
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...button, background: "#e11", color: "white" }}
+            >
+              ▶️ Watch on YouTube
+            </a>
+            <a
+              href="#signup"
+              className="cta"
+              style={{ ...button, background: "white", color: "#111" }}
+            >
+              ✍️ Sign up to play live with Tom B
+            </a>
           </div>
         </div>
       </header>
 
-      {/* YOUTUBE LIVE EMBED */}
+      {/* FEATURED VIDEO (replaces live embed) */}
       <section style={{ maxWidth: 1200, margin: "40px auto", padding: "0 16px" }}>
-        <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>Watch the Live Show</h2>
-        <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", background: "#000" }}>
+        <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>Featured Video</h2>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16 / 9",
+            background: "#000",
+          }}
+        >
           <iframe
-            title="Messed Up Game — Live"
-            src={`https://www.youtube-nocookie.com/embed/live_stream?channel=${CHANNEL_ID}&autoplay=1&mute=1&modestbranding=1&rel=0`}
+            title="Messed Up Game — Featured"
+            src={`https://www.youtube-nocookie.com/embed/${FEATURE_VIDEO_ID}?autoplay=0&modestbranding=1&rel=0`}
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
             referrerPolicy="strict-origin-when-cross-origin"
@@ -136,7 +142,13 @@ const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
 
           <button
             type="submit"
-            style={{ ...button, background: "#111", color: "white", width: "100%", margin: "8px 0 0" }}
+            style={{
+              ...button,
+              background: "#111",
+              color: "white",
+              width: "100%",
+              margin: "8px 0 0",
+            }}
           >
             Submit
           </button>
@@ -145,3 +157,5 @@ const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
     </>
   );
 }
+
+    
