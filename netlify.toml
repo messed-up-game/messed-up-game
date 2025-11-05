@@ -5,7 +5,15 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Allow Let's Encrypt and other well-known paths to pass through
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.well-known/:splat"
+  status = 200
+
+# SPA catch-all
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
