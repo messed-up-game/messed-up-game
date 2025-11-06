@@ -1,4 +1,41 @@
 // src/App.jsx — Featured video + signup
+
+Name		
+messed-up-game
+messed-up-game
+Import LiveCTA component in App.jsx
+5d369c8
+ · 
+1 minute ago
+public
+Add privacy policy page
+18 hours ago
+src
+Import LiveCTA component in App.jsx
+1 minute ago
+README.md messed up game
+Update README: deploy test @ 11:35 AM
+2 weeks ago
+index.html
+Add AdSense script to index.html
+yesterday
+messed-up-game-fresh.zip
+Add files via upload
+2 months ago
+netlify.toml
+Update netlify.toml to modify redirects
+yesterday
+package-lock.json
+update index.html
+2 weeks ago
+package.json
+Update package.json with project details and dependencies (#2)
+2 weeks ago
+vite.config.js
+Simplify vite.config.js export syntax
+2 weeks ago
+Repository files navigation
+README
 import LiveCTA from "./components/LiveCTA";
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
