@@ -1,15 +1,34 @@
-export default function AboutMessedUpGame() {
+export default function SignUp() {
   return (
-    <section style={{maxWidth: 900, margin: "0 auto"}}>
-      <h2>About Messed Up Game</h2>
-      <p><strong>The Messed Up Game</strong> (ages 12+) is a fast, fun, oral brain game designed to strengthen memory and cognitive function. Players must remember what others said so they don’t pick a duplicate and earn a strike. <strong>Three strikes and you’re out!</strong></p>
-      <p>It’s a live, brain-boosting challenge hosted by <strong>Wildman Tom B</strong>—pick numbers, face surprise categories, and answer in <strong>10 seconds</strong>. We’re building a positive, high-energy community where anyone can play, laugh, and sharpen their mind.</p>
-      <ul>
-        <li>Pick a number → reveal a <em>surprise category</em></li>
-        <li><strong>10 seconds</strong> to answer</li>
-        <li>No repeats—remember what others said</li>
-        <li><strong>3 strikes = eliminated</strong> • Last player standing wins</li>
-      </ul>
+    <section id="signup" style={{maxWidth: 900, margin: "24px auto"}}>
+      <h2>Sign Up to Play</h2>
+      <form
+        name="live-signup"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        style={{display:"grid", gap:12}}
+      >
+        <input type="hidden" name="form-name" value="live-signup" />
+        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+        <label> Name
+          <input name="name" required style={{width:"100%", padding:8}} />
+        </label>
+
+        <label> Email
+          <input name="email" type="email" required style={{width:"100%", padding:8}} />
+        </label>
+
+        <label style={{display:"flex", gap:8, alignItems:"flex-start"}}>
+          <input name="consent" type="checkbox" required />
+          <span>I agree to the <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+        </label>
+
+        <button type="submit" style={{padding:"12px 18px", borderRadius:8, background:"#1f6feb", color:"#fff", fontWeight:600}}>
+          Sign me up
+        </button>
+      </form>
     </section>
   );
 }
