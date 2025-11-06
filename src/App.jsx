@@ -1,4 +1,5 @@
 // src/App.jsx — Featured video + signup
+import LiveCTA from "./components/LiveCTA";
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
