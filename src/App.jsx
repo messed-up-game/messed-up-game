@@ -1,42 +1,8 @@
-// src/App.jsx — Featured video + signup
 
-Name		
-messed-up-game
-messed-up-game
-Import LiveCTA component in App.jsx
-5d369c8
- · 
-1 minute ago
-public
-Add privacy policy page
-18 hours ago
-src
-Import LiveCTA component in App.jsx
-1 minute ago
-README.md messed up game
-Update README: deploy test @ 11:35 AM
-2 weeks ago
-index.html
-Add AdSense script to index.html
-yesterday
-messed-up-game-fresh.zip
-Add files via upload
-2 months ago
-netlify.toml
-Update netlify.toml to modify redirects
-yesterday
-package-lock.json
-update index.html
-2 weeks ago
-package.json
-Update package.json with project details and dependencies (#2)
-2 weeks ago
-vite.config.js
-Simplify vite.config.js export syntax
-2 weeks ago
-Repository files navigation
-README
+    
+// src/App.jsx — Featured video + signup
 import LiveCTA from "./components/LiveCTA";
+
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
@@ -68,10 +34,13 @@ export default function App() {
       <header style={heroStyles}>
         <div style={{ maxWidth: 900 }}>
           <h1 style={{ lineHeight: 1.2, marginBottom: 12 }}>
-            Messed up Game is the ultimate Brain Game — the first 5 people to join by email will get
-            to play live with Wildman Tom B.
+            Play live with host Tom B who helps everyone with hints, which also makes it fun and entertaining!
+            — The first 9 people to join by email will get to play live for a chance to win $500.00!
           </h1>
-          <p style={{ opacity: 0.9, marginBottom: 24 }}>Fast, funny, 10-second brain battles ⚡️</p>
+          <p style={{ opacity: 0.9, marginBottom: 24 }}>
+            a slow paced game with a 10-second time limit, but with the hints from Tom,
+            it makes people more comfortable ⚡️
+          </p>
 
           {/* Buttons */}
           <div>
@@ -116,6 +85,8 @@ export default function App() {
         </div>
       </section>
 
+      <LiveCTA />
+
       {/* SIGNUP (Netlify Forms) */}
       <section id="signup" style={{ maxWidth: 900, margin: "40px auto 80px", padding: "0 16px" }}>
         <h2 style={{ textAlign: "center", marginBottom: 12 }}>
@@ -130,6 +101,7 @@ export default function App() {
           name="live-signup"
           method="POST"
           data-netlify="true"
+          netlify-honeypot="bot-field"
           style={{
             display: "grid",
             gap: 12,
@@ -140,6 +112,7 @@ export default function App() {
           }}
         >
           <input type="hidden" name="form-name" value="live-signup" />
+          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
           <label>
             Name
@@ -174,8 +147,8 @@ export default function App() {
           </label>
 
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <input type="checkbox" name="consent" required /> I agree to be contacted about the live
-            show.
+            <input type="checkbox" name="consent" required />
+            I agree to the <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
           </label>
 
           <button
@@ -195,5 +168,3 @@ export default function App() {
     </>
   );
 }
-
-    
