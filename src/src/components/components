@@ -1,34 +1,19 @@
-export default function SignUp() {
+export default function LiveCTA() {
   return (
-    <section id="signup" style={{maxWidth: 900, margin: "24px auto"}}>
-      <h2>Sign Up to Play</h2>
-      <form
-        name="live-signup"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        style={{display:"grid", gap:12}}
-      >
-        <input type="hidden" name="form-name" value="live-signup" />
-        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
-
-        <label> Name
-          <input name="name" required style={{width:"100%", padding:8}} />
-        </label>
-
-        <label> Email
-          <input name="email" type="email" required style={{width:"100%", padding:8}} />
-        </label>
-
-        <label style={{display:"flex", gap:8, alignItems:"flex-start"}}>
-          <input name="consent" type="checkbox" required />
-          <span>I agree to the <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
-        </label>
-
-        <button type="submit" style={{padding:"12px 18px", borderRadius:8, background:"#1f6feb", color:"#fff", fontWeight:600}}>
-          Sign me up
-        </button>
-      </form>
+    <section style={{maxWidth: 900, margin: "24px auto 0", textAlign: "center"}}>
+      <h3 style={{marginBottom: 12}}>Jump in the Next Live Game</h3>
+      <p style={{marginBottom: 20}}>Free to play. 10 seconds per answer. 3 strikes and you’re out!</p>
+      <div style={{display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap"}}>
+        <a href="https://streamyard.com/6u894xi3cw" target="_blank" rel="noopener"
+           style={{padding: "12px 18px", borderRadius: 8, background:"#1f6feb", color:"#fff", textDecoration:"none", fontWeight:600}}>
+          Join the next live game
+        </a>
+        <a href="/#signup"
+           style={{padding: "12px 18px", borderRadius: 8, border: "2px solid #1f6feb", color:"#1f6feb", textDecoration:"none", fontWeight:600}}>
+          Sign up to play
+        </a>
+      </div>
+      <p style={{fontSize: 12, color:"#555", marginTop: 12}}>Hosted by <strong>Wildman Tom B</strong>. Ages 12+.</p>
     </section>
   );
 }
