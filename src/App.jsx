@@ -1,7 +1,7 @@
 
     
 // src/App.jsx — Featured video + signup
-import LiveCTA from "./components/LiveCTA";
+
 
 export default function App() {
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
