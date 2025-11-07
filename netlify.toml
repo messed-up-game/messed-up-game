@@ -5,16 +5,9 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Keep this allow rule
 [[redirects]]
-  from = "/.well-known/*"
-  to   = "/.well-known/:splat"
+  from = "/*"
+  to = "/index.html"
   status = 200
-
-# TEMPORARILY DISABLE the SPA catch-all for this deploy:
-# [[redirects]]
-#   from = "/*"
-#   to   = "/index.html"
-#   status = 200
 
 
