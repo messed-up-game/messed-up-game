@@ -1,3 +1,4 @@
+import LiveCTA from "./components/LiveCTA";
 
     
 // src/App.jsx — Featured video + signup
