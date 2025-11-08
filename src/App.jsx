@@ -86,16 +86,17 @@ export default function App() {
         </div>
       </section>
 
-      <LiveCTA />
+      {/* <LiveCTA /> */}
 
       {/* SIGNUP (Netlify Forms) */}
       <section id="signup" style={{ maxWidth: 900, margin: "40px auto 80px", padding: "0 16px" }}>
         <h2 style={{ textAlign: "center", marginBottom: 12 }}>
-          The First 5 people that enter will be entered on the list to play against Wildman Tom B!
+          The First 9 people to sign up will be entered to play with Wildman Tom B host, and helping
+            others by giving hints, which makes them feel at ease... less stress!
           The Winner and all players will receive a deck of the Messed Up Game cards ($14.95 value),
           and the Winner will be entered to play in the playoffs with the opportunity to win the
           Grand Prize of $500.00! All games are recorded and the video is available within a few
-          days for everyone to see! Sponsorship opportunities available!
+          days for everyone to see, but only with your permission. Sponsorship opportunities are available!
         </h2>
 
         <form
@@ -142,7 +143,7 @@ export default function App() {
             <textarea
               name="note"
               rows={4}
-              placeholder="Good luck! Tom will reply within a few minutes with the invitation code and approximate start time (usually within five minutes)."
+              placeholder="Good luck! Tom will reply within a few minutes with your invitation code and approximate start time (usually within five minutes)."
               style={{ width: "100%", padding: 12, borderRadius: 8, border: "1px solid #ccc" }}
             />
           </label>
