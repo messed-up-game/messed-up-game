@@ -87,7 +87,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* <LiveCTA /> */}
+      <LiveCTA />
+
 
       {/* SIGNUP (Netlify Forms) */}
       <section id="signup" style={{ maxWidth: 900, margin: "40px auto 80px", padding: "0 16px" }}>
