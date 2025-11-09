@@ -5,6 +5,7 @@ export default function LiveCTA() {
       <h3 style={{marginBottom: 12}}>Jump in the Next Live Game</h3>
       <p style={{marginBottom: 20}}>Free to play. 10 seconds per answer. 3 strikes and you’re out!</p>
 
+  
       <div style={{display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap"}}>
         <a
           href="https://streamyard.com/6u894xi3cw"
