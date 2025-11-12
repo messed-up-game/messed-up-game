@@ -8,13 +8,22 @@ export default function App() {
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
   const SIGNUP_MAILTO =
-    "mailto:tombutler47@gmail.com" +
-    "?subject=" +
-    encodeURIComponent("Sign me up to play the Messed Up Game") +
-    "&body=" +
-    encodeURIComponent(
-      "Hey Tom,\n\nI want to sign up to play the Messed Up Game.\n\nName:\nBest email:\nBest time to play:\n\nThanks!\n"
-    );
+    const SIGNUP_MAILTO =
+  "mailto:tombutler47@gmail.com" +
+  "?subject=" +
+  encodeURIComponent("Sign me up to play the Messed Up Game") +
+  "&body=" +
+  encodeURIComponent(
+    "Hi Tom,\n\n" +
+      "I want to sign up to play the Messed Up Game.\n\n" +
+      "My name:\n" +
+      "My email address:\n" +
+      "Best time(s) for me to play:\n\n" +
+      "Please send me the link to join the next live game.\n\n" +
+      "Thanks!\n\n" +
+      "MUP — The Messed Up Game\n"
+  );
+
 
   const links = [
     { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
