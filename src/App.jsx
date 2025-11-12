@@ -8,22 +8,20 @@ export default function App() {
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
   const SIGNUP_MAILTO =
-    const SIGNUP_MAILTO =
-  "mailto:tombutler47@gmail.com" +
-  "?subject=" +
-  encodeURIComponent("Sign me up to play the Messed Up Game") +
-  "&body=" +
-  encodeURIComponent(
-    "Hi Tom,\n\n" +
-      "I want to sign up to play the Messed Up Game.\n\n" +
-      "My name:\n" +
-      "My email address:\n" +
-      "Best time(s) for me to play:\n\n" +
-      "Sign up with my email address and please send me the link to join the next live game.\n\n" +
-      "Thanks!\n\n" +
-      "MUP — The Messed Up Game\n"
-  );
-
+    "mailto:tombutler47@gmail.com" +
+    "?subject=" +
+    encodeURIComponent("Sign me up to play the Messed Up Game") +
+    "&body=" +
+    encodeURIComponent(
+      "Hi Tom,\n\n" +
+        "I want to sign up to play the Messed Up Game.\n\n" +
+        "My name:\n" +
+        "My email address:\n" +
+        "Best time(s) for me to play:\n\n" +
+        "Sign up with my email address and please send me the link to join the next live game.\n\n" +
+        "Thanks!\n\n" +
+        "MUP — The Messed Up Game\n"
+    );
 
   const links = [
     { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
@@ -117,10 +115,10 @@ export default function App() {
           <div style={small}>
             Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
           </div>
-        <div style={small}>
-  Sign up with your email address and Tom will send you the link to join the next live game.
-</div>
-
+          <div style={small}>
+            Sign up with your email address and Tom will send you the link to join the next live game.
+          </div>
+        </div>
       </section>
 
       {/* Featured links grid */}
@@ -128,4 +126,3 @@ export default function App() {
     </main>
   );
 }
-
