@@ -1,16 +1,23 @@
+// src/App.jsx — Featured video + Join button + Featured Links
 import LiveCTA from "./components/LiveCTA";
-
-    
-// src/App.jsx — Featured video + signup
-
+import LinkGrid from "./components/LinkGrid";
 
 export default function App() {
+  // ——— editable constants ———
   const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
-  const FEATURE_VIDEO_ID = "AgnyMhlyxBY";
+  const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // your requested featured video
+  const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
+  const links = [
+    { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
+    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
+    { title: "Messed Up Game — Sign Up", href: "https://messedupgame.com", desc: "Free signup to play" },
+    { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
+  ];
 
-  const heroStyles = {
+  // ——— simple styles ———
+  const hero = {
     minHeight: "60vh",
     display: "grid",
     placeItems: "center",
@@ -19,156 +26,73 @@ export default function App() {
     color: "white",
     textAlign: "center",
   };
-
-  const button = {
+  const h1 = { margin: "6px 0 0", fontSize: "clamp(28px, 5vw, 44px)", fontWeight: 900 };
+  const p = { opacity: 0.9, marginTop: 6 };
+  const btnRow = { marginTop: 14, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" };
+  const btn = {
     display: "inline-block",
-    margin: "12px 8px",
-    padding: "14px 20px",
+    padding: "12px 18px",
     borderRadius: 12,
-    border: "0",
-    fontSize: 18,
-    cursor: "pointer",
+    background: "#ffffff",
+    color: "#111",
+    textDecoration: "none",
+    fontWeight: 800,
+    boxShadow: "0 4px 12px rgba(0,0,0,.25)",
   };
+  const btnGhost = {
+    ...btn,
+    background: "transparent",
+    color: "#fff",
+    border: "1px solid rgba(255,255,255,.5)",
+  };
+  const videoWrap = {
+    width: "min(960px, 92vw)",
+    aspectRatio: "16 / 9",
+    margin: "16px auto 8px",
+    borderRadius: 14,
+    overflow: "hidden",
+    boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+    background: "#000",
+  };
+  const iframe = { width: "100%", height: "100%", border: 0 };
 
   return (
-    <>
-      {/* HERO */}
-      <header style={heroStyles}>
-        <div style={{ maxWidth: 900 }}>
-          <h1 style={{ lineHeight: 1.2, marginBottom: 12 }}>
-            Play live with host Tom B who helps everyone with hints, which also makes it fun and entertaining!
-            — The first 9 people to join by email will get to play live for a chance to win $500.00!
-          </h1>
-          <p style={{ opacity: 0.9, marginBottom: 24 }}>
-            a slow paced game with a 10-second time limit, but with the hints from Tom,
-            it makes people more comfortable ⚡️
-          </p>
+    <main>
+      {/* HERO: Featured video + CTAs */}
+      <section style={hero}>
+        <div style={{ width: "100%" }}>
+          <h1 style={h1}>Messed Up Game — Live with Wildman Tom B</h1>
+          <p style={p}>Up to 9 players join on camera. Family-friendly, fast, and hilarious.</p>
 
-          {/* Buttons */}
-          <div>
-            <a
-              href={CHANNEL_URL}
-              target="_blank"
-              rel="noreferrer"
-              style={{ ...button, background: "#e11", color: "white" }}
-            >
-              ▶️ Watch on YouTube
+          {/* Featured YouTube video */}
+          <div style={videoWrap}>
+            <iframe
+              style={iframe}
+              src={`https://www.youtube.com/embed/${FEATURE_VIDEO_ID}?rel=0`}
+              title="Featured video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+
+          {/* Primary CTAs */}
+          <div style={btnRow}>
+            <a href={STREAMYARD_GUEST_LINK} target="_blank" rel="noopener noreferrer" style={btn}>
+              Join Live on StreamYard
             </a>
-            <a
-              href="#signup"
-              className="cta"
-              style={{ ...button, background: "white", color: "#111" }}
-            >
-              ✍️ Sign up to play live with Tom B
+            <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
+              Visit YouTube Channel
             </a>
           </div>
         </div>
-      </header>
-
-      {/* FEATURED VIDEO (replaces live embed) */}
-      <section style={{ maxWidth: 1200, margin: "40px auto", padding: "0 16px" }}>
-        <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>Featured Video</h2>
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            aspectRatio: "16 / 9",
-            background: "#000",
-          }}
-        >
-          <iframe
-            title="Messed Up Game — Featured"
-            src={`https://www.youtube-nocookie.com/embed/${FEATURE_VIDEO_ID}?autoplay=0&modestbranding=1&rel=0`}
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowFullScreen
-            referrerPolicy="strict-origin-when-cross-origin"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-          />
-        </div>
       </section>
 
-      <LiveCTA />
+      {/* Optional extra CTA component (safe if it ignores props) */}
+      <LiveCTA streamyardUrl={STREAMYARD_GUEST_LINK} channelUrl={CHANNEL_URL} />
 
-
-      {/* SIGNUP (Netlify Forms) */}
-      <section id="signup" style={{ maxWidth: 900, margin: "40px auto 80px", padding: "0 16px" }}>
-        <h2 style={{ textAlign: "center", marginBottom: 12 }}>
-          The First 9 people to sign up will be entered to play with Wildman Tom B host, and helping
-            others by giving hints, which makes them feel at ease... less stress!
-          The Winner and all players will receive a deck of the Messed Up Game cards ($14.95 value),
-          and the Winner will be entered to play in the playoffs with the opportunity to win the
-          Grand Prize of $500.00! All games are recorded and the video is available within a few
-          days for everyone to see, but only with your permission. Sponsorship opportunities are available!
-        </h2>
-
-        <form
-          name="live-signup"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          style={{
-            display: "grid",
-            gap: 12,
-            background: "#f7f7f7",
-            padding: 20,
-            borderRadius: 12,
-            border: "1px solid #e5e5e5",
-          }}
-        >
-          <input type="hidden" name="form-name" value="live-signup" />
-          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
-
-          <label>
-            Name
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Your name"
-              style={{ width: "100%", padding: 12, borderRadius: 8, border: "1px solid #ccc" }}
-            />
-          </label>
-
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="you@example.com"
-              style={{ width: "100%", padding: 12, borderRadius: 8, border: "1px solid #ccc" }}
-            />
-          </label>
-
-          <label>
-            Note (optional)
-            <textarea
-              name="note"
-              rows={4}
-              placeholder="Good luck! Tom will reply within a few minutes with your invitation code and approximate start time (usually within five minutes)."
-              style={{ width: "100%", padding: 12, borderRadius: 8, border: "1px solid #ccc" }}
-            />
-          </label>
-
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <input type="checkbox" name="consent" required />
-            I agree to the <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
-          </label>
-
-          <button
-            type="submit"
-            style={{
-              ...button,
-              background: "#111",
-              color: "white",
-              width: "100%",
-              margin: "8px 0 0",
-            }}
-          >
-            Submit
-          </button>
-        </form>
-      </section>
-    </>
+      {/* Featured links grid */}
+      <LinkGrid title="Featured Links" items={links} />
+    </main>
   );
 }
