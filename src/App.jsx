@@ -19,7 +19,7 @@ export default function App() {
       "My name:\n" +
       "My email address:\n" +
       "Best time(s) for me to play:\n\n" +
-      "Please send me the link to join the next live game.\n\n" +
+      "Sign up with my email address and please send me the link to join the next live game.\n\n" +
       "Thanks!\n\n" +
       "MUP — The Messed Up Game\n"
   );
@@ -117,7 +117,10 @@ export default function App() {
           <div style={small}>
             Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
           </div>
-        </div>
+        <div style={small}>
+  Sign up with your email address and Tom will send you the link to join the next live game.
+</div>
+
       </section>
 
       {/* Featured links grid */}
