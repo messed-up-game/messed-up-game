@@ -10,7 +10,7 @@ export default function App() {
   const links = [
     { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
     { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
-    { title: "Messed Up Game — Sign Up", href: "https://messedupgame.com", desc: "Free signup to play" },
+    { title: "Messed Up Game — Sign Up", href: "/newsletter/", desc: "Free signup to play" },
     { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
   ];
 
@@ -87,8 +87,8 @@ export default function App() {
             <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
               Watch on YouTube
             </a>
-            <a href="https://messedupgame.com" target="_blank" rel="noopener noreferrer" style={btnGhost}>
-              Sign up to play
+            <a href="/newsletter/" style={btnGhost}>
+  Sign up to play
             </a>
           </div>
 
