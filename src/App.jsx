@@ -6,11 +6,19 @@ export default function App() {
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
+const SIGNUP_MAILTO =
+  "mailto:tombutler47@gmail.com" +
+  "?subject=" +
+  encodeURIComponent("Sign me up to play the Messed Up Game") +
+  "&body=" +
+  encodeURIComponent(
+    "Hey Tom,\n\nI want to sign up to play the Messed Up Game.\n\nName:\nBest email:\nBest time to play:\n\nThanks!\n"
+  );
 
   const links = [
     { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
     { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
-    { title: "Messed Up Game — Sign Up", href: "/newsletter/", desc: "Free signup to play" },
+      { title: "Messed Up Game — Sign Up", href: SIGNUP_MAILTO, desc: "Free signup to play" },
     { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
   ];
 
@@ -86,7 +94,10 @@ export default function App() {
             </a>
             <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
               Watch on YouTube
-            </a>
+              <a href={SIGNUP_MAILTO} style={btnGhost}>
+    Sign up to play
+  </a>
+
             <a href="/newsletter/" style={btnGhost}>
   Sign up to play
             </a>
