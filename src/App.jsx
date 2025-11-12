@@ -1,12 +1,10 @@
-// src/App.jsx — Featured video + Join button + Featured Links
-import LiveCTA from "./components/LiveCTA";
+// src/App.jsx — Featured video + Join button + Featured Links (no duplicate CTAs)
 import LinkGrid from "./components/LinkGrid";
 
 export default function App() {
   // ——— editable constants ———
-  const CHANNEL_ID = "UC5NKMIYPLcdvwzPF5ragDKw";
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
-  const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // your requested featured video
+  const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
   const links = [
@@ -55,16 +53,22 @@ export default function App() {
     background: "#000",
   };
   const iframe = { width: "100%", height: "100%", border: 0 };
+  const small = { opacity: 0.85, marginTop: 10, fontSize: 14 };
 
   return (
     <main>
+      {/* Optional tiny nav */}
+      <nav style={{maxWidth:1100, margin:"8px auto 0", padding:"8px 16px"}}>
+        <a href="/" style={{marginRight:12, color:"#fff", textDecoration:"none"}}>Home</a>
+        <a href="/newsletter/" style={{color:"#7bdff6", textDecoration:"none"}}>Newsletter</a>
+      </nav>
+
       {/* HERO: Featured video + CTAs */}
       <section style={hero}>
         <div style={{ width: "100%" }}>
           <h1 style={h1}>Messed Up Game — Live with Wildman Tom B</h1>
           <p style={p}>Up to 9 players join on camera. Family-friendly, fast, and hilarious.</p>
 
-          {/* Featured YouTube video */}
           <div style={videoWrap}>
             <iframe
               style={iframe}
@@ -76,20 +80,23 @@ export default function App() {
             />
           </div>
 
-          {/* Primary CTAs */}
           <div style={btnRow}>
             <a href={STREAMYARD_GUEST_LINK} target="_blank" rel="noopener noreferrer" style={btn}>
-              Join Live on StreamYard
+              Join LIVE (first 9)
             </a>
             <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
-              Visit YouTube Channel
+              Watch on YouTube
             </a>
+            <a href="https://messedupgame.com" target="_blank" rel="noopener noreferrer" style={btnGhost}>
+              Sign up to play
+            </a>
+          </div>
+
+          <div style={small}>
+            Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
           </div>
         </div>
       </section>
-
-      {/* Optional extra CTA component (safe if it ignores props) */}
-      <LiveCTA streamyardUrl={STREAMYARD_GUEST_LINK} channelUrl={CHANNEL_URL} />
 
       {/* Featured links grid */}
       <LinkGrid title="Featured Links" items={links} />
