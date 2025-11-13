@@ -24,11 +24,15 @@ export default function App() {
     );
 
   const links = [
-    { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
-    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
-    { title: "Messed Up Game — Sign Up", href: SIGNUP_MAILTO, desc: "Free signup to play" },
-    { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
-  ];
+  { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
+  { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
+  {
+    title: "Messed Up Game — Sign Up",
+    href: "mailto:tombutler@messedupgame.com?subject=Sign%20me%20up%20to%20play%20the%20Messed%20Up%20Game",
+    desc: "Free signup to play",
+  },
+  { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
+];
 
   // ——— simple styles ———
   const hero = {
@@ -99,18 +103,20 @@ export default function App() {
               loading="lazy"
             />
           </div>
-
           <div style={btnRow}>
-            <a href={STREAMYARD_GUEST_LINK} target="_blank" rel="noopener noreferrer" style={btn}>
-              Join LIVE (first 9)
-            </a>
-            <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
-              Watch on YouTube
-            </a>
-            <a href={SIGNUP_MAILTO} style={btnGhost}>
-              Sign up to play
-            </a>
-          </div>
+  <a href={STREAMYARD_GUEST_LINK} target="_blank" rel="noopener noreferrer" style={btn}>
+    Join LIVE (first 9)
+  </a>
+  <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
+    Watch on YouTube
+  </a>
+  <a
+    href="mailto:tombutler@messedupgame.com?subject=Sign%20me%20up%20to%20play%20the%20Messed%20Up%20Game"
+    style={btnGhost}
+  >
+    Sign up to play
+  </a>
+</div>
 
           <div style={small}>
             Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
