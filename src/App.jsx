@@ -5,10 +5,10 @@ export default function App() {
   // ——— editable constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
-  const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw"; 
-  
+  const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
+
   const SIGNUP_MAILTO =
-    "mailto:tombutler47@gmail.com" +
+    "mailto:tombutler@messedupgame.com" +
     "?subject=" +
     encodeURIComponent("Sign me up to play the Messed Up Game") +
     "&body=" +
@@ -29,6 +29,7 @@ export default function App() {
     { title: "Messed Up Game — Sign Up", href: SIGNUP_MAILTO, desc: "Free signup to play" },
     { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
   ];
+
   // ——— simple styles ———
   const hero = {
     minHeight: "60vh",
@@ -115,7 +116,15 @@ export default function App() {
             Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
           </div>
           <div style={small}>
-            Sign up with your email address and Tom will send you the link to join the next live game.
+            Click “Sign up to play” and send Tom an email with your name and best time to play. He’ll reply with your private join
+            link.
+          </div>
+          <div style={small}>
+            Or email Tom directly at{" "}
+            <a href={SIGNUP_MAILTO} style={{ color: "#7bdff6", textDecoration: "underline" }}>
+              tombutler@messedupgame.com
+            </a>{" "}
+            with the subject “Sign me up to play the Messed Up Game.”
           </div>
         </div>
       </section>
@@ -125,3 +134,4 @@ export default function App() {
     </main>
   );
 }
+
