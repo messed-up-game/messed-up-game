@@ -5,8 +5,8 @@ export default function App() {
   // ——— editable constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
-  const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
-
+  const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw"; 
+  
   const SIGNUP_MAILTO =
     "mailto:tombutler47@gmail.com" +
     "?subject=" +
