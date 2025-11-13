@@ -29,7 +29,6 @@ export default function App() {
     { title: "Messed Up Game — Sign Up", href: SIGNUP_MAILTO, desc: "Free signup to play" },
     { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
   ];
-
   // ——— simple styles ———
   const hero = {
     minHeight: "60vh",
