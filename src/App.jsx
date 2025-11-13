@@ -7,32 +7,26 @@ export default function App() {
   const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
-  const SIGNUP_MAILTO =
-    "mailto:tombutler@messedupgame.com" +
-    "?subject=" +
-    encodeURIComponent("Sign me up to play the Messed Up Game") +
-    "&body=" +
-    encodeURIComponent(
-      "Hi Tom,\n\n" +
-        "I want to sign up to play the Messed Up Game.\n\n" +
-        "My name:\n" +
-        "My email address:\n" +
-        "Best time(s) for me to play:\n\n" +
-        "Sign up with my email address and please send me the link to join the next live game.\n\n" +
-        "Thanks!\n\n" +
-        "MUP — The Messed Up Game\n"
-    );
+  // New: signup form + contact email
+  const SIGNUP_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
+  const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
   const links = [
-  { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
-  { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
-  {
-    title: "Messed Up Game — Sign Up",
-    href: "mailto:tombutler@messedupgame.com?subject=Sign%20me%20up%20to%20play%20the%20Messed%20Up%20Game",
-    desc: "Free signup to play",
-  },
-  { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
-];
+    { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
+    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
+    {
+      title: "Messed Up Game — Sign Up",
+      href: SIGNUP_FORM_URL,
+      desc: "Fill out the form to play",
+    },
+    {
+      title: "Got Backup Tom B",
+      href: "https://gotbackuptomb.com",
+      desc: "Cloud backup & storage",
+      affiliate: true,
+    },
+  ];
 
   // ——— simple styles ———
   const hero = {
@@ -46,7 +40,13 @@ export default function App() {
   };
   const h1 = { margin: "6px 0 0", fontSize: "clamp(28px, 5vw, 44px)", fontWeight: 900 };
   const p = { opacity: 0.9, marginTop: 6 };
-  const btnRow = { marginTop: 14, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" };
+  const btnRow = {
+    marginTop: 14,
+    display: "flex",
+    gap: 12,
+    justifyContent: "center",
+    flexWrap: "wrap",
+  };
   const btn = {
     display: "inline-block",
     padding: "12px 18px",
@@ -103,37 +103,38 @@ export default function App() {
               loading="lazy"
             />
           </div>
+
           <div style={btnRow}>
-  <a href={STREAMYARD_GUEST_LINK} target="_blank" rel="noopener noreferrer" style={btn}>
-    Join LIVE (first 9)
-  </a>
-  <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
-    Watch on YouTube
-  </a>
-  <a
-    href="mailto:tombutler@messedupgame.com?subject=Sign%20me%20up%20to%20play%20the%20Messed%20Up%20Game"
-    style={btnGhost}
-  >
-    Sign up to play
-  </a>
-</div>
+            <a href={STREAMYARD_GUEST_LINK} target="_blank" rel="noopener noreferrer" style={btn}>
+              Join LIVE (first 9)
+            </a>
+            <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" style={btnGhost}>
+              Watch on YouTube
+            </a>
+            <a
+              href={SIGNUP_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={btnGhost}
+            >
+              Sign up to play
+            </a>
+          </div>
 
           <div style={small}>
             Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
           </div>
           <div style={small}>
-            Click “Sign up to play” and send Tom an email with your name and best time to play. He’ll reply with your private join
-            link.
+            Click “Sign up to play” and fill out the short sign-up form with your name and best time to play. Tom will
+            email you your private join link.
           </div>
+          <div style={small}>Watch your email — Tom will send you your private game link!</div>
           <div style={small}>
-            Watch your email — Tom will send you your private game link!
-            </div>
-          <div style={small}>
-          Or email Tom directly at{" "}
-            <a href={SIGNUP_MAILTO} style={{ color: "#7bdff6", textDecoration: "underline" }}>
+            Prefer email? Contact Tom directly at{" "}
+            <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "underline" }}>
               tombutler@messedupgame.com
-            </a>{" "}
-            with the subject “Sign me up to play the Messed Up Game.”
+            </a>
+            .
           </div>
         </div>
       </section>
@@ -143,4 +144,3 @@ export default function App() {
     </main>
   );
 }
-
