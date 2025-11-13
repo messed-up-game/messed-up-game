@@ -126,7 +126,10 @@ export default function App() {
             link.
           </div>
           <div style={small}>
-            Or email Tom directly at{" "}
+            Watch your email — Tom will send you your private game link!
+            </div>
+          <div style={small}>
+          Or email Tom directly at{" "}
             <a href={SIGNUP_MAILTO} style={{ color: "#7bdff6", textDecoration: "underline" }}>
               tombutler@messedupgame.com
             </a>{" "}
