@@ -1,5 +1,8 @@
 // src/components/LiveCTA.jsx
 
+// 🔗 Use your Google Form link here:
+const FORM_URL = https://docs.google.com/forms/d/e/1FAIpQLSdkpVLK7wER_B51HwZMD8LwYeGHe-MwOoW0SipbtG3MAAYhQQ/viewform?usp=dialog
+
 const SIGNUP_MAILTO = `mailto:tom@messedupgame.com?subject=${encodeURIComponent(
   "Sign me up to play the Messed Up Game"
 )}&body=${encodeURIComponent(
@@ -39,7 +42,9 @@ export default function LiveCTA() {
         </a>
 
         <a
-          href={SIGNUP_MAILTO}
+          href={FORM_URL}
+          target="_blank"
+          rel="noopener"
           style={{
             padding: "12px 18px",
             borderRadius: 8,
