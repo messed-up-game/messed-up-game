@@ -1,7 +1,8 @@
 // src/components/LiveCTA.jsx
 
 // 🔗 Use your Google Form link here:
-const FORM_URL = https://docs.google.com/forms/d/e/1FAIpQLSdkpVLK7wER_B51HwZMD8LwYeGHe-MwOoW0SipbtG3MAAYhQQ/viewform?usp=dialog
+const FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdkpVLK7wER_B51HwZMD8LwYeGHe-MwOoW0SipbtG3MAAYhQQ/viewform?usp=sharing&ouid=106858560055118215405";
 
 const SIGNUP_MAILTO = `mailto:tom@messedupgame.com?subject=${encodeURIComponent(
   "Sign me up to play the Messed Up Game"
