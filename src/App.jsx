@@ -1,4 +1,4 @@
-// src/App.jsx — Featured video + Join button + Featured Links (no duplicate CTAs)
+// src/App.jsx — Featured video + Join button + Featured Links + Ghana section
 import LinkGrid from "./components/LinkGrid";
 
 export default function App() {
@@ -6,79 +6,6 @@ export default function App() {
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
-<section
-  id="ghana"
-  style={{
-    padding: "2rem",
-    backgroundColor: "#111827",
-    color: "white",
-    marginTop: "2rem",
-  }}
->
-  <h2 style={{ fontSize: "1.8rem", marginBottom: "1rem", fontWeight: "700" }}>
-    🇬🇭 The Ghana Connection — Protect Your Data &amp; Earn Residual Income
-  </h2>
-
-  <p style={{ marginBottom: "0.75rem" }}>
-    Ghana is one of the fastest-growing digital communities in Africa, and
-    thousands of students, families, entrepreneurs, creators, and business
-    owners rely on their phones every day… but many still lose photos,
-    videos, schoolwork, and business files due to phone theft, damage, lost
-    devices, or low storage.
-  </p>
-
-  <p style={{ marginBottom: "0.75rem" }}>
-    That’s exactly why <strong>Got Backup Tom B</strong> is expanding into
-    Ghana — to help protect people’s memories AND give them a chance to earn{" "}
-    <strong>real residual income</strong> for only{" "}
-    <strong>$9.97/month</strong>.
-  </p>
-
-  <h3 style={{ fontSize: "1.4rem", marginTop: "1rem", marginBottom: "0.5rem" }}>
-    🚀 What You Get
-  </h3>
-  <ul style={{ marginLeft: "1.25rem", marginBottom: "0.75rem" }}>
-    <li>6TB of cloud storage (split among up to 6 users)</li>
-    <li>500GB free to every new customer</li>
-    <li>Automatic backups for phones &amp; computers</li>
-    <li>24/7 access to all your files</li>
-    <li>Earn weekly commissions as an affiliate</li>
-    <li>Perfect for students (WASSCE), families, businesses &amp; creators</li>
-  </ul>
-
-  <h3 style={{ fontSize: "1.4rem", marginTop: "1rem", marginBottom: "0.5rem" }}>
-    💡 Why It Matters in Ghana
-  </h3>
-  <ul style={{ marginLeft: "1.25rem", marginBottom: "0.75rem" }}>
-    <li>
-      The average income in Ghana is around $500/month, so even a small weekly
-      commission makes a huge difference.
-    </li>
-    <li>
-      Many people experience phone theft — automatic backup protects everything.
-    </li>
-    <li>
-      Perfect for WASSCE students, teachers, youth groups, ministries, and
-      entrepreneurs.
-    </li>
-  </ul>
-
-  <p style={{ marginTop: "0.75rem" }}>
-    🌍 <strong>Join the Got Backup Ghana team today and protect what matters!</strong>
-  </p>
-  <p style={{ marginBottom: "0.25rem" }}>
-    👉{" "}
-    <a
-      href="https://www.gotbackuptomb.com"
-      style={{ color: "#38bdf8", fontWeight: "600" }}
-      target="_blank"
-      rel="noreferrer"
-    >
-      www.gotbackuptomb.com
-    </a>
-  </p>
-  <p>Contact: <strong>tom@gotbackuptomb.com</strong></p>
-</section>
 
   // New: signup form + contact email
   const SIGNUP_FORM_URL =
@@ -87,7 +14,11 @@ export default function App() {
 
   const links = [
     { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
-    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
+    {
+      title: "Join Live on StreamYard",
+      href: STREAMYARD_GUEST_LINK,
+      desc: "First 9 get on camera",
+    },
     {
       title: "Messed Up Game — Sign Up",
       href: SIGNUP_FORM_URL,
@@ -128,13 +59,13 @@ export default function App() {
     color: "#111",
     textDecoration: "none",
     fontWeight: 800,
-    boxShadow: "0 4px 12px rgba(0,0,0,.25)",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)",
   };
   const btnGhost = {
     ...btn,
     background: "transparent",
     color: "#fff",
-    border: "1px solid rgba(255,255,255,.5)",
+    border: "1px solid rgba(255, 255, 255, 0.5)",
   };
   const videoWrap = {
     width: "min(960px, 92vw)",
@@ -142,7 +73,7 @@ export default function App() {
     margin: "16px auto 8px",
     borderRadius: 14,
     overflow: "hidden",
-    boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+    boxShadow: "0 10px 24px rgba(0, 0, 0, 0.35)",
     background: "#000",
   };
   const iframe = { width: "100%", height: "100%", border: 0 };
@@ -195,11 +126,12 @@ export default function App() {
           </div>
 
           <div style={small}>
-            Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B • Ages 12+
+            Free to play • 10 seconds per answer • 3 strikes = out • Hosted by Wildman Tom B •
+            Ages 12+
           </div>
           <div style={small}>
-            Click “Sign up to play” and fill out the short sign-up form with your name and best time to play. Tom will
-            email you your private join link.
+            Click “Sign up to play” and fill out the short sign-up form with your name and best
+            time to play. Tom will email you your private join link.
           </div>
           <div style={small}>Watch your email — Tom will send you your private game link!</div>
           <div style={small}>
@@ -210,6 +142,78 @@ export default function App() {
             .
           </div>
         </div>
+      </section>
+
+      {/* 🇬🇭 Ghana + Got Backup section */}
+      <section
+        id="ghana"
+        style={{
+          padding: "2rem",
+          backgroundColor: "#111827",
+          color: "white",
+          marginTop: "2rem",
+        }}
+      >
+        <h2 style={{ fontSize: "1.8rem", marginBottom: "1rem", fontWeight: 700 }}>
+          🇬🇭 The Ghana Connection — Protect Your Data &amp; Earn Residual Income
+        </h2>
+
+        <p style={{ marginBottom: "0.75rem" }}>
+          Ghana is one of the fastest-growing digital communities in Africa, and thousands of
+          students, families, entrepreneurs, creators, and business owners rely on their phones
+          every day… but many still lose photos, videos, schoolwork, and business files due to
+          phone theft, damage, lost devices, or low storage.
+        </p>
+
+        <p style={{ marginBottom: "0.75rem" }}>
+          That’s exactly why <strong>Got Backup Tom B</strong> is expanding into Ghana — to help
+          protect people’s memories AND give them a chance to earn{" "}
+          <strong>real residual income</strong> for only <strong>$9.97/month</strong>.
+        </p>
+
+        <h3 style={{ fontSize: "1.4rem", marginTop: "1rem", marginBottom: "0.5rem" }}>
+          🚀 What You Get
+        </h3>
+        <ul style={{ marginLeft: "1.25rem", marginBottom: "0.75rem" }}>
+          <li>6TB of cloud storage (split among up to 6 users)</li>
+          <li>500GB free to every new customer</li>
+          <li>Automatic backups for phones &amp; computers</li>
+          <li>24/7 access to all your files</li>
+          <li>Earn weekly commissions as an affiliate</li>
+          <li>Perfect for students (WASSCE), families, businesses &amp; creators</li>
+        </ul>
+
+        <h3 style={{ fontSize: "1.4rem", marginTop: "1rem", marginBottom: "0.5rem" }}>
+          💡 Why It Matters in Ghana
+        </h3>
+        <ul style={{ marginLeft: "1.25rem", marginBottom: "0.75rem" }}>
+          <li>
+            The average income in Ghana is around $500/month, so even a small weekly commission
+            makes a huge difference.
+          </li>
+          <li>Many people experience phone theft — automatic backup protects everything.</li>
+          <li>
+            Perfect for WASSCE students, teachers, youth groups, ministries, and entrepreneurs.
+          </li>
+        </ul>
+
+        <p style={{ marginTop: "0.75rem" }}>
+          🌍 <strong>Join the Got Backup Ghana team today and protect what matters!</strong>
+        </p>
+        <p style={{ marginBottom: "0.25rem" }}>
+          👉{" "}
+          <a
+            href="https://www.gotbackuptomb.com"
+            style={{ color: "#38bdf8", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            www.gotbackuptomb.com
+          </a>
+        </p>
+        <p>
+          Contact: <strong>tom@gotbackuptomb.com</strong>
+        </p>
       </section>
 
       {/* Featured links grid */}
