@@ -1,4 +1,4 @@
-// src/App.jsx — Featured video + Ghana section + Featured Links
+// src/App.jsx — Featured video + Join button + Featured Links + Ghana section
 import LinkGrid from "./components/LinkGrid";
 
 export default function App() {
@@ -13,7 +13,11 @@ export default function App() {
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
   const links = [
-    { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
+    {
+      title: "Newsletter",
+      href: "/newsletter/",
+      desc: "Latest stories & show times",
+    },
     {
       title: "Join Live on StreamYard",
       href: STREAMYARD_GUEST_LINK,
@@ -63,13 +67,13 @@ export default function App() {
     color: "#111",
     textDecoration: "none",
     fontWeight: 800,
-    boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
+    boxShadow: "0 4px 12px rgba(0,0,0,.25)",
   };
   const btnGhost = {
     ...btn,
     background: "transparent",
     color: "#fff",
-    border: "1px solid rgba(255, 255, 255, 0.5)",
+    border: "1px solid rgba(255,255,255,.5)",
   };
   const videoWrap = {
     width: "min(960px, 92vw)",
@@ -77,7 +81,7 @@ export default function App() {
     margin: "16px auto 8px",
     borderRadius: 14,
     overflow: "hidden",
-    boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.35)",
     background: "#000",
   };
   const iframe = { width: "100%", height: "100%", border: 0 };
@@ -98,7 +102,7 @@ export default function App() {
       {/* HERO: Featured video + CTAs */}
       <section style={hero}>
         <div style={{ width: "100%" }}>
-          <h1 style={h1}>Messed Up Game — Live with Wildman Tom B</h1>
+          <h1 style={h1}>messedupgame.com with Wildman Tom B</h1>
           <p style={p}>
             Up to 9 players join on camera. Family-friendly, fast, and hilarious.
           </p>
@@ -147,9 +151,9 @@ export default function App() {
           </div>
           <div style={small}>
             Click “Sign up to play” and fill out the short sign-up form with your
-            name and best time to play. Tom will email you your private join link.
+            name and best time to play. Tom will email you your private join
+            link.
           </div>
-          <div style={small}>Watch your email — Tom will send you your private game link!</div>
           <div style={small}>
             Prefer email? Contact Tom directly at{" "}
             <a
@@ -163,50 +167,52 @@ export default function App() {
         </div>
       </section>
 
-      {/* GHANA SECTION — image (Option A) + text */}
+      {/* GHANA SECTION */}
       <section
         id="ghana"
         style={{
-          padding: "2.5rem 1.5rem 3rem",
-          backgroundColor: "#111827",
+          padding: "2.5rem 1rem 3rem",
+          backgroundColor: "#020617",
           color: "white",
         }}
       >
-        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          {/* Banner image */}
           <img
-            src="/ghana-income-hero.png"
+            src="/ghana-income-banner.png"
             alt="Help the people of Ghana multiply their income - Wildman Tom B and The Messed Up Game"
             style={{
               width: "100%",
               height: "auto",
-              borderRadius: 18,
-              marginBottom: "1.5rem",
+              borderRadius: 16,
+              marginBottom: "1.75rem",
               display: "block",
             }}
           />
 
           <h2
             style={{
-              fontSize: "1.8rem",
+              fontSize: "1.9rem",
               marginBottom: "1rem",
               fontWeight: 700,
             }}
           >
-            🇬🇭 The Ghana Connection — Protect Your Data &amp; Earn Residual Income
+            🇬🇭 The Ghana Connection — Protect Your Data &amp; Earn Residual
+            Income
           </h2>
 
           <p style={{ marginBottom: "0.75rem" }}>
-            Ghana is one of the fastest-growing digital communities in Africa,
-            and thousands of students, families, entrepreneurs, creators, and
-            business owners rely on their phones every day… but many still lose
-            photos, videos, schoolwork, and business files due to phone theft,
-            damage, lost devices, or low storage.
+            Ghana is one of the fastest-growing digital communities in Africa, and
+            thousands of students, families, entrepreneurs, creators, and business
+            owners rely on their phones every day… but many still lose photos,
+            videos, schoolwork, and business files due to phone theft, damage, lost
+            devices, or low storage.
           </p>
 
           <p style={{ marginBottom: "0.75rem" }}>
-            That&apos;s exactly why <strong>Got Backup Tom B</strong> is expanding
-            into Ghana — to help protect people&apos;s memories AND give them a
-            chance to earn <strong>real residual income</strong> for only{" "}
+            That’s exactly why <strong>Got Backup Tom B</strong> is expanding into
+            Ghana — to help protect people’s memories AND give them a chance to earn{" "}
+            <strong>real residual income</strong> for only{" "}
             <strong>$9.97/month</strong>.
           </p>
 
@@ -225,7 +231,9 @@ export default function App() {
             <li>Automatic backups for phones &amp; computers</li>
             <li>24/7 access to all your files</li>
             <li>Earn weekly commissions as an affiliate</li>
-            <li>Perfect for students (WASSCE), families, businesses &amp; creators</li>
+            <li>
+              Perfect for students (WASSCE), families, businesses &amp; creators
+            </li>
           </ul>
 
           <h3
@@ -247,8 +255,8 @@ export default function App() {
               everything.
             </li>
             <li>
-              Perfect for WASSCE students, teachers, youth groups, ministries,
-              and entrepreneurs.
+              Perfect for WASSCE students, teachers, youth groups, ministries, and
+              entrepreneurs.
             </li>
           </ul>
 
@@ -280,3 +288,5 @@ export default function App() {
     </main>
   );
 }
+
+           
