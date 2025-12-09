@@ -1,5 +1,8 @@
-// src/App.jsx — Featured video + Join button + Featured Links + Ghana section
+// src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo toggle
+
+import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
+import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 
 export default function App() {
   // ——— editable constants ———
@@ -11,6 +14,35 @@ export default function App() {
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
+
+  // ✅ Solo mode toggle state
+  const [mode, setMode] = useState("home");
+
+  // ✅ If Solo mode is active, show the Solo game instead of the homepage
+  if (mode === "solo") {
+    return (
+      <div>
+        <div style={{ padding: 12 }}>
+          <button
+            onClick={() => setMode("home")}
+            style={{
+              padding: "10px 14px",
+              borderRadius: 10,
+              fontWeight: 700,
+              border: "1px solid #ddd",
+              background: "#fff",
+              cursor: "pointer",
+              boxShadow: "0 4px 10px rgba(0,0,0,.12)",
+            }}
+          >
+            ← Back to Home
+          </button>
+        </div>
+
+        <MessedUpGameSoloVsComputer />
+      </div>
+    );
+  }
 
   const links = [
     {
@@ -91,12 +123,36 @@ export default function App() {
     <main>
       {/* Optional tiny nav */}
       <nav style={{ maxWidth: 1100, margin: "8px auto 0", padding: "8px 16px" }}>
-        <a href="/" style={{ marginRight: 12, color: "#fff", textDecoration: "none" }}>
+        <a
+          href="/"
+          style={{ marginRight: 12, color: "#fff", textDecoration: "none" }}
+        >
           Home
         </a>
-        <a href="/newsletter/" style={{ color: "#7bdff6", textDecoration: "none" }}>
+        <a
+          href="/newsletter/"
+          style={{ color: "#7bdff6", textDecoration: "none" }}
+        >
           Newsletter
         </a>
+
+        {/* ✅ Solo button (toggle approach) */}
+        <button
+          onClick={() => setMode("solo")}
+          style={{
+            marginLeft: 12,
+            padding: "6px 10px",
+            borderRadius: 10,
+            fontWeight: 800,
+            border: "1px solid rgba(255,255,255,.5)",
+            background: "transparent",
+            color: "#fff",
+            cursor: "pointer",
+          }}
+          title="Play Solo vs Computer"
+        >
+          Play Solo
+        </button>
       </nav>
 
       {/* HERO: Featured video + CTAs */}
@@ -143,6 +199,15 @@ export default function App() {
             >
               Sign up to play
             </a>
+
+            {/* ✅ Optional extra solo CTA in hero row */}
+            <button
+              onClick={() => setMode("solo")}
+              style={btnGhost}
+              title="Play Solo vs Computer"
+            >
+              Play Solo
+            </button>
           </div>
 
           <div style={small}>
@@ -288,5 +353,3 @@ export default function App() {
     </main>
   );
 }
-
-           
