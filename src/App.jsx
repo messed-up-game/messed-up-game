@@ -1,6 +1,5 @@
-// src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo toggle
+// src/App.jsx — Featured video + Join button + Featured Links + Ghana section
 
-import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 
 export default function App() {
@@ -9,39 +8,10 @@ export default function App() {
   const FEATURE_VIDEO_ID = "AgnyMhlyxBY"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
-  // New: signup form + contact email
+  // Signup form + contact email
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
-
-  // ✅ Solo mode toggle state
-  const [mode, setMode] = useState("home");
-
-  // ✅ If Solo mode is active, show the Solo game instead of the homepage
-  if (mode === "solo") {
-    return (
-      <div>
-        <div style={{ padding: 12 }}>
-          <button
-            onClick={() => setMode("home")}
-            style={{
-              padding: "10px 14px",
-              borderRadius: 10,
-              fontWeight: 700,
-              border: "1px solid #ddd",
-              background: "#fff",
-              cursor: "pointer",
-              boxShadow: "0 4px 10px rgba(0,0,0,.12)",
-            }}
-          >
-            ← Back to Home
-          </button>
-        </div>
-
-        <MessedUpGameSoloVsComputer />
-      </div>
-    );
-  }
 
   const links = [
     {
@@ -98,13 +68,13 @@ export default function App() {
     color: "#111",
     textDecoration: "none",
     fontWeight: 800,
-    boxShadow: "0 4px 12px rgba(0,0,0,.25)",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)",
   };
   const btnGhost = {
     ...btn,
     background: "transparent",
     color: "#fff",
-    border: "1px solid rgba(255,255,255,.5)",
+    border: "1px solid rgba(255, 255, 255, 0.5)",
   };
   const videoWrap = {
     width: "min(960px, 92vw)",
@@ -112,7 +82,7 @@ export default function App() {
     margin: "16px auto 8px",
     borderRadius: 14,
     overflow: "hidden",
-    boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+    boxShadow: "0 10px 24px rgba(0, 0, 0, 0.35)",
     background: "#000",
   };
   const iframe = { width: "100%", height: "100%", border: 0 };
@@ -135,20 +105,26 @@ export default function App() {
           Newsletter
         </a>
 
-        {/* ✅ Solo button (toggle approach) */}
+        {/* Solo button – for now, send to signup form */}
         <button
-          onClick={() => setMode("solo")}
+          onClick={() =>
+            window.open(
+              SIGNUP_FORM_URL,
+              "_blank",
+              "noopener,noreferrer"
+            )
+          }
           style={{
             marginLeft: 12,
             padding: "6px 10px",
             borderRadius: 10,
             fontWeight: 800,
-            border: "1px solid rgba(255,255,255,.5)",
+            border: "1px solid rgba(255, 255, 255, 0.5)",
             background: "transparent",
             color: "#fff",
             cursor: "pointer",
           }}
-          title="Play Solo vs Computer"
+          title="Play Solo vs Computer (coming soon)"
         >
           Play Solo
         </button>
@@ -198,15 +174,6 @@ export default function App() {
             >
               Sign up to play
             </a>
-
-            {/* ✅ Optional extra solo CTA in hero row */}
-            <button
-              onClick={() => setMode("solo")}
-              style={btnGhost}
-              title="Play Solo vs Computer"
-            >
-              Play Solo
-            </button>
           </div>
 
           <div style={small}>
@@ -215,8 +182,7 @@ export default function App() {
           </div>
           <div style={small}>
             Click “Sign up to play” and fill out the short sign-up form with your
-            name and best time to play. Tom will email you your private join
-            link.
+            name and best time to play. Tom will email you your private join link.
           </div>
           <div style={small}>
             Prefer email? Contact Tom directly at{" "}
@@ -269,14 +235,14 @@ export default function App() {
             Ghana is one of the fastest-growing digital communities in Africa, and
             thousands of students, families, entrepreneurs, creators, and business
             owners rely on their phones every day… but many still lose photos,
-            videos, schoolwork, and business files due to phone theft, damage, lost
-            devices, or low storage.
+            videos, schoolwork, and business files due to phone theft, damage,
+            lost devices, or low storage.
           </p>
 
           <p style={{ marginBottom: "0.75rem" }}>
             That’s exactly why <strong>Got Backup Tom B</strong> is expanding into
-            Ghana — to help protect people’s memories AND give them a chance to earn{" "}
-            <strong>real residual income</strong> for only{" "}
+            Ghana — to help protect people’s memories AND give them a chance to
+            earn <strong>real residual income</strong> for only{" "}
             <strong>$9.97/month</strong>.
           </p>
 
