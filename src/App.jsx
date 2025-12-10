@@ -91,7 +91,15 @@ export default function App() {
   return (
     <main>
       {/* Optional tiny nav */}
-      <nav style={{ maxWidth: 1100, margin: "8px auto 0", padding: "8px 16px" }}>
+      <nav
+        style={{
+          maxWidth: 1100,
+          margin: "8px auto 0",
+          padding: "8px 16px",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <a
           href="/"
           style={{ marginRight: 12, color: "#fff", textDecoration: "none" }}
@@ -105,7 +113,10 @@ export default function App() {
           Newsletter
         </a>
 
-        {/* Solo button – for now, send to signup form */}
+        {/* spacer pushes button to the right */}
+        <div style={{ flex: 1 }} />
+
+        {/* Play Solo – opens the signup form in a new tab */}
         <button
           onClick={() =>
             window.open(
@@ -115,11 +126,10 @@ export default function App() {
             )
           }
           style={{
-            marginLeft: 12,
-            padding: "6px 10px",
+            padding: "6px 12px",
             borderRadius: 10,
             fontWeight: 800,
-            border: "1px solid rgba(255, 255, 255, 0.5)",
+            border: "1px solid rgba(255,255,255,.5)",
             background: "transparent",
             color: "#fff",
             cursor: "pointer",
