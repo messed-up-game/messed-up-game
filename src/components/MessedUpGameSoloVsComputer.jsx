@@ -51,7 +51,7 @@ export default function MessedUpGameSoloVsComputer() {
   const [strikes, setStrikes] = useState(0);
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState(
-    "Type something that fits the category and press Enter or Submit."
+    "Type an answer that fits the category. YOU decide if it’s good. 3 strikes and the round is over."
   );
   const [gameOver, setGameOver] = useState(false);
 
@@ -69,6 +69,7 @@ export default function MessedUpGameSoloVsComputer() {
 
     const key = `${category.toLowerCase()}::${trimmed.toLowerCase()}`;
 
+    // ❌ strike for repeat answers
     if (usedAnswers.includes(key)) {
       const newStrikes = strikes + 1;
       setStrikes(newStrikes);
@@ -76,21 +77,24 @@ export default function MessedUpGameSoloVsComputer() {
         setGameOver(true);
         setMessage("❌ 3 strikes — game over! Click 'Play Again' to start fresh.");
       } else {
-        setMessage(`❌ Already used that answer for this category. Strike ${newStrikes}!`);
+        setMessage(`❌ Already used that answer. Strike ${newStrikes}!`);
       }
-    } else {
-      setUsedAnswers((prev) => [...prev, key]);
-      setScore((prev) => prev + 1);
-      setMessage("✅ Nice one! That counts. Try another or change category.");
+      setAnswer("");
+      return;
     }
 
+    // ✅ we count every new, unique answer as correct.
+    // The player decides in their head if it really fits the category.
+    setUsedAnswers((prev) => [...prev, key]);
+    setScore((prev) => prev + 1);
+    setMessage("✅ Nice one! If it fits the category, keep going. If not, give yourself a strike.");
     setAnswer("");
   };
 
   const handleNextCategory = () => {
     if (gameOver) return;
     setCategory((current) => getRandomCategory(current));
-    setMessage("🔁 New category! Enter a new answer.");
+    setMessage("🔁 New category! Type an answer and then judge yourself fairly.");
   };
 
   const handlePlayAgain = () => {
@@ -99,8 +103,22 @@ export default function MessedUpGameSoloVsComputer() {
     setUsedAnswers([]);
     setStrikes(0);
     setScore(0);
-    setMessage("New game! Type an answer that fits the category.");
+    setMessage(
+      "New game! Type answers that fit the category. Don’t repeat. 3 strikes and you’re out."
+    );
     setGameOver(false);
+  };
+
+  const giveYourselfStrike = () => {
+    if (gameOver) return;
+    const newStrikes = strikes + 1;
+    setStrikes(newStrikes);
+    if (newStrikes >= maxStrikes) {
+      setGameOver(true);
+      setMessage("❌ You gave yourself 3 strikes — game over! Click 'Play Again' to start fresh.");
+    } else {
+      setMessage(`❌ Strike ${newStrikes}! Be honest with yourself — that’s how your brain grows.`);
+    }
   };
 
   const wrapper = {
@@ -147,6 +165,7 @@ export default function MessedUpGameSoloVsComputer() {
     flexWrap: "wrap",
     marginBottom: "1rem",
     fontSize: 14,
+    alignItems: "center",
   };
 
   const statPill = {
@@ -202,6 +221,8 @@ export default function MessedUpGameSoloVsComputer() {
     opacity: 0.95,
   };
 
+  const strikeIcons = "❌".repeat(strikes) + "⭘".repeat(maxStrikes - strikes);
+
   return (
     <section
       style={{
@@ -217,8 +238,8 @@ export default function MessedUpGameSoloVsComputer() {
           <div style={{ marginBottom: "0.5rem" }}>
             <div style={heading}>Solo Practice Mode</div>
             <div style={subheading}>
-              Type answers that fit the category. Don’t repeat yourself. 3 strikes
-              and the round is over!
+              Practice your Messed Up Game brain — no host needed. Don’t repeat
+              answers. Be honest when you deserve a strike.
             </div>
           </div>
 
@@ -229,12 +250,9 @@ export default function MessedUpGameSoloVsComputer() {
 
           <div style={statsRow}>
             <div style={statPill}>✅ Score: {score}</div>
-            <div style={statPill}>
-              ❌ Strikes: {strikes} / {maxStrikes}
-            </div>
-            <div style={statPill}>
-              🧠 Unique answers: {usedAnswers.length}
-            </div>
+            <div style={statPill}>❌ Strikes: {strikes} / {maxStrikes}</div>
+            <div style={statPill}>🧠 Unique answers: {usedAnswers.length}</div>
+            <div style={{ fontSize: 18 }}>{strikeIcons}</div>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -264,6 +282,14 @@ export default function MessedUpGameSoloVsComputer() {
                 >
                   New Category
                 </button>
+                <button
+                  type="button"
+                  style={ghostBtn}
+                  onClick={giveYourselfStrike}
+                  disabled={gameOver}
+                >
+                  Give Myself a Strike
+                </button>
                 {gameOver && (
                   <button
                     type="button"
@@ -283,4 +309,3 @@ export default function MessedUpGameSoloVsComputer() {
     </section>
   );
 }
-
