@@ -31,6 +31,43 @@ const CATEGORIES = [
   "Board Games",
   "Christmas Movies",
 ];
+// Simple word lists so the computer can auto-judge a few categories
+const WORD_LISTS = {
+  Fruits: [
+    "apple",
+    "banana",
+    "orange",
+    "grape",
+    "strawberry",
+    "blueberry",
+    "raspberry",
+    "blackberry",
+    "watermelon",
+    "cantaloupe",
+    "honeydew",
+    "pear",
+    "peach",
+    "plum",
+    "cherry",
+    "pineapple",
+    "mango",
+    "kiwi",
+    "papaya",
+    "grapefruit",
+    "lemon",
+    "lime",
+    "apricot",
+    "pomegranate",
+    "coconut",
+  ],
+};
+
+function isObviouslyWrong(category, answer) {
+  const list = WORD_LISTS[category];
+  if (!list) return null; // this category has no dictionary – player self-judges
+  const normalized = answer.trim().toLowerCase();
+  return !list.includes(normalized);
+}
 
 function getRandomCategory(current) {
   if (CATEGORIES.length === 1) return CATEGORIES[0];
@@ -57,15 +94,60 @@ export default function MessedUpGameSoloVsComputer() {
 
   const maxStrikes = 3;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (gameOver) return;
+ const handleSubmit = (e) => {
+  e.preventDefault();
+  if (gameOver) return;
 
-    const trimmed = answer.trim();
-    if (!trimmed) {
-      setMessage("⚠️ Please type an answer first.");
-      return;
+  const trimmed = answer.trim();
+  if (!trimmed) {
+    setMessage("⚠️ Please type an answer first.");
+    return;
+  }
+
+  const key = `${category.toLowerCase()}::${trimmed.toLowerCase()}`;
+
+  // ❌ strike for repeat answers
+  if (usedAnswers.includes(key)) {
+    const newStrikes = strikes + 1;
+    setStrikes(newStrikes);
+    if (newStrikes >= maxStrikes) {
+      setGameOver(true);
+      setMessage("❌ 3 strikes — game over! Click 'Play Again' to start fresh.");
+    } else {
+      setMessage(`❌ Already used that answer. Strike ${newStrikes}!`);
     }
+    setAnswer("");
+    return;
+  }
+
+  // 👀 Check if this is obviously wrong for categories we know (like Fruits)
+  const wrongForCategory = isObviouslyWrong(category, trimmed);
+  if (wrongForCategory === true) {
+    // auto-strike for things like "steak" when the category is Fruits
+    const newStrikes = strikes + 1;
+    setStrikes(newStrikes);
+    if (newStrikes >= maxStrikes) {
+      setGameOver(true);
+      setMessage(
+        "❌ That doesn’t look like it fits this category. 3 strikes — game over!"
+      );
+    } else {
+      setMessage(
+        `❌ "${trimmed}" doesn’t look like it fits "${category}". Strike ${newStrikes}!`
+      );
+    }
+    setAnswer("");
+    return;
+  }
+
+  // ✅ Otherwise, treat as a good unique answer
+  setUsedAnswers((prev) => [...prev, key]);
+  setScore((prev) => prev + 1);
+  setMessage(
+    "✅ Nice one! If it fits the category, keep going. If not, give yourself a strike."
+  );
+  setAnswer("");
+};
 
     const key = `${category.toLowerCase()}::${trimmed.toLowerCase()}`;
 
