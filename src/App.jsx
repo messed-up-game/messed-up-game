@@ -1,6 +1,8 @@
-// src/App.jsx — Featured video + Join button + Featured Links + Ghana section
+// src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
 
+import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
+import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 
 export default function App() {
   // ——— editable constants ———
@@ -13,6 +15,54 @@ export default function App() {
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
+  // Solo / home toggle
+  const [mode, setMode] = useState("home"); // "home" | "solo"
+
+  // ——— Solo mode screen ———
+  if (mode === "solo") {
+    return (
+      <main
+        style={{
+          minHeight: "100vh",
+          backgroundColor: "#020617",
+          color: "white",
+        }}
+      >
+        <nav
+          style={{
+            maxWidth: 1100,
+            margin: "8px auto 0",
+            padding: "8px 16px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <button
+            onClick={() => setMode("home")}
+            style={{
+              padding: "6px 12px",
+              borderRadius: 10,
+              fontWeight: 800,
+              border: "1px solid rgba(255,255,255,.5)",
+              background: "transparent",
+              color: "#fff",
+              cursor: "pointer",
+              marginRight: 12,
+            }}
+          >
+            ← Back to Home
+          </button>
+          <span style={{ fontSize: 14, opacity: 0.85 }}>
+            Solo practice mode • Messed Up Game with Wildman Tom B
+          </span>
+        </nav>
+
+        <MessedUpGameSoloVsComputer />
+      </main>
+    );
+  }
+
+  // ——— Home page data ———
   const links = [
     {
       title: "Newsletter",
@@ -116,15 +166,9 @@ export default function App() {
         {/* spacer pushes button to the right */}
         <div style={{ flex: 1 }} />
 
-        {/* Play Solo – opens the signup form in a new tab */}
+        {/* Play Solo – switches into solo mode */}
         <button
-          onClick={() =>
-            window.open(
-              SIGNUP_FORM_URL,
-              "_blank",
-              "noopener,noreferrer"
-            )
-          }
+          onClick={() => setMode("solo")}
           style={{
             padding: "6px 12px",
             borderRadius: 10,
@@ -134,7 +178,7 @@ export default function App() {
             color: "#fff",
             cursor: "pointer",
           }}
-          title="Play Solo vs Computer (coming soon)"
+          title="Play Solo vs Computer"
         >
           Play Solo
         </button>
@@ -328,3 +372,7 @@ export default function App() {
     </main>
   );
 }
+
+   
+    
+    
