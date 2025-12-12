@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+// All categories used in solo mode
 const CATEGORIES = [
   "Colors",
   "Animals",
@@ -31,43 +32,45 @@ const CATEGORIES = [
   "Board Games",
   "Christmas Movies",
 ];
-// Simple word lists so the computer can auto-judge a few categories
-const WORD_LISTS = {
-  Fruits: [
+
+// Optional built-in answer lists (only Fruits for now)
+const VALID_ANSWERS = {
+  Fruits: new Set([
     "apple",
     "banana",
     "orange",
-    "grape",
-    "strawberry",
-    "blueberry",
-    "raspberry",
-    "blackberry",
-    "watermelon",
-    "cantaloupe",
-    "honeydew",
     "pear",
+    "grape",
+    "grapes",
+    "strawberry",
+    "strawberries",
+    "blueberry",
+    "blueberries",
+    "raspberry",
+    "raspberries",
+    "blackberry",
+    "blackberries",
     "peach",
     "plum",
     "cherry",
-    "pineapple",
+    "cherries",
+    "watermelon",
+    "cantaloupe",
+    "honeydew",
     "mango",
+    "pineapple",
     "kiwi",
     "papaya",
-    "grapefruit",
-    "lemon",
-    "lime",
-    "apricot",
     "pomegranate",
-    "coconut",
-  ],
+    "apricot",
+    "nectarine",
+    "lime",
+    "lemon",
+    "grapefruit",
+    "tangerine",
+    "clementine",
+  ]),
 };
-
-function isObviouslyWrong(category, answer) {
-  const list = WORD_LISTS[category];
-  if (!list) return null; // this category has no dictionary – player self-judges
-  const normalized = answer.trim().toLowerCase();
-  return !list.includes(normalized);
-}
 
 function getRandomCategory(current) {
   if (CATEGORIES.length === 1) return CATEGORIES[0];
@@ -88,66 +91,21 @@ export default function MessedUpGameSoloVsComputer() {
   const [strikes, setStrikes] = useState(0);
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState(
-    "Type an answer that fits the category. YOU decide if it’s good. 3 strikes and the round is over."
+    "Type an answer that fits the category. Don’t repeat answers. 3 strikes and the round is over."
   );
   const [gameOver, setGameOver] = useState(false);
 
   const maxStrikes = 3;
 
- const handleSubmit = (e) => {
-  e.preventDefault();
-  if (gameOver) return;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (gameOver) return;
 
-  const trimmed = answer.trim();
-  if (!trimmed) {
-    setMessage("⚠️ Please type an answer first.");
-    return;
-  }
-
-  const key = `${category.toLowerCase()}::${trimmed.toLowerCase()}`;
-
-  // ❌ strike for repeat answers
-  if (usedAnswers.includes(key)) {
-    const newStrikes = strikes + 1;
-    setStrikes(newStrikes);
-    if (newStrikes >= maxStrikes) {
-      setGameOver(true);
-      setMessage("❌ 3 strikes — game over! Click 'Play Again' to start fresh.");
-    } else {
-      setMessage(`❌ Already used that answer. Strike ${newStrikes}!`);
+    const trimmed = answer.trim();
+    if (!trimmed) {
+      setMessage("⚠️ Please type an answer first.");
+      return;
     }
-    setAnswer("");
-    return;
-  }
-
-  // 👀 Check if this is obviously wrong for categories we know (like Fruits)
-  const wrongForCategory = isObviouslyWrong(category, trimmed);
-  if (wrongForCategory === true) {
-    // auto-strike for things like "steak" when the category is Fruits
-    const newStrikes = strikes + 1;
-    setStrikes(newStrikes);
-    if (newStrikes >= maxStrikes) {
-      setGameOver(true);
-      setMessage(
-        "❌ That doesn’t look like it fits this category. 3 strikes — game over!"
-      );
-    } else {
-      setMessage(
-        `❌ "${trimmed}" doesn’t look like it fits "${category}". Strike ${newStrikes}!`
-      );
-    }
-    setAnswer("");
-    return;
-  }
-
-  // ✅ Otherwise, treat as a good unique answer
-  setUsedAnswers((prev) => [...prev, key]);
-  setScore((prev) => prev + 1);
-  setMessage(
-    "✅ Nice one! If it fits the category, keep going. If not, give yourself a strike."
-  );
-  setAnswer("");
-};
 
     const key = `${category.toLowerCase()}::${trimmed.toLowerCase()}`;
 
@@ -157,7 +115,9 @@ export default function MessedUpGameSoloVsComputer() {
       setStrikes(newStrikes);
       if (newStrikes >= maxStrikes) {
         setGameOver(true);
-        setMessage("❌ 3 strikes — game over! Click 'Play Again' to start fresh.");
+        setMessage(
+          "❌ 3 strikes — game over! Click 'Play Again' to start a new round."
+        );
       } else {
         setMessage(`❌ Already used that answer. Strike ${newStrikes}!`);
       }
@@ -165,18 +125,62 @@ export default function MessedUpGameSoloVsComputer() {
       return;
     }
 
-    // ✅ we count every new, unique answer as correct.
-    // The player decides in their head if it really fits the category.
+    // 🔍 auto-check for Fruits
+    const validSet = VALID_ANSWERS[category];
+    if (validSet && !validSet.has(trimmed.toLowerCase())) {
+      const newStrikes = strikes + 1;
+      setStrikes(newStrikes);
+      if (newStrikes >= maxStrikes) {
+        setGameOver(true);
+        setMessage(
+          "❌ That doesn’t look like it fits this category. 3 strikes — game over!"
+        );
+      } else {
+        setMessage(
+          `❌ That probably doesn’t fit “${category}”. Strike ${newStrikes}!`
+        );
+      }
+      setAnswer("");
+      return;
+    }
+
+    // ✅ New, unique, acceptable answer
     setUsedAnswers((prev) => [...prev, key]);
     setScore((prev) => prev + 1);
-    setMessage("✅ Nice one! If it fits the category, keep going. If not, give yourself a strike.");
+
+    if (validSet) {
+      setMessage("✅ Nice one! That fits the category — keep going!");
+    } else {
+      setMessage(
+        "✅ Nice one! If it fits the category, keep going. If not, be honest and give yourself a strike."
+      );
+    }
+
     setAnswer("");
   };
 
   const handleNextCategory = () => {
     if (gameOver) return;
     setCategory((current) => getRandomCategory(current));
-    setMessage("🔁 New category! Type an answer and then judge yourself fairly.");
+    setMessage(
+      "🔁 New category! Type an answer and then judge yourself fairly."
+    );
+    setAnswer("");
+    setUsedAnswers([]);
+  };
+
+  const handleGiveStrike = () => {
+    if (gameOver) return;
+    const newStrikes = strikes + 1;
+    setStrikes(newStrikes);
+    if (newStrikes >= maxStrikes) {
+      setGameOver(true);
+      setMessage(
+        "❌ Honest call! That deserves a strike — and that was your 3rd. Game over!"
+      );
+    } else {
+      setMessage(`⚠️ Honest call. Strike ${newStrikes}. Keep going!`);
+    }
   };
 
   const handlePlayAgain = () => {
@@ -191,191 +195,201 @@ export default function MessedUpGameSoloVsComputer() {
     setGameOver(false);
   };
 
-  const giveYourselfStrike = () => {
-    if (gameOver) return;
-    const newStrikes = strikes + 1;
-    setStrikes(newStrikes);
-    if (newStrikes >= maxStrikes) {
-      setGameOver(true);
-      setMessage("❌ You gave yourself 3 strikes — game over! Click 'Play Again' to start fresh.");
-    } else {
-      setMessage(`❌ Strike ${newStrikes}! Be honest with yourself — that’s how your brain grows.`);
-    }
-  };
-
-  const wrapper = {
-    maxWidth: 900,
-    margin: "0 auto",
-    padding: "1.5rem 1rem 3rem",
+  // ——— styles ———
+  const page = {
+    minHeight: "100vh",
+    padding: "24px 12px 40px",
+    background: "radial-gradient(circle at top, #0f172a, #020617 55%)",
+    color: "#e5e7eb",
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
   };
 
   const card = {
+    maxWidth: 900,
+    margin: "0 auto",
+    background: "rgba(15, 23, 42, 0.95)",
     borderRadius: 18,
-    padding: "1.5rem 1.5rem 2rem",
-    background:
-      "linear-gradient(135deg, rgba(56,189,248,0.08), rgba(15,23,42,0.95))",
-    border: "1px solid rgba(148,163,184,0.5)",
-    boxShadow: "0 18px 40px rgba(0,0,0,0.45)",
+    padding: "22px 22px 26px",
+    boxShadow: "0 18px 40px rgba(0,0,0,.45)",
+    border: "1px solid rgba(148, 163, 184, 0.5)",
   };
 
-  const heading = {
-    fontSize: "1.8rem",
-    fontWeight: 800,
-    marginBottom: "0.25rem",
-  };
-
-  const subheading = {
-    fontSize: "1rem",
-    opacity: 0.9,
-    marginBottom: "1rem",
-  };
-
+  const title = { fontSize: 30, fontWeight: 800, marginBottom: 4 };
+  const subtitle = { opacity: 0.9, marginBottom: 18, lineHeight: 1.4 };
+  const categoryLabel = { fontSize: 16, marginBottom: 6, opacity: 0.9 };
   const categoryBox = {
-    marginTop: "0.5rem",
-    marginBottom: "1rem",
-    padding: "0.75rem 1rem",
-    borderRadius: 12,
-    background: "rgba(15,23,42,0.9)",
-    border: "1px solid rgba(148,163,184,0.6)",
-    fontSize: "1.3rem",
+    padding: "10px 14px",
+    borderRadius: 10,
+    background: "rgba(15,23,42,.8)",
+    border: "1px solid rgba(148,163,184,.5)",
+    fontSize: 18,
     fontWeight: 700,
   };
 
   const statsRow = {
     display: "flex",
-    gap: 16,
     flexWrap: "wrap",
-    marginBottom: "1rem",
-    fontSize: 14,
-    alignItems: "center",
+    gap: 12,
+    marginTop: 14,
+    marginBottom: 14,
   };
 
   const statPill = {
-    padding: "6px 10px",
+    padding: "6px 12px",
     borderRadius: 999,
-    background: "rgba(15,23,42,0.85)",
-    border: "1px solid rgba(148,163,184,0.5)",
+    fontSize: 14,
+    display: "flex",
+    alignItems: "center",
+    gap: 6,
+    background: "rgba(15,23,42,0.9)",
+    border: "1px solid rgba(148,163,184,.5)",
   };
 
-  const inputRow = {
+  const formRow = {
     display: "flex",
     flexWrap: "wrap",
     gap: 10,
-    marginTop: "0.75rem",
+    marginTop: 12,
   };
 
-  const inputStyle = {
+  const input = {
     flex: 1,
-    minWidth: 200,
+    minWidth: 220,
     padding: "10px 12px",
     borderRadius: 10,
-    border: "1px solid rgba(148,163,184,0.7)",
-    fontSize: 16,
+    border: "1px solid rgba(148,163,184,.7)",
+    background: "rgba(15,23,42,0.9)",
+    color: "#e5e7eb",
+    fontSize: 15,
   };
 
-  const primaryBtn = {
+  const primaryButton = {
     padding: "10px 16px",
     borderRadius: 10,
     border: "none",
-    background: "#38bdf8",
-    color: "#0b1120",
+    background: "#0ea5e9",
+    color: "#0f172a",
     fontWeight: 800,
-    fontSize: 15,
     cursor: "pointer",
     minWidth: 110,
   };
 
-  const ghostBtn = {
-    padding: "10px 16px",
+  const secondaryButton = {
+    padding: "10px 14px",
     borderRadius: 10,
-    border: "1px solid rgba(148,163,184,0.7)",
-    background: "transparent",
+    border: "1px solid rgba(148,163,184,.7)",
+    background: "rgba(15,23,42,0.9)",
     color: "#e5e7eb",
     fontWeight: 700,
-    fontSize: 14,
     cursor: "pointer",
-    minWidth: 130,
+    minWidth: 140,
   };
 
   const messageStyle = {
-    marginTop: "0.75rem",
+    marginTop: 14,
     fontSize: 14,
+    lineHeight: 1.4,
     opacity: 0.95,
   };
 
-  const strikeIcons = "❌".repeat(strikes) + "⭘".repeat(maxStrikes - strikes);
+  const backRow = {
+    padding: "10px 12px 4px",
+    maxWidth: 900,
+    margin: "0 auto",
+  };
+
+  const backButton = {
+    padding: "8px 14px",
+    borderRadius: 999,
+    border: "1px solid rgba(148,163,184,.7)",
+    background: "rgba(15,23,42,0.95)",
+    color: "#e5e7eb",
+    fontWeight: 600,
+    cursor: "pointer",
+    fontSize: 14,
+  };
 
   return (
-    <section
-      style={{
-        padding: "1.5rem 1rem 3rem",
-        background:
-          "radial-gradient(circle at top, rgba(56,189,248,0.35), transparent 55%), #020617",
-        color: "white",
-        minHeight: "calc(100vh - 60px)",
-      }}
-    >
-      <div style={wrapper}>
-        <div style={card}>
-          <div style={{ marginBottom: "0.5rem" }}>
-            <div style={heading}>Solo Practice Mode</div>
-            <div style={subheading}>
-              Practice your Messed Up Game brain — no host needed. Don’t repeat
-              answers. Be honest when you deserve a strike.
-            </div>
-          </div>
+    <section style={page}>
+      <div style={backRow}>
+        <button
+          type="button"
+          style={backButton}
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
+          ← Back to Home
+        </button>
+      </div>
 
-          <div>
-            <div style={{ fontSize: 14, opacity: 0.85 }}>Current category</div>
-            <div style={categoryBox}>{category}</div>
-          </div>
+      <div style={card}>
+        <h1 style={title}>Solo Practice Mode</h1>
+        <p style={subtitle}>
+          Practice your Messed Up Game brain — no host needed. Don’t repeat
+          answers. Be honest when you deserve a strike.
+        </p>
+
+        <div>
+          <div style={categoryLabel}>Current category</div>
+          <div style={categoryBox}>{category}</div>
 
           <div style={statsRow}>
             <div style={statPill}>✅ Score: {score}</div>
-            <div style={statPill}>❌ Strikes: {strikes} / {maxStrikes}</div>
-            <div style={statPill}>🧠 Unique answers: {usedAnswers.length}</div>
-            <div style={{ fontSize: 18 }}>{strikeIcons}</div>
+            <div style={statPill}>
+              ❌ Strikes: {strikes} / {maxStrikes}
+            </div>
+            <div style={statPill}>
+              🧠 Unique answers: {usedAnswers.length}
+            </div>
           </div>
 
           <form onSubmit={handleSubmit}>
-            <label style={{ fontSize: 14, opacity: 0.9 }}>
-              Your answer:
-              <div style={inputRow}>
+            <label style={{ display: "block", marginTop: 8 }}>
+              <span style={{ fontSize: 14, opacity: 0.9 }}>Your answer:</span>
+              <div style={formRow}>
                 <input
-                  type="text"
+                  style={input}
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
-                  style={inputStyle}
-                  placeholder="Type something that fits the category…"
                   disabled={gameOver}
+                  placeholder="Type your answer and hit Enter or Submit"
                 />
+
                 <button
                   type="submit"
-                  style={primaryBtn}
+                  style={primaryButton}
                   disabled={gameOver}
                 >
                   Submit
                 </button>
+
                 <button
                   type="button"
-                  style={ghostBtn}
+                  style={secondaryButton}
                   onClick={handleNextCategory}
                   disabled={gameOver}
                 >
                   New Category
                 </button>
+
                 <button
                   type="button"
-                  style={ghostBtn}
-                  onClick={giveYourselfStrike}
+                  style={secondaryButton}
+                  onClick={handleGiveStrike}
                   disabled={gameOver}
                 >
                   Give Myself a Strike
                 </button>
+
                 {gameOver && (
                   <button
                     type="button"
-                    style={primaryBtn}
+                    style={{
+                      ...primaryButton,
+                      background: "#22c55e",
+                      color: "#022c22",
+                    }}
                     onClick={handlePlayAgain}
                   >
                     Play Again
