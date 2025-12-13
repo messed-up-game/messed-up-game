@@ -156,32 +156,30 @@ export default function App() {
         >
           Home
         </a>
-        <a
-          href="/newsletter/"
-          style={{ color: "#7bdff6", textDecoration: "none" }}
-        >
-          Newsletter
-        </a>
+        <a href="/newsletter/" style={{ color: "#000", textDecoration: "none" }}>
+  Newsletter
+</a>
 
         {/* spacer pushes button to the right */}
         <div style={{ flex: 1 }} />
 
         {/* Play Solo – switches into solo mode */}
-        <button
-          onClick={() => setMode("solo")}
-          style={{
-            padding: "6px 12px",
-            borderRadius: 10,
-            fontWeight: 800,
-            border: "1px solid rgba(255,255,255,.5)",
-            background: "transparent",
-            color: "#fff",
-            cursor: "pointer",
-          }}
-          title="Play Solo vs Computer"
-        >
-          Play Solo
-        </button>
+<button
+  onClick={() => setMode("solo")}
+  style={{
+    marginLeft: 12,
+    padding: "6px 10px",
+    borderRadius: 10,
+    fontWeight: 800,
+    border: "1px solid rgba(0,0,0,.35)",
+    background: "transparent",
+    color: "#000",
+    cursor: "pointer",
+  }}
+>
+  Play Solo
+</button>
+        
       </nav>
 
       {/* HERO: Featured video + CTAs */}
