@@ -1,7 +1,6 @@
 // src/components/MessedUpGameSoloVsComputer.jsx
 
 import { useState } from "react";
-
 // All categories used in solo mode
 const CATEGORIES = [
   "Colors",
@@ -70,9 +69,73 @@ const VALID_ANSWERS = {
     "tangerine",
     "clementine",
   ]),
+
+  Animals: new Set([
+    "dog",
+    "cat",
+    "horse",
+    "cow",
+    "pig",
+    "sheep",
+    "goat",
+    "chicken",
+    "duck",
+    "turkey",
+    "lion",
+    "tiger",
+    "bear",
+    "elephant",
+    "giraffe",
+    "zebra",
+  ]),
+
+  "Breakfast Foods": new Set([
+    "eggs",
+    "bacon",
+    "sausage",
+    "toast",
+    "bagel",
+    "pancakes",
+    "waffles",
+    "cereal",
+    "oatmeal",
+    "yogurt",
+    "hash browns",
+    "breakfast burrito",
+    "coffee",
+    "orange juice",
+  ]),
+
+  Cookies: new Set([
+    "chocolate chip",
+    "oatmeal raisin",
+    "peanut butter",
+    "sugar cookie",
+    "snickerdoodle",
+    "gingerbread",
+    "shortbread",
+    "oreo",
+  ]),
+
+  "Board Games": new Set([
+    "chess",
+    "checkers",
+    "monopoly",
+    "scrabble",
+    "clue",
+    "sorry",
+    "risk",
+    "pictionary",
+    "battleship",
+    "connect four",
+    "yahtzee",
+    "catan",
+    "ticket to ride",
+  ]),
 };
 
 function getRandomCategory(current) {
+
   if (CATEGORIES.length === 1) return CATEGORIES[0];
   let next = current;
   while (!next || next === current) {
