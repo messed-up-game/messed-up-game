@@ -30,6 +30,7 @@ const CATEGORIES = [
   "Family Members",
   "Board Games",
   "Christmas Movies",
+  "Books of the New Testament"
 ];
 
 // Optional built-in answer lists (only Fruits for now)
