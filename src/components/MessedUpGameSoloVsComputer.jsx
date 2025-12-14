@@ -32,8 +32,7 @@ const CATEGORIES = [
   "Christmas Movies",
   "Books of the New Testament"
 ];
-
-// Optional built-in answer lists (only Fruits for now)
+// Optional built-in answer lists (auto-check for some categories)
 const VALID_ANSWERS = {
     "Ice Cream Flavors": new Set([
     "vanilla",
