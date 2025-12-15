@@ -34,6 +34,27 @@ const CATEGORIES = [
 ];
 // Optional built-in answer lists (auto-check for some categories)
 const VALID_ANSWERS = {
+  const OBVIOUS_WRONG = new Set([
+  "steak",
+  "pork",
+  "beef",
+  "chicken",
+  "california",
+  "texas",
+  "utah",
+  "monopoly",
+  "scrabble",
+  "vanilla",
+  "chocolate",
+  "apple",
+  "banana",
+  "orange",
+  "matthew",
+  "mark",
+  "luke",
+  "john",
+]);
+
     "Ice Cream Flavors": new Set([
     "vanilla",
     "chocolate",
@@ -260,6 +281,20 @@ export default function MessedUpGameSoloVsComputer() {
 
     // 🔍 auto-check for Fruits
     const validSet = VALID_ANSWERS[category];
+        // 🚫 Light sanity check for categories we don't auto-validate (like Bathroom)
+    if (!validSet && OBVIOUS_WRONG.has(trimmed.toLowerCase())) {
+      const newStrikes = strikes + 1;
+      setStrikes(newStrikes);
+      if (newStrikes >= maxStrikes) {
+        setGameOver(true);
+        setMessage("❌ That clearly doesn’t fit. 3 strikes — game over!");
+      } else {
+        setMessage(`❌ That clearly doesn’t fit “${category}”. Strike ${newStrikes}!`);
+      }
+      setAnswer("");
+      return;
+    }
+
     if (validSet && !validSet.has(trimmed.toLowerCase())) {
       const newStrikes = strikes + 1;
       setStrikes(newStrikes);
