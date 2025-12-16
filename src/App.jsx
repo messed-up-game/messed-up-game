@@ -7,7 +7,7 @@ import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer"
 export default function App() {
   // ——— editable constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
-  const FEATURE_VIDEO_ID = "stZm5AH791I";// featured video
+  const FEATURE_VIDEO_ID = "stZm5AH791I"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
   // Signup form + contact email
@@ -18,359 +18,203 @@ export default function App() {
   // Solo / home toggle
   const [mode, setMode] = useState("home"); // "home" | "solo"
 
+  // ——— Home page data ———
+  const links = [
+    { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
+    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
+    { title: "Messed Up Game — Sign Up", href: SIGNUP_FORM_URL, desc: "Fill out the form to play" },
+    { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
+  ];
+
+  // ——— shared styles ———
+  const pageStyle = {
+    minHeight: "100vh",
+    backgroundColor: "#020617",
+    color: "white",
+    padding: "24px 16px",
+  };
+
+  const containerStyle = { maxWidth: 1100, margin: "0 auto" };
+
+  const buttonStyle = {
+    background: "#22c55e",
+    color: "#041b0a",
+    border: "none",
+    padding: "12px 16px",
+    borderRadius: 12,
+    fontWeight: 800,
+    cursor: "pointer",
+  };
+
+  const ghostButtonStyle = {
+    background: "transparent",
+    color: "white",
+    border: "1px solid rgba(255,255,255,.2)",
+    padding: "10px 14px",
+    borderRadius: 12,
+    fontWeight: 700,
+    cursor: "pointer",
+  };
+
   // ——— Solo mode screen ———
   if (mode === "solo") {
     return (
-      <main
-        style={{
-          minHeight: "100vh",
-          backgroundColor: "#020617",
-          color: "white",
-        }}
-      >
-        <nav
-          style={{
-            maxWidth: 1100,
-            margin: "8px auto 0",
-            padding: "8px 16px",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <button
-            onClick={() => setMode("home")}
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
             style={{
-              padding: "6px 12px",
-              borderRadius: 10,
-              fontWeight: 800,
-              border: "1px solid rgba(255,255,255,.5)",
-              background: "transparent",
-              color: "#fff",
-              cursor: "pointer",
-              marginRight: 12,
+              display: "flex",
+              gap: 10,
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginBottom: 16,
             }}
           >
-            ← Back to Home
-          </button>
-          <span style={{ fontSize: 14, opacity: 0.85 }}>
-            Solo practice mode • Messed Up Game with Wildman Tom B
-          </span>
-        </nav>
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
 
-        <MessedUpGameSoloVsComputer />
+            <div style={{ display: "flex", gap: 10 }}>
+              <a
+                href={SIGNUP_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+              >
+                Sign Up
+              </a>
+              <a
+                href={STREAMYARD_GUEST_LINK}
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...buttonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+              >
+                Join Live
+              </a>
+            </div>
+          </nav>
+
+          <MessedUpGameSoloVsComputer />
+        </div>
       </main>
     );
   }
 
-  // ——— Home page data ———
-  const links = [
-    {
-      title: "Newsletter",
-      href: "/newsletter/",
-      desc: "Latest stories & show times",
-    },
-    {
-      title: "Join Live on StreamYard",
-      href: STREAMYARD_GUEST_LINK,
-      desc: "First 9 get on camera",
-    },
-    {
-      title: "Messed Up Game — Sign Up",
-      href: SIGNUP_FORM_URL,
-      desc: "Fill out the form to play",
-    },
-    {
-      title: "Got Backup Tom B",
-      href: "https://gotbackuptomb.com",
-      desc: "Cloud backup & storage",
-      affiliate: true,
-    },
-  ];
-
-  // ——— simple styles ———
-  const hero = {
-    minHeight: "60vh",
-    display: "grid",
-    placeItems: "center",
-    padding: 24,
-    background: "linear-gradient(180deg, #0b0b0b 0%, #111 60%, #181818 100%)",
-    color: "white",
-    textAlign: "center",
-  };
-  const h1 = {
-    margin: "6px 0 0",
-    fontSize: "clamp(28px, 5vw, 44px)",
-    fontWeight: 900,
-  };
-  const p = { opacity: 0.9, marginTop: 6 };
-  const btnRow = {
-    marginTop: 14,
-    display: "flex",
-    gap: 12,
-    justifyContent: "center",
-    flexWrap: "wrap",
-  };
-  const btn = {
-    display: "inline-block",
-    padding: "12px 18px",
-    borderRadius: 12,
-    background: "#ffffff",
-    color: "#111",
-    textDecoration: "none",
-    fontWeight: 800,
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)",
-  };
-  const btnGhost = {
-    ...btn,
-    background: "transparent",
-    color: "#fff",
-    border: "1px solid rgba(255, 255, 255, 0.5)",
-  };
-  const videoWrap = {
-    width: "min(960px, 92vw)",
-    aspectRatio: "16 / 9",
-    margin: "16px auto 8px",
-    borderRadius: 14,
-    overflow: "hidden",
-    boxShadow: "0 10px 24px rgba(0, 0, 0, 0.35)",
-    background: "#000",
-  };
-  const iframe = { width: "100%", height: "100%", border: 0 };
-  const small = { opacity: 0.85, marginTop: 10, fontSize: 14 };
-
+  // ——— Home screen ———
   return (
-    <main>
-      {/* Optional tiny nav */}
-      <nav
-        style={{
-          maxWidth: 1100,
-          margin: "8px auto 0",
-          padding: "8px 16px",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <a
-          href="/"
-          style={{ marginRight: 12, color: "#fff", textDecoration: "none" }}
-        >
-          Home
-        </a>
-        <a href="/newsletter/" style={{ color: "#000", textDecoration: "none" }}>
-  Newsletter
-</a>
-
-        {/* spacer pushes button to the right */}
-        <div style={{ flex: 1 }} />
-
-        {/* Play Solo – switches into solo mode */}
-<button
-  onClick={() => setMode("solo")}
-  style={{
-    marginLeft: 12,
-    padding: "6px 10px",
-    borderRadius: 10,
-    fontWeight: 800,
-    border: "1px solid rgba(0,0,0,.35)",
-    background: "transparent",
-    color: "#000",
-    cursor: "pointer",
-  }}
->
-  Play Solo
-</button>
-        
-      </nav>
-
-      {/* HERO: Featured video + CTAs */}
-      <section style={hero}>
-        <div style={{ width: "100%" }}>
-          <h1 style={h1}>messedupgame.com with Wildman Tom B</h1>
-          <p style={p}>
-            Up to 9 players join on camera. Family-friendly, fast, and hilarious.
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <header style={{ marginBottom: 18 }}>
+          <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+            The Messed Up Game
+          </h1>
+          <p style={{ marginTop: 8, opacity: 0.9 }}>
+            Family-friendly, hilarious, and brain-boosting — play live or solo.
           </p>
 
-          <div style={videoWrap}>
-            <iframe
-              style={iframe}
-              src={`https://www.youtube.com/embed/${FEATURE_VIDEO_ID}?rel=0`}
-              title="Featured video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
-
-          <div style={btnRow}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 12 }}>
             <a
               href={STREAMYARD_GUEST_LINK}
               target="_blank"
-              rel="noopener noreferrer"
-              style={btn}
+              rel="noreferrer"
+              style={{ ...buttonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
             >
-              Join LIVE (first 9)
+              Join Live on StreamYard
             </a>
+
+            <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+              Play Solo (vs Computer)
+            </button>
+
             <a
               href={CHANNEL_URL}
               target="_blank"
-              rel="noopener noreferrer"
-              style={btnGhost}
+              rel="noreferrer"
+              style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
             >
-              Watch on YouTube
+              YouTube Channel
             </a>
+          </div>
+        </header>
+
+        {/* Featured video */}
+        <section style={{ marginBottom: 22 }}>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              paddingTop: "56.25%", // 16:9
+              borderRadius: 16,
+              overflow: "hidden",
+              boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+              border: "1px solid rgba(255,255,255,.08)",
+            }}
+          >
+            <iframe
+              title="Featured Video"
+              src={`https://www.youtube.com/embed/${FEATURE_VIDEO_ID}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+              }}
+            />
+          </div>
+        </section>
+
+        {/* Links grid */}
+        <section style={{ marginBottom: 22 }}>
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
+            Quick Links
+          </h2>
+          <LinkGrid links={links} />
+        </section>
+
+        {/* Ghana section */}
+        <section
+          style={{
+            marginTop: 10,
+            padding: 16,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.1)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 8px", fontSize: "1.4rem", fontWeight: 900 }}>
+            Ghana 🇬🇭
+          </h2>
+          <p style={{ margin: 0, opacity: 0.9 }}>
+            Want to play or host a game in Ghana? Hit me up and I’ll get you the details.
+          </p>
+          <div style={{ marginTop: 12, display: "flex", gap: 10, flexWrap: "wrap" }}>
             <a
               href={SIGNUP_FORM_URL}
               target="_blank"
-              rel="noopener noreferrer"
-              style={btnGhost}
+              rel="noreferrer"
+              style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
             >
-              Sign up to play
+              Sign Up to Play
             </a>
-          </div>
-
-          <div style={small}>
-            Free to play • 10 seconds per answer • 3 strikes = out • Hosted by
-            Wildman Tom B • Ages 12+
-          </div>
-          <div style={small}>
-            Click “Sign up to play” and fill out the short sign-up form with your
-            name and best time to play. Tom will email you your private join link.
-          </div>
-          <div style={small}>
-            Prefer email? Contact Tom directly at{" "}
             <a
               href={CONTACT_EMAIL}
-              style={{ color: "#7bdff6", textDecoration: "underline" }}
+              style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
             >
-              tombutler@messedupgame.com
+              Email Me
             </a>
-            .
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* GHANA SECTION */}
-      <section
-        id="ghana"
-        style={{
-          padding: "2.5rem 1rem 3rem",
-          backgroundColor: "#020617",
-          color: "white",
-        }}
-      >
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          {/* Banner image */}
-          <img
-            src="/ghana-income-banner.png"
-            alt="Help the people of Ghana multiply their income - Wildman Tom B and The Messed Up Game"
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: 16,
-              marginBottom: "1.75rem",
-              display: "block",
-            }}
-          />
-
-          <h2
-            style={{
-              fontSize: "1.9rem",
-              marginBottom: "1rem",
-              fontWeight: 700,
-            }}
-          >
-            🇬🇭 The Ghana Connection — Protect Your Data &amp; Earn Residual
-            Income
-          </h2>
-
-          <p style={{ marginBottom: "0.75rem" }}>
-            Ghana is one of the fastest-growing digital communities in Africa, and
-            thousands of students, families, entrepreneurs, creators, and business
-            owners rely on their phones every day… but many still lose photos,
-            videos, schoolwork, and business files due to phone theft, damage,
-            lost devices, or low storage.
-          </p>
-
-          <p style={{ marginBottom: "0.75rem" }}>
-            That’s exactly why <strong>Got Backup Tom B</strong> is expanding into
-            Ghana — to help protect people’s memories AND give them a chance to
-            earn <strong>real residual income</strong> for only{" "}
-            <strong>$9.97/month</strong>.
-          </p>
-
-          <h3
-            style={{
-              fontSize: "1.4rem",
-              marginTop: "1rem",
-              marginBottom: "0.5rem",
-            }}
-          >
-            🚀 What You Get
-          </h3>
-          <ul style={{ marginLeft: "1.25rem", marginBottom: "0.75rem" }}>
-            <li>6TB of cloud storage (split among up to 6 users)</li>
-            <li>500GB free to every new customer</li>
-            <li>Automatic backups for phones &amp; computers</li>
-            <li>24/7 access to all your files</li>
-            <li>Earn weekly commissions as an affiliate</li>
-            <li>
-              Perfect for students (WASSCE), families, businesses &amp; creators
-            </li>
-          </ul>
-
-          <h3
-            style={{
-              fontSize: "1.4rem",
-              marginTop: "1rem",
-              marginBottom: "0.5rem",
-            }}
-          >
-            💡 Why It Matters in Ghana
-          </h3>
-          <ul style={{ marginLeft: "1.25rem", marginBottom: "0.75rem" }}>
-            <li>
-              The average income in Ghana is around $500/month, so even a small
-              weekly commission makes a huge difference.
-            </li>
-            <li>
-              Many people experience phone theft — automatic backup protects
-              everything.
-            </li>
-            <li>
-              Perfect for WASSCE students, teachers, youth groups, ministries, and
-              entrepreneurs.
-            </li>
-          </ul>
-
-          <p style={{ marginTop: "0.75rem" }}>
-            🌍{" "}
-            <strong>
-              Join the Got Backup Ghana team today and protect what matters!
-            </strong>
-          </p>
-          <p style={{ marginBottom: "0.25rem" }}>
-            👉{" "}
-            <a
-              href="https://www.gotbackuptomb.com"
-              style={{ color: "#38bdf8", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              www.gotbackuptomb.com
-            </a>
-          </p>
-          <p>
-            Contact: <strong>tom@gotbackuptomb.com</strong>
-          </p>
-        </div>
-      </section>
-
-      {/* Featured links grid */}
-      <LinkGrid title="Featured Links" items={links} />
+        <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
+          © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
+          <a href={CONTACT_EMAIL} style={{ color: "white" }}>
+            tombutler@messedupgame.com
+          </a>
+        </footer>
+      </div>
     </main>
   );
 }
-
-   
-    
-    
