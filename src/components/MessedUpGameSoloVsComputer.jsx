@@ -33,74 +33,23 @@ const CATEGORIES = [
   "Books of the New Testament"
 ];
 // Optional built-in answer lists (auto-check for some categories)
-
-  "steak",
-  "pork",
-  // …
-]);
-const VALID_ANSWERS = {
-  const OBVIOUS_WRONG = new Set([
+const OBVIOUS_WRONG = new Set([
   "steak",
   "pork",
   "beef",
   "chicken",
   "california",
   "texas",
-  "utah",
-  "monopoly",
-  "scrabble",
-  "vanilla",
-  "chocolate",
-  "apple",
-  "banana",
-  "orange",
-  "matthew",
-  "mark",
-  "luke",
-  "john",
 ]);
 
-    "Ice Cream Flavors": new Set([
+const VALID_ANSWERS = {
+  "Ice Cream Flavors": new Set([
     "vanilla",
     "chocolate",
     "strawberry",
     "mint chocolate chip",
-    "cookies and cream",
-    "cookie dough",
-    "chocolate chip",
-    "rocky road",
-    "butter pecan",
-    "pistachio",
-    "coffee",
-    "mocha",
-    "caramel",
-    "salted caramel",
-    "chocolate fudge",
-    "fudge",
-    "neapolitan",
-    "banana",
-    "banana split",
-    "mango",
-    "coconut",
-    "rum raisin",
-    "cherry",
-    "cherry garcia",
-    "birthday cake",
-    "cotton candy",
-    "bubblegum",
-    "peanut butter",
-    "s'mores",
-    "smores",
-    "brownie batter",
-    "dulce de leche",
-    "raspberry",
-    "black raspberry",
-    "lemon",
-    "orange sherbet",
-    "sherbet",
-    "sorbet",
   ]),
-
+  
   Fruits: new Set([
     "apple",
     "banana",
@@ -136,6 +85,7 @@ const VALID_ANSWERS = {
     "tangerine",
     "clementine",
   ]),
+    
   "Books of the New Testament": new Set([
     "matthew",
     "mark",
@@ -143,7 +93,7 @@ const VALID_ANSWERS = {
     "john",
     "acts",
     "romans",
-    "1 corinthians",
+    "1st corinthians",
     "2 corinthians",
     "galatians",
     "ephesians",
@@ -165,7 +115,7 @@ const VALID_ANSWERS = {
     "jude",
     "revelation",
   ]),
-
+};
   Animals: new Set([
     "dog",
     "cat",
