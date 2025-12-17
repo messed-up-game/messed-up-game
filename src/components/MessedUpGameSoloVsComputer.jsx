@@ -33,6 +33,11 @@ const CATEGORIES = [
   "Books of the New Testament"
 ];
 // Optional built-in answer lists (auto-check for some categories)
+
+  "steak",
+  "pork",
+  // …
+]);
 const VALID_ANSWERS = {
   const OBVIOUS_WRONG = new Set([
   "steak",
