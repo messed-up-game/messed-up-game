@@ -41,7 +41,6 @@ const OBVIOUS_WRONG = new Set([
   "california",
   "texas",
 ]);
-
 const VALID_ANSWERS = {
   "Ice Cream Flavors": new Set([
     "vanilla",
@@ -49,8 +48,8 @@ const VALID_ANSWERS = {
     "strawberry",
     "mint chocolate chip",
   ]),
-  
-  Fruits: new Set([
+
+  "Fruits": new Set([
     "apple",
     "banana",
     "orange",
@@ -85,7 +84,7 @@ const VALID_ANSWERS = {
     "tangerine",
     "clementine",
   ]),
-    
+
   "Books of the New Testament": new Set([
     "matthew",
     "mark",
@@ -93,7 +92,7 @@ const VALID_ANSWERS = {
     "john",
     "acts",
     "romans",
-    "1st corinthians",
+    "1 corinthians",
     "2 corinthians",
     "galatians",
     "ephesians",
@@ -115,8 +114,8 @@ const VALID_ANSWERS = {
     "jude",
     "revelation",
   ]),
-};
-  Animals: new Set([
+
+  "Animals": new Set([
     "dog",
     "cat",
     "horse",
@@ -152,7 +151,7 @@ const VALID_ANSWERS = {
     "orange juice",
   ]),
 
-  Cookies: new Set([
+  "Cookies": new Set([
     "chocolate chip",
     "oatmeal raisin",
     "peanut butter",
