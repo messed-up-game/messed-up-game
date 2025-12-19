@@ -1,10 +1,16 @@
 // src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
+{/* Featured video */}
+<section style={{ marginBottom: 22 }}>
+  ...
+</section>
+
+{/* Big Newsletter button */}
 <a
   href="/newsletter/"
   style={{
     display: "block",
     maxWidth: 560,
-    margin: "22px auto 10px",
+    margin: "0 auto 22px",
     padding: "18px 22px",
     fontSize: 22,
     fontWeight: 900,
@@ -19,7 +25,6 @@
 >
   📩 JOIN THE NEWSLETTER
 </a>
-
 
 
 import { useState } from "react";
@@ -158,6 +163,27 @@ export default function App() {
             </a>
           </div>
         </header>
+        {/* Big Newsletter button */}
+        <a
+          href="/newsletter/"
+          style={{
+            display: "block",
+            maxWidth: 560,
+            margin: "0 auto 22px",
+            padding: "18px 22px",
+            fontSize: 22,
+            fontWeight: 900,
+            textAlign: "center",
+            borderRadius: 16,
+            textDecoration: "none",
+            background: "#7bdff6",
+            color: "#0b0b0b",
+            border: "3px solid rgba(255,255,255,0.35)",
+            boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+          }}
+        >
+          📩 JOIN THE NEWSLETTER
+        </a>
 
         {/* Featured video */}
         <section style={{ marginBottom: 22 }}>
