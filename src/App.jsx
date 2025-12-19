@@ -1,4 +1,22 @@
 // src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
+<a
+  href="/newsletter/"
+  style={{
+    display: "block",
+    maxWidth: 520,
+    margin: "18px auto 0",
+    padding: "16px 22px",
+    fontSize: "20px",
+    fontWeight: 800,
+    textAlign: "center",
+    borderRadius: 14,
+    textDecoration: "none",
+    color: "#0b0b0b",
+    background: "#7bdff6",
+  }}
+>
+  📩 Join the Newsletter
+</a>
 
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
