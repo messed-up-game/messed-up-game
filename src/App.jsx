@@ -3,20 +3,23 @@
   href="/newsletter/"
   style={{
     display: "block",
-    maxWidth: 520,
-    margin: "18px auto 0",
-    padding: "16px 22px",
-    fontSize: "20px",
-    fontWeight: 800,
+    maxWidth: 560,
+    margin: "22px auto 10px",
+    padding: "18px 22px",
+    fontSize: 22,
+    fontWeight: 900,
     textAlign: "center",
-    borderRadius: 14,
+    borderRadius: 16,
     textDecoration: "none",
-    color: "#0b0b0b",
     background: "#7bdff6",
+    color: "#0b0b0b",
+    border: "3px solid rgba(255,255,255,0.35)",
+    boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
   }}
 >
-  📩 Join the Newsletter
+  📩 JOIN THE NEWSLETTER
 </a>
+
 
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
