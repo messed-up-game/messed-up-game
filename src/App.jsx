@@ -156,6 +156,29 @@ export default function App() {
 >
   📩 JOIN THE NEWSLETTER
 </a>
+{/* Ghana Proposal link */}
+<a
+  href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "block",
+    maxWidth: 560,
+    margin: "0 auto 14px",
+    padding: "14px 18px",
+    fontSize: 18,
+    fontWeight: 900,
+    textAlign: "center",
+    borderRadius: 16,
+    textDecoration: "none",
+    background: "rgba(34,197,94,.15)",
+    border: "2px solid rgba(34,197,94,.45)",
+    color: "white",
+    boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+  }}
+>
+  🇬🇭 Read Our Ghana Expansion Proposal →
+</a>
 
 {/* Big Join Team button */}
 <a
