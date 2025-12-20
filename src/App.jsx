@@ -1,32 +1,4 @@
 // src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
-{/* Featured video */}
-<section style={{ marginBottom: 22 }}>
-  ...
-</section>
-
-{/* Big Newsletter button */}
-<a
-  href="/newsletter/"
-  style={{
-    display: "block",
-    maxWidth: 560,
-    margin: "0 auto 22px",
-    padding: "18px 22px",
-    fontSize: 22,
-    fontWeight: 900,
-    textAlign: "center",
-    borderRadius: 16,
-    textDecoration: "none",
-    background: "#7bdff6",
-    color: "#0b0b0b",
-    border: "3px solid rgba(255,255,255,0.35)",
-    boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
-  }}
->
-  📩 JOIN THE NEWSLETTER
-</a>
-
-
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
@@ -164,26 +136,48 @@ export default function App() {
           </div>
         </header>
         {/* Big Newsletter button */}
-        <a
-          href="/newsletter/"
-          style={{
-            display: "block",
-            maxWidth: 560,
-            margin: "0 auto 22px",
-            padding: "18px 22px",
-            fontSize: 22,
-            fontWeight: 900,
-            textAlign: "center",
-            borderRadius: 16,
-            textDecoration: "none",
-            background: "#7bdff6",
-            color: "#0b0b0b",
-            border: "3px solid rgba(255,255,255,0.35)",
-            boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
-          }}
-        >
-          📩 JOIN THE NEWSLETTER
-        </a>
+<a
+  href="/newsletter/"
+  style={{
+    display: "block",
+    maxWidth: 560,
+    margin: "0 auto 22px",
+    padding: "18px 22px",
+    fontSize: 22,
+    fontWeight: 900,
+    textAlign: "center",
+    borderRadius: 16,
+    textDecoration: "none",
+    background: "#7bdff6",
+    color: "#0b0b0b",
+    border: "3px solid rgba(255,255,255,0.35)",
+    boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+  }}
+>
+  📩 JOIN THE NEWSLETTER
+</a>
+
+{/* Big Join Team button */}
+<a
+  href="#join-team"
+  style={{
+    display: "block",
+    maxWidth: 560,
+    margin: "0 auto 14px",
+    padding: "18px 22px",
+    fontSize: 22,
+    fontWeight: 900,
+    textAlign: "center",
+    borderRadius: 16,
+    textDecoration: "none",
+    background: "#22c55e",
+    color: "#041b0a",
+    border: "3px solid rgba(255,255,255,0.20)",
+    boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+  }}
+>
+  🏆 JOIN OUR MESSED UP TEAM
+</a>
 
         {/* Featured video */}
         <section style={{ marginBottom: 22 }}>
@@ -213,6 +207,66 @@ export default function App() {
             />
           </div>
         </section>
+{/* Join Team signup section */}
+<section
+  id="join-team"
+  style={{
+    maxWidth: 560,
+    margin: "0 auto 22px",
+    padding: 16,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.03)",
+  }}
+>
+  <h2 style={{ margin: "0 0 8px", fontSize: "1.35rem", fontWeight: 900 }}>
+    Join our Messed Up Team 🎉
+  </h2>
+
+  <p style={{ margin: "0 0 12px", opacity: 0.9, lineHeight: 1.35 }}>
+    Sign up with your email address to win free prizes and see our newest videos!
+    <br />
+    If you join me for a live game, we’ll give you a <b>FREE Deck of MUG Cards</b> 🎁
+  </p>
+
+  <form name="live-signup" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="live-signup" />
+
+    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Enter your email"
+        style={{
+          flex: "1 1 260px",
+          padding: "12px 14px",
+          fontSize: 16,
+          borderRadius: 12,
+          border: "1px solid rgba(255,255,255,.18)",
+          background: "rgba(0,0,0,.25)",
+          color: "white",
+        }}
+      />
+
+      <button
+        type="submit"
+        style={{
+          padding: "12px 16px",
+          fontSize: 16,
+          fontWeight: 900,
+          borderRadius: 12,
+          border: "none",
+          cursor: "pointer",
+          background: "#22c55e",
+          color: "#041b0a",
+        }}
+      >
+        Join & Win
+      </button>
+    </div>
+  </form>
+</section>
 
         {/* Links grid */}
         <section style={{ marginBottom: 22 }}>
