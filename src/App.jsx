@@ -1,16 +1,16 @@
-// src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
+
+  // Signup form + contact email
+  const SIGNUP_FORM_URL =// src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
+import GotBackupBannerAd from "./components/GotBackupBannerAd"; // ✅ ADD THIS
 
 export default function App() {
   // ——— editable constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "stZm5AH791I"; // featured video
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
-
-  // Signup form + contact email
-  const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
@@ -18,12 +18,13 @@ export default function App() {
   const [mode, setMode] = useState("home"); // "home" | "solo" | "newsletter"
 
   // ——— Home page data ———
+  
   const links = [
-
-    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
-    { title: "Messed Up Game — Sign Up", href: SIGNUP_FORM_URL, desc: "Fill out the form to play" },
-    { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
-  ];
+  { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
+  { title: "Messed Up Game — Sign Up", href: SIGNUP_FORM_URL, desc: "Fill out the form to play" },
+  { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
+  { title: "MOSH Brain Bars", href: "https://moshlife.com/", desc: "Brain fuel sponsor 🧠", sponsor: true },
+];
 
   // ——— shared styles ———
   const pageStyle = {
@@ -112,11 +113,12 @@ if (mode === "newsletter") {
         <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
           📰 Newsletter
         </h1>
-        <p style={{ marginTop: 0, opacity: 0.9, maxWidth: 700 }}>
-          Read the latest updates and show times. No signup required.
+
+        <p style={{ opacity: 0.9, maxWidth: 700 }}>
+          Read the latest updates and stories. No signup required.
         </p>
 
-        {/* Put your newsletter content here */}
+        {/* Example newsletter content */}
         <section
           style={{
             marginTop: 16,
@@ -129,12 +131,16 @@ if (mode === "newsletter") {
           <h2 style={{ margin: "0 0 8px", fontSize: "1.2rem", fontWeight: 900 }}>
             Latest Issue
           </h2>
-          <p style={{ margin: 0, opacity: 0.9 }}>
-            (Add your first newsletter story here — I can help you write it.)
+          <p style={{ margin: 0 }}>
+            Welcome to the Messed Up Game newsletter — fun, memory, and protecting
+            what matters.
           </p>
         </section>
 
-        {/* Optional signup (kept separate) */}
+        {/* ✅ Got Backup banner ad */}
+        <GotBackupBannerAd />
+
+        {/* Optional signup */}
         <section
           style={{
             maxWidth: 560,
