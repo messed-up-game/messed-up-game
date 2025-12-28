@@ -332,6 +332,95 @@ export default function App() {
             </a>
           </div>
         </section>
+{/* Proud Partner / Sponsor block */}
+<section
+  id="got-backup"
+  style={{
+    maxWidth: 1100,
+    margin: "28px auto 0",
+    padding: "18px 16px",
+  }}
+>
+  <div
+    style={{
+      borderRadius: 18,
+      padding: "18px 18px",
+      background: "rgba(255,255,255,0.06)",
+      border: "2px solid rgba(255,255,255,0.14)",
+      boxShadow: "0 10px 26px rgba(0,0,0,0.25)",
+    }}
+  >
+    <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
+      <h2 style={{ margin: 0, fontSize: 22, fontWeight: 900 }}>
+        Proud Partner: Protect What Matters
+      </h2>
+      <span
+        style={{
+          padding: "6px 10px",
+          borderRadius: 999,
+          fontSize: 12,
+          fontWeight: 800,
+          background: "rgba(34,197,94,0.18)",
+          border: "1px solid rgba(34,197,94,0.35)",
+        }}
+      >
+        Secure Cloud Backup
+      </span>
+    </div>
+
+    <p style={{ margin: "10px 0 0", lineHeight: 1.5, opacity: 0.95 }}>
+      The Messed Up Game is all about memory, connection, and thinking on your feet.
+      That’s why we proudly partner with <strong>Got Backup Tom B</strong> — a simple,
+      affordable way to protect your photos, videos, and important data so memories
+      aren’t lost when technology fails.
+    </p>
+
+    <div style={{ marginTop: 12, display: "flex", flexWrap: "wrap", gap: 10 }}>
+      <a
+        href="https://www.gotbackuptomb.com"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          display: "inline-block",
+          padding: "12px 16px",
+          borderRadius: 14,
+          textDecoration: "none",
+          fontWeight: 900,
+          fontSize: 16,
+          background: "#22c55e",
+          color: "#041b0a",
+          border: "2px solid rgba(255,255,255,0.15)",
+          boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+        }}
+      >
+        🔐 Protect Your Data with Got Backup
+      </a>
+
+      <a
+        href="https://www.gotbackuptomb.com"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          display: "inline-block",
+          padding: "12px 16px",
+          borderRadius: 14,
+          textDecoration: "none",
+          fontWeight: 800,
+          fontSize: 16,
+          background: "rgba(255,255,255,0.08)",
+          color: "#ffffff",
+          border: "2px solid rgba(255,255,255,0.14)",
+        }}
+      >
+        Learn More
+      </a>
+    </div>
+
+    <p style={{ margin: "10px 0 0", fontSize: 12, opacity: 0.7 }}>
+      Note: The Messed Up Game and Got Backup are separate offerings; this is a community partner link.
+    </p>
+  </div>
+</section>
 
         <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
           © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
