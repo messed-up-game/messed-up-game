@@ -1,6 +1,8 @@
 
   // Signup form + contact email
-  const SIGNUP_FORM_URL =// src/App.jsx — Featured video + Join button + Featured Links + Ghana section + Solo mode
+  const SIGNUP_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
+
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
