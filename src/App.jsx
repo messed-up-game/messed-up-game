@@ -135,27 +135,54 @@ export default function App() {
             </a>
           </div>
         </header>
-        {/* Big Newsletter button */}
-<a
-  href="/newsletter/"
+    {/* Newsletter actions */}
+<div
   style={{
-    display: "block",
     maxWidth: 560,
     margin: "0 auto 22px",
-    padding: "18px 22px",
-    fontSize: 22,
-    fontWeight: 900,
-    textAlign: "center",
-    borderRadius: 16,
-    textDecoration: "none",
-    background: "#7bdff6",
-    color: "#0b0b0b",
-    border: "3px solid rgba(255,255,255,0.35)",
-    boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+    display: "grid",
+    gap: 12,
   }}
 >
-  📩 JOIN THE NEWSLETTER
-</a>
+  {/* Read Newsletter */}
+  <button
+    onClick={() => setMode("newsletter")}
+    style={{
+      padding: "18px 22px",
+      fontSize: 22,
+      fontWeight: 900,
+      textAlign: "center",
+      borderRadius: 16,
+      background: "rgba(255,255,255,0.08)",
+      color: "white",
+      border: "3px solid rgba(255,255,255,0.25)",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+      cursor: "pointer",
+    }}
+  >
+    📰 READ THE NEWSLETTER
+  </button>
+
+  {/* Join Newsletter */}
+  <button
+    onClick={() => setMode("newsletter")}
+    style={{
+      padding: "18px 22px",
+      fontSize: 22,
+      fontWeight: 900,
+      textAlign: "center",
+      borderRadius: 16,
+      background: "#7bdff6",
+      color: "#0b0b0b",
+      border: "3px solid rgba(255,255,255,0.35)",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+      cursor: "pointer",
+    }}
+  >
+    📩 JOIN THE NEWSLETTER (OPTIONAL)
+  </button>
+</div>
+    
 {/* Ghana Proposal link */}
 <a
   href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
