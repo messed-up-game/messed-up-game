@@ -15,11 +15,11 @@ export default function App() {
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
   // Solo / home toggle
-  const [mode, setMode] = useState("home"); // "home" | "solo"
+  const [mode, setMode] = useState("home"); // "home" | "solo" | "newsletter"
 
   // ——— Home page data ———
   const links = [
-    { title: "Newsletter", href: "/newsletter/", desc: "Latest stories & show times" },
+
     { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
     { title: "Messed Up Game — Sign Up", href: SIGNUP_FORM_URL, desc: "Fill out the form to play" },
     { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
@@ -98,6 +98,87 @@ export default function App() {
       </main>
     );
   }
+// ——— Newsletter screen ———
+if (mode === "newsletter") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav style={{ marginBottom: 16 }}>
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+        </nav>
+
+        <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
+          📰 Newsletter
+        </h1>
+        <p style={{ marginTop: 0, opacity: 0.9, maxWidth: 700 }}>
+          Read the latest updates and show times. No signup required.
+        </p>
+
+        {/* Put your newsletter content here */}
+        <section
+          style={{
+            marginTop: 16,
+            padding: 16,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.12)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 8px", fontSize: "1.2rem", fontWeight: 900 }}>
+            Latest Issue
+          </h2>
+          <p style={{ margin: 0, opacity: 0.9 }}>
+            (Add your first newsletter story here — I can help you write it.)
+          </p>
+        </section>
+
+        {/* Optional signup (kept separate) */}
+        <section
+          style={{
+            maxWidth: 560,
+            margin: "18px auto 0",
+            padding: 16,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.12)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 8px", fontSize: "1.2rem", fontWeight: 900 }}>
+            📩 Join the Newsletter (Optional)
+          </h2>
+
+          <form name="newsletter" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="newsletter" />
+
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+                style={{
+                  flex: "1 1 260px",
+                  padding: "12px 14px",
+                  fontSize: 16,
+                  borderRadius: 12,
+                  border: "1px solid rgba(255,255,255,.18)",
+                  background: "rgba(0,0,0,.25)",
+                  color: "white",
+                }}
+              />
+
+              <button type="submit" style={buttonStyle}>
+                Join
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+  );
+}
 
   // ——— Home screen ———
   return (
