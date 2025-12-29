@@ -7,7 +7,7 @@ import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 import GotBackupBannerAd from "./components/GotBackupBannerAd"; // ✅ ADD THIS
-
+ 
 export default function App() {
   // ——— editable constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
@@ -142,7 +142,58 @@ if (mode === "newsletter") {
     not require technology for participants.
   </p>
 </section>
- 
+ {/* Testimonials */}
+<section
+  style={{
+    maxWidth: 720,
+    margin: "0 auto 18px",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.06)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ margin: "0 0 12px", fontSize: "1.35rem", fontWeight: 900 }}>
+    What Players Are Saying
+  </h2>
+
+  <blockquote
+    style={{
+      margin: "0 0 14px",
+      paddingLeft: 14,
+      borderLeft: "4px solid rgba(34,197,94,.6)",
+      fontStyle: "italic",
+      opacity: 0.95,
+    }}
+  >
+    “After playing the game at Starbucks with a few of my friends and Tom,
+    I noticed that I slept better that night.”
+    <br />
+    <span style={{ fontWeight: 800, fontStyle: "normal" }}>
+      — Bill Gibson
+    </span>
+  </blockquote>
+
+  <blockquote
+    style={{
+      margin: 0,
+      paddingLeft: 14,
+      borderLeft: "4px solid rgba(34,197,94,.6)",
+      fontStyle: "italic",
+      opacity: 0.95,
+    }}
+  >
+    “I love this game. It makes you have to think about the replies from others,
+    what they said, along with having to think of another item in the same
+    category. It definitely makes my brain do things it’s never done before.”
+    <br />
+    <span style={{ fontWeight: 800, fontStyle: "normal" }}>
+      — Jim Henderson
+    </span>
+  </blockquote>
+</section>
+
 {/* 📄 Messed Up Game Proposal */}
 <a
   href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
