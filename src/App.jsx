@@ -193,6 +193,43 @@ if (mode === "newsletter") {
     </span>
   </blockquote>
 </section>
+{/* Hiring Notice */}
+<section
+  style={{
+    maxWidth: 720,
+    margin: "0 auto 18px",
+    padding: 18,
+    borderRadius: 16,
+    border: "2px dashed rgba(34,197,94,.45)",
+    background: "rgba(34,197,94,.08)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+    🌍 Now Hiring Hosts & Sales Reps Worldwide
+  </h2>
+
+  <p style={{ margin: "0 0 10px", lineHeight: 1.5, opacity: 0.95 }}>
+    The <strong>Messed Up Game</strong> is expanding globally and we are now hiring
+    <strong> Hosts</strong> and <strong>Sales Representatives</strong> worldwide.
+  </p>
+
+  <p style={{ margin: "0 0 10px", lineHeight: 1.5, opacity: 0.95 }}>
+    If you are an <strong>Actor or Actress</strong>, this is a powerful opportunity
+    to gain <strong>massive exposure</strong> while earning an
+    <strong> incredible income</strong> hosting live games and events.
+  </p>
+
+  <p style={{ margin: 0, fontWeight: 800 }}>
+    📧 Message us with your resume at{" "}
+    <a
+      href="mailto:tom@messedupgame.com"
+      style={{ color: "#7bdff6", textDecoration: "none" }}
+    >
+      tom@messedupgame.com
+    </a>
+  </p>
+</section>
 
 {/* 📄 Messed Up Game Proposal */}
 <a
