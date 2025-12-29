@@ -119,6 +119,53 @@ if (mode === "newsletter") {
         <p style={{ opacity: 0.9, maxWidth: 700 }}>
           Read the latest updates and stories. No signup required.
         </p>
+       {/* Program Overview */}
+<section
+  style={{
+    maxWidth: 720,
+    margin: "16px auto 16px",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.04)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+    Program Overview
+  </h2>
+
+  <p style={{ margin: 0, lineHeight: 1.5, opacity: 0.95 }}>
+    The <strong>Messed Up Game</strong> is a live, hosted, brain-engagement group
+    activity designed to bring laughter, connection, and cognitive stimulation
+    to seniors and community members. The program is simple, inclusive, and does
+    not require technology for participants.
+  </p>
+</section>
+ 
+{/* 📄 Messed Up Game Proposal */}
+<a
+  href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "block",
+    maxWidth: 720,
+    margin: "0 auto 24px",
+    padding: "16px 20px",
+    fontSize: 18,
+    fontWeight: 900,
+    textAlign: "center",
+    borderRadius: 16,
+    textDecoration: "none",
+    background: "rgba(34,197,94,.18)",
+    border: "2px solid rgba(34,197,94,.45)",
+    color: "white",
+    boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+  }}
+>
+  📄 Read the Full Messed Up Game Proposal →
+</a>
 
         {/* Example newsletter content */}
         <section
