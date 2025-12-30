@@ -1,26 +1,21 @@
 
-  // Signup form + contact email
-  const SIGNUP_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
-
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 import GotBackupBannerAd from "./components/GotBackupBannerAd"; // ✅ ADD THIS
- 
+
 export default function App() {
-  // ——— editable constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
-  const FEATURE_VIDEO_ID = "stZm5AH791I"; // featured video
+  const FEATURE_VIDEO_ID = "stZm5AH791I";
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
+
+  const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
+
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
-  // Solo / home toggle
-  const [mode, setMode] = useState("home"); // "home" | "solo" | "newsletter"
+const [mode, setMode] = useState("home"); // "home" | "solo" | "newsletter" | "poster"
 
-  // ——— Home page data ———
-  
   const links = [
   { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
   { title: "Messed Up Game — Sign Up", href: SIGNUP_FORM_URL, desc: "Fill out the form to play" },
@@ -58,20 +53,155 @@ export default function App() {
     cursor: "pointer",
   };
 
-  // ——— Solo mode screen ———
-  if (mode === "solo") {
-    return (
-      <main style={pageStyle}>
-        <div style={containerStyle}>
-          <nav
+// ——— Solo mode screen ———
+if (mode === "solo") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            display: "flex",
+            gap: 10,
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: 16,
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <div style={{ display: "flex", gap: 10 }}>
+            <a
+              href={SIGNUP_FORM_URL}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...ghostButtonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              Sign Up
+            </a>
+            <a
+              href={STREAMYARD_GUEST_LINK}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...buttonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              Join Live
+            </a>
+          </div>
+        </nav>
+
+        <MessedUpGameSoloVsComputer />
+      </div>
+    </main>
+  );
+}
+
+// ——— Poster screen ———
+if (mode === "poster") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 10,
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <a
+            href="/posters/hesperia-poster.png"
+            target="_blank"
+            rel="noreferrer"
             style={{
-              display: "flex",
-              gap: 10,
+              ...buttonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
               alignItems: "center",
-              justifyContent: "space-between",
-              marginBottom: 16,
             }}
           >
+            Open Full Size
+          </a>
+        </nav>
+
+        <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+          Hesperia Senior Home Poster
+        </h1>
+
+        <div
+          style={{
+            borderRadius: 16,
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,.12)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <img
+            src="/posters/hesperia-poster.png"
+            alt="The Messed Up Game poster for Hesperia Senior Home"
+            style={{ width: "100%", display: "block" }}
+            loading="lazy"
+          />
+        </div>
+
+        <p style={{ marginTop: 14, opacity: 0.9 }}>
+          Want to sponsor a deck or host a weekly game? Email me at{" "}
+          <a
+            href={CONTACT_EMAIL}
+            style={{ color: "#7bdff6", textDecoration: "none" }}
+          >
+            tombutler@messedupgame.com
+          </a>
+          .
+        </p>
+      </div>
+    </main>
+  );
+}
+
+// ——— Newsletter screen ———
+if (mode === "newsletter") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav style={{ marginBottom: 16 }}>
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+        </nav>
+
+        {/* KEEP ALL YOUR EXISTING NEWSLETTER CONTENT BELOW THIS LINE */}
+        <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
+          📰 Newsletter
+        </h1>
+
+        <p style={{ opacity: 0.9, maxWidth: 700 }}>
+          Read the latest updates and stories. No signup required.
+        </p>
+
+        {/* ...rest of your newsletter sections... */}
+      </div>
+    </main>
+  );
+}
+
+
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
@@ -101,9 +231,101 @@ export default function App() {
       </main>
     );
   }
+  // ——— Poster screen ———
+if (mode === "poster") { return (...) }
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav style={{ marginBottom: 16, display: "flex", justifyContent: "space-between", gap: 10 }}>
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <a
+            href="/posters/hesperia-poster.png"
+            target="_blank"
+            rel="noreferrer"
+            style={{ ...buttonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+          >
+            Open Full Size
+          </a>
+        </nav>
+
+        <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+          Hesperia Senior Home Poster
+        </h1>
+
+        <div
+          style={{
+            borderRadius: 16,
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,.12)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <img
+            src="/posters/hesperia-poster.png"
+            alt="The Messed Up Game poster for Hesperia Senior Home"
+            style={{ width: "100%", display: "block" }}
+            loading="lazy"
+          />
+        </div>
+
+        <p style={{ marginTop: 14, opacity: 0.9 }}>
+          Want to sponsor a deck or host a weekly game? Email me at{" "}
+          <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
+            tombutler@messedupgame.com
+          </a>
+          .
+        </p>
+      </div>
+    </main>
+  );
+}
+// ——— Poster screen ———
+if (mode === "poster") { return (...) }
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav style={{ marginBottom: 16, display: "flex", justifyContent: "space-between", gap: 10 }}>
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <a
+            href="/posters/hesperia-poster.png"
+            target="_blank"
+            rel="noreferrer"
+            style={{ ...buttonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+          >
+            Open Full Size
+          </a>
+        </nav>
+
+        <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+          Hesperia Senior Home Poster
+        </h1>
+
+        <div style={{
+          borderRadius: 16,
+          overflow: "hidden",
+          border: "1px solid rgba(255,255,255,.12)",
+          boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+          background: "rgba(255,255,255,.03)",
+        }}>
+          <img
+            src="/posters/hesperia-poster.png"
+            alt="The Messed Up Game poster for Hesperia Senior Home"
+            style={{ width: "100%", display: "block" }}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </main>
+  );
+}
+
 // ——— Newsletter screen ———
-if (mode === "newsletter") {
-  return (
+if (mode === "newsletter") { return (...) }
     <main style={pageStyle}>
       <div style={containerStyle}>
         <nav style={{ marginBottom: 16 }}>
@@ -348,6 +570,9 @@ if (mode === "newsletter") {
             <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
               Play Solo (vs Computer)
             </button>
+<button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+  🪧 View Hesperia Poster
+</button>
 
             <a
               href={CHANNEL_URL}
