@@ -126,7 +126,7 @@ if (mode === "poster") {
           </button>
 
           <a
-            href="/posters/hesperia-poster.png"
+            href="/posters/hesperia-poster.webp"
             target="_blank"
             rel="noreferrer"
             style={{
@@ -153,6 +153,26 @@ if (mode === "poster") {
             background: "rgba(255,255,255,.03)",
           }}
         >
+          <img
+            src="/posters/hesperia-poster.webp"
+            alt="The Messed Up Game poster for Hesperia Senior Home"
+            style={{ width: "100%", height: "auto", display: "block" }}
+            loading="lazy"
+          />
+        </div>
+
+        <p style={{ marginTop: 14, opacity: 0.9 }}>
+          Want to sponsor a deck or host a weekly game? Email me at{" "}
+          <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
+            tombutler@messedupgame.com
+          </a>
+          .
+        </p>
+      </div>
+    </main>
+  );
+}
+
           <img
             src="/posters/hesperia-poster.png"
             alt="The Messed Up Game poster for Hesperia Senior Home"
