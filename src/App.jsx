@@ -112,6 +112,24 @@ export default function App() {
               flexWrap: "wrap",
             }}
           >
+            <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
+  Want this hosted at your senior community or in-home care group?{" "}
+  <a
+    href={CONTACT_EMAIL}
+    style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 800 }}
+  >
+    Send us an email
+  </a>{" "}
+  or call us at{" "}
+  <a
+    href="tel:13106287889"
+    style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 800 }}
+  >
+    310-628-7889
+  </a>
+  .
+</p>
+
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
