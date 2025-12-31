@@ -201,7 +201,131 @@ if (mode === "newsletter") {
           Read the latest updates and stories. No signup required.
         </p>
 
-        {/* ✅ PASTE YOUR NEWSLETTER SECTIONS HERE (Program Overview, Testimonials, Hiring, etc.) */}
+                {/* Program Overview */}
+        <section
+          style={{
+            maxWidth: 720,
+            margin: "16px auto 16px",
+            padding: 18,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.14)",
+            background: "rgba(255,255,255,.04)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+            Program Overview
+          </h2>
+
+          <p style={{ margin: 0, lineHeight: 1.5, opacity: 0.95 }}>
+            The <strong>Messed Up Game</strong> is a live, hosted, brain-engagement group
+            activity designed to bring laughter, connection, and cognitive stimulation
+            to seniors and community members. The program is simple, inclusive, and does
+            not require technology for participants.
+          </p>
+        </section>
+
+        {/* Testimonials */}
+        <section
+          style={{
+            maxWidth: 720,
+            margin: "0 auto 18px",
+            padding: 18,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.14)",
+            background: "rgba(255,255,255,.06)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 12px", fontSize: "1.35rem", fontWeight: 900 }}>
+            What Players Are Saying
+          </h2>
+
+          <blockquote
+            style={{
+              margin: "0 0 14px",
+              paddingLeft: 14,
+              borderLeft: "4px solid rgba(34,197,94,.6)",
+              fontStyle: "italic",
+              opacity: 0.95,
+            }}
+          >
+            “After playing the game at Starbucks with a few of my friends and Tom,
+            I noticed that I slept better that night.”
+            <br />
+            <span style={{ fontWeight: 800, fontStyle: "normal" }}>— Bill Gibson</span>
+          </blockquote>
+
+          <blockquote
+            style={{
+              margin: 0,
+              paddingLeft: 14,
+              borderLeft: "4px solid rgba(34,197,94,.6)",
+              fontStyle: "italic",
+              opacity: 0.95,
+            }}
+          >
+            “I love this game. It makes you have to think about the replies from others,
+            what they said, along with having to think of another item in the same
+            category. It definitely makes my brain do things it’s never done before.”
+            <br />
+            <span style={{ fontWeight: 800, fontStyle: "normal" }}>— Jim Henderson</span>
+          </blockquote>
+        </section>
+
+        {/* Hiring Notice */}
+        <section
+          style={{
+            maxWidth: 720,
+            margin: "0 auto 18px",
+            padding: 18,
+            borderRadius: 16,
+            border: "2px dashed rgba(34,197,94,.45)",
+            background: "rgba(34,197,94,.08)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+            🌍 Now Hiring Hosts & Sales Reps Worldwide
+          </h2>
+
+          <p style={{ margin: "0 0 10px", lineHeight: 1.5, opacity: 0.95 }}>
+            The <strong>Messed Up Game</strong> is expanding globally and we are now hiring
+            <strong> Hosts</strong> and <strong>Sales Representatives</strong> worldwide.
+          </p>
+
+          <p style={{ margin: 0, fontWeight: 800 }}>
+            📧 Contact:{" "}
+            <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
+              tombutler@messedupgame.com
+            </a>
+          </p>
+        </section>
+
+        {/* Proposal button */}
+        <a
+          href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            display: "block",
+            maxWidth: 720,
+            margin: "0 auto 24px",
+            padding: "16px 20px",
+            fontSize: 18,
+            fontWeight: 900,
+            textAlign: "center",
+            borderRadius: 16,
+            textDecoration: "none",
+            background: "rgba(34,197,94,.18)",
+            border: "2px solid rgba(34,197,94,.45)",
+            color: "white",
+            boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+          }}
+        >
+          📄 Read the Full Messed Up Game Proposal →
+        </a>
+
 
         <section
           style={{
