@@ -178,18 +178,54 @@ if (mode === "newsletter") {
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
-        <nav style={{ marginBottom: 16 }}>
+        <nav style={{ marginBottom: 16, display: "flex", justifyContent: "space-between" }}>
           <button style={ghostButtonStyle} onClick={() => setMode("home")}>
             ← Back Home
           </button>
+
+          <a
+            href={SIGNUP_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{ ...buttonStyle, textDecoration: "none" }}
+          >
+            Sign Up
+          </a>
         </nav>
 
-        {/* ✅ KEEP your full newsletter content here (Program Overview, Testimonials, etc.) */}
-        {/* You can paste your existing newsletter sections below this line */}
+        <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
+          📰 Newsletter
+        </h1>
+
+        <p style={{ opacity: 0.9, maxWidth: 700 }}>
+          Read the latest updates and stories. No signup required.
+        </p>
+
+        {/* ✅ PASTE YOUR NEWSLETTER SECTIONS HERE (Program Overview, Testimonials, Hiring, etc.) */}
+
+        <section
+          style={{
+            marginTop: 16,
+            padding: 16,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.12)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 8px", fontSize: "1.2rem", fontWeight: 900 }}>
+            Latest Issue
+          </h2>
+          <p style={{ margin: 0 }}>
+            Welcome to the Messed Up Game newsletter — fun, memory, and protecting what matters.
+          </p>
+        </section>
+
+        <GotBackupBannerAd />
       </div>
     </main>
   );
 }
+
 
   // ——— Home screen ———
   return (
