@@ -1,1 +1,5 @@
-/* /index.html 200
+# Serve posters as real files (must be BEFORE SPA fallback)
+/posters/*  /posters/:splat  200
+
+# SPA fallback for React Router
+/*  /index.html 200
