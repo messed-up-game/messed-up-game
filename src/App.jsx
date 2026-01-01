@@ -164,6 +164,25 @@ export default function App() {
               loading="lazy"
             />
           </div>
+{/* Button under Hesperia poster */}
+<div style={{ textAlign: "center", margin: "24px 0 8px" }}>
+  <a
+    href="#benefits"
+    style={{
+      display: "inline-block",
+      padding: "12px 24px",
+      borderRadius: 999,
+      fontWeight: 700,
+      fontSize: 18,
+      textDecoration: "none",
+      background: "#facc15", // or your brand yellow
+      color: "#111827",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+    }}
+  >
+    Benefits for Seniors, Churches &amp; More
+  </a>
+</div>
 
           <p style={{ marginTop: 14, opacity: 0.9 }}>
             Want to sponsor a deck or host a weekly game? Email me at{" "}
