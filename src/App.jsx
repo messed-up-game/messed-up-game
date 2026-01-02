@@ -1,3 +1,5 @@
+// src/App.jsx
+
 import { useState } from "react";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
@@ -12,16 +14,35 @@ export default function App() {
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
 
-  const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
+  // use your new Gmail-based address
+  const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
 
   // "home" | "solo" | "newsletter" | "poster"
   const [mode, setMode] = useState("home");
 
   const links = [
-    { title: "Join Live on StreamYard", href: STREAMYARD_GUEST_LINK, desc: "First 9 get on camera" },
-    { title: "Messed Up Game — Sign Up", href: SIGNUP_FORM_URL, desc: "Fill out the form to play" },
-    { title: "Got Backup Tom B", href: "https://gotbackuptomb.com", desc: "Cloud backup & storage", affiliate: true },
-    { title: "MOSH Brain Bars", href: "https://moshlife.com/", desc: "Brain fuel sponsor 🧠", sponsor: true },
+    {
+      title: "Join Live on StreamYard",
+      href: STREAMYARD_GUEST_LINK,
+      desc: "First 9 get on camera",
+    },
+    {
+      title: "Messed Up Game — Sign Up",
+      href: SIGNUP_FORM_URL,
+      desc: "Fill out the form to play",
+    },
+    {
+      title: "Got Backup Tom B",
+      href: "https://gotbackuptomb.com",
+      desc: "Cloud backup & storage",
+      affiliate: true,
+    },
+    {
+      title: "MOSH Brain Bars",
+      href: "https://moshlife.com/",
+      desc: "Brain fuel sponsor 🧠",
+      sponsor: true,
+    },
   ];
 
   // ——— styles ———
@@ -47,7 +68,7 @@ export default function App() {
   const ghostButtonStyle = {
     background: "transparent",
     color: "white",
-    border: "1px solid rgba(255,255,255,.2)",
+    border: "1px solid " + "rgba(255,255,255,.2)",
     padding: "10px 14px",
     borderRadius: 12,
     fontWeight: 700,
@@ -113,22 +134,30 @@ export default function App() {
             }}
           >
             <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
-  Want this hosted at your senior community or in-home care group?{" "}
-  <a
-    href={CONTACT_EMAIL}
-    style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 800 }}
-  >
-    Send us an email
-  </a>{" "}
-  or call us at{" "}
-  <a
-    href="tel:13106287889"
-    style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 800 }}
-  >
-    310-628-7889
-  </a>
-  .
-</p>
+              Want this hosted at your senior community or in-home care group?{" "}
+              <a
+                href={CONTACT_EMAIL}
+                style={{
+                  color: "#7bdff6",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                }}
+              >
+                Send us an email
+              </a>{" "}
+              or call us at{" "}
+              <a
+                href="tel:13106287889"
+                style={{
+                  color: "#7bdff6",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                }}
+              >
+                310-628-7889
+              </a>
+              .
+            </p>
 
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
@@ -148,144 +177,29 @@ export default function App() {
             Hesperia Senior Home Poster
           </h1>
 
-        <div
-          style={{
-            borderRadius: 16,
-            overflow: "hidden",
-            border: "1px solid rgba(255,255,255,.12)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.35)",
-            background: "rgba(255,255,255,.03)",
-          }}
-        >
-          <img
-            src="/posters/hesperia-poster.webp"
-            alt="The Messed Up Game poster for Hesperia Senior Home"
-            style={{ width: "100%", height: "auto", display: "block" }}
-            loading="lazy"
-          />
-        </div>
-
-        {/* Button under Hesperia poster */}
-        <div style={{ textAlign: "center", margin: "24px 0 8px" }}>
-          <a
-            href="#benefits"
-            style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              borderRadius: 999,
-              fontWeight: 700,
-              fontSize: 18,
-              textDecoration: "none",
-              background: "#facc15",
-              color: "#111827",
-              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-            }}
-          >
-            Benefits for Seniors, Churches &amp; More
-          </a>
-        </div>
-
-        <p style={{ marginTop: 14, opacity: 0.9 }}>
-          Want to sponsor a deck or host a weekly game? Email me at{" "}
-          <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
-            tom@messedupgame.com
-          </a>
-          .
-        </p>
-
-        {/* Benefits section */}
-        <section
-          id="benefits"
-          style={{
-            maxWidth: 900,
-            margin: "40px auto 60px",
-            padding: "24px 20px",
-            borderRadius: 16,
-            background: "rgba(15,23,42,0.9)",
-            color: "#e5e7eb",
-            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
-          }}
-        >
-          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
-            How The Messed Up Game Helps Your Community
-          </h2>
-          <p style={{ textAlign: "center", marginBottom: 20, opacity: 0.9 }}>
-            Fun, fast, and brain-boosting for seniors, churches, schools, bars &amp; more.
-          </p>
-
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: 18,
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(255,255,255,.12)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+              background: "rgba(255,255,255,.03)",
             }}
           >
-            {/* Seniors */}
-            <div>
-              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Senior Homes &amp; Communities</h3>
-              <ul style={{ margin: 0, paddingLeft: 18 }}>
-                <li>Weekly 60–90 minute brain-boost game hour.</li>
-                <li>Up to <strong>40 residents</strong> can play in the room at once.</li>
-                <li>Up to <strong>9 players</strong> live online with Wildman Tom B.</li>
-                <li>
-                  Host uses a big whiteboard to track names &amp; strikes
-                  (3 strikes and you’re out, but you can stay and watch).
-                </li>
-                <li>
-                  Solo players just click the link – no code needed. Reach
-                  <strong> 50 points</strong> and earn a free deck of The Messed Up Game!
-                </li>
-              </ul>
-            </div>
-
-            {/* Churches */}
-            <div>
-              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Churches &amp; Faith Groups</h3>
-              <ul style={{ margin: 0, paddingLeft: 18 }}>
-                <li>Family-friendly and faith-friendly fun.</li>
-                <li>Includes <strong>Books of the New Testament</strong> as a category.</li>
-                <li>Great for seniors, youth nights, small groups &amp; game nights.</li>
-                <li>Builds fellowship while waking up the amazing brain God gave us.</li>
-              </ul>
-            </div>
-
-            {/* Schools */}
-            <div>
-              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Schools &amp; Youth Programs</h3>
-              <ul style={{ margin: 0, paddingLeft: 18 }}>
-                <li>Supports memory, vocabulary, and quick thinking.</li>
-                <li>Works for classrooms, after-school programs, and clubs.</li>
-                <li>Kids love the speed; teachers love the engagement.</li>
-              </ul>
-            </div>
-
-            {/* Bars */}
-            <div>
-              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Bars, Cafés &amp; Social Venues</h3>
-              <ul style={{ margin: 0, paddingLeft: 18 }}>
-                <li>A fresh spin on traditional trivia night.</li>
-                <li>Keeps guests hanging out longer and talking to each other.</li>
-                <li>Easy to run with a host, a whiteboard, and prizes.</li>
-                <li>Perfect for theme nights, tournaments, or sponsor tie-ins.</li>
-              </ul>
-            </div>
+            <img
+              src="/posters/hesperia-poster.webp"
+              alt="The Messed Up Game poster for Hesperia Senior Home"
+              style={{ width: "100%", height: "auto", display: "block" }}
+              loading="lazy"
+            />
           </div>
-
-          <p style={{ marginTop: 24, textAlign: "center" }}>
-            Want to see how this could work in your place? Email{" "}
-            <a
-              href="mailto:tom@messedupgame.com"
-              style={{ color: "#facc15", fontWeight: 600 }}
-            >
-              tom@messedupgame.com
-            </a>{" "}
-            to schedule a quick demo.
-          </p>
-        </section>
 
           <p style={{ marginTop: 14, opacity: 0.9 }}>
             Want to sponsor a deck or host a weekly game? Email me at{" "}
-            <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
+            <a
+              href={CONTACT_EMAIL}
+              style={{ color: "#7bdff6", textDecoration: "none" }}
+            >
               tom@messedupgame.com
             </a>
             .
@@ -300,7 +214,15 @@ export default function App() {
     return (
       <main style={pageStyle}>
         <div style={containerStyle}>
-          <nav style={{ marginBottom: 16, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
+          <nav
+            style={{
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: 10,
+            }}
+          >
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
@@ -335,13 +257,20 @@ export default function App() {
               boxShadow: "0 10px 24px rgba(0,0,0,.25)",
             }}
           >
-            <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+            <h2
+              style={{
+                margin: "0 0 10px",
+                fontSize: "1.35rem",
+                fontWeight: 900,
+              }}
+            >
               Program Overview
             </h2>
 
             <p style={{ margin: 0, lineHeight: 1.5, opacity: 0.95 }}>
-              The <strong>Messed Up Game</strong> is a live, hosted, brain-engagement group
-              activity designed to bring laughter, connection, and cognitive stimulation.
+              The <strong>Messed Up Game</strong> is a live, hosted,
+              brain-engagement group activity designed to bring laughter,
+              connection, and cognitive stimulation.
             </p>
           </section>
 
@@ -357,7 +286,13 @@ export default function App() {
               boxShadow: "0 10px 24px rgba(0,0,0,.25)",
             }}
           >
-            <h2 style={{ margin: "0 0 12px", fontSize: "1.35rem", fontWeight: 900 }}>
+            <h2
+              style={{
+                margin: "0 0 12px",
+                fontSize: "1.35rem",
+                fontWeight: 900,
+              }}
+            >
               What Players Are Saying
             </h2>
 
@@ -370,10 +305,12 @@ export default function App() {
                 opacity: 0.95,
               }}
             >
-              “After playing the game at Starbucks with a few of my friends and Tom,
-              I noticed that I slept better that night.”
+              “After playing the game at Starbucks with a few of my friends and
+              Tom, I noticed that I slept better that night.”
               <br />
-              <span style={{ fontWeight: 800, fontStyle: "normal" }}>— Bill Gibson</span>
+              <span
+                style={{ fontWeight: 800, fontStyle: "normal" }}
+              >{`— Bill Gibson`}</span>
             </blockquote>
 
             <blockquote
@@ -385,9 +322,12 @@ export default function App() {
                 opacity: 0.95,
               }}
             >
-              “I love this game… it definitely makes my brain do things it’s never done before.”
+              “I love this game… it definitely makes my brain do things it’s
+              never done before.”
               <br />
-              <span style={{ fontWeight: 800, fontStyle: "normal" }}>— Jim Henderson</span>
+              <span
+                style={{ fontWeight: 800, fontStyle: "normal" }}
+              >{`— Jim Henderson`}</span>
             </blockquote>
           </section>
 
@@ -404,7 +344,13 @@ export default function App() {
               background: "rgba(255,255,255,.03)",
             }}
           >
-            <h2 style={{ margin: "0 0 8px", fontSize: "1.2rem", fontWeight: 900 }}>
+            <h2
+              style={{
+                margin: "0 0 8px",
+                fontSize: "1.2rem",
+                fontWeight: 900,
+              }}
+            >
               📩 Join the Newsletter (Optional)
             </h2>
 
@@ -449,12 +395,24 @@ export default function App() {
             Family-friendly, hilarious, and brain-boosting — play live or solo.
           </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 12 }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 10,
+              marginTop: 12,
+            }}
+          >
             <a
               href={STREAMYARD_GUEST_LINK}
               target="_blank"
               rel="noreferrer"
-              style={{ ...buttonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+              style={{
+                ...buttonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
             >
               Join Live on StreamYard
             </a>
@@ -463,7 +421,10 @@ export default function App() {
               Play Solo (vs Computer)
             </button>
 
-            <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+            <button
+              style={ghostButtonStyle}
+              onClick={() => setMode("newsletter")}
+            >
               📰 Newsletter
             </button>
 
@@ -475,7 +436,12 @@ export default function App() {
               href={CHANNEL_URL}
               target="_blank"
               rel="noreferrer"
-              style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+              style={{
+                ...ghostButtonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
             >
               YouTube Channel
             </a>
@@ -494,8 +460,22 @@ export default function App() {
             boxShadow: "0 10px 24px rgba(0,0,0,.25)",
           }}
         >
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "space-between", alignItems: "center" }}>
-            <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 10,
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <h2
+              style={{
+                margin: 0,
+                fontSize: "1.35rem",
+                fontWeight: 900,
+              }}
+            >
               🪧 Hesperia Senior Home Poster
             </h2>
 
@@ -537,6 +517,147 @@ export default function App() {
           </button>
         </section>
 
+        {/* Button under Hesperia poster on home */}
+        <div style={{ textAlign: "center", margin: "8px 0 0" }}>
+          <a
+            href="#benefits"
+            style={{
+              display: "inline-block",
+              padding: "12px 24px",
+              borderRadius: 999,
+              fontWeight: 700,
+              fontSize: 18,
+              textDecoration: "none",
+              background: "#facc15",
+              color: "#111827",
+              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+            }}
+          >
+            Benefits for Seniors, Churches &amp; More
+          </a>
+        </div>
+
+        {/* Benefits section on home */}
+        <section
+          id="benefits"
+          style={{
+            maxWidth: 900,
+            margin: "40px auto 60px",
+            padding: "24px 20px",
+            borderRadius: 16,
+            background: "rgba(15,23,42,0.9)",
+            color: "#e5e7eb",
+            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
+            How The Messed Up Game Helps Your Community
+          </h2>
+          <p style={{ textAlign: "center", marginBottom: 20, opacity: 0.9 }}>
+            Fun, fast, and brain-boosting for seniors, churches, schools, bars
+            &amp; more.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: 18,
+            }}
+          >
+            {/* Seniors */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>
+                Senior Homes &amp; Communities
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>Weekly 60–90 minute brain-boost game hour.</li>
+                <li>
+                  Up to <strong>40 residents</strong> can play in the room at
+                  once.
+                </li>
+                <li>
+                  Up to <strong>9 players</strong> live online with Wildman Tom
+                  B.
+                </li>
+                <li>
+                  Host uses a big whiteboard to track names &amp; strikes (3
+                  strikes and you’re out, but you can stay and watch).
+                </li>
+                <li>
+                  Solo players just click the link – no code needed. Reach
+                  <strong> 50 points</strong> and earn a free deck of The
+                  Messed Up Game!
+                </li>
+              </ul>
+            </div>
+
+            {/* Churches */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>
+                Churches &amp; Faith Groups
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>Family-friendly and faith-friendly fun.</li>
+                <li>
+                  Includes <strong>Books of the New Testament</strong> as a
+                  category.
+                </li>
+                <li>
+                  Great for seniors, youth nights, small groups &amp; game
+                  nights.
+                </li>
+                <li>
+                  Builds fellowship while waking up the amazing brain God gave
+                  us.
+                </li>
+              </ul>
+            </div>
+
+            {/* Schools */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>
+                Schools &amp; Youth Programs
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>Supports memory, vocabulary, and quick thinking.</li>
+                <li>Works for classrooms, after-school programs, and clubs.</li>
+                <li>Kids love the speed; teachers love the engagement.</li>
+              </ul>
+            </div>
+
+            {/* Bars */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>
+                Bars, Cafés &amp; Social Venues
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>A fresh spin on traditional trivia night.</li>
+                <li>
+                  Keeps guests hanging out longer and talking to each other.
+                </li>
+                <li>
+                  Easy to run with a host, a whiteboard, and prizes.
+                </li>
+                <li>
+                  Perfect for theme nights, tournaments, or sponsor tie-ins.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p style={{ marginTop: 24, textAlign: "center" }}>
+            Want to see how this could work in your place? Email{" "}
+            <a
+              href="mailto:tom@messedupgame.com"
+              style={{ color: "#facc15", fontWeight: 600 }}
+            >
+              tom@messedupgame.com
+            </a>{" "}
+            to schedule a quick demo.
+          </p>
+        </section>
+
         {/* Featured video */}
         <section style={{ marginBottom: 22 }}>
           <div
@@ -555,14 +676,26 @@ export default function App() {
               src={`https://www.youtube.com/embed/${FEATURE_VIDEO_ID}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+              }}
             />
           </div>
         </section>
 
         {/* Quick links */}
         <section style={{ marginBottom: 22 }}>
-          <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
+          <h2
+            style={{
+              margin: "0 0 10px",
+              fontSize: "1.4rem",
+              fontWeight: 900,
+            }}
+          >
             Quick Links
           </h2>
           <LinkGrid links={links} />
@@ -571,7 +704,7 @@ export default function App() {
         <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
           © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
           <a href={CONTACT_EMAIL} style={{ color: "white" }}>
-            tombutler@messedupgame.com
+            tom@messedupgame.com
           </a>
         </footer>
       </div>
