@@ -148,46 +148,145 @@ export default function App() {
             Hesperia Senior Home Poster
           </h1>
 
-          <div
+        <div
+          style={{
+            borderRadius: 16,
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,.12)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+            background: "rgba(255,255,255,.03)",
+          }}
+        >
+          <img
+            src="/posters/hesperia-poster.webp"
+            alt="The Messed Up Game poster for Hesperia Senior Home"
+            style={{ width: "100%", height: "auto", display: "block" }}
+            loading="lazy"
+          />
+        </div>
+
+        {/* Button under Hesperia poster */}
+        <div style={{ textAlign: "center", margin: "24px 0 8px" }}>
+          <a
+            href="#benefits"
             style={{
-              borderRadius: 16,
-              overflow: "hidden",
-              border: "1px solid rgba(255,255,255,.12)",
-              boxShadow: "0 10px 24px rgba(0,0,0,.35)",
-              background: "rgba(255,255,255,.03)",
+              display: "inline-block",
+              padding: "12px 24px",
+              borderRadius: 999,
+              fontWeight: 700,
+              fontSize: 18,
+              textDecoration: "none",
+              background: "#facc15",
+              color: "#111827",
+              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
             }}
           >
-            <img
-              src="/posters/hesperia-poster.webp"
-              alt="The Messed Up Game poster for Hesperia Senior Home"
-              style={{ width: "100%", height: "auto", display: "block" }}
-              loading="lazy"
-            />
+            Benefits for Seniors, Churches &amp; More
+          </a>
+        </div>
+
+        <p style={{ marginTop: 14, opacity: 0.9 }}>
+          Want to sponsor a deck or host a weekly game? Email me at{" "}
+          <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
+            tom@messedupgame.com
+          </a>
+          .
+        </p>
+
+        {/* Benefits section */}
+        <section
+          id="benefits"
+          style={{
+            maxWidth: 900,
+            margin: "40px auto 60px",
+            padding: "24px 20px",
+            borderRadius: 16,
+            background: "rgba(15,23,42,0.9)",
+            color: "#e5e7eb",
+            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
+            How The Messed Up Game Helps Your Community
+          </h2>
+          <p style={{ textAlign: "center", marginBottom: 20, opacity: 0.9 }}>
+            Fun, fast, and brain-boosting for seniors, churches, schools, bars &amp; more.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: 18,
+            }}
+          >
+            {/* Seniors */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Senior Homes &amp; Communities</h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>Weekly 60–90 minute brain-boost game hour.</li>
+                <li>Up to <strong>40 residents</strong> can play in the room at once.</li>
+                <li>Up to <strong>9 players</strong> live online with Wildman Tom B.</li>
+                <li>
+                  Host uses a big whiteboard to track names &amp; strikes
+                  (3 strikes and you’re out, but you can stay and watch).
+                </li>
+                <li>
+                  Solo players just click the link – no code needed. Reach
+                  <strong> 50 points</strong> and earn a free deck of The Messed Up Game!
+                </li>
+              </ul>
+            </div>
+
+            {/* Churches */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Churches &amp; Faith Groups</h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>Family-friendly and faith-friendly fun.</li>
+                <li>Includes <strong>Books of the New Testament</strong> as a category.</li>
+                <li>Great for seniors, youth nights, small groups &amp; game nights.</li>
+                <li>Builds fellowship while waking up the amazing brain God gave us.</li>
+              </ul>
+            </div>
+
+            {/* Schools */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Schools &amp; Youth Programs</h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>Supports memory, vocabulary, and quick thinking.</li>
+                <li>Works for classrooms, after-school programs, and clubs.</li>
+                <li>Kids love the speed; teachers love the engagement.</li>
+              </ul>
+            </div>
+
+            {/* Bars */}
+            <div>
+              <h3 style={{ fontSize: 20, marginBottom: 6 }}>Bars, Cafés &amp; Social Venues</h3>
+              <ul style={{ margin: 0, paddingLeft: 18 }}>
+                <li>A fresh spin on traditional trivia night.</li>
+                <li>Keeps guests hanging out longer and talking to each other.</li>
+                <li>Easy to run with a host, a whiteboard, and prizes.</li>
+                <li>Perfect for theme nights, tournaments, or sponsor tie-ins.</li>
+              </ul>
+            </div>
           </div>
-{/* Button under Hesperia poster */}
-<div style={{ textAlign: "center", margin: "24px 0 8px" }}>
-  <a
-    href="#benefits"
-    style={{
-      display: "inline-block",
-      padding: "12px 24px",
-      borderRadius: 999,
-      fontWeight: 700,
-      fontSize: 18,
-      textDecoration: "none",
-      background: "#facc15", // or your brand yellow
-      color: "#111827",
-      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-    }}
-  >
-    Benefits for Seniors, Churches &amp; More
-  </a>
-</div>
+
+          <p style={{ marginTop: 24, textAlign: "center" }}>
+            Want to see how this could work in your place? Email{" "}
+            <a
+              href="mailto:tom@messedupgame.com"
+              style={{ color: "#facc15", fontWeight: 600 }}
+            >
+              tom@messedupgame.com
+            </a>{" "}
+            to schedule a quick demo.
+          </p>
+        </section>
 
           <p style={{ marginTop: 14, opacity: 0.9 }}>
             Want to sponsor a deck or host a weekly game? Email me at{" "}
             <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
-              tombutler@messedupgame.com
+              tom@messedupgame.com
             </a>
             .
           </p>
