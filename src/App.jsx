@@ -244,6 +244,65 @@ export default function App() {
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
             Read the latest updates and stories. No signup required.
           </p>
+{/* Latest Update */}
+<section
+  style={{
+    maxWidth: 720,
+    margin: "16px auto 16px",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.05)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+    <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+      🧠 What Actually Helps the Brain (The Non-Pill Truth)
+    </h2>
+    <span style={{ opacity: 0.8, fontWeight: 700 }}>January 2026</span>
+  </div>
+
+  <p style={{ margin: "12px 0 12px", lineHeight: 1.55, opacity: 0.95 }}>
+    As we age, it’s easy to think supplements are the main answer for memory and brain health.
+    While they can help, research and real-world experience show that <strong>daily habits matter even more</strong>.
+  </p>
+
+  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.6, opacity: 0.95 }}>
+    <li>🧠 <strong>Cognitive play</strong> – word games, categories, light thinking (games like <strong>The Messed Up Game</strong> truly matter)</li>
+    <li>🚶‍♂️ <strong>Light daily movement</strong> – walking, stretching, gentle activity</li>
+    <li>😴 <strong>Sleep consistency</strong> – going to bed and waking up around the same time</li>
+    <li>😄 <strong>Social interaction &amp; laughter</strong> – connection, conversation, joy</li>
+  </ul>
+
+  <p style={{ margin: "0 0 12px", fontWeight: 800, opacity: 0.98 }}>
+    These habits often outperform pills alone.
+  </p>
+
+  <p style={{ margin: 0, lineHeight: 1.55, opacity: 0.95 }}>
+    That’s why <strong>The Messed Up Game</strong> is designed around thinking, laughter, and connection —
+    no pressure, no performance, just fun brain engagement.
+  </p>
+
+  <a
+    href="/What_Actually_Helps_the_Brain_Most_Senior_Handout.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      marginTop: 14,
+      padding: "12px 16px",
+      borderRadius: 12,
+      textDecoration: "none",
+      fontWeight: 900,
+      background: "#22c55e",
+      color: "#041b0a",
+      boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+    }}
+  >
+    📄 Download the Free One-Page Handout
+  </a>
+</section>
 
           {/* Program Overview */}
           <section
