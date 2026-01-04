@@ -619,26 +619,27 @@ export default function App() {
   </button>
 </section>
 
-
-        {/* Button under Hesperia poster on home */}
-        <div style={{ textAlign: "center", margin: "8px 0 0" }}>
-          <a
-            href="#benefits"
-            style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              borderRadius: 999,
-              fontWeight: 700,
-              fontSize: 18,
-              textDecoration: "none",
-              background: "#facc15",
-              color: "#111827",
-              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-            }}
-          >
-            Benefits for Seniors, Churches &amp; More
-          </a>
-        </div>
+{/* Button under Hesperia poster on home */}
+<div style={{ textAlign: "center", margin: "8px 0 0" }}>
+  <a
+href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view"
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "inline-block",
+      padding: "12px 24px",
+      borderRadius: 999,
+      fontWeight: 700,
+      fontSize: 18,
+      textDecoration: "none",
+      background: "#facc15",
+      color: "#111827",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+    }}
+  >
+    Benefits for Seniors, Churches &amp; More
+  </a>
+</div>
 
         {/* Benefits section on home */}
         <section
