@@ -412,6 +412,41 @@ export default function App() {
             >
               📩 Join the Newsletter (Optional)
             </h2>
+{/* Social links (after Sign Up) */}
+<div style={{ marginTop: 10, textAlign: "center" }}>
+  <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+    Follow The Messed Up Game
+  </p>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: 10,
+      flexWrap: "wrap",
+    }}
+  >
+    {SOCIAL_LINKS.map((s) => (
+      <a
+        key={s.label}
+        href={s.href}
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          padding: "10px 14px",
+          borderRadius: 999,
+          textDecoration: "none",
+          fontWeight: 800,
+          border: "2px solid rgba(255,255,255,0.25)",
+          background: "rgba(0,0,0,0.25)",
+          color: "white",
+        }}
+      >
+        {s.label}
+      </a>
+    ))}
+  </div>
+</div>
 
             <form name="newsletter" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="newsletter" />
