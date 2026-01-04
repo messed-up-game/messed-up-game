@@ -16,6 +16,12 @@ export default function App() {
 
   // use your new Gmail-based address
   const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
+  const SOCIAL_LINKS = [
+    { label: "YouTube", href: CHANNEL_URL },
+    { label: "Instagram", href: "https://www.instagram.com/YOUR_HANDLE" },
+    { label: "Facebook", href: "https://www.facebook.com/YOUR_PAGE" },
+    { label: "X", href: "https://x.com/YOUR_HANDLE" },
+  ];
 
   // "home" | "solo" | "newsletter" | "poster"
   const [mode, setMode] = useState("home");
@@ -426,7 +432,7 @@ export default function App() {
       flexWrap: "wrap",
     }}
   >
-    {SOCIAL_LINKS.map((s) => (
+{(SOCIAL_LINKS || []).map((s) => (   
       <a
         key={s.label}
         href={s.href}
