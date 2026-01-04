@@ -1,3 +1,6 @@
+# Serve PDFs as real files (must be BEFORE SPA fallback)
+/*.pdf  /:splat  200
+
 # Serve posters as real files (must be BEFORE SPA fallback)
 /posters/*  /posters/:splat  200
 
