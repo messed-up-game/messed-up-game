@@ -558,6 +558,117 @@ export default function App() {
               </a>
             </div>
           </div>
+// ——— Home screen (default) ———
+return (
+  <main style={pageStyle}>
+    <div style={containerStyle}>
+      <header style={{ marginBottom: 18 }}>
+        <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+          The Messed Up Game
+        </h1>
+        <p style={{ marginTop: 8, opacity: 0.9 }}>
+          Family-friendly, hilarious, and brain-boosting — play live or solo.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 10,
+            marginTop: 12,
+          }}
+        >
+          <a
+            href={STREAMYARD_GUEST_LINK}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...buttonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            Join Live on StreamYard
+          </a>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+            Play Solo (vs Computer)
+          </button>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+            📰 Newsletter
+          </button>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+            🪧 Hesperia Poster
+          </button>
+
+          <a
+            href={CHANNEL_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...ghostButtonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            YouTube Channel
+          </a>
+        </div>
+
+        {/* Social links (Home page) */}
+        <div style={{ marginTop: 14, textAlign: "center" }}>
+          <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+            Follow The Messed Up Game
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            {(SOCIAL_LINKS || []).map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  padding: "10px 14px",
+                  borderRadius: 999,
+                  textDecoration: "none",
+                  fontWeight: 800,
+                  border: "2px solid rgba(255,255,255,0.25)",
+                  background: "rgba(0,0,0,0.25)",
+                  color: "white",
+                }}
+              >
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      {/* Poster preview on home */}
+      <section
+        style={{
+          maxWidth: 900,
+          margin: "0 auto 22px",
+          padding: 16,
+          borderRadius: 16,
+          border: "1px solid rgba(255,255,255,.12)",
+          background: "rgba(255,255,255,.03)",
+          boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+        }}
+      >
+        ...
 
           <button
             onClick={() => setMode("poster")}
