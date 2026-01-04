@@ -17,10 +17,10 @@ export default function App() {
   // use your new Gmail-based address
   const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
   const SOCIAL_LINKS = [
-    { label: "YouTube", href: CHANNEL_URL },
-    { label: "Instagram", href: "https://www.instagram.com/YOUR_HANDLE" },
-    { label: "Facebook", href: "https://www.facebook.com/YOUR_PAGE" },
-    { label: "X", href: "https://x.com/YOUR_HANDLE" },
+    { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
+    { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
+    { label: "Facebook", href: "https://www.facebook.com/messedupgametomb" },
+    { label: "X", href: "https://x.com/saveplanetusa" },
   ];
 
   // "home" | "solo" | "newsletter" | "poster"
@@ -396,302 +396,229 @@ export default function App() {
             </blockquote>
           </section>
 
-          {/* ✅ Got Backup banner */}
-          <GotBackupBannerAd />
-          
-          <section
-            style={{
-              maxWidth: 560,
-              margin: "18px auto 0",
-              padding: 16,
-              borderRadius: 16,
-              border: "1px solid rgba(255,255,255,.12)",
-              background: "rgba(255,255,255,.03)",
-            }}
-          >
-         <h2
+{/* ✅ Got Backup banner */}
+<GotBackupBannerAd />
+
+{/* ✅ Newsletter signup */}
+<section
   style={{
-    margin: "0 0 8px",
-    fontSize: "1.2rem",
-    fontWeight: 900,
+    maxWidth: 560,
+    margin: "18px auto 0",
+    padding: 16,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.03)",
   }}
 >
-  📩 Join the Newsletter (Optional)
-</h2>
-   
-            <form name="newsletter" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="newsletter" />
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Enter your email"
-                  style={{
-                    flex: "1 1 260px",
-                    padding: "12px 14px",
-                    fontSize: 16,
-                    borderRadius: 12,
-                    border: "1px solid rgba(255,255,255,.18)",
-                    background: "rgba(0,0,0,.25)",
-                    color: "white",
-                  }}
-                />
-                <button type="submit" style={buttonStyle}>
-                  Join
-                </button>
-              </div>
-            </form>
-          </section>
+  <h2
+    style={{
+      margin: "0 0 8px",
+      fontSize: "1.2rem",
+      fontWeight: 900,
+    }}
+  >
+    📩 Join the Newsletter (Optional)
+  </h2>
+
+  <form
+    name="newsletter"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="newsletter" />
+    <input type="hidden" name="bot-field" />
+
+    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Enter your email"
+        style={{
+          flex: "1 1 260px",
+          padding: "12px 14px",
+          fontSize: 16,
+          borderRadius: 12,
+          border: "1px solid rgba(255,255,255,.18)",
+          background: "rgba(0,0,0,.25)",
+          color: "white",
+        }}
+      />
+      <button type="submit" style={buttonStyle}>
+        Join
+      </button>
+    </div>
+  </form>
+</section>
+
         </div>
       </main>
     );
-  }
+  }  // ✅ end Newsletter screen
 
   // ——— Home screen (default) ———
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
         <header style={{ marginBottom: 18 }}>
-          <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-            The Messed Up Game
-          </h1>
-          <p style={{ marginTop: 8, opacity: 0.9 }}>
-            Family-friendly, hilarious, and brain-boosting — play live or solo.
-          </p>
+  <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+    The Messed Up Game
+  </h1>
 
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              marginTop: 12,
-            }}
-          >
-            <a
-              href={STREAMYARD_GUEST_LINK}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                ...buttonStyle,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              Join Live on StreamYard
-            </a>
+  <p style={{ marginTop: 8, opacity: 0.9 }}>
+    Family-friendly, hilarious, and brain-boosting — play live or solo.
+  </p>
 
-            <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-              Play Solo (vs Computer)
-            </button>
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 10,
+      marginTop: 12,
+    }}
+  >
+    <a
+      href={STREAMYARD_GUEST_LINK}
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        ...buttonStyle,
+        textDecoration: "none",
+        display: "inline-flex",
+        alignItems: "center",
+      }}
+    >
+      Join Live on StreamYard
+    </a>
 
-            <button
-              style={ghostButtonStyle}
-              onClick={() => setMode("newsletter")}
-            >
-              📰 Newsletter
-            </button>
+    <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+      Play Solo (vs Computer)
+    </button>
 
-            <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
-              🪧 Hesperia Poster
-            </button>
+    <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+      📰 Newsletter
+    </button>
 
-            <a
-              href={CHANNEL_URL}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                ...ghostButtonStyle,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              YouTube Channel
-            </a>
-          </div>
-        </header>
+    <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+      🪧 Hesperia Poster
+    </button>
 
-        {/* Poster preview on home */}
-        <section
+    <a
+      href={CHANNEL_URL}
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        ...ghostButtonStyle,
+        textDecoration: "none",
+        display: "inline-flex",
+        alignItems: "center",
+      }}
+    >
+      YouTube Channel
+    </a>
+  </div>
+
+  {/* Social links (Home page) */}
+  <div style={{ marginTop: 14, textAlign: "center" }}>
+    <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+      Follow The Messed Up Game
+    </p>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: 10,
+        flexWrap: "wrap",
+      }}
+    >
+      {(SOCIAL_LINKS || []).map((s) => (
+        <a
+          key={s.label}
+          href={s.href}
+          target="_blank"
+          rel="noreferrer"
           style={{
-            maxWidth: 900,
-            margin: "0 auto 22px",
-            padding: 16,
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,.12)",
-            background: "rgba(255,255,255,.03)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            padding: "10px 14px",
+            borderRadius: 999,
+            textDecoration: "none",
+            fontWeight: 800,
+            border: "2px solid rgba(255,255,255,0.25)",
+            background: "rgba(0,0,0,0.25)",
+            color: "white",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <h2
-              style={{
-                margin: 0,
-                fontSize: "1.35rem",
-                fontWeight: 900,
-              }}
-            >
-              🪧 Hesperia Senior Home Poster
-            </h2>
+          {s.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
 
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <button style={buttonStyle} onClick={() => setMode("poster")}>
-                View Poster
-              </button>
-              <a
-                href="/posters/hesperia-poster.webp"
-                target="_blank"
-                rel="noreferrer"
-                style={{ ...ghostButtonStyle, textDecoration: "none" }}
-              >
-                Open Full Size
-              </a>
-            </div>
-          </div>
-// ——— Home screen (default) ———
-return (
-  <main style={pageStyle}>
-    <div style={containerStyle}>
-      <header style={{ marginBottom: 18 }}>
-        <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-          The Messed Up Game
-        </h1>
-        <p style={{ marginTop: 8, opacity: 0.9 }}>
-          Family-friendly, hilarious, and brain-boosting — play live or solo.
-        </p>
+    {/* Poster preview on home */}
+<section
+  style={{
+    maxWidth: 900,
+    margin: "0 auto 22px",
+    padding: 16,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.03)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 10,
+      justifyContent: "space-between",
+      alignItems: "center",
+    }}
+  >
+    <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+      🪧 Hesperia Senior Home Poster
+    </h2>
 
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 10,
-            marginTop: 12,
-          }}
-        >
-          <a
-            href={STREAMYARD_GUEST_LINK}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...buttonStyle,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            Join Live on StreamYard
-          </a>
-
-          <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-            Play Solo (vs Computer)
-          </button>
-
-          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
-            📰 Newsletter
-          </button>
-
-          <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
-            🪧 Hesperia Poster
-          </button>
-
-          <a
-            href={CHANNEL_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...ghostButtonStyle,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            YouTube Channel
-          </a>
-        </div>
-
-        {/* Social links (Home page) */}
-        <div style={{ marginTop: 14, textAlign: "center" }}>
-          <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
-            Follow The Messed Up Game
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: 10,
-              flexWrap: "wrap",
-            }}
-          >
-            {(SOCIAL_LINKS || []).map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  padding: "10px 14px",
-                  borderRadius: 999,
-                  textDecoration: "none",
-                  fontWeight: 800,
-                  border: "2px solid rgba(255,255,255,0.25)",
-                  background: "rgba(0,0,0,0.25)",
-                  color: "white",
-                }}
-              >
-                {s.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </header>
-
-      {/* Poster preview on home */}
-      <section
-        style={{
-          maxWidth: 900,
-          margin: "0 auto 22px",
-          padding: 16,
-          borderRadius: 16,
-          border: "1px solid rgba(255,255,255,.12)",
-          background: "rgba(255,255,255,.03)",
-          boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-        }}
+    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+      <button style={buttonStyle} onClick={() => setMode("poster")}>
+        View Poster
+      </button>
+      <a
+        href="/posters/hesperia-poster.webp"
+        target="_blank"
+        rel="noreferrer"
+        style={{ ...ghostButtonStyle, textDecoration: "none" }}
       >
-        ...
+        Open Full Size
+      </a>
+    </div>
+  </div>
 
-          <button
-            onClick={() => setMode("poster")}
-            style={{
-              marginTop: 14,
-              padding: 0,
-              width: "100%",
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-              borderRadius: 16,
-              overflow: "hidden",
-            }}
-            aria-label="View the Hesperia poster"
-          >
-            <img
-              src="/posters/hesperia-poster.webp"
-              alt="Hesperia poster preview"
-              style={{ width: "100%", height: "auto", display: "block" }}
-              loading="lazy"
-            />
-          </button>
-        </section>
+  <button
+    onClick={() => setMode("poster")}
+    style={{
+      marginTop: 14,
+      padding: 0,
+      width: "100%",
+      border: "none",
+      background: "transparent",
+      cursor: "pointer",
+      borderRadius: 16,
+      overflow: "hidden",
+    }}
+    aria-label="View the Hesperia poster"
+  >
+    <img
+      src="/posters/hesperia-poster.webp"
+      alt="Hesperia poster preview"
+      style={{ width: "100%", height: "auto", display: "block" }}
+      loading="lazy"
+    />
+  </button>
+</section>
+
 
         {/* Button under Hesperia poster on home */}
         <div style={{ textAlign: "center", margin: "8px 0 0" }}>
