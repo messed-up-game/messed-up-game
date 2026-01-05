@@ -8,6 +8,20 @@ import GotBackupBannerAd from "./components/GotBackupBannerAd";
 export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
+  <a
+  href="https://youtube.com/shorts/tA4mF_4hBJs"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    ...ghostButtonStyle,
+    textDecoration: "none",
+    display: "inline-flex",
+    alignItems: "center",
+  }}
+>
+  🙏 Mark Wahlberg Prayer
+</a>
+
   const FEATURE_VIDEO_ID = "stZm5AH791I";
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
@@ -250,6 +264,68 @@ export default function App() {
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
             Read the latest updates and stories. No signup required.
           </p>
+ {/* 🙏 Mark Wahlberg Prayer Short */}
+<section
+  style={{
+    maxWidth: 420,
+    margin: "16px auto",
+    padding: 16,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.04)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}>
+    🙏 Prayer for Strength (Mark Wahlberg)
+  </h2>
+
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      paddingTop: "177.78%", // 9:16 aspect ratio for Shorts
+      borderRadius: 14,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.10)",
+      boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+      background: "rgba(0,0,0,.35)",
+    }}
+  >
+    <iframe
+      title="Mark Wahlberg Prayer Short"
+      src="https://www.youtube.com/embed/tA4mF_4hBJs"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+    />
+  </div>
+
+  <a
+    href="https://youtube.com/shorts/tA4mF_4hBJs"
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "inline-block",
+      marginTop: 12,
+      padding: "10px 14px",
+      borderRadius: 12,
+      textDecoration: "none",
+      fontWeight: 900,
+      background: "#22c55e",
+      color: "#041b0a",
+    }}
+  >
+    Watch on YouTube
+  </a>
+</section>
+         
 {/* Latest Update */}
 <section
   style={{
