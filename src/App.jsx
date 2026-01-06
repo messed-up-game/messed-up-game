@@ -8,34 +8,28 @@ import GotBackupBannerAd from "./components/GotBackupBannerAd";
 export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
-  <a
-  href="https://youtube.com/shorts/tA4mF_4hBJs"
-  target="_blank"
-  rel="noreferrer"
-  style={{
-    ...ghostButtonStyle,
-    textDecoration: "none",
-    display: "inline-flex",
-    alignItems: "center",
-  }}
->
-  🙏 Mark Wahlberg Prayer
-</a>
-
   const FEATURE_VIDEO_ID = "stZm5AH791I";
   const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
 
-  // use your new Gmail-based address
   const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
+
   const SOCIAL_LINKS = [
     { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
     { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
     { label: "Facebook", href: "https://www.facebook.com/messedupgametomb" },
     { label: "X", href: "https://x.com/saveplanetusa" },
   ];
+
+  // Mark Wahlberg prayer short
+  const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
+  const PRAYER_SHORT_ID = "tA4mF_4hBJs";
+
+  // Benefits doc button
+  const BENEFITS_DOC_URL =
+    "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
   // "home" | "solo" | "newsletter" | "poster"
   const [mode, setMode] = useState("home");
@@ -88,7 +82,7 @@ export default function App() {
   const ghostButtonStyle = {
     background: "transparent",
     color: "white",
-    border: "1px solid " + "rgba(255,255,255,.2)",
+    border: "1px solid rgba(255,255,255,.2)",
     padding: "10px 14px",
     borderRadius: 12,
     fontWeight: 700,
@@ -107,6 +101,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "space-between",
               marginBottom: 16,
+              flexWrap: "wrap",
             }}
           >
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
@@ -264,127 +259,144 @@ export default function App() {
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
             Read the latest updates and stories. No signup required.
           </p>
- {/* 🙏 Mark Wahlberg Prayer Short */}
-<section
-  style={{
-    maxWidth: 420,
-    margin: "16px auto",
-    padding: 16,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.04)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}>
-    🙏 Prayer for Strength (Mark Wahlberg)
-  </h2>
 
-  <div
-    style={{
-      position: "relative",
-      width: "100%",
-      paddingTop: "177.78%", // 9:16 aspect ratio for Shorts
-      borderRadius: 14,
-      overflow: "hidden",
-      border: "1px solid rgba(255,255,255,.10)",
-      boxShadow: "0 10px 24px rgba(0,0,0,.35)",
-      background: "rgba(0,0,0,.35)",
-    }}
-  >
-    <iframe
-      title="Mark Wahlberg Prayer Short"
-      src="https://www.youtube.com/embed/tA4mF_4hBJs"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        border: 0,
-      }}
-    />
-  </div>
+          {/* 🙏 Mark Wahlberg Prayer Short */}
+          <section
+            style={{
+              maxWidth: 420,
+              margin: "16px auto",
+              padding: 16,
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,.14)",
+              background: "rgba(255,255,255,.04)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            }}
+          >
+            <h2
+              style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}
+            >
+              🙏 Prayer for Strength (Mark Wahlberg)
+            </h2>
 
-  <a
-    href="https://youtube.com/shorts/tA4mF_4hBJs"
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      display: "inline-block",
-      marginTop: 12,
-      padding: "10px 14px",
-      borderRadius: 12,
-      textDecoration: "none",
-      fontWeight: 900,
-      background: "#22c55e",
-      color: "#041b0a",
-    }}
-  >
-    Watch on YouTube
-  </a>
-</section>
-         
-{/* Latest Update */}
-<section
-  style={{
-    maxWidth: 720,
-    margin: "16px auto 16px",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.05)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-    <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
-      🧠 What Actually Helps the Brain (The Non-Pill Truth)
-    </h2>
-    <span style={{ opacity: 0.8, fontWeight: 700 }}>January 2026</span>
-  </div>
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "177.78%", // 9:16
+                borderRadius: 14,
+                overflow: "hidden",
+                border: "1px solid rgba(255,255,255,.10)",
+                boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+                background: "rgba(0,0,0,.35)",
+              }}
+            >
+              <iframe
+                title="Mark Wahlberg Prayer Short"
+                src={`https://www.youtube.com/embed/${PRAYER_SHORT_ID}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                }}
+              />
+            </div>
 
-  <p style={{ margin: "12px 0 12px", lineHeight: 1.55, opacity: 0.95 }}>
-    As we age, it’s easy to think supplements are the main answer for memory and brain health.
-    While they can help, research and real-world experience show that <strong>daily habits matter even more</strong>.
-  </p>
+            <a
+              href={PRAYER_SHORT_URL}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: 12,
+                padding: "10px 14px",
+                borderRadius: 12,
+                textDecoration: "none",
+                fontWeight: 900,
+                background: "#22c55e",
+                color: "#041b0a",
+              }}
+            >
+              Watch on YouTube
+            </a>
+          </section>
 
-  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.6, opacity: 0.95 }}>
-    <li>🧠 <strong>Cognitive play</strong> – word games, categories, light thinking (games like <strong>The Messed Up Game</strong> truly matter)</li>
-    <li>🚶‍♂️ <strong>Light daily movement</strong> – walking, stretching, gentle activity</li>
-    <li>😴 <strong>Sleep consistency</strong> – going to bed and waking up around the same time</li>
-    <li>😄 <strong>Social interaction &amp; laughter</strong> – connection, conversation, joy</li>
-  </ul>
+          {/* Latest Update */}
+          <section
+            style={{
+              maxWidth: 720,
+              margin: "16px auto 16px",
+              padding: 18,
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,.14)",
+              background: "rgba(255,255,255,.05)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: 12,
+                flexWrap: "wrap",
+              }}
+            >
+              <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+                🧠 What Actually Helps the Brain (The Non-Pill Truth)
+              </h2>
+              <span style={{ opacity: 0.8, fontWeight: 700 }}>January 2026</span>
+            </div>
 
-  <p style={{ margin: "0 0 12px", fontWeight: 800, opacity: 0.98 }}>
-    These habits often outperform pills alone.
-  </p>
+            <p style={{ margin: "12px 0 12px", lineHeight: 1.55, opacity: 0.95 }}>
+              As we age, it’s easy to think supplements are the main answer for
+              memory and brain health. While they can help, research and real-world
+              experience show that{" "}
+              <strong>daily habits matter even more</strong>.
+            </p>
 
-  <p style={{ margin: 0, lineHeight: 1.55, opacity: 0.95 }}>
-    That’s why <strong>The Messed Up Game</strong> is designed around thinking, laughter, and connection —
-    no pressure, no performance, just fun brain engagement.
-  </p>
+            <ul
+              style={{
+                margin: "0 0 12px",
+                paddingLeft: 18,
+                lineHeight: 1.6,
+                opacity: 0.95,
+              }}
+            >
+              <li>
+                🧠 <strong>Cognitive play</strong> – word games, categories, light
+                thinking (games like <strong>The Messed Up Game</strong> truly matter)
+              </li>
+              <li>🚶‍♂️ <strong>Light daily movement</strong> – walking, stretching</li>
+              <li>😴 <strong>Sleep consistency</strong> – consistent bedtime/wake</li>
+              <li>😄 <strong>Social interaction &amp; laughter</strong> – connection &amp; joy</li>
+            </ul>
 
-  <a
-    href="/What_Actually_Helps_the_Brain_Most_Senior_Handout.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: "inline-block",
-      marginTop: 14,
-      padding: "12px 16px",
-      borderRadius: 12,
-      textDecoration: "none",
-      fontWeight: 900,
-      background: "#22c55e",
-      color: "#041b0a",
-      boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-    }}
-  >
-    📄 Download the Free One-Page Handout
-  </a>
-</section>
+            <p style={{ margin: "0 0 12px", fontWeight: 800, opacity: 0.98 }}>
+              These habits often outperform pills alone.
+            </p>
+
+            <a
+              href="/What_Actually_Helps_the_Brain_Most_Senior_Handout.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: 6,
+                padding: "12px 16px",
+                borderRadius: 12,
+                textDecoration: "none",
+                fontWeight: 900,
+                background: "#22c55e",
+                color: "#041b0a",
+                boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+              }}
+            >
+              📄 Download the Free One-Page Handout
+            </a>
+          </section>
 
           {/* Program Overview */}
           <section
@@ -398,20 +410,13 @@ export default function App() {
               boxShadow: "0 10px 24px rgba(0,0,0,.25)",
             }}
           >
-            <h2
-              style={{
-                margin: "0 0 10px",
-                fontSize: "1.35rem",
-                fontWeight: 900,
-              }}
-            >
+            <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
               Program Overview
             </h2>
-
             <p style={{ margin: 0, lineHeight: 1.5, opacity: 0.95 }}>
-              The <strong>Messed Up Game</strong> is a live, hosted,
-              brain-engagement group activity designed to bring laughter,
-              connection, and cognitive stimulation.
+              The <strong>Messed Up Game</strong> is a live, hosted, brain-engagement
+              group activity designed to bring laughter, connection, and cognitive
+              stimulation.
             </p>
           </section>
 
@@ -427,13 +432,7 @@ export default function App() {
               boxShadow: "0 10px 24px rgba(0,0,0,.25)",
             }}
           >
-            <h2
-              style={{
-                margin: "0 0 12px",
-                fontSize: "1.35rem",
-                fontWeight: 900,
-              }}
-            >
+            <h2 style={{ margin: "0 0 12px", fontSize: "1.35rem", fontWeight: 900 }}>
               What Players Are Saying
             </h2>
 
@@ -446,12 +445,12 @@ export default function App() {
                 opacity: 0.95,
               }}
             >
-              “After playing the game at Starbucks with a few of my friends and
-              Tom, I noticed that I slept better that night.”
+              “After playing the game at Starbucks with a few of my friends and Tom,
+              I noticed that I slept better that night.”
               <br />
-              <span
-                style={{ fontWeight: 800, fontStyle: "normal" }}
-              >{`— Bill Gibson`}</span>
+              <span style={{ fontWeight: 800, fontStyle: "normal" }}>
+                — Bill Gibson
+              </span>
             </blockquote>
 
             <blockquote
@@ -463,261 +462,269 @@ export default function App() {
                 opacity: 0.95,
               }}
             >
-              “I love this game… it definitely makes my brain do things it’s
-              never done before.”
+              “I love this game… it definitely makes my brain do things it’s never
+              done before.”
               <br />
-              <span
-                style={{ fontWeight: 800, fontStyle: "normal" }}
-              >{`— Jim Henderson`}</span>
+              <span style={{ fontWeight: 800, fontStyle: "normal" }}>
+                — Jim Henderson
+              </span>
             </blockquote>
           </section>
 
-{/* ✅ Got Backup banner */}
-<GotBackupBannerAd />
+          {/* ✅ Got Backup banner */}
+          <GotBackupBannerAd />
 
-{/* ✅ Newsletter signup */}
-<section
-  style={{
-    maxWidth: 560,
-    margin: "18px auto 0",
-    padding: 16,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.03)",
-  }}
->
-  <h2
-    style={{
-      margin: "0 0 8px",
-      fontSize: "1.2rem",
-      fontWeight: 900,
-    }}
-  >
-    📩 Join the Newsletter (Optional)
-  </h2>
+          {/* ✅ Newsletter signup */}
+          <section
+            style={{
+              maxWidth: 560,
+              margin: "18px auto 0",
+              padding: 16,
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,.12)",
+              background: "rgba(255,255,255,.03)",
+            }}
+          >
+            <h2 style={{ margin: "0 0 8px", fontSize: "1.2rem", fontWeight: 900 }}>
+              📩 Join the Newsletter (Optional)
+            </h2>
 
-  <form
-    name="newsletter"
-    method="POST"
-    data-netlify="true"
-    netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="form-name" value="newsletter" />
-    <input type="hidden" name="bot-field" />
+            <form
+              name="newsletter"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="newsletter" />
+              <input type="hidden" name="bot-field" />
 
-    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="Enter your email"
-        style={{
-          flex: "1 1 260px",
-          padding: "12px 14px",
-          fontSize: 16,
-          borderRadius: 12,
-          border: "1px solid rgba(255,255,255,.18)",
-          background: "rgba(0,0,0,.25)",
-          color: "white",
-        }}
-      />
-      <button type="submit" style={buttonStyle}>
-        Join
-      </button>
-    </div>
-  </form>
-</section>
-
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email"
+                  style={{
+                    flex: "1 1 260px",
+                    padding: "12px 14px",
+                    fontSize: 16,
+                    borderRadius: 12,
+                    border: "1px solid rgba(255,255,255,.18)",
+                    background: "rgba(0,0,0,.25)",
+                    color: "white",
+                  }}
+                />
+                <button type="submit" style={buttonStyle}>
+                  Join
+                </button>
+              </div>
+            </form>
+          </section>
         </div>
       </main>
     );
-  }  // ✅ end Newsletter screen
+  } // ✅ end Newsletter screen
 
   // ——— Home screen (default) ———
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
         <header style={{ marginBottom: 18 }}>
-  <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-    The Messed Up Game
-  </h1>
+          <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+            The Messed Up Game
+          </h1>
 
-  <p style={{ marginTop: 8, opacity: 0.9 }}>
-    Family-friendly, hilarious, and brain-boosting — play live or solo.
-  </p>
+          <p style={{ marginTop: 8, opacity: 0.9 }}>
+            Family-friendly, hilarious, and brain-boosting — play live or solo.
+          </p>
 
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 10,
-      marginTop: 12,
-    }}
-  >
-    <a
-      href={STREAMYARD_GUEST_LINK}
-      target="_blank"
-      rel="noreferrer"
-      style={{
-        ...buttonStyle,
-        textDecoration: "none",
-        display: "inline-flex",
-        alignItems: "center",
-      }}
-    >
-      Join Live on StreamYard
-    </a>
+          {/* ✅ Home buttons row */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 10,
+              marginTop: 12,
+            }}
+          >
+            <a
+              href={STREAMYARD_GUEST_LINK}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...buttonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              Join Live on StreamYard
+            </a>
 
-    <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-      Play Solo (vs Computer)
-    </button>
+            <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+              Play Solo (vs Computer)
+            </button>
 
-    <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
-      📰 Newsletter
-    </button>
+            <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+              📰 Newsletter
+            </button>
 
-    <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
-      🪧 Hesperia Poster
-    </button>
+            <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+              🪧 Hesperia Poster
+            </button>
 
-    <a
-      href={CHANNEL_URL}
-      target="_blank"
-      rel="noreferrer"
-      style={{
-        ...ghostButtonStyle,
-        textDecoration: "none",
-        display: "inline-flex",
-        alignItems: "center",
-      }}
-    >
-      YouTube Channel
-    </a>
-  </div>
+            <a
+              href={PRAYER_SHORT_URL}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...ghostButtonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              🙏 Mark Wahlberg Prayer
+            </a>
 
-  {/* Social links (Home page) */}
-  <div style={{ marginTop: 14, textAlign: "center" }}>
-    <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
-      Follow The Messed Up Game
-    </p>
+            <a
+              href={CHANNEL_URL}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...ghostButtonStyle,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              YouTube Channel
+            </a>
+          </div>
 
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: 10,
-        flexWrap: "wrap",
-      }}
-    >
-      {(SOCIAL_LINKS || []).map((s) => (
-        <a
-          key={s.label}
-          href={s.href}
-          target="_blank"
-          rel="noreferrer"
+          {/* Social links (Home page) */}
+          <div style={{ marginTop: 14, textAlign: "center" }}>
+            <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+              Follow The Messed Up Game
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: 10,
+                flexWrap: "wrap",
+              }}
+            >
+              {(SOCIAL_LINKS || []).map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    padding: "10px 14px",
+                    borderRadius: 999,
+                    textDecoration: "none",
+                    fontWeight: 800,
+                    border: "2px solid rgba(255,255,255,0.25)",
+                    background: "rgba(0,0,0,0.25)",
+                    color: "white",
+                  }}
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </header>
+
+        {/* Poster preview on home */}
+        <section
           style={{
-            padding: "10px 14px",
-            borderRadius: 999,
-            textDecoration: "none",
-            fontWeight: 800,
-            border: "2px solid rgba(255,255,255,0.25)",
-            background: "rgba(0,0,0,0.25)",
-            color: "white",
+            maxWidth: 900,
+            margin: "0 auto 22px",
+            padding: 16,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.12)",
+            background: "rgba(255,255,255,.03)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
           }}
         >
-          {s.label}
-        </a>
-      ))}
-    </div>
-  </div>
-</header>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 10,
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+              🪧 Hesperia Senior Home Poster
+            </h2>
 
-    {/* Poster preview on home */}
-<section
-  style={{
-    maxWidth: 900,
-    margin: "0 auto 22px",
-    padding: 16,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.03)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 10,
-      justifyContent: "space-between",
-      alignItems: "center",
-    }}
-  >
-    <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
-      🪧 Hesperia Senior Home Poster
-    </h2>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <button style={buttonStyle} onClick={() => setMode("poster")}>
+                View Poster
+              </button>
+              <a
+                href="/posters/hesperia-poster.webp"
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...ghostButtonStyle, textDecoration: "none" }}
+              >
+                Open Full Size
+              </a>
+            </div>
+          </div>
 
-    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-      <button style={buttonStyle} onClick={() => setMode("poster")}>
-        View Poster
-      </button>
-      <a
-        href="/posters/hesperia-poster.webp"
-        target="_blank"
-        rel="noreferrer"
-        style={{ ...ghostButtonStyle, textDecoration: "none" }}
-      >
-        Open Full Size
-      </a>
-    </div>
-  </div>
+          <button
+            onClick={() => setMode("poster")}
+            style={{
+              marginTop: 14,
+              padding: 0,
+              width: "100%",
+              border: "none",
+              background: "transparent",
+              cursor: "pointer",
+              borderRadius: 16,
+              overflow: "hidden",
+            }}
+            aria-label="View the Hesperia poster"
+          >
+            <img
+              src="/posters/hesperia-poster.webp"
+              alt="Hesperia poster preview"
+              style={{ width: "100%", height: "auto", display: "block" }}
+              loading="lazy"
+            />
+          </button>
+        </section>
 
-  <button
-    onClick={() => setMode("poster")}
-    style={{
-      marginTop: 14,
-      padding: 0,
-      width: "100%",
-      border: "none",
-      background: "transparent",
-      cursor: "pointer",
-      borderRadius: 16,
-      overflow: "hidden",
-    }}
-    aria-label="View the Hesperia poster"
-  >
-    <img
-      src="/posters/hesperia-poster.webp"
-      alt="Hesperia poster preview"
-      style={{ width: "100%", height: "auto", display: "block" }}
-      loading="lazy"
-    />
-  </button>
-</section>
+        {/* Button under Hesperia poster on home */}
+        <div style={{ textAlign: "center", margin: "8px 0 0" }}>
+          <a
+            href={BENEFITS_DOC_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-block",
+              padding: "12px 24px",
+              borderRadius: 999,
+              fontWeight: 700,
+              fontSize: 18,
+              textDecoration: "none",
+              background: "#facc15",
+              color: "#111827",
+              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+            }}
+          >
+            Benefits for Seniors, Churches &amp; More
+          </a>
+        </div>
 
-{/* Button under Hesperia poster on home */}
-<div style={{ textAlign: "center", margin: "8px 0 0" }}>
-  <a
-href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view"
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      display: "inline-block",
-      padding: "12px 24px",
-      borderRadius: 999,
-      fontWeight: 700,
-      fontSize: 18,
-      textDecoration: "none",
-      background: "#facc15",
-      color: "#111827",
-      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-    }}
-  >
-    Benefits for Seniors, Churches &amp; More
-  </a>
-</div>
-
-        {/* Benefits section on home */}
+        {/* Benefits section on home (keep it) */}
         <section
           id="benefits"
           style={{
@@ -745,7 +752,6 @@ href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB9
               gap: 18,
             }}
           >
-            {/* Seniors */}
             <div>
               <h3 style={{ fontSize: 20, marginBottom: 6 }}>
                 Senior Homes &amp; Communities
@@ -753,26 +759,22 @@ href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB9
               <ul style={{ margin: 0, paddingLeft: 18 }}>
                 <li>Weekly 60–90 minute brain-boost game hour.</li>
                 <li>
-                  Up to <strong>40 residents</strong> can play in the room at
-                  once.
+                  Up to <strong>40 residents</strong> can play in the room at once.
                 </li>
                 <li>
-                  Up to <strong>9 players</strong> live online with Wildman Tom
-                  B.
+                  Up to <strong>9 players</strong> live online with Wildman Tom B.
                 </li>
                 <li>
-                  Host uses a big whiteboard to track names &amp; strikes (3
-                  strikes and you’re out, but you can stay and watch).
+                  Host uses a big whiteboard to track names &amp; strikes (3 strikes
+                  and you’re out, but you can stay and watch).
                 </li>
                 <li>
-                  Solo players just click the link – no code needed. Reach
-                  <strong> 50 points</strong> and earn a free deck of The
-                  Messed Up Game!
+                  Solo players just click the link – no code needed. Reach{" "}
+                  <strong>50 points</strong> and earn a free deck!
                 </li>
               </ul>
             </div>
 
-            {/* Churches */}
             <div>
               <h3 style={{ fontSize: 20, marginBottom: 6 }}>
                 Churches &amp; Faith Groups
@@ -780,21 +782,13 @@ href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB9
               <ul style={{ margin: 0, paddingLeft: 18 }}>
                 <li>Family-friendly and faith-friendly fun.</li>
                 <li>
-                  Includes <strong>Books of the New Testament</strong> as a
-                  category.
+                  Includes <strong>Books of the New Testament</strong> as a category.
                 </li>
-                <li>
-                  Great for seniors, youth nights, small groups &amp; game
-                  nights.
-                </li>
-                <li>
-                  Builds fellowship while waking up the amazing brain God gave
-                  us.
-                </li>
+                <li>Great for seniors, youth nights, small groups &amp; game nights.</li>
+                <li>Builds fellowship while waking up the amazing brain God gave us.</li>
               </ul>
             </div>
 
-            {/* Schools */}
             <div>
               <h3 style={{ fontSize: 20, marginBottom: 6 }}>
                 Schools &amp; Youth Programs
@@ -806,22 +800,15 @@ href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB9
               </ul>
             </div>
 
-            {/* Bars */}
             <div>
               <h3 style={{ fontSize: 20, marginBottom: 6 }}>
                 Bars, Cafés &amp; Social Venues
               </h3>
               <ul style={{ margin: 0, paddingLeft: 18 }}>
                 <li>A fresh spin on traditional trivia night.</li>
-                <li>
-                  Keeps guests hanging out longer and talking to each other.
-                </li>
-                <li>
-                  Easy to run with a host, a whiteboard, and prizes.
-                </li>
-                <li>
-                  Perfect for theme nights, tournaments, or sponsor tie-ins.
-                </li>
+                <li>Keeps guests hanging out longer and talking to each other.</li>
+                <li>Easy to run with a host, a whiteboard, and prizes.</li>
+                <li>Perfect for theme nights, tournaments, or sponsor tie-ins.</li>
               </ul>
             </div>
           </div>
@@ -869,13 +856,7 @@ href="https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB9
 
         {/* Quick links */}
         <section style={{ marginBottom: 22 }}>
-          <h2
-            style={{
-              margin: "0 0 10px",
-              fontSize: "1.4rem",
-              fontWeight: 900,
-            }}
-          >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
             Quick Links
           </h2>
           <LinkGrid links={links} />
