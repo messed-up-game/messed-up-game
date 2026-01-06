@@ -1,9 +1,8 @@
 // src/App.jsx
-
 import { useState } from "react";
+import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
-import GotBackupBannerAd from "./components/GotBackupBannerAd";
 
 export default function App() {
   // ——— constants ———
@@ -117,7 +116,8 @@ export default function App() {
               >
                 Sign Up
               </a>
-              <a
+              
+                <a
                 href={STREAMYARD_GUEST_LINK}
                 target="_blank"
                 rel="noreferrer"
@@ -127,6 +127,8 @@ export default function App() {
               </a>
             </div>
           </nav>
+
+          <SocialBar />
 
           <MessedUpGameSoloVsComputer />
         </div>
