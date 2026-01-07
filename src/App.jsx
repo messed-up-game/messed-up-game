@@ -53,12 +53,12 @@ export default function App() {
       desc: "Cloud backup & storage",
       affiliate: true,
     },
-    {
-      title: "MOSH Brain Bars",
-      href: "https://moshlife.com/",
-      desc: "Brain fuel sponsor 🧠",
-      sponsor: true,
-    },
+  {
+  title: "MOSH Brain Bars",
+  href: "https://moshlife.com/",
+  desc: "Brain fuel sponsor 🧠",
+},
+  
   ];
 
   // ——— styles ———
