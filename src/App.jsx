@@ -32,8 +32,8 @@ export default function App() {
   // Benefits doc button
   const BENEFITS_DOC_URL =
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
+// "home" | "solo" | "newsletter" | "poster" | "sponsors"
 
-  // "home" | "solo" | "newsletter" | "poster"
   const [mode, setMode] = useState("home");
 
   const links = [
@@ -264,6 +264,18 @@ export default function App() {
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
             Read the latest updates and stories. No signup required.
           </p>
+<button
+  style={{
+    ...ghostButtonStyle,
+    display: "block",
+    maxWidth: 560,
+    margin: "6px auto 14px",
+    fontWeight: 900,
+  }}
+  onClick={() => setMode("sponsors")}
+>
+  ⭐ Our Sponsors & Advertisers
+</button>
 
           {/* 🙏 Mark Wahlberg Prayer Short */}
           <section
@@ -499,6 +511,7 @@ export default function App() {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              action="/?newsletter=success"
             >
               <input type="hidden" name="form-name" value="newsletter" />
               <input type="hidden" name="bot-field" />
@@ -528,7 +541,113 @@ export default function App() {
         </div>
       </main>
     );
-  } // ✅ end Newsletter screen
+ } // ✅ end Newsletter screen
+
+// ——— Sponsors screen ———
+if (mode === "sponsors") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: 10,
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+            ← Back to Newsletter
+          </button>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+        </nav>
+
+        <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+          ⭐ Our Sponsors & Advertisers
+        </h1>
+
+        <p style={{ opacity: 0.9, maxWidth: 760 }}>
+          Thanks to our amazing sponsors who help us bring brain-boosting fun to communities everywhere.
+        </p>
+
+        {/* MOSH */}
+        <section
+          style={{
+            maxWidth: 760,
+            margin: "16px auto",
+            padding: 18,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.14)",
+            background: "rgba(255,255,255,.06)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+            MOSH Brain Bars 🧠
+          </h2>
+          <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
+            Brain fuel sponsor — support the brands that support brain health.
+          </p>
+          <a
+            href="https://moshlife.com/"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-block",
+              padding: "12px 16px",
+              borderRadius: 12,
+              textDecoration: "none",
+              fontWeight: 900,
+              background: "#facc15",
+              color: "#111827",
+              boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            }}
+          >
+            Visit MOSH
+          </a>
+        </section>
+
+        {/* Joyful Dog Lover */}
+        <section
+          style={{
+            maxWidth: 760,
+            margin: "16px auto",
+            padding: 18,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.14)",
+            background: "rgba(255,255,255,.04)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+            Joyful Dog Lover 🐶
+          </h2>
+
+          <img
+            src="/joyful-dog-lover-mup.png"
+            alt="Joyful Dog Lover sponsor"
+            style={{
+              width: "100%",
+              maxWidth: 640,
+              height: "auto",
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,.10)",
+              display: "block",
+              margin: "10px auto 0",
+            }}
+            loading="lazy"
+          />
+        </section>
+
+        <SocialBar />
+      </div>
+    </main>
+  );
+}
 
   // ——— Home screen (default) ———
   return (
