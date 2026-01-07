@@ -627,27 +627,38 @@ if (mode === "sponsors") {
             Joyful Dog Lover 🐶
           </h2>
 
-          <img
-            src="/joyful-dog-lover-mup.png"
-            alt="Joyful Dog Lover sponsor"
-            style={{
-              width: "100%",
-              maxWidth: 640,
-              height: "auto",
-              borderRadius: 16,
-              border: "1px solid rgba(255,255,255,.10)",
-              display: "block",
-              margin: "10px auto 0",
-            }}
-            loading="lazy"
-          />
-        </section>
-
-        <SocialBar />
-      </div>
-    </main>
-  );
-}
+  <a
+  href="https://www.joyfuldoglover.com/"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "block",
+    maxWidth: 640,
+    margin: "10px auto 0",
+    borderRadius: 16,
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,.10)",
+    textDecoration: "none",
+  }}
+>
+  <img
+    src="/joyful-dog-lover-mup.png"
+    alt="Joyful Dog Lover sponsor"
+    style={{
+      width: "100%",
+      height: "auto",
+      display: "block",
+      cursor: "pointer",
+    }}
+    loading="lazy"
+  />
+</a>
+</section>
+<SocialBar />
+</div>
+</main>
+);
+} // ✅ end Sponsors screen
 
   // ——— Home screen (default) ———
   return (
