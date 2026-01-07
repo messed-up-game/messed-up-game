@@ -3,6 +3,7 @@ import { useState } from "react";
 import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
+import GotBackupBannerAd from "./components/GotBackupBannerAd";
 
 export default function App() {
   // ——— constants ———
