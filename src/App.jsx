@@ -682,6 +682,43 @@ if (mode === "sponsors") {
               marginTop: 12,
             }}
           >
+    {/* 🎥 What is The Messed Up Game? */}
+<section style={{ margin: "22px 0" }}>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+    What Is The Messed Up Game?
+  </h2>
+
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      paddingTop: "56.25%", // 16:9
+      borderRadius: 16,
+      overflow: "hidden",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+      border: "1px solid rgba(255,255,255,.12)",
+    }}
+  >
+    <iframe
+      title="What Is The Messed Up Game"
+      src="https://www.youtube.com/embed/ju6fYT3K9tQ"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+    />
+  </div>
+
+  <p style={{ marginTop: 10, opacity: 0.9 }}>
+    A simple, hilarious party game you can play anywhere — no cards required.
+  </p>
+</section>
+
             <a
               href={STREAMYARD_GUEST_LINK}
               target="_blank"
