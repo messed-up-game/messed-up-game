@@ -17,13 +17,13 @@ export default function App() {
   const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
 
   const SOCIAL_LINKS = [
-  { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
-  { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
-  { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
-  { label: "X", href: "https://x.com/saveplanetusa" },
-  { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
-  { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
-];
+    { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
+    { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
+    { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
+    { label: "X", href: "https://x.com/saveplanetusa" },
+    { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
+    { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
+  ];
 
   // Mark Wahlberg prayer short
   const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
@@ -32,9 +32,9 @@ export default function App() {
   // Benefits doc button
   const BENEFITS_DOC_URL =
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
-// "home" | "solo" | "newsletter" | "poster" | "sponsors"
 
-  const [mode, setMode] = useState("home");
+// "home" | "solo" | "newsletter" | "poster" | "sponsors"
+const [mode, setMode] = useState("home");
 
   const links = [
     {
@@ -53,12 +53,11 @@ export default function App() {
       desc: "Cloud backup & storage",
       affiliate: true,
     },
-  {
-  title: "MOSH Brain Bars",
-  href: "https://moshlife.com/",
-  desc: "Brain fuel sponsor 🧠",
-},
-  
+    {
+      title: "MOSH Brain Bars",
+      href: "https://moshlife.com/",
+      desc: "Brain fuel sponsor 🧠",
+    },
   ];
 
   // ——— styles ———
@@ -88,7 +87,7 @@ export default function App() {
     padding: "10px 14px",
     borderRadius: 12,
     fontWeight: 700,
-    cursor: "pointer",*96
+    cursor: "pointer",
   };
 
   // ——— Solo screen ———
@@ -106,6 +105,7 @@ export default function App() {
               flexWrap: "wrap",
             }}
           >
+
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
@@ -120,7 +120,7 @@ export default function App() {
                 Sign Up
               </a>
               
-                <a
+              <a
                 href={STREAMYARD_GUEST_LINK}
                 target="_blank"
                 rel="noreferrer"
@@ -167,7 +167,7 @@ export default function App() {
               </a>{" "}
               or call us at{" "}
               <a
-                href="tel:13106287889"
+                href="tel:+13106287889"
                 style={{
                   color: "#7bdff6",
                   textDecoration: "none",
@@ -220,7 +220,7 @@ export default function App() {
               href={CONTACT_EMAIL}
               style={{ color: "#7bdff6", textDecoration: "none" }}
             >
-              tom@messedupgame.com
+              {CONTACT_EMAIL.replace("mailto:", "")}
             </a>
             .
           </p>
@@ -257,7 +257,7 @@ export default function App() {
             </a>
           </nav>
           
-          {/* 🌍 Now Hiring (anchor target) */}
+{/* 🌍 Now Hiring (anchor target) */}
   <section
   id="now-hiring"
   style={{
@@ -270,34 +270,39 @@ export default function App() {
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
   }}
 >
+  <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
+    🌍 Now Hiring – Hosts & Sales Reps Worldwide
+  </h2>
 
-            <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
-              🌍 Now Hiring – Hosts & Sales Reps Worldwide
-            </h2>
+  <p style={{ opacity: 0.92, maxWidth: 700, marginTop: 0 }}>
+    We’re expanding <b>The Messed Up Game</b>, a fun, family-friendly,
+    brain-boosting live game show, and we’re hiring:
+  </p>
 
-            <p style={{ opacity: 0.92, maxWidth: 700, marginTop: 0 }}>
-              We’re expanding <b>The Messed Up Game</b>, a fun, family-friendly,
-              brain-boosting live game show, and we’re hiring:
-            </p>
+  <p style={{ marginTop: 8, lineHeight: 1.5 }}>
+    🎤 <b>Hosts / Actors / Comedians</b>
+    <br />
+    💼 <b>Sales Reps (Sponsorships &amp; Bookings)</b>
+  </p>
 
-            <p style={{ marginTop: 8, lineHeight: 1.5 }}>
-              🎤 <b>Hosts / Actors / Comedians</b>
-              <br />
-              💼 <b>Sales Reps (Sponsorships &amp; Bookings)</b>
-            </p>
+  <p style={{ marginTop: 8, fontWeight: 900 }}>
+    Part-time • Contract • Remote + Local Opportunities
+  </p>
 
-            <p style={{ marginTop: 8, fontWeight: 900 }}>
-              Part-time • Contract • Remote + Local Opportunities
-            </p>
+  <p style={{ marginTop: 8 }}>
+    📧 Questions?{" "}
+    <a
+      href="mailto:tom@messedupgame.com"
+      style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 900 }}
+    >
+      tom@messedupgame.com
+    </a>
+  </p>
+</section>
 
-            <p style={{ marginTop: 8 }}>
-              📧 Questions? <b>tombutler@messedupgame.com</b>
-            </p>
-          </section>
-
-          <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
-            📰 Newsletter
-          </h1>
+<h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
+  📰 Newsletter
+</h1>
 
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
             Read the latest updates and stories. No signup required.
@@ -581,122 +586,142 @@ export default function App() {
     );
  } // ✅ end Newsletter screen
 
-// ——— Sponsors screen ———
-if (mode === "sponsors") {
-  return (
-    <main style={pageStyle}>
-      <div style={containerStyle}>
-        <nav
-          style={{
-            marginBottom: 16,
-            display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 10,
-          }}
-        >
-          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
-            ← Back to Newsletter
-          </button>
-
-          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
-            ← Back Home
-          </button>
-        </nav>
-
-        <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
-          ⭐ Our Sponsors & Advertisers
-        </h1>
-
-        <p style={{ opacity: 0.9, maxWidth: 760 }}>
-          Thanks to our amazing sponsors who help us bring brain-boosting fun to communities everywhere.
-        </p>
-
-        {/* MOSH */}
-        <section
-          style={{
-            maxWidth: 760,
-            margin: "16px auto",
-            padding: 18,
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,.14)",
-            background: "rgba(255,255,255,.06)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-          }}
-        >
-          <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
-            MOSH Brain Bars 🧠
-          </h2>
-          <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-            Brain fuel sponsor — support the brands that support brain health.
-          </p>
-          <a
-            href="https://moshlife.com/"
-            target="_blank"
-            rel="noreferrer"
+  // ——— Sponsors screen ———
+  if (mode === "sponsors") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
             style={{
-              display: "inline-block",
-              padding: "12px 16px",
-              borderRadius: 12,
-              textDecoration: "none",
-              fontWeight: 900,
-              background: "#facc15",
-              color: "#111827",
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: 10,
+            }}
+          >
+            <button
+              style={ghostButtonStyle}
+              onClick={() => setMode("newsletter")}
+            >
+              ← Back to Newsletter
+            </button>
+
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
+          </nav>
+
+          <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+            ⭐ Our Sponsors & Advertisers
+          </h1>
+
+          <p style={{ opacity: 0.9, maxWidth: 760 }}>
+            Thanks to our amazing sponsors who help us bring brain-boosting fun to
+            communities everywhere.
+          </p>
+
+          {/* MOSH */}
+          <section
+            style={{
+              maxWidth: 760,
+              margin: "16px auto",
+              padding: 18,
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,.14)",
+              background: "rgba(255,255,255,.06)",
               boxShadow: "0 10px 24px rgba(0,0,0,.25)",
             }}
           >
-            Visit MOSH
-          </a>
-        </section>
+            <h2
+              style={{
+                margin: "0 0 10px",
+                fontSize: "1.35rem",
+                fontWeight: 900,
+              }}
+            >
+              MOSH Brain Bars 🧠
+            </h2>
 
-        {/* Joyful Dog Lover */}
-        <section
-          style={{
-            maxWidth: 760,
-            margin: "16px auto",
-            padding: 18,
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,.14)",
-            background: "rgba(255,255,255,.04)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-          }}
-        >
-          <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
-            Joyful Dog Lover 🐶
-          </h2>
+            <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
+              Brain fuel sponsor — support the brands that support brain health.
+            </p>
 
-  <a
-  href="https://www.joyfuldoglover.com/"
-  target="_blank"
-  rel="noreferrer"
-  style={{
-    display: "block",
-    maxWidth: 640,
-    margin: "10px auto 0",
-    borderRadius: 16,
-    overflow: "hidden",
-    border: "1px solid rgba(255,255,255,.10)",
-    textDecoration: "none",
-  }}
->
-  <img
-    src="/joyful-dog-lover-mup.png"
-    alt="Joyful Dog Lover sponsor"
-    style={{
-      width: "100%",
-      height: "auto",
-      display: "block",
-      cursor: "pointer",
-    }}
-    loading="lazy"
-  />
-</a>
-</section>
-<SocialBar />
-</div>
-</main>
-);
-} // ✅ end Sponsors screen
+            <a
+              href="https://moshlife.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-block",
+                padding: "12px 16px",
+                borderRadius: 12,
+                textDecoration: "none",
+                fontWeight: 900,
+                background: "#facc15",
+                color: "#111827",
+                boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+              }}
+            >
+              Visit MOSH
+            </a>
+          </section>
+
+          {/* Joyful Dog Lover */}
+          <section
+            style={{
+              maxWidth: 760,
+              margin: "16px auto",
+              padding: 18,
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,.14)",
+              background: "rgba(255,255,255,.04)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            }}
+          >
+            <h2
+              style={{
+                margin: "0 0 10px",
+                fontSize: "1.35rem",
+                fontWeight: 900,
+              }}
+            >
+              Joyful Dog Lover 🐶
+            </h2>
+
+            <a
+              href="https://www.joyfuldoglover.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "block",
+                maxWidth: 640,
+                margin: "10px auto 0",
+                borderRadius: 16,
+                overflow: "hidden",
+                border: "1px solid rgba(255,255,255,.10)",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src="/joyful-dog-lover-mup.png"
+                alt="Joyful Dog Lover sponsor"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  cursor: "pointer",
+                }}
+                loading="lazy"
+              />
+            </a>
+          </section>
+
+          <SocialBar />
+        </div>
+      </main>
+    );
+  } // ✅ end Sponsors screen
+
 
   // ——— Home screen (default) ———
   return (
@@ -718,10 +743,10 @@ if (mode === "sponsors") {
     cursor: "pointer",
   }}
   onClick={() => setMode("newsletter")}
->       
-🌍 Now Hiring – Hosts & Sales Reps (Click)
-      </div>
-        
+>
+  🌍 Now Hiring – Hosts & Sales Reps (Click)
+</div>
+      
         <header style={{ marginBottom: 18 }}>
           <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
             The Messed Up Game
@@ -731,16 +756,7 @@ if (mode === "sponsors") {
             Family-friendly, hilarious, and brain-boosting — play live or solo.
           </p>
 
-          {/* ✅ Home buttons row */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              marginTop: 12,
-            }}
-          >
-    {/* 🎥 What is The Messed Up Game? */}
+  {/* 🎥 What is The Messed Up Game? */}
 <section style={{ margin: "22px 0" }}>
   <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
     What Is The Messed Up Game?
@@ -777,6 +793,16 @@ if (mode === "sponsors") {
   </p>
 </section>
 
+{/* ✅ Home buttons row */}
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 10,
+    marginTop: 12,
+  }}
+>
+  
             <a
               href={STREAMYARD_GUEST_LINK}
               target="_blank"
