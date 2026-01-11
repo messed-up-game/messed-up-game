@@ -88,7 +88,7 @@ export default function App() {
     padding: "10px 14px",
     borderRadius: 12,
     fontWeight: 700,
-    cursor: "pointer",
+    cursor: "pointer",*96
   };
 
   // ——— Solo screen ———
@@ -256,6 +256,44 @@ export default function App() {
               Sign Up
             </a>
           </nav>
+          
+          {/* 🌍 Now Hiring (anchor target) */}
+  <section
+  id="now-hiring"
+  style={{
+    scrollMarginTop: 90,
+    marginBottom: 18,
+    padding: "14px 14px",
+    borderRadius: 14,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.06)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+
+            <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
+              🌍 Now Hiring – Hosts & Sales Reps Worldwide
+            </h2>
+
+            <p style={{ opacity: 0.92, maxWidth: 700, marginTop: 0 }}>
+              We’re expanding <b>The Messed Up Game</b>, a fun, family-friendly,
+              brain-boosting live game show, and we’re hiring:
+            </p>
+
+            <p style={{ marginTop: 8, lineHeight: 1.5 }}>
+              🎤 <b>Hosts / Actors / Comedians</b>
+              <br />
+              💼 <b>Sales Reps (Sponsorships &amp; Bookings)</b>
+            </p>
+
+            <p style={{ marginTop: 8, fontWeight: 900 }}>
+              Part-time • Contract • Remote + Local Opportunities
+            </p>
+
+            <p style={{ marginTop: 8 }}>
+              📧 Questions? <b>tombutler@messedupgame.com</b>
+            </p>
+          </section>
 
           <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
             📰 Newsletter
@@ -664,6 +702,7 @@ if (mode === "sponsors") {
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
+        
 {/* 🌍 Hiring Banner */}
 <div
   style={{
@@ -679,10 +718,10 @@ if (mode === "sponsors") {
     cursor: "pointer",
   }}
   onClick={() => setMode("newsletter")}
->
-  🌍 Now Hiring Hosts & Sales Reps Worldwide — Actors, Comedians & Extroverts Welcome
-</div>
-
+>       
+🌍 Now Hiring – Hosts & Sales Reps (Click)
+      </div>
+        
         <header style={{ marginBottom: 18 }}>
           <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
             The Messed Up Game
@@ -826,6 +865,7 @@ if (mode === "sponsors") {
                   {s.label}
                 </a>
               ))}
+              
             </div>
           </div>
         </header>
