@@ -926,55 +926,46 @@ const [mode, setMode] = useState("home");
             boxShadow: "0 10px 24px rgba(0,0,0,.25)",
           }}
         >
-          <div
+       
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+  <button style={buttonStyle} onClick={() => setMode("poster")}>
+    View Poster
+  </button>
+
+  <a
+    href="/posters/hesperia-poster.webp"
+    target="_blank"
+    rel="noreferrer"
+    style={{ ...ghostButtonStyle, textDecoration: "none" }}
+  >
+    Open Full Size
+  </a>
+</div>   
+
+          {/* Clickable poster image preview */}
+          <button
+            onClick={() => setMode("poster")}
             style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              justifyContent: "space-between",
-              alignItems: "center",
+              marginTop: 14,
+              padding: 0,
+              width: "100%",
+              border: "none",
+              background: "transparent",
+              cursor: "pointer",
+              borderRadius: 16,
+              overflow: "hidden",
             }}
+            aria-label="View the Hesperia poster"
           >
-            <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
-              🪧 Hesperia Senior Home Poster
-            </h2>
+            <img
+              src="/posters/hesperia-poster.webp"
+              alt="Hesperia poster preview"
+              style={{ width: "100%", height: "auto", display: "block" }}
+              loading="lazy"
+            />
+          </button>
+        </section>
 
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <button style={buttonStyle} onClick={() => setMode("poster")}>
-                View Poster
-              </button>
-              <a
-                href="/posters/hesperia-poster.webp"
-                target="_blank"
-                rel="noreferrer"
-                style={{ ...ghostButtonStyle, textDecoration: "none" }}
-              >
-            https://messedupgame.com/posters/ghana-edition-sleeve.png
-  <h3 style={{ margin: "10px 0 6px", fontSize: "1.1rem", fontWeight: 900 }}>
-    🏡 Royal Olive Court – Ghana
-  </h3>
-
-  <p style={{ marginTop: 0, opacity: 0.95, lineHeight: 1.55 }}>
-    Royal Olive Court is a senior home in Ghana, and they are officially{" "}
-    <b>piloting weekly play</b> of The Messed Up Game as part of their regular
-    activities.
-  </p>
-
-  <h3 style={{ margin: "14px 0 6px", fontSize: "1.1rem", fontWeight: 900 }}>
-    🎴 Ghana Edition Deck
-  </h3>
-
-  <p style={{ marginTop: 0, opacity: 0.95, lineHeight: 1.55 }}>
-    This Ghana Edition is designed to stay local — a true deck sleeve (not a
-    brochure), simple rules, a separate insert card, and space for{" "}
-    <b>local community sponsors</b>.
-  </p>
-
-  <p style={{ marginTop: 10, opacity: 0.92, lineHeight: 1.55 }}>
-    <b>Why this matters:</b> Respecting elders, creating joy, encouraging mental
-    engagement, and building bridges between communities worldwide.
-  </p>
-</section>
 
         {/* Button under Hesperia poster on home */}
         <div style={{ textAlign: "center", margin: "8px 0 0" }}>
