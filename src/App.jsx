@@ -753,16 +753,16 @@ const [mode, setMode] = useState("home");
           </h1>
 
           <p style={{ marginTop: 8, opacity: 0.9 }}>
-            Family-friendly, hilarious, and brain-boosting — play live or solo.
-          </p>
-
-  {/* 🎥 What is The Messed Up Game? */}
-<section style={{ margin: "22px 0" }}>
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-    What Is The Messed Up Game?
-  </h2>
-
-  <div
+              Family-friendly, hilarious, and brain-boosting — play live or solo.
+            </p>
+  
+    {/* 🎥 What is The Messed Up Game? */}
+  <section style={{ margin: "22px 0" }}>
+    <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+      What Is The Messed Up Game?
+    </h2>
+  
+<div
     style={{
       position: "relative",
       width: "100%",
@@ -787,21 +787,76 @@ const [mode, setMode] = useState("home");
       }}
     />
   </div>
+  
+    <p style={{ marginTop: 12, opacity: 0.9 }}>
+      A simple, hilarious party game you can play anywhere — no cards required.
+    </p>
+  </section>
+  
+  {/* ✅ Home buttons row */}
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 10,
+      marginTop: 12,
+    }}
+  >
+  <a
+    href={STREAMYARD_GUEST_LINK}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...buttonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    Join Live on StreamYard
+  </a>
 
-  <p style={{ marginTop: 10, opacity: 0.9 }}>
-    A simple, hilarious party game you can play anywhere — no cards required.
-  </p>
-</section>
+  <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+    Play Solo (vs Computer)
+  </button>
 
-{/* ✅ Home buttons row */}
-<div
-  style={{
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 10,
-    marginTop: 12,
-  }}
->
+  <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+    📰 Newsletter
+  </button>
+
+  <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+    🪧 Hesperia Poster
+  </button>
+
+  <a
+    href={PRAYER_SHORT_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...ghostButtonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    🙏 Mark Wahlberg Prayer
+  </a>
+
+  <a
+    href={CHANNEL_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...ghostButtonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    YouTube Channel
+  </a>
+</div>
+
 {/* 🇬🇭 Ghana Pilot button (Home) */}
 <div style={{ marginTop: 12 }}>
   <button
@@ -818,62 +873,8 @@ const [mode, setMode] = useState("home");
   <p style={{ marginTop: 8, opacity: 0.85, fontSize: 14 }}>
     Local printing • Weekly play • Community sponsors
   </p>
-</div> 
+</div>
 
-            <a
-              href={STREAMYARD_GUEST_LINK}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                ...buttonStyle,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              Join Live on StreamYard
-            </a>
-
-            <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-              Play Solo (vs Computer)
-            </button>
-
-            <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
-              📰 Newsletter
-            </button>
-
-            <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
-              🪧 Hesperia Poster
-            </button>
-
-            <a
-              href={PRAYER_SHORT_URL}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                ...ghostButtonStyle,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              🙏 Mark Wahlberg Prayer
-            </a>
-
-            <a
-              href={CHANNEL_URL}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                ...ghostButtonStyle,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              YouTube Channel
-            </a>
-          </div>
 
           {/* Social links (Home page) */}
           <div style={{ marginTop: 14, textAlign: "center" }}>
@@ -948,51 +949,7 @@ const [mode, setMode] = useState("home");
                 rel="noreferrer"
                 style={{ ...ghostButtonStyle, textDecoration: "none" }}
               >
-                Open Full Size
-              </a>
-            </div>
-          </div>
-
-          <button
-            onClick={() => setMode("poster")}
-            style={{
-              marginTop: 14,
-              padding: 0,
-              width: "100%",
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-              borderRadius: 16,
-              overflow: "hidden",
-            }}
-            aria-label="View the Hesperia poster"
-          >
-            <img
-              src="/posters/hesperia-poster.webp"
-              alt="Hesperia poster preview"
-              style={{ width: "100%", height: "auto", display: "block" }}
-              loading="lazy"
-            />
-          </button>
-        </section>
-{/* 🇬🇭 Ghana Pilot section (Home) */}
-<section
-  id="ghana-pilot"
-  style={{
-    scrollMarginTop: 90,
-    maxWidth: 900,
-    margin: "0 auto 22px",
-    padding: 16,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.03)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
-    🇬🇭 Ghana Pilot Program
-  </h2>
-
+            https://messedupgame.com/posters/ghana-edition-sleeve.png
   <h3 style={{ margin: "10px 0 6px", fontSize: "1.1rem", fontWeight: 900 }}>
     🏡 Royal Olive Court – Ghana
   </h3>
