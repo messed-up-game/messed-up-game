@@ -862,9 +862,7 @@ const [mode, setMode] = useState("home");
   <button
     style={ghostButtonStyle}
     onClick={() =>
-      document
-        .getElementById("ghana-pilot")
-        ?.scrollIntoView({ behavior: "smooth" })
+      document.getElementById("ghana-pilot")?.scrollIntoView({ behavior: "smooth" })
     }
   >
     🇬🇭 Ghana Pilot: Weekly Play at Royal Olive Court
@@ -875,8 +873,42 @@ const [mode, setMode] = useState("home");
   </p>
 </div>
 
+{/* Social links (Home page) */}
+<div style={{ marginTop: 14, textAlign: "center" }}>
+  <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+    Follow The Messed Up Game
+  </p>
 
-          {/* Social links (Home page) */}
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: 10,
+      flexWrap: "wrap",
+    }}
+  >
+    {(SOCIAL_LINKS || []).map((s) => (
+      <a
+        key={s.label}
+        href={s.href}
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          padding: "10px 14px",
+          borderRadius: 999,
+          textDecoration: "none",
+          fontWeight: 800,
+          border: "2px solid rgba(255,255,255,0.25)",
+          background: "rgba(0,0,0,0.25)",
+          color: "white",
+        }}
+      >
+        {s.label}
+      </a>
+    ))}
+  </div>
+</div>
+
           <div style={{ marginTop: 14, textAlign: "center" }}>
             <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
               Follow The Messed Up Game
@@ -969,6 +1001,10 @@ const [mode, setMode] = useState("home");
 {/* 🇬🇭 Ghana Pilot section (Home) */}
 <section
   id="ghana-pilot"
+<h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+  🇬🇭 Ghana Pilot – Royal Olive Court
+</h2>
+  
   style={{
     maxWidth: 900,
     margin: "0 auto 22px",
