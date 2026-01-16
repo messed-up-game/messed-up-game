@@ -857,21 +857,22 @@ const [mode, setMode] = useState("home");
   </a>
 </div>
 
-{/* 🇬🇭 Ghana Pilot button (Home) */}
+{/* 🇬🇭 Ghana Pilot link (Home) */}
 <div style={{ marginTop: 12 }}>
-  <button
-    style={ghostButtonStyle}
-    onClick={() =>
-      document.getElementById("ghana-pilot")?.scrollIntoView({ behavior: "smooth" })
-    }
+  <a
+    href="https://docs.google.com/document/d/1A26VqvmSUo1_ZCisSpEDN3pdK_xIAcA5SqiMa6FdSHw/edit?usp=sharing"
+    target="_blank"
+    rel="noreferrer"
+    style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-block" }}
   >
     🇬🇭 Ghana Pilot: Weekly Play at Royal Olive Court
-  </button>
+  </a>
 
   <p style={{ marginTop: 8, opacity: 0.85, fontSize: 14 }}>
     Local printing • Weekly play • Community sponsors
   </p>
 </div>
+
 
 {/* Social links (Home page) */}
 <div style={{ marginTop: 14, textAlign: "center" }}>
@@ -907,14 +908,7 @@ const [mode, setMode] = useState("home");
       </a>
     ))}
   </div>
-</div>
-
-          <div style={{ marginTop: 14, textAlign: "center" }}>
-            <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
-              Follow The Messed Up Game
-            </p>
-
-            <div
+  
               style={{
                 display: "flex",
                 justifyContent: "center",
