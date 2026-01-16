@@ -965,7 +965,6 @@ const [mode, setMode] = useState("home");
             />
           </button>
         </section>
-</section>
 
 {/* 🇬🇭 Ghana Pilot section (Home) */}
 <section
@@ -980,10 +979,6 @@ const [mode, setMode] = useState("home");
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
   }}
 >
-  <section id="ghana-pilot" style={{ ... }}>
-  <h2>🇬🇭 Ghana Pilot – Royal Olive Court</h2>
-
-  </h2>
 
   <p style={{ marginTop: 10, opacity: 0.95, lineHeight: 1.55 }}>
     Weekly brain-boost game play is being piloted at <b>Royal Olive Court</b> in Ghana.
@@ -1010,7 +1005,6 @@ const [mode, setMode] = useState("home");
       loading="lazy"
     />
   </a>
-
   <a
     href="/posters/ghana-edition-sleeve.png"
     target="_blank"
