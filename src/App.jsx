@@ -965,26 +965,89 @@ const [mode, setMode] = useState("home");
             />
           </button>
         </section>
+</section>
 
+{/* 🇬🇭 Ghana Pilot section (Home) */}
+<section
+  id="ghana-pilot"
+  style={{
+    maxWidth: 900,
+    margin: "0 auto 22px",
+    padding: 16,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.03)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <section id="ghana-pilot" style={{ ... }}>
+  <h2>🇬🇭 Ghana Pilot – Royal Olive Court</h2>
 
-        {/* Button under Hesperia poster on home */}
-        <div style={{ textAlign: "center", margin: "8px 0 0" }}>
-          <a
-            href={BENEFITS_DOC_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              borderRadius: 999,
-              fontWeight: 700,
-              fontSize: 18,
-              textDecoration: "none",
-              background: "#facc15",
-              color: "#111827",
-              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-            }}
-          >
+  </h2>
+
+  <p style={{ marginTop: 10, opacity: 0.95, lineHeight: 1.55 }}>
+    Weekly brain-boost game play is being piloted at <b>Royal Olive Court</b> in Ghana.
+    Local printing • weekly play • community sponsors.
+  </p>
+
+  <a
+    href="/posters/ghana-edition-sleeve.png"
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "block",
+      marginTop: 10,
+      borderRadius: 16,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.10)",
+      textDecoration: "none",
+    }}
+  >
+    <img
+      src="/posters/ghana-edition-sleeve.png"
+      alt="Ghana Edition sleeve preview"
+      style={{ width: "100%", height: "auto", display: "block" }}
+      loading="lazy"
+    />
+  </a>
+
+  <a
+    href="/posters/ghana-edition-sleeve.png"
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "inline-block",
+      marginTop: 12,
+      padding: "10px 14px",
+      borderRadius: 12,
+      textDecoration: "none",
+      fontWeight: 900,
+      background: "#22c55e",
+      color: "#041b0a",
+    }}
+  >
+    Open Full Size
+  </a>
+</section>
+
+{/* Button under Hesperia poster on home */}
+<div style={{ textAlign: "center", margin: "8px 0 0" }}>
+  <a
+    href={BENEFITS_DOC_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "inline-block",
+      padding: "12px 24px",
+      borderRadius: 999,
+      fontWeight: 700,
+      fontSize: 18,
+      textDecoration: "none",
+      background: "#facc15",
+      color: "#111827",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+    }}
+  >
             Benefits for Seniors, Churches &amp; More
           </a>
         </div>
@@ -1009,7 +1072,7 @@ const [mode, setMode] = useState("home");
             Fun, fast, and brain-boosting for seniors, churches, schools, bars
             &amp; more.
           </p>
-
+          
           <div
             style={{
               display: "grid",
@@ -1039,7 +1102,7 @@ const [mode, setMode] = useState("home");
                 </li>
               </ul>
             </div>
-
+            
             <div>
               <h3 style={{ fontSize: 20, marginBottom: 6 }}>
                 Churches &amp; Faith Groups
