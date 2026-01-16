@@ -1001,10 +1001,6 @@ const [mode, setMode] = useState("home");
 {/* 🇬🇭 Ghana Pilot section (Home) */}
 <section
   id="ghana-pilot"
-<h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
-  🇬🇭 Ghana Pilot – Royal Olive Court
-</h2>
-  
   style={{
     maxWidth: 900,
     margin: "0 auto 22px",
@@ -1015,6 +1011,9 @@ const [mode, setMode] = useState("home");
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
   }}
 >
+  <h2 style={{ margin: 0, fontSize: "1.35rem", fontWeight: 900 }}>
+    🇬🇭 Ghana Pilot – Royal Olive Court
+  </h2>
 
   <p style={{ marginTop: 10, opacity: 0.95, lineHeight: 1.55 }}>
     Weekly brain-boost game play is being piloted at <b>Royal Olive Court</b> in Ghana.
@@ -1041,6 +1040,7 @@ const [mode, setMode] = useState("home");
       loading="lazy"
     />
   </a>
+
   <a
     href="/posters/ghana-edition-sleeve.png"
     target="_blank"
@@ -1059,6 +1059,7 @@ const [mode, setMode] = useState("home");
     Open Full Size
   </a>
 </section>
+
 
 {/* Button under Hesperia poster on home */}
 <div style={{ textAlign: "center", margin: "8px 0 0" }}>
