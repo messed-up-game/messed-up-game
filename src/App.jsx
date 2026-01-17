@@ -859,15 +859,19 @@ const [mode, setMode] = useState("home");
 
 {/* 🇬🇭 Ghana Pilot link (Home) */}
 <div style={{ marginTop: 12 }}>
-  <a
-    href="https://docs.google.com/document/d/1A26VqvmSUo1_ZCisSpEDN3pdK_xIAcA5SqiMa6FdSHw/edit?usp=sharing"
-    target="_blank"
-    rel="noreferrer"
-    style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-block" }}
-  >
-    🇬🇭 Ghana Pilot: Weekly Play at Royal Olive Court
-  </a>
-
+ <a
+  href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    ...ghostButtonStyle,
+      display: "inline-flex",
+    alignItems: "center",
+  }}
+>
+  🇬🇭 Weekly Play at Royal Olive Court (Ghana)
+</a>
+ 
   <p style={{ marginTop: 8, opacity: 0.85, fontSize: 14 }}>
     Local printing • Weekly play • Community sponsors
   </p>
@@ -916,28 +920,7 @@ const [mode, setMode] = useState("home");
                 flexWrap: "wrap",
               }}
             >
-              {(SOCIAL_LINKS || []).map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    padding: "10px 14px",
-                    borderRadius: 999,
-                    textDecoration: "none",
-                    fontWeight: 800,
-                    border: "2px solid rgba(255,255,255,0.25)",
-                    background: "rgba(0,0,0,0.25)",
-                    color: "white",
-                  }}
-                >
-                  {s.label}
-                </a>
-              ))}
-              
-            </div>
-          </div>
+        
         </header>
 
         {/* Poster preview on home */}
