@@ -723,205 +723,203 @@ const [mode, setMode] = useState("home");
   } // ✅ end Sponsors screen
 
 
-  // ——— Home screen (default) ———
-  return (
-    <main style={pageStyle}>
-      <div style={containerStyle}>
-        
-{/* 🌍 Hiring Banner */}
-<div
-  style={{
-    marginBottom: 16,
-    padding: "10px 14px",
-    borderRadius: 12,
-    textAlign: "center",
-    fontWeight: 900,
-    fontSize: 16,
-    background: "linear-gradient(90deg, #22c55e, #16a34a)",
-    color: "#041b0a",
-    boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
-    cursor: "pointer",
-  }}
-  onClick={() => setMode("newsletter")}
->
-  🌍 Now Hiring – Hosts & Sales Reps (Click)
-</div>
-      
-        <header style={{ marginBottom: 18 }}>
-          <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-            The Messed Up Game
-          </h1>
-
-          <p style={{ marginTop: 8, opacity: 0.9 }}>
-              Family-friendly, hilarious, and brain-boosting — play live or solo.
-            </p>
-  
-    {/* 🎥 What is The Messed Up Game? */}
-  <section style={{ margin: "22px 0" }}>
-    <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-      What Is The Messed Up Game?
-    </h2>
-  
-<div
-    style={{
-      position: "relative",
-      width: "100%",
-      paddingTop: "56.25%", // 16:9
-      borderRadius: 16,
-      overflow: "hidden",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-      border: "1px solid rgba(255,255,255,.12)",
-    }}
-  >
-    <iframe
-      title="What Is The Messed Up Game"
-      src="https://www.youtube.com/embed/ju6fYT3K9tQ"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        border: 0,
-      }}
-    />
-  </div>
-  
-    <p style={{ marginTop: 12, opacity: 0.9 }}>
-      A simple, hilarious party game you can play anywhere — no cards required.
-    </p>
-  </section>
-  
-  {/* ✅ Home buttons row */}
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 10,
-      marginTop: 12,
-    }}
-  >
-  <a
-    href={STREAMYARD_GUEST_LINK}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      ...buttonStyle,
-      textDecoration: "none",
-      display: "inline-flex",
-      alignItems: "center",
-    }}
-  >
-    Join Live on StreamYard
-  </a>
-
-  <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-    Play Solo (vs Computer)
-  </button>
-
-  <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
-    📰 Newsletter
-  </button>
-
-  <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
-    🪧 Hesperia Poster
-  </button>
-
-  <a
-    href={PRAYER_SHORT_URL}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      ...ghostButtonStyle,
-      textDecoration: "none",
-      display: "inline-flex",
-      alignItems: "center",
-    }}
-  >
-    🙏 Mark Wahlberg Prayer
-  </a>
-
-  <a
-    href={CHANNEL_URL}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      ...ghostButtonStyle,
-      textDecoration: "none",
-      display: "inline-flex",
-      alignItems: "center",
-    }}
-  >
-    YouTube Channel
-  </a>
-</div>
-
-{/* 🇬🇭 Ghana Pilot link (Home) */}
-<div style={{ marginTop: 12 }}>
- <a
-  href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
-  target="_blank"
-  rel="noreferrer"
-  style={{
-    ...ghostButtonStyle,
-      display: "inline-flex",
-    alignItems: "center",
-  }}
->
-  🇬🇭 Weekly Play at Royal Olive Court (Ghana)
-</a>
- 
-  <p style={{ marginTop: 8, opacity: 0.85, fontSize: 14 }}>
-    Local printing • Weekly play • Community sponsors
-  </p>
-</div>
-
-
-{/* Social links (Home page) */}
-<div style={{ marginTop: 14, textAlign: "center" }}>
-  <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
-    Follow The Messed Up Game
-  </p>
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: 10,
-      flexWrap: "wrap",
-    }}
-  >
-    {(SOCIAL_LINKS || []).map((s) => (
-      <a
-        key={s.label}
-        href={s.href}
-        target="_blank"
-        rel="noreferrer"
+// ——— Home screen (default) ———
+return (
+  <main style={pageStyle}>
+    <div style={containerStyle}>
+      {/* 🌍 Hiring Banner */}
+      <div
         style={{
+          marginBottom: 16,
           padding: "10px 14px",
-          borderRadius: 999,
-          textDecoration: "none",
-          fontWeight: 800,
-          border: "2px solid rgba(255,255,255,0.25)",
-          background: "rgba(0,0,0,0.25)",
-          color: "white",
+          borderRadius: 12,
+          textAlign: "center",
+          fontWeight: 900,
+          fontSize: 16,
+          background: "linear-gradient(90deg, #22c55e, #16a34a)",
+          color: "#041b0a",
+          boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
+          cursor: "pointer",
         }}
+        onClick={() => setMode("newsletter")}
       >
-        {s.label}
-      </a>
-    ))}
-  </div>
-  
+        🌍 Now Hiring – Hosts & Sales Reps (Click)
+      </div>
+
+      <header style={{ marginBottom: 18 }}>
+        <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+          The Messed Up Game
+        </h1>
+
+        <p style={{ marginTop: 8, opacity: 0.9 }}>
+          Family-friendly, hilarious, and brain-boosting — play live or solo.
+        </p>
+
+        {/* 🎥 What is The Messed Up Game? */}
+        <section style={{ margin: "22px 0" }}>
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+            What Is The Messed Up Game?
+          </h2>
+
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              paddingTop: "56.25%", // 16:9
+              borderRadius: 16,
+              overflow: "hidden",
+              boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+              border: "1px solid rgba(255,255,255,.12)",
+            }}
+          >
+            <iframe
+              title="What Is The Messed Up Game"
+              src="https://www.youtube.com/embed/ju6fYT3K9tQ"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
               style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: 10,
-                flexWrap: "wrap",
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
               }}
-            >
-        
-        </header>
+            />
+          </div>
+
+          <p style={{ marginTop: 12, opacity: 0.9 }}>
+            A simple, hilarious party game you can play anywhere — no cards required.
+          </p>
+        </section>
+
+        {/* ✅ Home buttons row */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 10,
+            marginTop: 12,
+          }}
+        >
+          <a
+            href={STREAMYARD_GUEST_LINK}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...buttonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            Join Live on StreamYard
+          </a>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+            Play Solo (vs Computer)
+          </button>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+            📰 Newsletter
+          </button>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+            🪧 Hesperia Poster
+          </button>
+
+          <a
+            href={PRAYER_SHORT_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...ghostButtonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            🙏 Mark Wahlberg Prayer
+          </a>
+
+          <a
+            href={CHANNEL_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...ghostButtonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            YouTube Channel
+          </a>
+        </div>
+
+        {/* 🇬🇭 Ghana Pilot link (Home) */}
+        <div style={{ marginTop: 12 }}>
+          <a
+            href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...ghostButtonStyle,
+              display: "inline-block",
+              textDecoration: "none",
+            }}
+          >
+            🇬🇭 Weekly Play at Royal Olive Court (Ghana)
+          </a>
+
+          <p style={{ marginTop: 8, opacity: 0.85, fontSize: 14 }}>
+            Local printing • Weekly play • Community sponsors
+          </p>
+        </div>
+
+        {/* Social links (Home page) */}
+        <div style={{ marginTop: 14, textAlign: "center" }}>
+          <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+            Follow The Messed Up Game
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            {(SOCIAL_LINKS || []).map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  padding: "10px 14px",
+                  borderRadius: 999,
+                  textDecoration: "none",
+                  fontWeight: 800,
+                  border: "2px solid rgba(255,255,255,0.25)",
+                  background: "rgba(0,0,0,0.25)",
+                  color: "white",
+                }}
+              >
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      {/* Everything below header stays OUTSIDE header */}
+      {/* (keep your poster preview, benefits, featured video, quick links, footer here) */}
+
+    </div>
+  </main>
+);
+
 
         {/* Poster preview on home */}
         <section
