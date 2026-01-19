@@ -662,6 +662,55 @@ const [mode, setMode] = useState("home");
                 boxShadow: "0 10px 24px rgba(0,0,0,.25)",
               }}
             >
+                       {/* MOSH Photo Gallery */}
+            <div
+              style={{
+                marginTop: 14,
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                gap: 12,
+              }}
+            >
+              {[
+                { src: "/mosh/pat-maria-mission.webp", alt: "MOSH mission graphic" },
+                {
+                  src: "/mosh/tom-patrick-schwarzenegger.jpg",
+                  alt: "Tom with Patrick holding MOSH",
+                },
+                { src: "/mosh/mosh-box.jpg", alt: "MOSH bars and box", fit: "contain" },
+                { src: "/mosh/ralphs.jpg", alt: "MOSH at Ralphs" },
+              ].map((img) => (
+                <a
+                  key={img.src}
+                  href={img.src}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Open full size"
+                  style={{
+                    display: "block",
+                    borderRadius: 16,
+                    overflow: "hidden",
+                    border: "1px solid rgba(255,255,255,.10)",
+                    background: "rgba(0,0,0,.25)",
+                    textDecoration: "none",
+                  }}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    style={{
+                      width: "100%",
+                      height: 220,
+                      objectFit: img.fit === "contain" ? "contain" : "cover",
+                      background: "rgba(0,0,0,.35)",
+                      display: "block",
+                    }}
+                  />
+                </a>
+              ))}
+            </div>
+   
               Visit MOSH
             </a>
           </section>
