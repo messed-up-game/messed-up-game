@@ -621,7 +621,7 @@ const [mode, setMode] = useState("home");
             communities everywhere.
           </p>
 
-          {/* MOSH */}
+              {/* MOSH */}
           <section
             style={{
               maxWidth: 760,
@@ -644,7 +644,8 @@ const [mode, setMode] = useState("home");
             </h2>
 
             <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-              Brain fuel sponsor — support the brands that support brain health.
+              MOSH is a brain-fuel snack brand with a mission to support brain
+              health and help fund Alzheimer’s research initiatives.
             </p>
 
             <a
@@ -662,7 +663,10 @@ const [mode, setMode] = useState("home");
                 boxShadow: "0 10px 24px rgba(0,0,0,.25)",
               }}
             >
-                       {/* MOSH Photo Gallery */}
+              Visit MOSH (Official Site)
+            </a>
+
+            {/* MOSH Photo Gallery (all photos link to MOSH site) */}
             <div
               style={{
                 marginTop: 14,
@@ -682,10 +686,10 @@ const [mode, setMode] = useState("home");
               ].map((img) => (
                 <a
                   key={img.src}
-                  href={img.src}
+                  href="https://moshlife.com/"
                   target="_blank"
                   rel="noreferrer"
-                  title="Open full size"
+                  title="Visit MOSH (Official Site)"
                   style={{
                     display: "block",
                     borderRadius: 16,
@@ -710,10 +714,12 @@ const [mode, setMode] = useState("home");
                 </a>
               ))}
             </div>
-   
-              Visit MOSH
-            </a>
+
+            <p style={{ marginTop: 12, opacity: 0.9, lineHeight: 1.5 }}>
+              Tap any photo to learn more and shop on the official MOSH website.
+            </p>
           </section>
+
 
           {/* Joyful Dog Lover */}
           <section
