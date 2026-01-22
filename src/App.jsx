@@ -862,19 +862,19 @@ const ghostButtonStyle = {
               marginTop: 12,
             }}
           >
-            <a
-              href={STREAMYARD_GUEST_LINK}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                ...buttonStyle,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              Join Live on StreamYard
-            </a>
+           <a
+  href={SIGNUP_FORM_URL}
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    ...buttonStyle,
+    textDecoration: "none",
+    display: "inline-flex",
+    alignItems: "center",
+  }}
+>
+  🎲 Sign Up to Play Live
+</a>
 
             <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
               Play Solo (vs Computer)
