@@ -5,11 +5,10 @@ import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 import GotBackupBannerAd from "./components/GotBackupBannerAd";
 
-export default function App() {
+export default function App() {t
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "stZm5AH791I";
-  const STREAMYARD_GUEST_LINK = "https://streamyard.com/6u894xi3cw";
 
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
@@ -38,10 +37,12 @@ const [mode, setMode] = useState("home");
 
   const links = [
     {
-      title: "Join Live on StreamYard",
-      href: STREAMYARD_GUEST_LINK,
-      desc: "First 9 get on camera",
-    },
+     {
+  title: "🎲 Sign Up to Play Live",
+  href: SIGNUP_FORM_URL,
+  desc: "Get your private StreamYard link before we go live (first 9 on camera)",
+},
+
     {
       title: "Messed Up Game — Sign Up",
       href: SIGNUP_FORM_URL,
