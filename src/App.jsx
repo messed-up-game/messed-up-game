@@ -5,7 +5,7 @@ import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 import GotBackupBannerAd from "./components/GotBackupBannerAd";
 
-export default function App() {t
+export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "stZm5AH791I";
@@ -24,72 +24,70 @@ export default function App() {t
     { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
   ];
 
-  // Mark Wahlberg prayer short
-  const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
-  const PRAYER_SHORT_ID = "tA4mF_4hBJs";
+// Mark Wahlberg prayer short
+const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
+const PRAYER_SHORT_ID = "tA4mF_4hBJs";
 
-  // Benefits doc button
-  const BENEFITS_DOC_URL =
-    "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
+// Benefits doc button
+const BENEFITS_DOC_URL =
+  "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
 // "home" | "solo" | "newsletter" | "poster" | "sponsors"
 const [mode, setMode] = useState("home");
 
-  const links = [
-    {
-     {
-  title: "🎲 Sign Up to Play Live",
-  href: SIGNUP_FORM_URL,
-  desc: "Get your private StreamYard link before we go live (first 9 on camera)",
-},
+const links = [
+  {
+    title: "🎲 Sign Up to Play Live",
+    href: SIGNUP_FORM_URL,
+    desc: "We’ll send your private StreamYard link before we go live (first 9 on camera)",
+  },
+  {
+    title: "Messed Up Game — Sign Up",
+    href: SIGNUP_FORM_URL,
+    desc: "Fill out the form to play",
+  },
+  {
+    title: "Got Backup Tom B",
+    href: "https://gotbackuptomb.com",
+    desc: "Cloud backup & storage",
+    affiliate: true,
+  },
+  {
+    title: "MOSH Brain Bars",
+    href: "https://moshlife.com/",
+    desc: "Brain fuel sponsor 🧠",
+  },
+];
 
-    {
-      title: "Messed Up Game — Sign Up",
-      href: SIGNUP_FORM_URL,
-      desc: "Fill out the form to play",
-    },
-    {
-      title: "Got Backup Tom B",
-      href: "https://gotbackuptomb.com",
-      desc: "Cloud backup & storage",
-      affiliate: true,
-    },
-    {
-      title: "MOSH Brain Bars",
-      href: "https://moshlife.com/",
-      desc: "Brain fuel sponsor 🧠",
-    },
-  ];
+// ——— styles ———
+const pageStyle = {
+  minHeight: "100vh",
+  backgroundColor: "#020617",
+  color: "white",
+  padding: "24px 16px",
+};
 
-  // ——— styles ———
-  const pageStyle = {
-    minHeight: "100vh",
-    backgroundColor: "#020617",
-    color: "white",
-    padding: "24px 16px",
-  };
+const containerStyle = { maxWidth: 1100, margin: "0 auto" };
 
-  const containerStyle = { maxWidth: 1100, margin: "0 auto" };
+const buttonStyle = {
+  background: "#22c55e",
+  color: "#041b0a",
+  border: "none",
+  padding: "12px 16px",
+  borderRadius: 12,
+  fontWeight: 800,
+  cursor: "pointer",
+};
 
-  const buttonStyle = {
-    background: "#22c55e",
-    color: "#041b0a",
-    border: "none",
-    padding: "12px 16px",
-    borderRadius: 12,
-    fontWeight: 800,
-    cursor: "pointer",
-  };
-
-  const ghostButtonStyle = {
-    background: "transparent",
-    color: "white",
-    border: "1px solid rgba(255,255,255,.2)",
-    padding: "10px 14px",
-    borderRadius: 12,
-    fontWeight: 700,
-    cursor: "pointer",
-  };
+const ghostButtonStyle = {
+  background: "transparent",
+  color: "white",
+  border: "1px solid rgba(255,255,255,.2)",
+  padding: "10px 14px",
+  borderRadius: 12,
+  fontWeight: 700,
+  cursor: "pointer",
+};
 
   // ——— Solo screen ———
   if (mode === "solo") {
@@ -121,14 +119,15 @@ const [mode, setMode] = useState("home");
                 Sign Up
               </a>
               
-              <a
-                href={STREAMYARD_GUEST_LINK}
-                target="_blank"
-                rel="noreferrer"
-                style={{ ...buttonStyle, textDecoration: "none" }}
-              >
-                Join Live
-              </a>
+        <a
+  href={SIGNUP_FORM_URL}
+  target="_blank"
+  rel="noreferrer"
+  style={{ ...buttonStyle, textDecoration: "none" }}
+>
+  🎲 Sign Up to Play Live
+</a>
+              
             </div>
           </nav>
 
