@@ -34,6 +34,57 @@ const BENEFITS_DOC_URL =
 
 // "home" | "solo" | "newsletter" | "poster" | "sponsors"
 const [mode, setMode] = useState("home");
+<section className="senior-homes" style={{ padding: "24px 0" }}>
+  <h2>Senior Homes: We Pay You to Host the Fun</h2>
+
+  <p>
+    <strong>The Messed Up Game™</strong> is a live, hosted, laughter-filled brain
+    game designed to boost memory and real connection for residents.
+  </p>
+
+  <p>
+    <strong>Here’s the wow part:</strong> we share revenue with your facility —
+    so you can <strong>save money</strong> while your residents enjoy a weekly
+    brain-boosting experience.
+  </p>
+
+  <h3>Example math (real numbers):</h3>
+  <ul>
+    <li>
+      Program value: <strong>$150/week</strong>
+    </li>
+    <li>
+      If we sell <strong>10 local advertisers at $100/month</strong> ={" "}
+      <strong>$1,000/month</strong>
+    </li>
+    <li>
+      Your facility earns <strong>20% = $200/month</strong>
+    </li>
+    <li>
+      That equals <strong>$50 savings per week</strong>
+    </li>
+  </ul>
+
+  <p>
+    <strong>Bonus every week:</strong> we provide <strong>5 free decks</strong>{" "}
+    (value <strong>$76/week</strong>).
+  </p>
+
+  <p>
+    <strong>Exclusive benefit:</strong> your facility’s{" "}
+    <strong>logo/ad appears on every sleeve &amp; deck</strong> distributed or
+    sold by participating advertisers.
+  </p>
+
+  <p>
+    <strong>Interested?</strong> Visit <strong>Sponsors &amp; Advertisers</strong>{" "}
+    on our site or email us to schedule a quick call:
+  </p>
+
+  <p>
+    <a href={CONTACT_EMAIL}>tom@messedupgame.com</a>
+  </p>
+</section>
 
 const links = [
   {
