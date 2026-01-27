@@ -1,5 +1,3 @@
-// src/App.jsx 
-
 const links = [
   {
     title: "🎲 Sign Up to Play Live",
