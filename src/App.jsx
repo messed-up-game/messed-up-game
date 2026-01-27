@@ -919,77 +919,7 @@ export default function App() {
               YouTube Channel
             </a>
           </div>
-{/* 🧠 Senior Homes Revenue Share */}
-<section
-  className="senior-homes"
-  style={{
-    maxWidth: 900,
-    margin: "18px auto 22px",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.05)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-    Senior Homes: We Pay You to Host the Fun
-  </h2>
 
-  <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
-    <strong>The Messed Up Game™</strong> is a live, hosted, laughter-filled brain
-    game designed to boost memory and real connection for residents.
-  </p>
-
-  <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-    <strong>Here’s the wow part:</strong> we share revenue with your facility —
-    so you can <strong>save money</strong> while your residents enjoy a weekly
-    brain-boosting experience.
-  </p>
-
-  <h3 style={{ margin: "0 0 8px", fontSize: "1.1rem", fontWeight: 900 }}>
-    Example math (real numbers):
-  </h3>
-
-  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.6, opacity: 0.95 }}>
-    <li>
-      Program value: <strong>$150/week</strong>
-    </li>
-    <li>
-      If we sell <strong>10 local advertisers at $100/month</strong> ={" "}
-      <strong>$1,000/month</strong>
-    </li>
-    <li>Your facility earns <strong>20% = $200/month</strong></li>
-    <li>That equals <strong>$50 savings per week</strong></li>
-  </ul>
-
-  <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
-    <strong>Bonus every week:</strong> we provide <strong>5 free decks</strong>{" "}
-    (value <strong>$76/week</strong>).
-  </p>
-
-  <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-    <strong>Exclusive benefit:</strong> your facility’s{" "}
-    <strong>logo/ad appears on every sleeve &amp; deck</strong> distributed or
-    sold by participating advertisers.
-  </p>
-
-  <a
-    href={CONTACT_EMAIL}
-    style={{
-      display: "inline-block",
-      padding: "12px 16px",
-      borderRadius: 12,
-      textDecoration: "none",
-      fontWeight: 900,
-      background: "#facc15",
-      color: "#111827",
-      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-    }}
-  >
-    📩 Contact Us (Senior Homes)
-  </a>
-</section>
 
           {/* 🇬🇭 Ghana Pilot link (Home) */}
           <div style={{ marginTop: 12 }}>
