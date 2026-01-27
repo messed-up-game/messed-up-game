@@ -1,56 +1,93 @@
-const links = [
-  {
-    title: "🎲 Sign Up to Play Live",
-    href: SIGNUP_FORM_URL,
-    desc: "We’ll send your private StreamYard link before we go live (first 9 on camera)",
-  },
-  {
-    title: "Messed Up Game — Sign Up",
-    href: SIGNUP_FORM_URL,
-    desc: "Fill out the form to play",
-  },
-  {
-    title: "Got Backup Tom B",
-    href: "https://gotbackuptomb.com",
-    desc: "Cloud backup & storage",
-    affiliate: true,
-  },
-  {
-    title: "MOSH Brain Bars",
-    href: "https://moshlife.com/",
-    desc: "Brain fuel sponsor 🧠",
-  },
-];
+// src/App.jsx
+import { useState } from "react";
+import SocialBar from "./components/SocialBar";
+import LinkGrid from "./components/LinkGrid";
+import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
+import GotBackupBannerAd from "./components/GotBackupBannerAd";
 
-// ——— styles ———
-const pageStyle = {
-  minHeight: "100vh",
-  backgroundColor: "#020617",
-  color: "white",
-  padding: "24px 16px",
-};
+export default function App() {
+  // ——— constants ———
+  const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
+  const FEATURE_VIDEO_ID = "stZm5AH791I";
 
-const containerStyle = { maxWidth: 1100, margin: "0 auto" };
+  const SIGNUP_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
 
-const buttonStyle = {
-  background: "#22c55e",
-  color: "#041b0a",
-  border: "none",
-  padding: "12px 16px",
-  borderRadius: 12,
-  fontWeight: 800,
-  cursor: "pointer",
-};
+  const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
 
-const ghostButtonStyle = {
-  background: "transparent",
-  color: "white",
-  border: "1px solid rgba(255,255,255,.2)",
-  padding: "10px 14px",
-  borderRadius: 12,
-  fontWeight: 700,
-  cursor: "pointer",
-};
+  const SOCIAL_LINKS = [
+    { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
+    { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
+    { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
+    { label: "X", href: "https://x.com/saveplanetusa" },
+    { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
+    { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
+  ];
+
+  // Mark Wahlberg prayer short
+  const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
+  const PRAYER_SHORT_ID = "tA4mF_4hBJs";
+
+  // Benefits doc button
+  const BENEFITS_DOC_URL =
+    "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
+
+  // "home" | "solo" | "newsletter" | "poster" | "sponsors"
+  const [mode, setMode] = useState("home");
+
+  const links = [
+    {
+      title: "🎲 Sign Up to Play Live",
+      href: SIGNUP_FORM_URL,
+      desc: "We’ll send your private StreamYard link before we go live (first 9 on camera)",
+    },
+    {
+      title: "Messed Up Game — Sign Up",
+      href: SIGNUP_FORM_URL,
+      desc: "Fill out the form to play",
+    },
+    {
+      title: "Got Backup Tom B",
+      href: "https://gotbackuptomb.com",
+      desc: "Cloud backup & storage",
+      affiliate: true,
+    },
+    {
+      title: "MOSH Brain Bars",
+      href: "https://moshlife.com/",
+      desc: "Brain fuel sponsor 🧠",
+    },
+  ];
+
+  // ——— styles ———
+  const pageStyle = {
+    minHeight: "100vh",
+    backgroundColor: "#020617",
+    color: "white",
+    padding: "24px 16px",
+  };
+
+  const containerStyle = { maxWidth: 1100, margin: "0 auto" };
+
+  const buttonStyle = {
+    background: "#22c55e",
+    color: "#041b0a",
+    border: "none",
+    padding: "12px 16px",
+    borderRadius: 12,
+    fontWeight: 800,
+    cursor: "pointer",
+  };
+
+  const ghostButtonStyle = {
+    background: "transparent",
+    color: "white",
+    border: "1px solid rgba(255,255,255,.2)",
+    padding: "10px 14px",
+    borderRadius: 12,
+    fontWeight: 700,
+    cursor: "pointer",
+  };
 
   // ——— Solo screen ———
   if (mode === "solo") {
@@ -1010,6 +1047,74 @@ const ghostButtonStyle = {
             </div>
           </div>
         </header>
+        {/* 🧠 Senior Homes: Revenue Share / Savings */}
+        <section
+          style={{
+            maxWidth: 900,
+            margin: "0 auto 22px",
+            padding: 18,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.14)",
+            background: "rgba(255,255,255,.05)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+            Senior Homes: We Pay You to Host the Fun
+          </h2>
+
+          <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
+            <strong>The Messed Up Game™</strong> is a live, hosted, laughter-filled
+            brain game designed to boost memory and real connection for residents.
+          </p>
+
+          <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
+            <strong>Here’s the wow part:</strong> we share revenue with your facility —
+            so you can <strong>save money</strong> while your residents enjoy a weekly
+            brain-boosting experience.
+          </p>
+
+          <h3 style={{ margin: "0 0 8px", fontSize: "1.1rem", fontWeight: 900 }}>
+            Example math (real numbers):
+          </h3>
+
+          <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.6, opacity: 0.95 }}>
+            <li>Program value: <strong>$150/week</strong></li>
+            <li>
+              If we sell <strong>10 local advertisers at $100/month</strong> ={" "}
+              <strong>$1,000/month</strong>
+            </li>
+            <li>Your facility earns <strong>20% = $200/month</strong></li>
+            <li>That equals <strong>$50 savings per week</strong></li>
+          </ul>
+
+          <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
+            <strong>Bonus every week:</strong> we provide <strong>5 free decks</strong>{" "}
+            (value <strong>$76/week</strong>).
+          </p>
+
+          <p style={{ margin: "0 0 14px", opacity: 0.95, lineHeight: 1.55 }}>
+            <strong>Exclusive benefit:</strong> your facility’s{" "}
+            <strong>logo/ad appears on every sleeve &amp; deck</strong> distributed or
+            sold by participating advertisers.
+          </p>
+
+          <a
+            href={CONTACT_EMAIL}
+            style={{
+              display: "inline-block",
+              padding: "12px 16px",
+              borderRadius: 12,
+              textDecoration: "none",
+              fontWeight: 900,
+              background: "#facc15",
+              color: "#111827",
+              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+            }}
+          >
+            📩 Contact Us (Senior Homes)
+          </a>
+        </section>
 
         {/* Poster preview on home */}
         <section
