@@ -229,13 +229,35 @@ export default function App() {
     );
   }
 
-  // ——— Newsletter screen ———
-  if (mode === "newsletter") {
-    return (
-      <main style={pageStyle}>
-        <div style={containerStyle}>
-          <nav
-      <section
+ // ——— Newsletter screen ———
+if (mode === "newsletter") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: 10,
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <a
+            href={SIGNUP_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{ ...buttonStyle, textDecoration: "none" }}
+          >
+            Sign Up
+          </a>
+        </nav>
+
+<section
   id="newsletter"
   style={{
     borderRadius: 16,
@@ -358,30 +380,14 @@ export default function App() {
   </p>
 </section>
       
-            style={{
-              marginBottom: 16,
-              display: "flex",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: 10,
-            }}
-          >
-            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
-              ← Back Home
-            </button>
-
-            <a
-              href={SIGNUP_FORM_URL}
-              target="_blank"
-              rel="noreferrer"
-              style={{ ...buttonStyle, textDecoration: "none" }}
-            >
-              Sign Up
-            </a>
-          </nav>
           
 {/* 🌍 Now Hiring (anchor target) */}
   <section
+         </div>
+    </main>
+  );
+}
+ 
   id="now-hiring"
   style={{
     scrollMarginTop: 90,
@@ -706,7 +712,7 @@ export default function App() {
           </section>
         </div>
       </main>
-    );
+   );
  } // ✅ end Newsletter screen
 
   // ——— Sponsors screen ———
