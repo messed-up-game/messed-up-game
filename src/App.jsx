@@ -383,11 +383,9 @@ if (mode === "newsletter") {
           
 {/* 🌍 Now Hiring (anchor target) */}
   <section
-         </div>
-    </main>
-  );
-}
- 
+
+{/* 🌍 Now Hiring (anchor target) */}
+<section
   id="now-hiring"
   style={{
     scrollMarginTop: 90,
@@ -398,6 +396,8 @@ if (mode === "newsletter") {
     background: "rgba(255,255,255,.06)",
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
   }}
+>
+  
 >
   <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
     🌍 Now Hiring – Hosts & Sales Reps Worldwide
@@ -600,6 +600,8 @@ if (mode === "newsletter") {
             }}
           >
             <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
+              </section>
+
               Program Overview
             </h2>
             <p style={{ margin: 0, lineHeight: 1.5, opacity: 0.95 }}>
