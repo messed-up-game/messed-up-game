@@ -600,8 +600,6 @@ if (mode === "newsletter") {
             }}
           >
             <h2 style={{ margin: "0 0 10px", fontSize: "1.35rem", fontWeight: 900 }}>
-              </section>
-
               Program Overview
             </h2>
             <p style={{ margin: 0, lineHeight: 1.5, opacity: 0.95 }}>
@@ -714,7 +712,7 @@ if (mode === "newsletter") {
           </section>
         </div>
       </main>
-   );
+    );
  } // ✅ end Newsletter screen
 
   // ——— Sponsors screen ———
