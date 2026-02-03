@@ -379,11 +379,7 @@ if (mode === "newsletter") {
     .
   </p>
 </section>
-      
-          
-{/* 🌍 Now Hiring (anchor target) */}
-  <section
-
+        
 {/* 🌍 Now Hiring (anchor target) */}
 <section
   id="now-hiring"
@@ -395,9 +391,7 @@ if (mode === "newsletter") {
     border: "1px solid rgba(255,255,255,.12)",
     background: "rgba(255,255,255,.06)",
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  
+  }}  
 >
   <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
     🌍 Now Hiring – Hosts & Sales Reps Worldwide
