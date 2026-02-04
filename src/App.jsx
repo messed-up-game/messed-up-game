@@ -178,6 +178,95 @@ export default function App() {
               </a>
               .
             </p>
+  // ——— Ghana Poster screen ———
+  if (mode === "ghanaPoster") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
+            style={{
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
+              Want this hosted or sponsored?{" "}
+              <a
+                href={CONTACT_EMAIL}
+                style={{
+                  color: "#7bdff6",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                }}
+              >
+                Send us an email
+              </a>{" "}
+              or call{" "}
+              <a
+                href="tel:+13106287889"
+                style={{
+                  color: "#7bdff6",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                }}
+              >
+                310-628-7889
+              </a>
+              .
+            </p>
+
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
+
+            <a
+              href="/posters/ghana-poster.jpg"
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...buttonStyle, textDecoration: "none" }}
+            >
+              Open Full Size
+            </a>
+          </nav>
+
+          <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+            🇬🇭 Ghana Edition Poster
+          </h1>
+
+          <div
+            style={{
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(255,255,255,.12)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+              background: "rgba(255,255,255,.03)",
+            }}
+          >
+            <img
+              src="/posters/ghana-poster.jpg"
+              alt="The Messed Up Game Ghana edition poster"
+              style={{ width: "100%", height: "auto", display: "block" }}
+              loading="lazy"
+            />
+          </div>
+
+          <p style={{ marginTop: 14, opacity: 0.9 }}>
+            Questions? Email me at{" "}
+            <a
+              href={CONTACT_EMAIL}
+              style={{ color: "#7bdff6", textDecoration: "none" }}
+            >
+              {CONTACT_EMAIL.replace("mailto:", "")}
+            </a>
+            .
+          </p>
+        </div>
+      </main>
+    );
+  }
 
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
@@ -268,6 +357,8 @@ if (mode === "newsletter") {
     padding: 18,
   }}
 >
+   <div id="got-backup-ghana" style={{ scrollMarginTop: 90 }} />
+ 
   <h1 style={{ margin: "0 0 6px", fontSize: "1.9rem", fontWeight: 900 }}>
     A Global Mission: Protecting Memories, Building Opportunity 🌍💾
   </h1>
@@ -976,8 +1067,71 @@ if (mode === "newsletter") {
             </p>
           </section>
 
-          {/* ✅ Home buttons row */}
-          <div
+            {/* ✅ Home buttons row */}
+<div
+   <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
+    🇬🇭 Got Backup + Ghana Opportunity
+  </button>
+
+  <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>
+    🇬🇭 Ghana Poster
+  </button>
+ 
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 10,
+    marginTop: 12,
+  }}
+>
+  <a
+    href={SIGNUP_FORM_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...buttonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    🎲 Sign Up to Play Live
+  </a>
+
+  <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+    Play Solo (vs Computer)
+  </button>
+
+  <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+    📰 Newsletter
+  </button>
+
+  <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
+    🪧 Hesperia Poster
+  </button>
+
+  {/* ✅ Put it here */}
+  <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>
+    🇬🇭 Ghana Poster
+  </button>
+
+  <a
+    href={PRAYER_SHORT_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...ghostButtonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    🙏 Mark Wahlberg Prayer
+  </a>
+
+  {/* keep the rest of your links/buttons */}
+</div>
+
             style={{
               display: "flex",
               flexWrap: "wrap",
