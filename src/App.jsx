@@ -1,4 +1,4 @@
-// src/App.jsx
+// src/App.jsx 
 import { useState } from "react";
 import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
@@ -32,7 +32,8 @@ export default function App() {
   const BENEFITS_DOC_URL =
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
-  // "home" | "solo" | "newsletter" | "poster" | "sponsors"
+  // "home" | "solo" | "newsletter" | "poster" | "ghanaPoster" | "sponsors"
+
   const [mode, setMode] = useState("home");
 
   const links = [
@@ -66,6 +67,15 @@ export default function App() {
     color: "white",
     padding: "24px 16px",
   };
+  
+const goToGhanaOpportunity = () => {
+  setMode("newsletter");
+  setTimeout(() => {
+    document
+      .getElementById("got-backup-ghana")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 50);
+};
 
   const containerStyle = { maxWidth: 1100, margin: "0 auto" };
 
@@ -1067,16 +1077,8 @@ if (mode === "newsletter") {
             </p>
           </section>
 
-            {/* ✅ Home buttons row */}
+{/* ✅ Home buttons row */}
 <div
-   <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
-    🇬🇭 Got Backup + Ghana Opportunity
-  </button>
-
-  <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>
-    🇬🇭 Ghana Poster
-  </button>
- 
   style={{
     display: "flex",
     flexWrap: "wrap",
@@ -1084,6 +1086,14 @@ if (mode === "newsletter") {
     marginTop: 12,
   }}
 >
+  <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
+    🇬🇭 Got Backup + Ghana Opportunity
+  </button>
+
+  <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>
+    🇬🇭 Ghana Poster
+  </button>
+
   <a
     href={SIGNUP_FORM_URL}
     target="_blank"
@@ -1110,11 +1120,6 @@ if (mode === "newsletter") {
     🪧 Hesperia Poster
   </button>
 
-  {/* ✅ Put it here */}
-  <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>
-    🇬🇭 Ghana Poster
-  </button>
-
   <a
     href={PRAYER_SHORT_URL}
     target="_blank"
@@ -1129,8 +1134,21 @@ if (mode === "newsletter") {
     🙏 Mark Wahlberg Prayer
   </a>
 
-  {/* keep the rest of your links/buttons */}
+  <a
+    href={CHANNEL_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...ghostButtonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    YouTube Channel
+  </a>
 </div>
+
 
             style={{
               display: "flex",
