@@ -88,97 +88,7 @@ export default function App() {
     fontWeight: 700,
     cursor: "pointer",
   };
-
-  // ——— Solo screen ———
-  if (mode === "solo") {
-    return (
-      <main style={pageStyle}>
-        <div style={containerStyle}>
-          <nav
-            style={{
-              display: "flex",
-              gap: 10,
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginBottom: 16,
-              flexWrap: "wrap",
-            }}
-          >
-
-            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
-              ← Back Home
-            </button>
-
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <a
-                href={SIGNUP_FORM_URL}
-                target="_blank"
-                rel="noreferrer"
-                style={{ ...ghostButtonStyle, textDecoration: "none" }}
-              >
-                Sign Up
-              </a>
-              
-        <a
-  href={SIGNUP_FORM_URL}
-  target="_blank"
-  rel="noreferrer"
-  style={{ ...buttonStyle, textDecoration: "none" }}
->
-  🎲 Sign Up to Play Live
-</a>
-              
-            </div>
-          </nav>
-
-          <SocialBar />
-
-          <MessedUpGameSoloVsComputer />
-        </div>
-      </main>
-    );
-  }
-
-  // ——— Poster screen ———
-  if (mode === "poster") {
-    return (
-      <main style={pageStyle}>
-        <div style={containerStyle}>
-          <nav
-            style={{
-              marginBottom: 16,
-              display: "flex",
-              justifyContent: "space-between",
-              gap: 10,
-              flexWrap: "wrap",
-            }}
-          >
-            <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
-              Want this hosted at your senior community or in-home care group?{" "}
-              <a
-                href={CONTACT_EMAIL}
-                style={{
-                  color: "#7bdff6",
-                  textDecoration: "none",
-                  fontWeight: 800,
-                }}
-              >
-                Send us an email
-              </a>{" "}
-              or call us at{" "}
-              <a
-                href="tel:+13106287889"
-                style={{
-                  color: "#7bdff6",
-                  textDecoration: "none",
-                  fontWeight: 800,
-                }}
-              >
-                310-628-7889
-              </a>
-              .
-            </p>
-  // ——— Ghana Poster screen ———
+ // ——— Ghana Poster screen ———
   if (mode === "ghanaPoster") {
     return (
       <main style={pageStyle}>
@@ -268,6 +178,96 @@ export default function App() {
     );
   }
 
+  // ——— Solo screen ———
+  if (mode === "solo") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
+            style={{
+              display: "flex",
+              gap: 10,
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginBottom: 16,
+              flexWrap: "wrap",
+            }}
+          >
+
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
+
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <a
+                href={SIGNUP_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...ghostButtonStyle, textDecoration: "none" }}
+              >
+                Sign Up
+              </a>
+              
+        <a
+  href={SIGNUP_FORM_URL}
+  target="_blank"
+  rel="noreferrer"
+  style={{ ...buttonStyle, textDecoration: "none" }}
+>
+  🎲 Sign Up to Play Live
+</a>
+              
+            </div>
+          </nav>
+
+          <SocialBar />
+
+          <MessedUpGameSoloVsComputer />
+        </div>
+      </main>
+    );
+  }
+ 
+  // ——— Poster screen ———
+  if (mode === "poster") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
+            style={{
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
+              Want this hosted at your senior community or in-home care group?{" "}
+              <a
+                href={CONTACT_EMAIL}
+                style={{
+                  color: "#7bdff6",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                }}
+              >
+                Send us an email
+              </a>{" "}
+              or call us at{" "}
+              <a
+                href="tel:+13106287889"
+                style={{
+                  color: "#7bdff6",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                }}
+              >
+                310-628-7889
+              </a>
+              .
+            </p>
+ 
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
