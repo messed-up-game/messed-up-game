@@ -4,7 +4,7 @@ import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 import GotBackupBannerAd from "./components/GotBackupBannerAd";
-
+ 
 export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
@@ -367,7 +367,7 @@ if (mode === "newsletter") {
     padding: 18,
   }}
 >
-   <div id="got-backup-ghana" style={{ scrollMarginTop: 90 }} />
+   <div id="got-backup-ghana" aria-hidden="true" style={{ scrollMarginTop: 90 }} />
  
   <h1 style={{ margin: "0 0 6px", fontSize: "1.9rem", fontWeight: 900 }}>
     A Global Mission: Protecting Memories, Building Opportunity 🌍💾
@@ -1077,7 +1077,7 @@ if (mode === "newsletter") {
             </p>
           </section>
 
-{/* ✅ Home buttons row */}
+          {/* ✅ Home buttons row */}
 <div
   style={{
     display: "flex",
@@ -1148,7 +1148,6 @@ if (mode === "newsletter") {
     YouTube Channel
   </a>
 </div>
-
 
             style={{
               display: "flex",
