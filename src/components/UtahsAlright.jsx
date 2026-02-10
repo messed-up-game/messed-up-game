@@ -1,3 +1,5 @@
+import OlympicPollSection from "./OlympicPollSection";
+
 export default function UtahsAlright() {
   return (
     <section
@@ -11,12 +13,11 @@ export default function UtahsAlright() {
         boxShadow: "0 10px 30px rgba(0,0,0,.35)",
       }}
     >
-      <h2 style={{ fontSize: "2rem", marginBottom: 10 }}>
-        🎿 Utah’s Alright!
-      </h2>
+      <h2 style={{ fontSize: "2rem", marginBottom: 10 }}>🎿 Utah’s Alright!</h2>
 
       <p style={{ opacity: 0.9, marginBottom: 20 }}>
-        Written & performed by <strong>Tim & Tom Butler</strong><br />
+        Written & performed by <strong>Tim & Tom Butler</strong>
+        <br />
         Created during the <strong>2002 Winter Olympics</strong> in Salt Lake City
       </p>
 
@@ -34,6 +35,11 @@ export default function UtahsAlright() {
           }}
           allowFullScreen
         />
+      </div>
+
+      {/* 👇 Poll + Website voting form + Past winners links */}
+      <div style={{ marginTop: 18, textAlign: "left" }}>
+        <OlympicPollSection />
       </div>
     </section>
   );
