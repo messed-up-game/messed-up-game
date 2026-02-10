@@ -4,7 +4,8 @@ import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
 import GotBackupBannerAd from "./components/GotBackupBannerAd";
- 
+import UtahsAlright from "./components/UtahsAlright";
+
 export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
@@ -355,8 +356,11 @@ if (mode === "newsletter") {
             Sign Up
           </a>
         </nav>
+       
+        {/* 🎿 Utah’s Alright section */}
+        <UtahsAlright />
 
-<section
+        <section
   id="newsletter"
   style={{
     borderRadius: 16,
