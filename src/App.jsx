@@ -1159,7 +1159,6 @@ return (
             required.
           </p>
         </section>
-
         {/* ✅ Home buttons row */}
         <div
           style={{
@@ -1173,7 +1172,10 @@ return (
             🇬🇭 Got Backup + Ghana Opportunity
           </button>
 
-          <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>
+          <button
+            style={ghostButtonStyle}
+            onClick={() => setMode("ghanaPoster")}
+          >
             🇬🇭 Ghana Poster
           </button>
 
@@ -1195,7 +1197,10 @@ return (
             Play Solo (vs Computer)
           </button>
 
-          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+          <button
+            style={ghostButtonStyle}
+            onClick={() => setMode("newsletter")}
+          >
             📰 Newsletter
           </button>
 
@@ -1287,7 +1292,7 @@ return (
             ))}
           </div>
         </div>
-      </header>
+
 
 
           {/* 🇬🇭 Ghana Pilot link (Home) */}
