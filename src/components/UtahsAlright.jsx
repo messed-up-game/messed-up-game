@@ -1,11 +1,14 @@
+import { useState } from "react";
 import OlympicPollSection from "./OlympicPollSection";
 
-export default function UtahsAlright() {
+export default function UtahsAlright({ defaultOpen = false }) {
+  const [showPoll, setShowPoll] = useState(defaultOpen);
+
   return (
     <section
       style={{
         maxWidth: 960,
-        margin: "60px auto",
+        margin: "18px auto 22px",
         textAlign: "center",
         padding: 20,
         background: "rgba(255,255,255,.04)",
@@ -32,14 +35,56 @@ export default function UtahsAlright() {
             width: "100%",
             height: "100%",
             borderRadius: 12,
+            border: 0,
           }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
       </div>
 
-      {/* 👇 Poll + Website voting form + Past winners links */}
-      <div style={{ marginTop: 18, textAlign: "left" }}>
-        <OlympicPollSection />
+      {/* ✅ Collapsible Poll */}
+      <div style={{ marginTop: 16, textAlign: "center" }}>
+        <button
+          type="button"
+          onClick={() => setShowPoll((v) => !v)}
+          style={{
+            background: showPoll ? "rgba(255,255,255,.08)" : "transparent",
+            color: "white",
+            border: "1px solid rgba(255,255,255,.22)",
+            padding: "10px 14px",
+            borderRadius: 12,
+            fontWeight: 900,
+            cursor: "pointer",
+          }}
+          aria-expanded={showPoll}
+          aria-controls="olympic-poll"
+        >
+          {showPoll ? "▲ Hide Olympic Poll" : "▼ Show Olympic Poll"}
+        </button>
+
+        <div
+          id="olympic-poll"
+          style={{
+            marginTop: 12,
+            textAlign: "left",
+            overflow: "hidden",
+            maxHeight: showPoll ? 1400 : 0,
+            opacity: showPoll ? 1 : 0,
+            transition: "max-height 300ms ease, opacity 250ms ease",
+            borderRadius: 14,
+          }}
+        >
+          <div
+            style={{
+              padding: showPoll ? 14 : 0,
+              border: showPoll ? "1px solid rgba(255,255,255,.12)" : "none",
+              background: showPoll ? "rgba(0,0,0,.18)" : "transparent",
+              borderRadius: 14,
+            }}
+          >
+            <OlympicPollSection />
+          </div>
+        </div>
       </div>
     </section>
   );
