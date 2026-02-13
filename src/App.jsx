@@ -1005,10 +1005,8 @@ if (mode === "newsletter") {
     );
   } // ✅ end Sponsors screen
 
-          {/* ✅ Home buttons row */}
-<div
-// ——— Home screen (default) ———
-return (
+  // ——— Home screen (default) ———
+  return (
   <main style={pageStyle}>
     <div style={containerStyle}>
       {/* 🌍 Hiring Banner */}
