@@ -1038,7 +1038,10 @@ return (
         <p style={{ marginTop: 8, opacity: 0.9 }}>
           Family-friendly, hilarious, and brain-boosting — play live or solo.
         </p>
-
+        
+        {/* 🎿 Utah’s Alright */}
+        <UtahsAlright />
+        
         {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
           <h2
@@ -1048,6 +1051,7 @@ return (
               fontWeight: 900,
             }}
           >
+            
             What Is The Messed Up Game?
           </h2>
 
