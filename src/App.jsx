@@ -14,7 +14,7 @@ export default function App() {
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
 
-  const CONTACT_EMAIL = "mailto:tom@messedupgame.com";
+  const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
   const SOCIAL_LINKS = [
     { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
@@ -1221,7 +1221,124 @@ return (
             </div>
           </div>
         </header>
-        
+     {/* 🤝 Community-Friendly Programming (No Advertising Required) */}
+<section
+  style={{
+    maxWidth: 900,
+    margin: "0 auto 22px",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.05)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+    🤝 Community-Friendly Programming (No Advertising Required)
+  </h2>
+
+  <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
+    Many <strong>city community centers</strong>, public facilities, and recreation programs
+    cannot allow advertising on materials. That’s totally fine.
+  </p>
+
+  <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
+    The Messed Up Game™ can be hosted in multiple clean, community-first formats:
+  </p>
+
+  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.65, opacity: 0.95 }}>
+    <li>
+      <strong>Community Enrichment Model:</strong> weekly/monthly programming focused on memory,
+      laughter, and social connection.
+    </li>
+    <li>
+      <strong>Sponsored Event Nights (off-product recognition only):</strong> sponsor snacks/prizes
+      with recognition via signage, announcements, and website/social mentions.
+    </li>
+    <li>
+      <strong>Participation or Membership Model:</strong> small session fee, club option, or fundraiser nights.
+    </li>
+    <li>
+      <strong>Annual Program License:</strong> unlimited sessions/year + host guide + templates + support.
+    </li>
+  </ul>
+
+  <p style={{ margin: "0 0 14px", opacity: 0.95, lineHeight: 1.55 }}>
+    Want the community-center version? Email{" "}
+    <a
+      href={CONTACT_EMAIL}
+      style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 900 }}
+    >
+      {CONTACT_EMAIL.replace("mailto:", "")}
+    </a>
+    .
+  </p>
+
+  <a
+    href={CONTACT_EMAIL}
+    style={{
+      display: "inline-block",
+      padding: "12px 16px",
+      borderRadius: 12,
+      textDecoration: "none",
+      fontWeight: 900,
+      background: "#22c55e",
+      color: "#041b0a",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+    }}
+  >
+    📩 Contact Us (Community Centers)
+  </a>
+</section>
+{/* 🤝 Community-Friendly Programming (No Advertising Required) */}
+<section
+  style={{
+    maxWidth: 900,
+    margin: "0 auto 22px",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.05)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+    🤝 Community-Friendly Programming (No Advertising Required)
+  </h2>
+
+  <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
+    Many city community centers and public facilities cannot allow advertising on materials.
+    That’s completely fine.
+  </p>
+
+  <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
+    The Messed Up Game™ can operate in multiple clean, community-first formats:
+  </p>
+
+  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.65, opacity: 0.95 }}>
+    <li><strong>Community Enrichment Model:</strong> Weekly or monthly memory and social engagement programming.</li>
+    <li><strong>Sponsored Event Nights:</strong> Sponsor recognition via signage and announcements only — no sleeve logos.</li>
+    <li><strong>Participation Model:</strong> Small session fee or fundraiser event option.</li>
+    <li><strong>Annual License Model:</strong> Unlimited sessions per year with host guide and structure included.</li>
+  </ul>
+
+  <a
+    href={CONTACT_EMAIL}
+    style={{
+      display: "inline-block",
+      padding: "12px 16px",
+      borderRadius: 12,
+      textDecoration: "none",
+      fontWeight: 900,
+      background: "#22c55e",
+      color: "#041b0a",
+      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+    }}
+  >
+    📩 Contact Us (Community Centers)
+  </a>
+</section>
+      
       {/* 🧠 Senior Homes: Revenue Share / Savings */}
         <section
           style={{
@@ -1269,10 +1386,9 @@ return (
           </p>
 
           <p style={{ margin: "0 0 14px", opacity: 0.95, lineHeight: 1.55 }}>
-            <strong>Exclusive benefit:</strong> your facility’s{" "}
-            <strong>logo/ad appears on every sleeve &amp; deck</strong> distributed or
-            sold by participating advertisers.
-          </p>
+  <strong>Optional benefit (for private venues that allow it):</strong> your facility’s{" "}
+  <strong>logo/ad can appear on sleeves &amp; decks</strong> distributed through participating sponsors.
+</p>
 
           <a
             href={CONTACT_EMAIL}
