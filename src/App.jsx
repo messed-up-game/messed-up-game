@@ -1290,54 +1290,6 @@ return (
     📩 Contact Us (Community Centers)
   </a>
 </section>
-{/* 🤝 Community-Friendly Programming (No Advertising Required) */}
-<section
-  style={{
-    maxWidth: 900,
-    margin: "0 auto 22px",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.05)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-    🤝 Community-Friendly Programming (No Advertising Required)
-  </h2>
-
-  <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
-    Many city community centers and public facilities cannot allow advertising on materials.
-    That’s completely fine.
-  </p>
-
-  <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-    The Messed Up Game™ can operate in multiple clean, community-first formats:
-  </p>
-
-  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.65, opacity: 0.95 }}>
-    <li><strong>Community Enrichment Model:</strong> Weekly or monthly memory and social engagement programming.</li>
-    <li><strong>Sponsored Event Nights:</strong> Sponsor recognition via signage and announcements only — no sleeve logos.</li>
-    <li><strong>Participation Model:</strong> Small session fee or fundraiser event option.</li>
-    <li><strong>Annual License Model:</strong> Unlimited sessions per year with host guide and structure included.</li>
-  </ul>
-
-  <a
-    href={CONTACT_EMAIL}
-    style={{
-      display: "inline-block",
-      padding: "12px 16px",
-      borderRadius: 12,
-      textDecoration: "none",
-      fontWeight: 900,
-      background: "#22c55e",
-      color: "#041b0a",
-      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-    }}
-  >
-    📩 Contact Us (Community Centers)
-  </a>
-</section>
       
       {/* 🧠 Senior Homes: Revenue Share / Savings */}
         <section
