@@ -1005,7 +1005,7 @@ if (mode === "newsletter") {
     );
   } // ✅ end Sponsors screen
 
-          {/* ✅ Home buttons row */}
+          // ✅ Home buttons row
 // ——— Home screen (default) ———
 return (
   <main style={pageStyle}>
