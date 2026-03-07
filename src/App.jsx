@@ -1039,16 +1039,45 @@ return (
           Family-friendly, hilarious, and brain-boosting — play live or solo.
         </p>
         
-        {/* 🎵 Music From Tom Butler */}
+       {/* 🎵 Music From Tom Butler */}
+<section style={{ margin: "28px 0 24px" }}>
+  <h2
+    style={{
+      margin: "0 0 10px",
+      fontSize: "1.8rem",
+      fontWeight: 900,
+      textAlign: "center",
+    }}
+  >
+    🎵 Music From Tom Butler Productions
+  </h2>
 
-{/* 🎵 Wildman Tom B */}
-<WildmanTomSong />
+  <p
+    style={{
+      margin: "0 0 20px",
+      opacity: 0.9,
+      textAlign: "center",
+      maxWidth: 760,
+      marginInline: "auto",
+      lineHeight: 1.6,
+    }}
+  >
+    Original music from Wildman Tom B — family songs, fun songs, and Olympic storytelling.
+  </p>
 
-{/* 🎂 Patrick's Birthday Song */}
-<PatrickSong />
-
-{/* 🎿 Utah’s Alright */}
-<UtahsAlright />
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: 18,
+      alignItems: "start",
+    }}
+  >
+    <WildmanTomSong />
+    <PatrickSong />
+    <UtahsAlright />
+  </div>
+</section>
         
         {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
