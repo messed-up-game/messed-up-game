@@ -6,7 +6,7 @@ import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer"
 import GotBackupBannerAd from "./components/GotBackupBannerAd";
 import UtahsAlright from "./components/UtahsAlright";
 import WildmanTomSong from "./components/WildmanTomSong";
-import PatrickBirthdaySong from "./components/PatrickBirthdaySong";
+import PatrickSong from "./components/PatrickSong";
 export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
@@ -1039,11 +1039,16 @@ return (
           Family-friendly, hilarious, and brain-boosting — play live or solo.
         </p>
         
-        {/* 🎿 Utah’s Alright */}
-<UtahsAlright />
+        {/* 🎵 Music From Tom Butler */}
 
 {/* 🎵 Wildman Tom B */}
 <WildmanTomSong />
+
+{/* 🎂 Patrick's Birthday Song */}
+<PatrickSong />
+
+{/* 🎿 Utah’s Alright */}
+<UtahsAlright />
         
         {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
