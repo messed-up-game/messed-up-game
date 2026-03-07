@@ -4,21 +4,21 @@ export default function UtahsAlright() {
   return (
     <section
       style={{
-        margin: "22px 0",
         padding: 16,
         borderRadius: 16,
         border: "1px solid rgba(255,255,255,.12)",
         background: "rgba(255,255,255,.03)",
         boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-        textAlign: "center"
+        textAlign: "center",
+        height: "100%",
       }}
     >
-      <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-        🎿 Utah’s Alright – Olympic Song
-      </h2>
+      <h3 style={{ margin: "0 0 10px", fontSize: "1.3rem", fontWeight: 900 }}>
+        🎿 Utah’s Alright
+      </h3>
 
-      <p style={{ marginBottom: 16, opacity: 0.9 }}>
-        Written and recorded by Tom Butler for the 2002 Winter Olympics in Salt Lake City.
+      <p style={{ marginBottom: 14, opacity: 0.9, lineHeight: 1.5 }}>
+        Written and recorded for the 2002 Winter Olympics in Salt Lake City.
       </p>
 
       <div
@@ -26,10 +26,10 @@ export default function UtahsAlright() {
           position: "relative",
           width: "100%",
           paddingTop: "56.25%",
-          borderRadius: 16,
+          borderRadius: 14,
           overflow: "hidden",
-          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-          border: "1px solid rgba(255,255,255,.12)"
+          border: "1px solid rgba(255,255,255,.10)",
+          boxShadow: "0 10px 24px rgba(0,0,0,.3)",
         }}
       >
         <iframe
@@ -42,29 +42,28 @@ export default function UtahsAlright() {
             inset: 0,
             width: "100%",
             height: "100%",
-            border: 0
+            border: 0,
           }}
         />
       </div>
 
-      <p style={{ marginTop: 12 }}>
-        <a
-          href="https://youtu.be/gLs7eegiTF0"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            display: "inline-block",
-            padding: "10px 14px",
-            borderRadius: 12,
-            textDecoration: "none",
-            fontWeight: 900,
-            background: "#22c55e",
-            color: "#041b0a"
-          }}
-        >
-          Watch on YouTube
-        </a>
-      </p>
+      <a
+        href="https://youtu.be/gLs7eegiTF0"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          display: "inline-block",
+          marginTop: 12,
+          padding: "10px 14px",
+          borderRadius: 12,
+          textDecoration: "none",
+          fontWeight: 900,
+          background: "#22c55e",
+          color: "#041b0a",
+        }}
+      >
+        Watch on YouTube
+      </a>
     </section>
   );
 }
