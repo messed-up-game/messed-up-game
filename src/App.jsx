@@ -6,6 +6,7 @@ import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer"
 import GotBackupBannerAd from "./components/GotBackupBannerAd";
 import UtahsAlright from "./components/UtahsAlright";
 import WildmanTomSong from "./components/WildmanTomSong";
+import PatrickBirthdaySong from "./components/PatrickBirthdaySong";
 export default function App() {
   // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
