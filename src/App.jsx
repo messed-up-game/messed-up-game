@@ -18,7 +18,7 @@ export default function App() {
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
   const SOCIAL_LINKS = [
-    { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
+    { label: "YouTube", href: "hpatricksttps://www.youtube.com/@Messedupgame" },
     { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
     { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
     { label: "X", href: "https://x.com/saveplanetusa" },
@@ -1073,25 +1073,43 @@ return (
       alignItems: "start",
     }}
   >
-   <h2 style={{ textAlign: "center" }}>🎂 Patrick's Birthday Song</h2>
+<h2 style={{ textAlign: "center" }}>🎂 Patrick's Birthday Song</h2>
 
 <p style={{ maxWidth: 700, margin: "10px auto 20px", textAlign: "center" }}>
-A 22-second birthday song I wrote for my son Patrick.
+  A 22-second birthday song I wrote for my son Patrick.
 </p>
 
 <div
   style={{
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
     gap: 18,
     alignItems: "start",
   }}
 >
-  <PatrickSong />
-  <UtahsAlright />
+  <div
+    style={{
+      background: "rgba(255,255,255,0.04)",
+      border: "1px solid rgba(255,255,255,0.12)",
+      borderRadius: 16,
+      padding: 16,
+    }}
+  >
+    <PatrickSong />
+  </div>
+
+  <div
+    style={{
+      background: "rgba(255,255,255,0.04)",
+      border: "1px solid rgba(255,255,255,0.12)",
+      borderRadius: 16,
+      padding: 16,
+    }}
+  >
+    <UtahsAlright />
+  </div>
 </div>
 </section>
-        
         {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
           <h2
