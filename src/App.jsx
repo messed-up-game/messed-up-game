@@ -1040,6 +1040,7 @@ return (
         </p>
         
        {/* 🎵 Music From Tom Butler */}
+{/* 🎵 Featured songs */}
 <section style={{ margin: "28px 0 24px" }}>
   <h2
     style={{
@@ -1049,66 +1050,50 @@ return (
       textAlign: "center",
     }}
   >
-    🎵 Music From Tom Butler Productions
+    🎂 Patrick's Birthday Song
   </h2>
 
   <p
     style={{
-      margin: "0 0 20px",
-      opacity: 0.9,
+      maxWidth: 700,
+      margin: "10px auto 20px",
       textAlign: "center",
-      maxWidth: 760,
-      marginInline: "auto",
-      lineHeight: 1.6,
+      opacity: 0.9,
     }}
   >
-    Original music from Wildman Tom B — family songs, fun songs, and Olympic storytelling.
+    A 22-second birthday song I wrote for my son Patrick.
   </p>
 
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
       gap: 18,
       alignItems: "start",
     }}
   >
-<h2 style={{ textAlign: "center" }}>🎂 Patrick's Birthday Song</h2>
+    <div
+      style={{
+        background: "rgba(255,255,255,0.04)",
+        border: "1px solid rgba(255,255,255,.12)",
+        borderRadius: 16,
+        padding: 12,
+      }}
+    >
+      <PatrickSong />
+    </div>
 
-<p style={{ maxWidth: 700, margin: "10px auto 20px", textAlign: "center" }}>
-  A 22-second birthday song I wrote for my son Patrick.
-</p>
-
-<div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-    gap: 18,
-    alignItems: "start",
-  }}
->
-  <div
-    style={{
-      background: "rgba(255,255,255,0.04)",
-      border: "1px solid rgba(255,255,255,0.12)",
-      borderRadius: 16,
-      padding: 16,
-    }}
-  >
-    <PatrickSong />
+    <div
+      style={{
+        background: "rgba(255,255,255,0.04)",
+        border: "1px solid rgba(255,255,255,.12)",
+        borderRadius: 16,
+        padding: 12,
+      }}
+    >
+      <UtahsAlright />
+    </div>
   </div>
-
-  <div
-    style={{
-      background: "rgba(255,255,255,0.04)",
-      border: "1px solid rgba(255,255,255,0.12)",
-      borderRadius: 16,
-      padding: 16,
-    }}
-  >
-    <UtahsAlright />
-  </div>
-</div>
 </section>
         {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
