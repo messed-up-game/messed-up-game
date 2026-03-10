@@ -1073,10 +1073,23 @@ return (
       alignItems: "start",
     }}
   >
-    <WildmanTomSong />
-    <PatrickSong />
-    <UtahsAlright />
-  </div>
+   <h2 style={{ textAlign: "center" }}>🎂 Patrick's Birthday Song</h2>
+
+<p style={{ maxWidth: 700, margin: "10px auto 20px", textAlign: "center" }}>
+A 22-second birthday song I wrote for my son Patrick.
+</p>
+
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: 18,
+    alignItems: "start",
+  }}
+>
+  <PatrickSong />
+  <UtahsAlright />
+</div>
 </section>
         
         {/* 🎥 What is The Messed Up Game? */}
@@ -1123,7 +1136,11 @@ return (
             required.
           </p>
         </section>
-       
+       <section style={{ margin: "30px 0", textAlign: "center" }}>
+  <h2>🎸 Wildman Tom B</h2>
+  <WildmanTomSong />
+</section>
+        
         {/* ✅ Home buttons row */}
         <div
           style={{
