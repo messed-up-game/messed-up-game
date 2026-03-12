@@ -1661,130 +1661,35 @@ return (
   }}
 >
   <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-    🤝 Community-Friendly Programming (No Advertising Required)
+ <section
+  style={{
+    maxWidth: 900,
+    margin: "0 auto 22px",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.05)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+    🏘️ Bring The Messed Up Game to Your Community Center
   </h2>
 
-  <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
-    Many <strong>city community centers</strong>, public facilities, and recreation programs
-    cannot allow advertising on materials. That’s totally fine.
+  <p style={{ maxWidth: 700, margin: "0 auto 14px", opacity: 0.95 }}>
+    Looking for a fun, brain-boosting event for your community center?
+    Wildman Tom B hosts an unforgettable night of music, laughter,
+    and The Messed Up Game.
   </p>
 
-  <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-    The Messed Up Game™ can be hosted in multiple clean, community-first formats:
-  </p>
-
-  <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.65, opacity: 0.95 }}>
-    <li>
-      <strong>Community Enrichment Model:</strong> weekly/monthly programming focused on memory,
-      laughter, and social connection.
-    </li>
-    <li>
-      <strong>Sponsored Event Nights (off-product recognition only):</strong> sponsor snacks/prizes
-      with recognition via signage, announcements, and website/social mentions.
-    </li>
-    <li>
-      <strong>Participation or Membership Model:</strong> small session fee, club option, or fundraiser nights.
-    </li>
-    <li>
-      <strong>Annual Program License:</strong> unlimited sessions/year + host guide + templates + support.
-    </li>
-  </ul>
-
-  <p style={{ margin: "0 0 14px", opacity: 0.95, lineHeight: 1.55 }}>
-    Want the community-center version? Email{" "}
-    <a
-      href={CONTACT_EMAIL}
-      style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 900 }}
-    >
-      {CONTACT_EMAIL.replace("mailto:", "")}
-    </a>
-    .
-  </p>
-
-  <a
-    href={CONTACT_EMAIL}
-    style={{
-      display: "inline-block",
-      padding: "12px 16px",
-      borderRadius: 12,
-      textDecoration: "none",
-      fontWeight: 900,
-      background: "#22c55e",
-      color: "#041b0a",
-      boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-    }}
+  <button
+    style={buttonStyle}
+    onClick={() => setMode("communityCenters")}
   >
-    📩 Contact Us (Community Centers)
-  </a>
-</section>
-      
-      {/* 🧠 Senior Homes: Revenue Share / Savings */}
-        <section
-          style={{
-            maxWidth: 900,
-            margin: "0 auto 22px",
-            padding: 18,
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,.14)",
-            background: "rgba(255,255,255,.05)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-          }}
-        >
-          <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-            Senior Homes: We Pay You to Host the Fun
-          </h2>
-
-          <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
-            <strong>The Messed Up Game™</strong> is a live, hosted, laughter-filled
-            brain game designed to boost memory and real connection for residents.
-          </p>
-
-          <p style={{ margin: "0 0 12px", opacity: 0.95, lineHeight: 1.55 }}>
-            <strong>Here’s the wow part:</strong> we share revenue with your facility —
-            so you can <strong>save money</strong> while your residents enjoy a weekly
-            brain-boosting experience.
-          </p>
-
-          <h3 style={{ margin: "0 0 8px", fontSize: "1.1rem", fontWeight: 900 }}>
-            Example math (real numbers):
-          </h3>
-
-          <ul style={{ margin: "0 0 12px", paddingLeft: 18, lineHeight: 1.6, opacity: 0.95 }}>
-            <li>Program value: <strong>$150/week</strong></li>
-            <li>
-              If we sell <strong>10 local advertisers at $100/month</strong> ={" "}
-              <strong>$1,000/month</strong>
-            </li>
-            <li>Your facility earns <strong>20% = $200/month</strong></li>
-            <li>That equals <strong>$50 savings per week</strong></li>
-          </ul>
-
-          <p style={{ margin: "0 0 10px", opacity: 0.95, lineHeight: 1.55 }}>
-            <strong>Bonus every week:</strong> we provide <strong>5 free decks</strong>{" "}
-            (value <strong>$76/week</strong>).
-          </p>
-
-          <p style={{ margin: "0 0 14px", opacity: 0.95, lineHeight: 1.55 }}>
-  <strong>Optional benefit (for private venues that allow it):</strong> your facility’s{" "}
-  <strong>logo/ad can appear on sleeves &amp; decks</strong> distributed through participating sponsors.
-</p>
-
-          <a
-            href={CONTACT_EMAIL}
-            style={{
-              display: "inline-block",
-              padding: "12px 16px",
-              borderRadius: 12,
-              textDecoration: "none",
-              fontWeight: 900,
-              background: "#facc15",
-              color: "#111827",
-              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
-            }}
-          >
-            📩 Contact Us (Senior Homes)
-          </a>
-        </section>
+    Learn More
+  </button>
+</section>   
 
         {/* Poster preview on home */}
         <section
