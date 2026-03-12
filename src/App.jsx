@@ -1040,30 +1040,8 @@ return (
         </p>
         
        {/* 🎵 Music From Tom Butler */}
-{/* 🎵 Featured songs */}
+{/* 🎵 Featured Songs */}
 <section style={{ margin: "28px 0 24px" }}>
-  <h2
-    style={{
-      margin: "0 0 10px",
-      fontSize: "1.8rem",
-      fontWeight: 900,
-      textAlign: "center",
-    }}
-  >
-    🎂 Patrick's Birthday Song
-  </h2>
-
-  <p
-    style={{
-      maxWidth: 700,
-      margin: "10px auto 20px",
-      textAlign: "center",
-      opacity: 0.9,
-    }}
-  >
-    A 22-second birthday song I wrote for my son Patrick.
-  </p>
-
   <div
     style={{
       display: "grid",
@@ -1072,29 +1050,61 @@ return (
       alignItems: "start",
     }}
   >
-    <div
-      style={{
-        background: "rgba(255,255,255,0.04)",
-        border: "1px solid rgba(255,255,255,.12)",
-        borderRadius: 16,
-        padding: 12,
-      }}
-    >
+
+    {/* 🎂 NEW Birthday Promo Short */}
+    <div style={{ textAlign: "center" }}>
+      <h2 style={{ marginBottom: 10 }}>
+        🎂 The Best Birthday Gift Ever?
+      </h2>
+
+      <p style={{ opacity: 0.9 }}>
+        A 15-second birthday song from Dad.
+      </p>
+
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          paddingTop: "177.78%",
+          borderRadius: 16,
+          overflow: "hidden",
+          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+          border: "1px solid rgba(255,255,255,.12)",
+        }}
+      >
+        <iframe
+          src="https://www.youtube.com/embed/mLwoEIiM6XM"
+          title="Patrick's Birthday Song Promo"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            border: 0,
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+
+    {/* 🎵 Full Birthday Song */}
+    <div style={{ textAlign: "center" }}>
+      <h2 style={{ marginBottom: 10 }}>
+        🎵 Patrick’s Birthday Song (Full Version)
+      </h2>
+
       <PatrickSong />
     </div>
 
-    <div
-      style={{
-        background: "rgba(255,255,255,0.04)",
-        border: "1px solid rgba(255,255,255,.12)",
-        borderRadius: 16,
-        padding: 12,
-      }}
-    >
-      <UtahsAlright />
-    </div>
+  </div>
+
+  {/* 🏅 Utah's Alright */}
+  <div style={{ marginTop: 30 }}>
+    <UtahsAlright />
   </div>
 </section>
+      
         {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
           <h2
