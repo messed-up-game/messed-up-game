@@ -1051,42 +1051,72 @@ return (
     }}
   >
 
-    {/* 🎂 NEW Birthday Promo Short */}
-    <div style={{ textAlign: "center" }}>
-      <h2 style={{ marginBottom: 10 }}>
-        🎂 The Best Birthday Gift Ever?
-      </h2>
+   {/* 🎂 NEW Birthday Promo Short */}
+<div style={{ textAlign: "center" }}>
+  <h2 style={{ marginBottom: 10 }}>
+    🎂 The Best Birthday Gift Ever?
+  </h2>
 
-      <p style={{ opacity: 0.9 }}>
-        A 15-second birthday song from Dad.
-      </p>
+  <p style={{ opacity: 0.9 }}>
+    A 15-second birthday song from Dad.
+  </p>
 
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          paddingTop: "177.78%",
-          borderRadius: 16,
-          overflow: "hidden",
-          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-          border: "1px solid rgba(255,255,255,.12)",
-        }}
-      >
-        <iframe
-          src="https://www.youtube.com/embed/mLwoEIiM6XM"
-          title="Patrick's Birthday Song Promo"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            border: 0,
-          }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
-    </div>
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      paddingTop: "177.78%",
+      borderRadius: 16,
+      overflow: "hidden",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+      border: "1px solid rgba(255,255,255,.12)",
+    }}
+  >
+    <iframe
+      src="https://www.youtube.com/embed/mLwoEIiM6XM"
+      title="Patrick's Birthday Song Promo"
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
+  </div>
+
+  {/* ⭐ Call To Action */}
+  <div
+    style={{
+      marginTop: 16,
+      padding: 14,
+      background: "rgba(255,255,255,0.05)",
+      borderRadius: 12,
+      border: "1px solid rgba(255,255,255,.12)",
+    }}
+  >
+    <p style={{ marginBottom: 8 }}>
+      🎶 Want a personalized birthday song for someone special?
+    </p>
+
+    <a
+      href="mailto:tom@gotbackuptomb.com"
+      style={{
+        display: "inline-block",
+        padding: "10px 18px",
+        background: "#22c55e",
+        color: "#041b0a",
+        fontWeight: 800,
+        borderRadius: 10,
+        textDecoration: "none",
+      }}
+    >
+      Request a Custom Birthday Song
+    </a>
+  </div>
+</div>
 
     {/* 🎵 Full Birthday Song */}
     <div style={{ textAlign: "center" }}>
