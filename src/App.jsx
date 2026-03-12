@@ -1086,7 +1086,47 @@ return (
       allowFullScreen
     />
   </div>
+{/* 🎉 Orson Wins The Messed Up Game */}
+<div style={{ marginTop: 28, textAlign: "center" }}>
+  <h2 style={{ marginBottom: 10 }}>
+    🎉 Orson Wins The Messed Up Game!
+  </h2>
 
+  <p style={{ opacity: 0.9 }}>
+    Grandpa sings a 16-second victory song.
+  </p>
+
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      paddingTop: "177.78%",
+      borderRadius: 16,
+      overflow: "hidden",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+      border: "1px solid rgba(255,255,255,.12)",
+    }}
+  >
+    <iframe
+      src="https://www.youtube.com/embed/ZDxGMx3tGDk"
+      title="Orson Wins The Messed Up Game"
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
+  </div>
+
+  <p style={{ marginTop: 10, fontStyle: "italic", opacity: 0.8 }}>
+    Orson Ralph Butler — great-grandson of WWII B-17 tail gunner Ralph Stanford Butler.
+  </p>
+</div>
+  “Want a custom birthday or victory song for someone you love?”
   {/* ⭐ Call To Action */}
   <div
     style={{
