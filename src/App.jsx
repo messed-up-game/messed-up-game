@@ -34,7 +34,7 @@ export default function App() {
   const BENEFITS_DOC_URL =
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
-  // "home" | "solo" | "newsletter" | "poster" | "ghanaPoster" | "sponsors"
+  // "home" | "solo" | "newsletter" | "poster" | "ghanaPoster" | "sponsors" | "communityCenters"
 
   const [mode, setMode] = useState("home");
 
@@ -814,6 +814,289 @@ if (mode === "newsletter") {
       </main>
     );
  } // ✅ end Newsletter screen
+// ——— Community Centers screen ———
+if (mode === "communityCenters") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 10,
+            flexWrap: "wrap",
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <a
+            href={CONTACT_EMAIL}
+            style={{ ...buttonStyle, textDecoration: "none" }}
+          >
+            Contact Tom
+          </a>
+        </nav>
+
+        <section
+          style={{
+            textAlign: "center",
+            padding: "28px 20px",
+            borderRadius: 22,
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.12)",
+            boxShadow: "0 10px 30px rgba(0,0,0,.25)",
+            marginBottom: 24,
+          }}
+        >
+          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.1rem)", marginBottom: 14 }}>
+            🏘️ Bring The Messed Up Game to Your Community Center
+          </h1>
+
+          <p
+            style={{
+              maxWidth: 820,
+              margin: "0 auto",
+              lineHeight: 1.7,
+              opacity: 0.94,
+              fontSize: "1.05rem",
+            }}
+          >
+            Looking for a fun, memorable, family-friendly event that gets people
+            laughing, thinking, singing, and connecting? The Messed Up Game Live
+            with Wildman Tom B brings music, audience participation, special
+            shout-outs, and a one-of-a-kind live game experience to your community center.
+          </p>
+        </section>
+
+        <section
+          style={{
+            marginBottom: 24,
+            padding: 22,
+            borderRadius: 18,
+            background: "rgba(255,255,255,0.04)",
+            border: "1px solid rgba(255,255,255,0.1)",
+          }}
+        >
+          <h2 style={{ marginBottom: 12 }}>🎬 Built for Shareable Moments</h2>
+
+          <p style={{ lineHeight: 1.7, opacity: 0.92 }}>
+            One exciting part of the experience is the potential for short,
+            high-energy video moments — including Tom’s 14.8-second promo style
+            content and quick custom songs that people love to share. If one of
+            those songs or clips goes viral, your community center could receive
+            exposure and be seen as the place where the fun happened.
+          </p>
+        </section>
+
+        <section
+          style={{
+            marginBottom: 24,
+            padding: 22,
+            borderRadius: 18,
+            background: "rgba(255,255,255,0.04)",
+            border: "1px solid rgba(255,255,255,0.1)",
+          }}
+        >
+          <h2 style={{ marginBottom: 14 }}>🎤 What the Event Can Include</h2>
+
+          <div style={{ display: "grid", gap: 14 }}>
+            <div
+              style={{
+                padding: 16,
+                borderRadius: 14,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              <h3 style={{ marginTop: 0 }}>Host Opening the Night</h3>
+              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                Wildman Tom B kicks off the event as host, welcomes the crowd,
+                and brings energy to the room right from the start.
+              </p>
+            </div>
+
+            <div
+              style={{
+                padding: 16,
+                borderRadius: 14,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              <h3 style={{ marginTop: 0 }}>Special Occasion Recognition</h3>
+              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                Birthdays, anniversaries, and special milestones can be recognized
+                at the beginning of the night to help people feel celebrated.
+              </p>
+            </div>
+
+            <div
+              style={{
+                padding: 16,
+                borderRadius: 14,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              <h3 style={{ marginTop: 0 }}>2 to 4 Warm-Up Songs</h3>
+              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                Tom can sing 2 to 4 songs to warm up the crowd, get smiles on faces,
+                and create a fun atmosphere before the game begins.
+              </p>
+            </div>
+
+            <div
+              style={{
+                padding: 16,
+                borderRadius: 14,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              <h3 style={{ marginTop: 0 }}>The Messed Up Game Live</h3>
+              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                Then the fun really begins with a lively, interactive game experience
+                designed to get people laughing, thinking, remembering, and connecting.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          style={{
+            marginBottom: 24,
+            padding: 22,
+            borderRadius: 18,
+            background: "rgba(255,255,255,0.04)",
+            border: "1px solid rgba(255,255,255,0.1)",
+          }}
+        >
+          <h2 style={{ marginBottom: 14 }}>✨ Why Community Centers Love It</h2>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+              gap: 14,
+            }}
+          >
+            {[
+              "Family-friendly entertainment",
+              "Laughter and community bonding",
+              "Interactive, brain-boosting fun",
+              "Special attention for birthdays and milestones",
+              "Memorable moments people talk about later",
+              "Great atmosphere for photos and short videos",
+              "Positive local buzz and exposure",
+              "A unique event that stands out from the usual programming",
+            ].map((item) => (
+              <div
+                key={item}
+                style={{
+                  padding: 16,
+                  borderRadius: 14,
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  lineHeight: 1.5,
+                }}
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          style={{
+            padding: 26,
+            borderRadius: 20,
+            textAlign: "center",
+            background: "rgba(255,213,74,0.12)",
+            border: "1px solid rgba(255,213,74,0.35)",
+            boxShadow: "0 10px 30px rgba(0,0,0,.2)",
+          }}
+        >
+          <h2 style={{ marginBottom: 12 }}>
+            Ready to Create a Memorable Community Event?
+          </h2>
+
+          <p
+            style={{
+              maxWidth: 760,
+              margin: "0 auto",
+              lineHeight: 1.7,
+              opacity: 0.94,
+            }}
+          >
+            Let’s bring music, laughter, recognition, and The Messed Up Game to
+            your community center.
+          </p>
+
+          <div style={{ marginTop: 20 }}>
+            <a
+              href={CONTACT_EMAIL}
+              style={{
+                display: "inline-block",
+                padding: "13px 24px",
+                borderRadius: 12,
+                textDecoration: "none",
+                fontWeight: 800,
+                background: "#ffd54a",
+                color: "#111",
+              }}
+            >
+              Contact Tom About Booking
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
+  // ——— Community Centers screen ———
+if (mode === "communityCenters") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 10,
+            flexWrap: "wrap",
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+
+          <a
+            href={CONTACT_EMAIL}
+            style={{ ...buttonStyle, textDecoration: "none" }}
+          >
+            Contact Tom
+          </a>
+        </nav>
+
+        <h1 style={{ fontSize: "2rem", fontWeight: 900 }}>
+          🏘️ Bring The Messed Up Game to Your Community Center
+        </h1>
+
+        <p style={{ maxWidth: 760, lineHeight: 1.7 }}>
+          Looking for a fun, memorable, family-friendly event that gets people
+          laughing, thinking, singing, and connecting? Wildman Tom B hosts a
+          lively game night featuring music, special occasion recognition,
+          crowd warm-up songs, and The Messed Up Game.
+        </p>
+
+      </div>
+    </main>
+  );
+}
 
   // ——— Sponsors screen ———
   if (mode === "sponsors") {
@@ -1223,52 +1506,59 @@ return (
   <h2>🎸 Wildman Tom B</h2>
   <WildmanTomSong />
 </section>
-        
-        {/* ✅ Home buttons row */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 10,
-            marginTop: 12,
-          }}
-        >
-          <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
-            🇬🇭 Got Backup + Ghana Opportunity
-          </button>
+      
+{/* ✅ Home buttons row */}
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 10,
+    marginTop: 12,
+  }}
+>
+  <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
+    🇬🇭 Got Backup + Ghana Opportunity
+  </button>
 
-          <button
-            style={ghostButtonStyle}
-            onClick={() => setMode("ghanaPoster")}
-          >
-            🇬🇭 Ghana Poster
-          </button>
+  {/* NEW COMMUNITY CENTER BUTTON */}
+  <button
+    style={ghostButtonStyle}
+    onClick={() => setMode("communityCenters")}
+  >
+    🏘️ Community Centers
+  </button>
 
-          <a
-            href={SIGNUP_FORM_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...buttonStyle,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            🎲 Sign Up to Play Live
-          </a>
+  <button
+    style={ghostButtonStyle}
+    onClick={() => setMode("ghanaPoster")}
+  >
+    🇬🇭 Ghana Poster
+  </button>
 
-          <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-            Play Solo (vs Computer)
-          </button>
+  <a
+    href={SIGNUP_FORM_URL}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...buttonStyle,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    🎲 Sign Up to Play Live
+  </a>
 
-          <button
-            style={ghostButtonStyle}
-            onClick={() => setMode("newsletter")}
-          >
-            📰 Newsletter
-          </button>
+  <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+    Play Solo (vs Computer)
+  </button>
 
+  <button
+    style={ghostButtonStyle}
+    onClick={() => setMode("newsletter")}
+  >
+    📰 Newsletter
+  </button>
           <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
             🪧 Hesperia Poster
           </button>
