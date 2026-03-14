@@ -1309,7 +1309,7 @@ return (
 </header>
 
 {/* 🌍 Hiring Banner */}
-<div
+</h2>
   style={{
     marginBottom: 16,
     padding: "10px 14px",
@@ -1328,7 +1328,7 @@ return (
 </div>
 
 {/* 🎵 Featured Songs */}
-<section style={{ margin: "28px 0 24px" }}>
+</section> style={{ margin: "28px 0 24px" }}>
   <div
     style={{
       display: "grid",
