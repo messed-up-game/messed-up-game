@@ -1294,30 +1294,11 @@ if (mode === "communityCenters") {
 return (
   <main style={pageStyle}>
     <div style={containerStyle}>
-      {/* 🌍 Hiring Banner */}
-      <div
-        style={{
-          marginBottom: 16,
-          padding: "10px 14px",
-          borderRadius: 12,
-          textAlign: "center",
-          fontWeight: 900,
-          fontSize: 16,
-          background: "linear-gradient(90deg, #22c55e, #16a34a)",
-          color: "#041b0a",
-          boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
-          cursor: "pointer",
-        }}
-        onClick={() => setMode("newsletter")}
-      >
-        🌍 Now Hiring – Hosts & Sales Reps (Click)
-      </div>
-
+    
      <header style={{ marginBottom: 18 }}>
   <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-    The Messed Up Game
-  </h1>
-
+  
+<h1>The Messed Up Game™</h1>
   <p style={{ marginTop: 8, opacity: 0.9 }}>
     Family-friendly, hilarious, and brain-boosting — play live or solo.
   </p>
