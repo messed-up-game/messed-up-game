@@ -1303,13 +1303,12 @@ return (
     Family-friendly, hilarious, and brain-boosting — play live or solo.
   </p>
 
-  <p style={{ marginTop: 6, opacity: 0.95 }}>
-    The Messed Up Game™ is a live hosted social party game created by Tom Butler.
-  </p>
+ <p style={{ marginTop: 6, opacity: 0.95 }}>
+  The Messed Up Game™ is a live hosted social party game created by Tom Butler.
+</p>
 </header>
-
 {/* 🌍 Hiring Banner */}
-</h2>
+<div
   style={{
     marginBottom: 16,
     padding: "10px 14px",
@@ -1328,7 +1327,7 @@ return (
 </div>
 
 {/* 🎵 Featured Songs */}
-</section> style={{ margin: "28px 0 24px" }}>
+<section style={{ margin: "28px 0 24px" }}>
   <div
     style={{
       display: "grid",
@@ -1337,83 +1336,85 @@ return (
       alignItems: "start",
     }}
   >
+    {/* 🎂 NEW Birthday Promo Short */}
+    <div style={{ textAlign: "center" }}>
+      <h2 style={{ marginBottom: 10 }}>
+        🎂 The Best Birthday Gift Ever?
+      </h2>
 
-   {/* 🎂 NEW Birthday Promo Short */}
-<div style={{ textAlign: "center" }}>
-  <h2 style={{ marginBottom: 10 }}>
-    🎂 The Best Birthday Gift Ever?
-  </h2>
+      <p style={{ opacity: 0.9 }}>
+        A 15-second birthday song from Dad.
+      </p>
 
-  <p style={{ opacity: 0.9 }}>
-    A 15-second birthday song from Dad.
-  </p>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          paddingTop: "177.78%",
+          borderRadius: 16,
+          overflow: "hidden",
+          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+          border: "1px solid rgba(255,255,255,.12)",
+        }}
+      >
+        <iframe
+          src="https://www.youtube.com/embed/mLwoEIiM6XM"
+          title="Patrick's Birthday Song Promo"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            border: 0,
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
 
-  <div
-    style={{
-      position: "relative",
-      width: "100%",
-      paddingTop: "177.78%",
-      borderRadius: 16,
-      overflow: "hidden",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-      border: "1px solid rgba(255,255,255,.12)",
-    }}
-  >
-    <iframe
-      src="https://www.youtube.com/embed/mLwoEIiM6XM"
-      title="Patrick's Birthday Song Promo"
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        border: 0,
-      }}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
+    {/* 🎉 Orson Wins The Messed Up Game */}
+    <div style={{ textAlign: "center" }}>
+      <h2 style={{ marginBottom: 10 }}>
+        🎉 Orson Wins The Messed Up Game!
+      </h2>
+
+      <p style={{ opacity: 0.9 }}>
+        Grandpa sings a 16-second victory song.
+      </p>
+
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          paddingTop: "177.78%",
+          borderRadius: 16,
+          overflow: "hidden",
+          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+          border: "1px solid rgba(255,255,255,.12)",
+        }}
+      >
+        <iframe
+          src="https://www.youtube.com/embed/ZDxGMx3tGDk"
+          title="Orson Wins The Messed Up Game"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            border: 0,
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+
+      <p style={{ marginTop: 10, fontStyle: "italic", opacity: 0.8 }}>
+        Orson Ralph Butler — great-grandson of WWII B-17 tail gunner Ralph Stanford Butler.
+      </p>
+    </div>
   </div>
-{/* 🎉 Orson Wins The Messed Up Game */}
-<div style={{ marginTop: 28, textAlign: "center" }}>
-  <h2 style={{ marginBottom: 10 }}>
-    🎉 Orson Wins The Messed Up Game!
-  </h2>
 
-  <p style={{ opacity: 0.9 }}>
-    Grandpa sings a 16-second victory song.
-  </p>
-
-  <div
-    style={{
-      position: "relative",
-      width: "100%",
-      paddingTop: "177.78%",
-      borderRadius: 16,
-      overflow: "hidden",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-      border: "1px solid rgba(255,255,255,.12)",
-    }}
-  >
-    <iframe
-      src="https://www.youtube.com/embed/ZDxGMx3tGDk"
-      title="Orson Wins The Messed Up Game"
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        border: 0,
-      }}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-  </div>
-
-  <p style={{ marginTop: 10, fontStyle: "italic", opacity: 0.8 }}>
-    Orson Ralph Butler — great-grandson of WWII B-17 tail gunner Ralph Stanford Butler.
-  </p>
-</div>
-  “Want a custom birthday or victory song for someone you love?”
   {/* ⭐ Call To Action */}
   <div
     style={{
@@ -1422,10 +1423,11 @@ return (
       background: "rgba(255,255,255,0.05)",
       borderRadius: 12,
       border: "1px solid rgba(255,255,255,.12)",
+      textAlign: "center",
     }}
   >
     <p style={{ marginBottom: 8 }}>
-      🎶 Want a personalized birthday song for someone special?
+      🎶 Want a personalized birthday or victory song for someone special?
     </p>
 
     <a
@@ -1443,7 +1445,7 @@ return (
       Request a Custom Birthday Song
     </a>
   </div>
-</div>
+</section>
 
     {/* 🎵 Full Birthday Song */}
     <div style={{ textAlign: "center" }}>
