@@ -1403,9 +1403,68 @@ export default function App() {
               textDecoration: "none",
             }}
           >
-            Request a Custom Birthday Song
-          </a>
-        </div>
+            </a>
+</div>
+
+{/* 🎶 Custom Song CTA Upgrade */}
+<div
+  style={{
+    marginTop: 16,
+    padding: 18,
+    background: "rgba(255,255,255,0.06)",
+    borderRadius: 14,
+    border: "1px solid rgba(255,255,255,.12)",
+    textAlign: "center",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <p style={{ marginBottom: 10, fontSize: "1.05rem", fontWeight: 800 }}>
+    🎶 Want a personalized song for someone you love?
+  </p>
+
+  <p style={{ marginBottom: 14, opacity: 0.9 }}>
+    Birthdays • Anniversaries • Victory Songs • Tributes
+  </p>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: 10,
+      flexWrap: "wrap",
+    }}
+  >
+    <a
+      href="mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request"
+      style={{
+        padding: "12px 18px",
+        background: "#22c55e",
+        color: "#041b0a",
+        fontWeight: 900,
+        borderRadius: 12,
+        textDecoration: "none",
+      }}
+    >
+      🎤 Request Your Song
+    </a>
+
+    <a
+      href="https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY"
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        padding: "12px 18px",
+        background: "#f97316",
+        color: "white",
+        fontWeight: 900,
+        borderRadius: 12,
+        textDecoration: "none",
+      }}
+    >
+      🎧 Hear Example
+    </a>
+  </div>
+</div>
 
         <section style={{ margin: "30px 0", textAlign: "center" }}>
           <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song (Full Version)</h2>
