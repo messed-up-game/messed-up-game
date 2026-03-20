@@ -24,6 +24,7 @@ export default function App() {
     { label: "X", href: "https://x.com/saveplanetusa" },
     { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
     { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
+    { label: "SoundCloud", href: "https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY" },
   ];
 
   const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
@@ -1461,7 +1462,38 @@ export default function App() {
           <h2>🎸 Wildman Tom B</h2>
           <WildmanTomSong />
         </section>
+<section
+  style={{
+    margin: "30px 0",
+    textAlign: "center",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.04)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2 style={{ marginBottom: 10 }}>
+    🎧 Hear What a $95 Custom Song Sounds Like
+  </h2>
 
+  <iframe
+    width="100%"
+    height="166"
+    scrolling="no"
+    frameBorder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wildman-tom-b/lucky-to-have-you&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+    style={{
+      borderRadius: 12,
+      marginTop: 10,
+    }}
+  />
+
+  <p style={{ marginTop: 10, opacity: 0.8 }}>
+    🎶 Custom songs for the people you love ❤️
+  </p>
+</section>
         <div
           style={{
             display: "flex",
