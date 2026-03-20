@@ -1655,20 +1655,8 @@ return (
             </div>
           </div>
         </header>
-     {/* 🤝 Community-Friendly Programming (No Advertising Required) */}
+{/* 🤝 Community-Friendly Programming (No Advertising Required) */}
 <section
-  style={{
-    maxWidth: 900,
-    margin: "0 auto 22px",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.05)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
- <section
   style={{
     maxWidth: 900,
     margin: "0 auto 22px",
@@ -1696,7 +1684,7 @@ return (
   >
     Learn More
   </button>
-</section>   
+</section>
 
         {/* Poster preview on home */}
         <section
