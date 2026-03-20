@@ -1289,89 +1289,90 @@ if (mode === "communityCenters") {
     );
   } // ✅ end Sponsors screen
 
-          // ✅ Home buttons row
+// ✅ Home buttons row
 // ——— Home screen (default) ———
 return (
   <main style={pageStyle}>
     <div style={containerStyle}>
-    
-     <header style={{ marginBottom: 18 }}>
-  <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-  
-<h1>The Messed Up Game™</h1>
-  <p style={{ marginTop: 8, opacity: 0.9 }}>
-    Family-friendly, hilarious, and brain-boosting — play live or solo.
-  </p>
+      <header style={{ marginBottom: 18 }}>
+        <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+          The Messed Up Game™
+        </h1>
 
- <p style={{ marginTop: 6, opacity: 0.95 }}>
-  The Messed Up Game™ is a live hosted social party game created by Tom Butler.
-</p>
-</header>
-{/* 🌍 Hiring Banner */}
-<div
-  style={{
-    marginBottom: 16,
-    padding: "10px 14px",
-    borderRadius: 12,
-    textAlign: "center",
-    fontWeight: 900,
-    fontSize: 16,
-    background: "linear-gradient(90deg, #22c55e, #16a34a)",
-    color: "#041b0a",
-    boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
-    cursor: "pointer",
-  }}
-  onClick={() => setMode("newsletter")}
->
-  🌍 Now Hiring – Hosts & Sales Reps (Click)
-</div>
+        <p style={{ marginTop: 8, opacity: 0.9 }}>
+          Family-friendly, hilarious, and brain-boosting — play live or solo.
+        </p>
 
-{/* 🎵 Featured Songs */}
-<section style={{ margin: "28px 0 24px" }}>
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-      gap: 18,
-      alignItems: "start",
-    }}
-  >
-    {/* 🎂 NEW Birthday Promo Short */}
-    <div style={{ textAlign: "center" }}>
-      <h2 style={{ marginBottom: 10 }}>
-        🎂 The Best Birthday Gift Ever?
-      </h2>
+        <p style={{ marginTop: 6, opacity: 0.95 }}>
+          The Messed Up Game™ is a live hosted social party game created by Tom Butler.
+        </p>
+      </header>
 
-      <p style={{ opacity: 0.9 }}>
-        A 15-second birthday song from Dad.
-      </p>
-
+      {/* 🌍 Hiring Banner */}
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          paddingTop: "177.78%",
-          borderRadius: 16,
-          overflow: "hidden",
-          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-          border: "1px solid rgba(255,255,255,.12)",
+          marginBottom: 16,
+          padding: "10px 14px",
+          borderRadius: 12,
+          textAlign: "center",
+          fontWeight: 900,
+          fontSize: 16,
+          background: "linear-gradient(90deg, #22c55e, #16a34a)",
+          color: "#041b0a",
+          boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
+          cursor: "pointer",
         }}
+        onClick={() => setMode("newsletter")}
       >
-        <iframe
-          src="https://www.youtube.com/embed/mLwoEIiM6XM"
-          title="Patrick's Birthday Song Promo"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            border: 0,
-          }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        🌍 Now Hiring – Hosts & Sales Reps (Click)
       </div>
-    </div>
+
+      {/* 🎵 Featured Songs */}
+      <section style={{ margin: "28px 0 24px" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: 18,
+            alignItems: "start",
+          }}
+        >
+          {/* 🎂 NEW Birthday Promo Short */}
+          <div style={{ textAlign: "center" }}>
+            <h2 style={{ marginBottom: 10 }}>
+              🎂 The Best Birthday Gift Ever?
+            </h2>
+
+            <p style={{ opacity: 0.9 }}>
+              A 15-second birthday song from Dad.
+            </p>
+
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "177.78%",
+                borderRadius: 16,
+                overflow: "hidden",
+                boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+                border: "1px solid rgba(255,255,255,.12)",
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/mLwoEIiM6XM"
+                title="Patrick's Birthday Song Promo"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
 
     {/* 🎉 Orson Wins The Messed Up Game */}
     <div style={{ textAlign: "center" }}>
