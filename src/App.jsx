@@ -1,4 +1,4 @@
-// src/App.jsx 
+// src/App.jsx
 import { useState } from "react";
 import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
@@ -7,8 +7,8 @@ import GotBackupBannerAd from "./components/GotBackupBannerAd";
 import UtahsAlright from "./components/UtahsAlright";
 import WildmanTomSong from "./components/WildmanTomSong";
 import PatrickSong from "./components/PatrickSong";
+
 export default function App() {
-  // ——— constants ———
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "stZm5AH791I";
 
@@ -26,15 +26,11 @@ export default function App() {
     { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
   ];
 
-  // Mark Wahlberg prayer short
   const PRAYER_SHORT_URL = "https://youtube.com/shorts/tA4mF_4hBJs";
   const PRAYER_SHORT_ID = "tA4mF_4hBJs";
 
-  // Benefits doc button
   const BENEFITS_DOC_URL =
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
-
-  // "home" | "solo" | "newsletter" | "poster" | "ghanaPoster" | "sponsors" | "communityCenters"
 
   const [mode, setMode] = useState("home");
 
@@ -62,22 +58,12 @@ export default function App() {
     },
   ];
 
-  // ——— styles ———
   const pageStyle = {
     minHeight: "100vh",
     backgroundColor: "#020617",
     color: "white",
     padding: "24px 16px",
   };
-  
-const goToGhanaOpportunity = () => {
-  setMode("newsletter");
-  setTimeout(() => {
-    document
-      .getElementById("got-backup-ghana")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 50);
-};
 
   const containerStyle = { maxWidth: 1100, margin: "0 auto" };
 
@@ -100,7 +86,17 @@ const goToGhanaOpportunity = () => {
     fontWeight: 700,
     cursor: "pointer",
   };
- // ——— Ghana Poster screen ———
+
+  const goToGhanaOpportunity = () => {
+    setMode("newsletter");
+    setTimeout(() => {
+      document
+        .getElementById("got-backup-ghana")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
+
+  // Ghana Poster screen
   if (mode === "ghanaPoster") {
     return (
       <main style={pageStyle}>
@@ -190,7 +186,7 @@ const goToGhanaOpportunity = () => {
     );
   }
 
-  // ——— Solo screen ———
+  // Solo screen
   if (mode === "solo") {
     return (
       <main style={pageStyle}>
@@ -205,7 +201,6 @@ const goToGhanaOpportunity = () => {
               flexWrap: "wrap",
             }}
           >
-
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
@@ -219,28 +214,26 @@ const goToGhanaOpportunity = () => {
               >
                 Sign Up
               </a>
-              
-        <a
-  href={SIGNUP_FORM_URL}
-  target="_blank"
-  rel="noreferrer"
-  style={{ ...buttonStyle, textDecoration: "none" }}
->
-  🎲 Sign Up to Play Live
-</a>
-              
+
+              <a
+                href={SIGNUP_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...buttonStyle, textDecoration: "none" }}
+              >
+                🎲 Sign Up to Play Live
+              </a>
             </div>
           </nav>
 
           <SocialBar />
-
           <MessedUpGameSoloVsComputer />
         </div>
       </main>
     );
   }
- 
-  // ——— Poster screen ———
+
+  // Poster screen
   if (mode === "poster") {
     return (
       <main style={pageStyle}>
@@ -279,7 +272,7 @@ const goToGhanaOpportunity = () => {
               </a>
               .
             </p>
- 
+
             <button style={ghostButtonStyle} onClick={() => setMode("home")}>
               ← Back Home
             </button>
@@ -330,226 +323,249 @@ const goToGhanaOpportunity = () => {
     );
   }
 
- // ——— Newsletter screen ———
-if (mode === "newsletter") {
-  return (
-    <main style={pageStyle}>
-      <div style={containerStyle}>
-        <nav
-          style={{
-            marginBottom: 16,
-            display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 10,
-          }}
-        >
-          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
-            ← Back Home
-          </button>
-
-          <a
-            href={SIGNUP_FORM_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{ ...buttonStyle, textDecoration: "none" }}
+  // Newsletter screen
+  if (mode === "newsletter") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
+            style={{
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: 10,
+            }}
           >
-            Sign Up
-          </a>
-        </nav>
-       
-        {/* 🎿 Utah’s Alright section */}
-        <UtahsAlright />
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
 
-        <section
-  id="newsletter"
-  style={{
-    borderRadius: 16,
-    overflow: "hidden",
-    border: "1px solid rgba(255,255,255,.12)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.35)",
-    background: "rgba(255,255,255,.03)",
-    padding: 18,
-  }}
->
-   <div id="got-backup-ghana" aria-hidden="true" style={{ scrollMarginTop: 90 }} />
- 
-  <h1 style={{ margin: "0 0 6px", fontSize: "1.9rem", fontWeight: 900 }}>
-    A Global Mission: Protecting Memories, Building Opportunity 🌍💾
-  </h1>
+            <a
+              href={SIGNUP_FORM_URL}
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...buttonStyle, textDecoration: "none" }}
+            >
+              Sign Up
+            </a>
+          </nav>
 
-  <p style={{ margin: "0 0 14px", opacity: 0.9 }}>
-    A message from Got Backup President <strong>Joel Therien</strong> after an incredible event in Accra, Ghana —
-    and how it connects to our mission with <strong>The Messed Up Game™</strong>.
-  </p>
+          <UtahsAlright />
 
-  <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-    A Message from Our President
-  </h2>
+          <section
+            id="newsletter"
+            style={{
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(255,255,255,.12)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+              background: "rgba(255,255,255,.03)",
+              padding: 18,
+            }}
+          >
+            <div
+              id="got-backup-ghana"
+              aria-hidden="true"
+              style={{ scrollMarginTop: 90 }}
+            />
 
-  <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-    To our leadership family in Accra, Ghana — thank you from the bottom of our hearts. We came to meet colleagues,
-    and we left with a new family. ❤️ Nearly <strong>800 people</strong> packed the room — and one truth was clear:
-    <strong> everyone has a phone… and everyone cares about what’s on it.</strong>
-  </p>
+            <h1 style={{ margin: "0 0 6px", fontSize: "1.9rem", fontWeight: 900 }}>
+              A Global Mission: Protecting Memories, Building Opportunity 🌍💾
+            </h1>
 
-  <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-    <li>Photos & videos</li>
-    <li>WhatsApp messages</li>
-    <li>Business files & documents</li>
-    <li>Banking apps</li>
-  </ul>
+            <p style={{ margin: "0 0 14px", opacity: 0.9 }}>
+              A message from Got Backup President <strong>Joel Therien</strong> after
+              an incredible event in Accra, Ghana — and how it connects to our
+              mission with <strong>The Messed Up Game™</strong>.
+            </p>
 
-  <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-    People immediately asked: <strong>“If I lose my phone or my computer crashes… my files are still safe?”</strong>
-    That’s when it clicked — <strong>devices can be replaced, memories and data can’t.</strong>
-  </p>
+            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
+              A Message from Our President
+            </h2>
 
-  <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-    Why Got Backup Works Anywhere
-  </h2>
+            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
+              To our leadership family in Accra, Ghana — thank you from the bottom
+              of our hearts. We came to meet colleagues, and we left with a new
+              family. ❤️ Nearly <strong>800 people</strong> packed the room — and one
+              truth was clear: <strong>everyone has a phone… and everyone cares about
+              what’s on it.</strong>
+            </p>
 
-  <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-    <li>🌍 Works worldwide — if people use phones or computers, they need Got Backup</li>
-    <li>📱💻 Protects Android, iPhone, Windows, and Mac</li>
-    <li>💬 Simple message: “Lose the device, keep your photos and files.”</li>
-    <li>🚫 No shipping, no borders — 100% digital and instantly delivered</li>
-  </ul>
+            <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
+              <li>Photos &amp; videos</li>
+              <li>WhatsApp messages</li>
+              <li>Business files &amp; documents</li>
+              <li>Banking apps</li>
+            </ul>
 
-  <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-    How This Connects to The Messed Up Game™ 🧠😂
-  </h2>
+            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
+              People immediately asked:{" "}
+              <strong>
+                “If I lose my phone or my computer crashes… my files are still safe?”
+              </strong>{" "}
+              That’s when it clicked —{" "}
+              <strong>devices can be replaced, memories and data can’t.</strong>
+            </p>
 
-  <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-    Our mission is also about protecting what matters — including the memories we create together.
-    <strong> The Messed Up Game™</strong> wakes people up with laughter and helps improve cognitive function because
-    players have to remember what others said.
-  </p>
+            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
+              Why Got Backup Works Anywhere
+            </h2>
 
-  <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-    Learn more and play live:
-    {" "}
-    <a href="https://www.messedupgame.com" target="_blank" rel="noreferrer" style={{ color: "#7bdff6", textDecoration: "none" }}>
-      www.messedupgame.com
-    </a>
-  </p>
+            <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
+              <li>🌍 Works worldwide — if people use phones or computers, they need Got Backup</li>
+              <li>📱💻 Protects Android, iPhone, Windows, and Mac</li>
+              <li>💬 Simple message: “Lose the device, keep your photos and files.”</li>
+              <li>🚫 No shipping, no borders — 100% digital and instantly delivered</li>
+            </ul>
 
-  <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-    The Opportunity (Simple & Powerful)
-  </h2>
+            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
+              How This Connects to The Messed Up Game™ 🧠😂
+            </h2>
 
-  <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-    <li><strong>$20</strong> one-time yearly affiliate fee</li>
-    <li><strong>$9.97/month</strong></li>
-    <li><strong>6 TB</strong> total storage (split with 5 others = 500+ GB each)</li>
-    <li>Gift protection to families (including in Ghana) so they never worry about losing photos, videos, or documents</li>
-  </ul>
+            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
+              Our mission is also about protecting what matters — including the
+              memories we create together. <strong>The Messed Up Game™</strong>{" "}
+              wakes people up with laughter and helps improve cognitive function
+              because players have to remember what others said.
+            </p>
 
-  <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-    Your Next Steps
-  </h2>
+            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
+              Learn more and play live:{" "}
+              <a
+                href="https://www.messedupgame.com"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "#7bdff6", textDecoration: "none" }}
+              >
+                www.messedupgame.com
+              </a>
+            </p>
 
-  <ol style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-    <li>Share the story from Ghana — people instantly understood Got Backup.</li>
-    <li>Ask: <strong>“If your phone or computer died today… what would you lose?”</strong></li>
-    <li>Think global — anywhere there’s a device, there’s a Got Backup customer.</li>
-  </ol>
+            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
+              The Opportunity (Simple &amp; Powerful)
+            </h2>
 
-  <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 10 }}>
-    <a
-      href="https://willbackyouup.gotbackuptour.com"
-      target="_blank"
-      rel="noreferrer"
-      style={{ ...buttonStyle, textDecoration: "none" }}
-    >
-      Get Your Affiliate Link
-    </a>
+            <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
+              <li><strong>$20</strong> one-time yearly affiliate fee</li>
+              <li><strong>$9.97/month</strong></li>
+              <li><strong>6 TB</strong> total storage (split with 5 others = 500+ GB each)</li>
+              <li>
+                Gift protection to families (including in Ghana) so they never worry
+                about losing photos, videos, or documents
+              </li>
+            </ul>
 
-    <a
-      href="#top"
-      style={{ ...ghostButtonStyle, textDecoration: "none" }}
-      onClick={(e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
-    >
-      Back to Top ↑
-    </a>
-  </div>
+            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
+              Your Next Steps
+            </h2>
 
-  <p style={{ marginTop: 14, opacity: 0.9 }}>
-    Questions? Email me at{" "}
-    <a href={CONTACT_EMAIL} style={{ color: "#7bdff6", textDecoration: "none" }}>
-      {CONTACT_EMAIL.replace("mailto:", "")}
-    </a>
-    .
-  </p>
-</section>
-        
-{/* 🌍 Now Hiring (anchor target) */}
-<section
-  id="now-hiring"
-  style={{
-    scrollMarginTop: 90,
-    marginBottom: 18,
-    padding: "14px 14px",
-    borderRadius: 14,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.06)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}  
->
-  <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
-    🌍 Now Hiring – Hosts & Sales Reps Worldwide
-  </h2>
+            <ol style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
+              <li>Share the story from Ghana — people instantly understood Got Backup.</li>
+              <li>
+                Ask: <strong>“If your phone or computer died today… what would you lose?”</strong>
+              </li>
+              <li>Think global — anywhere there’s a device, there’s a Got Backup customer.</li>
+            </ol>
 
-  <p style={{ opacity: 0.92, maxWidth: 700, marginTop: 0 }}>
-    We’re expanding <b>The Messed Up Game</b>, a fun, family-friendly,
-    brain-boosting live game show, and we’re hiring:
-  </p>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 10 }}>
+              <a
+                href="https://willbackyouup.gotbackuptour.com"
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...buttonStyle, textDecoration: "none" }}
+              >
+                Get Your Affiliate Link
+              </a>
 
-  <p style={{ marginTop: 8, lineHeight: 1.5 }}>
-    🎤 <b>Hosts / Actors / Comedians</b>
-    <br />
-    💼 <b>Sales Reps (Sponsorships &amp; Bookings)</b>
-  </p>
+              <a
+                href="#top"
+                style={{ ...ghostButtonStyle, textDecoration: "none" }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Back to Top ↑
+              </a>
+            </div>
 
-  <p style={{ marginTop: 8, fontWeight: 900 }}>
-    Part-time • Contract • Remote + Local Opportunities
-  </p>
+            <p style={{ marginTop: 14, opacity: 0.9 }}>
+              Questions? Email me at{" "}
+              <a
+                href={CONTACT_EMAIL}
+                style={{ color: "#7bdff6", textDecoration: "none" }}
+              >
+                {CONTACT_EMAIL.replace("mailto:", "")}
+              </a>
+              .
+            </p>
+          </section>
 
-  <p style={{ marginTop: 8 }}>
-    📧 Questions?{" "}
-    <a
-      href="mailto:tom@messedupgame.com"
-      style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 900 }}
-    >
-      tom@messedupgame.com
-    </a>
-  </p>
-</section>
+          <section
+            id="now-hiring"
+            style={{
+              scrollMarginTop: 90,
+              marginTop: 18,
+              marginBottom: 18,
+              padding: "14px 14px",
+              borderRadius: 14,
+              border: "1px solid rgba(255,255,255,.12)",
+              background: "rgba(255,255,255,.06)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            }}
+          >
+            <h2 style={{ margin: "0 0 8px", fontSize: "1.6rem", fontWeight: 900 }}>
+              🌍 Now Hiring – Hosts &amp; Sales Reps Worldwide
+            </h2>
 
-<h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
-  📰 Newsletter
-</h1>
+            <p style={{ opacity: 0.92, maxWidth: 700, marginTop: 0 }}>
+              We’re expanding <b>The Messed Up Game</b>, a fun, family-friendly,
+              brain-boosting live game show, and we’re hiring:
+            </p>
+
+            <p style={{ marginTop: 8, lineHeight: 1.5 }}>
+              🎤 <b>Hosts / Actors / Comedians</b>
+              <br />
+              💼 <b>Sales Reps (Sponsorships &amp; Bookings)</b>
+            </p>
+
+            <p style={{ marginTop: 8, fontWeight: 900 }}>
+              Part-time • Contract • Remote + Local Opportunities
+            </p>
+
+            <p style={{ marginTop: 8 }}>
+              📧 Questions?{" "}
+              <a
+                href="mailto:tom@messedupgame.com"
+                style={{ color: "#7bdff6", textDecoration: "none", fontWeight: 900 }}
+              >
+                tom@messedupgame.com
+              </a>
+            </p>
+          </section>
+
+          <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
+            📰 Newsletter
+          </h1>
 
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
             Read the latest updates and stories. No signup required.
           </p>
-<button
-  style={{
-    ...ghostButtonStyle,
-    display: "block",
-    maxWidth: 560,
-    margin: "6px auto 14px",
-    fontWeight: 900,
-  }}
-  onClick={() => setMode("sponsors")}
->
-  ⭐ Our Sponsors & Advertisers
-</button>
 
-          {/* 🙏 Mark Wahlberg Prayer Short */}
+          <button
+            style={{
+              ...ghostButtonStyle,
+              display: "block",
+              maxWidth: 560,
+              margin: "6px auto 14px",
+              fontWeight: 900,
+            }}
+            onClick={() => setMode("sponsors")}
+          >
+            ⭐ Our Sponsors &amp; Advertisers
+          </button>
+
           <section
             style={{
               maxWidth: 420,
@@ -561,9 +577,7 @@ if (mode === "newsletter") {
               boxShadow: "0 10px 24px rgba(0,0,0,.25)",
             }}
           >
-            <h2
-              style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}
-            >
+            <h2 style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}>
               🙏 Prayer for Strength (Mark Wahlberg)
             </h2>
 
@@ -571,7 +585,7 @@ if (mode === "newsletter") {
               style={{
                 position: "relative",
                 width: "100%",
-                paddingTop: "177.78%", // 9:16
+                paddingTop: "177.78%",
                 borderRadius: 14,
                 overflow: "hidden",
                 border: "1px solid rgba(255,255,255,.10)",
@@ -613,11 +627,10 @@ if (mode === "newsletter") {
             </a>
           </section>
 
-          {/* Latest Update */}
           <section
             style={{
               maxWidth: 720,
-              margin: "16px auto 16px",
+              margin: "16px auto",
               padding: 18,
               borderRadius: 16,
               border: "1px solid rgba(255,255,255,.14)",
@@ -639,11 +652,10 @@ if (mode === "newsletter") {
               <span style={{ opacity: 0.8, fontWeight: 700 }}>January 2026</span>
             </div>
 
-            <p style={{ margin: "12px 0 12px", lineHeight: 1.55, opacity: 0.95 }}>
+            <p style={{ margin: "12px 0", lineHeight: 1.55, opacity: 0.95 }}>
               As we age, it’s easy to think supplements are the main answer for
               memory and brain health. While they can help, research and real-world
-              experience show that{" "}
-              <strong>daily habits matter even more</strong>.
+              experience show that <strong>daily habits matter even more</strong>.
             </p>
 
             <ul
@@ -687,11 +699,10 @@ if (mode === "newsletter") {
             </a>
           </section>
 
-          {/* Program Overview */}
           <section
             style={{
               maxWidth: 720,
-              margin: "16px auto 16px",
+              margin: "16px auto",
               padding: 18,
               borderRadius: 16,
               border: "1px solid rgba(255,255,255,.14)",
@@ -709,7 +720,6 @@ if (mode === "newsletter") {
             </p>
           </section>
 
-          {/* Testimonials */}
           <section
             style={{
               maxWidth: 720,
@@ -760,10 +770,8 @@ if (mode === "newsletter") {
             </blockquote>
           </section>
 
-          {/* ✅ Got Backup banner */}
           <GotBackupBannerAd />
 
-          {/* ✅ Newsletter signup */}
           <section
             style={{
               maxWidth: 560,
@@ -813,262 +821,255 @@ if (mode === "newsletter") {
         </div>
       </main>
     );
- } // ✅ end Newsletter screen
-// ——— Community Centers screen ———
-if (mode === "communityCenters") {
-  return (
-    <main style={pageStyle}>
-      <div style={containerStyle}>
-        <nav
-          style={{
-            marginBottom: 16,
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 10,
-            flexWrap: "wrap",
-          }}
-        >
-          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
-            ← Back Home
-          </button>
+  }
 
-          <a
-            href={CONTACT_EMAIL}
-            style={{ ...buttonStyle, textDecoration: "none" }}
-          >
-            Contact Tom
-          </a>
-        </nav>
-
-        <section
-          style={{
-            textAlign: "center",
-            padding: "28px 20px",
-            borderRadius: 22,
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            boxShadow: "0 10px 30px rgba(0,0,0,.25)",
-            marginBottom: 24,
-          }}
-        >
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.1rem)", marginBottom: 14 }}>
-            🏘️ Bring The Messed Up Game to Your Community Center
-          </h1>
-
-          <p
+  // Community Centers screen
+  if (mode === "communityCenters") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
             style={{
-              maxWidth: 820,
-              margin: "0 auto",
-              lineHeight: 1.7,
-              opacity: 0.94,
-              fontSize: "1.05rem",
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 10,
+              flexWrap: "wrap",
             }}
           >
-            Looking for a fun, memorable, family-friendly event that gets people
-            laughing, thinking, singing, and connecting? The Messed Up Game Live
-            with Wildman Tom B brings music, audience participation, special
-            shout-outs, and a one-of-a-kind live game experience to your community center.
-          </p>
-        </section>
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
 
-        <section
-          style={{
-            marginBottom: 24,
-            padding: 22,
-            borderRadius: 18,
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          <h2 style={{ marginBottom: 12 }}>🎬 Built for Shareable Moments</h2>
-
-          <p style={{ lineHeight: 1.7, opacity: 0.92 }}>
-            One exciting part of the experience is the potential for short,
-            high-energy video moments — including Tom’s 14.8-second promo style
-            content and quick custom songs that people love to share. If one of
-            those songs or clips goes viral, your community center could receive
-            exposure and be seen as the place where the fun happened.
-          </p>
-        </section>
-
-        <section
-          style={{
-            marginBottom: 24,
-            padding: 22,
-            borderRadius: 18,
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          <h2 style={{ marginBottom: 14 }}>🎤 What the Event Can Include</h2>
-
-          <div style={{ display: "grid", gap: 14 }}>
-            <div
-              style={{
-                padding: 16,
-                borderRadius: 14,
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
+            <a
+              href={CONTACT_EMAIL}
+              style={{ ...buttonStyle, textDecoration: "none" }}
             >
-              <h3 style={{ marginTop: 0 }}>Host Opening the Night</h3>
-              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
-                Wildman Tom B kicks off the event as host, welcomes the crowd,
-                and brings energy to the room right from the start.
-              </p>
-            </div>
+              Contact Tom
+            </a>
+          </nav>
 
-            <div
-              style={{
-                padding: 16,
-                borderRadius: 14,
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <h3 style={{ marginTop: 0 }}>Special Occasion Recognition</h3>
-              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
-                Birthdays, anniversaries, and special milestones can be recognized
-                at the beginning of the night to help people feel celebrated.
-              </p>
-            </div>
-
-            <div
-              style={{
-                padding: 16,
-                borderRadius: 14,
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <h3 style={{ marginTop: 0 }}>2 to 4 Warm-Up Songs</h3>
-              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
-                Tom can sing 2 to 4 songs to warm up the crowd, get smiles on faces,
-                and create a fun atmosphere before the game begins.
-              </p>
-            </div>
-
-            <div
-              style={{
-                padding: 16,
-                borderRadius: 14,
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <h3 style={{ marginTop: 0 }}>The Messed Up Game Live</h3>
-              <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
-                Then the fun really begins with a lively, interactive game experience
-                designed to get people laughing, thinking, remembering, and connecting.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginBottom: 24,
-            padding: 22,
-            borderRadius: 18,
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          <h2 style={{ marginBottom: 14 }}>✨ Why Community Centers Love It</h2>
-
-          <div
+          <section
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
-              gap: 14,
+              textAlign: "center",
+              padding: "28px 20px",
+              borderRadius: 22,
+              background: "rgba(255,255,255,0.05)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              boxShadow: "0 10px 30px rgba(0,0,0,.25)",
+              marginBottom: 24,
             }}
           >
-            {[
-              "Family-friendly entertainment",
-              "Laughter and community bonding",
-              "Interactive, brain-boosting fun",
-              "Special attention for birthdays and milestones",
-              "Memorable moments people talk about later",
-              "Great atmosphere for photos and short videos",
-              "Positive local buzz and exposure",
-              "A unique event that stands out from the usual programming",
-            ].map((item) => (
+            <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.1rem)", marginBottom: 14 }}>
+              🏘️ Bring The Messed Up Game to Your Community Center
+            </h1>
+
+            <p
+              style={{
+                maxWidth: 820,
+                margin: "0 auto",
+                lineHeight: 1.7,
+                opacity: 0.94,
+                fontSize: "1.05rem",
+              }}
+            >
+              Looking for a fun, memorable, family-friendly event that gets people
+              laughing, thinking, singing, and connecting? The Messed Up Game Live
+              with Wildman Tom B brings music, audience participation, special
+              shout-outs, and a one-of-a-kind live game experience to your
+              community center.
+            </p>
+          </section>
+
+          <section
+            style={{
+              marginBottom: 24,
+              padding: 22,
+              borderRadius: 18,
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
+          >
+            <h2 style={{ marginBottom: 12 }}>🎬 Built for Shareable Moments</h2>
+
+            <p style={{ lineHeight: 1.7, opacity: 0.92 }}>
+              One exciting part of the experience is the potential for short,
+              high-energy video moments — including Tom’s 14.8-second promo style
+              content and quick custom songs that people love to share. If one of
+              those songs or clips goes viral, your community center could receive
+              exposure and be seen as the place where the fun happened.
+            </p>
+          </section>
+
+          <section
+            style={{
+              marginBottom: 24,
+              padding: 22,
+              borderRadius: 18,
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
+          >
+            <h2 style={{ marginBottom: 14 }}>🎤 What the Event Can Include</h2>
+
+            <div style={{ display: "grid", gap: 14 }}>
               <div
-                key={item}
                 style={{
                   padding: 16,
                   borderRadius: 14,
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
-                  lineHeight: 1.5,
                 }}
               >
-                {item}
+                <h3 style={{ marginTop: 0 }}>Host Opening the Night</h3>
+                <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                  Wildman Tom B kicks off the event as host, welcomes the crowd,
+                  and brings energy to the room right from the start.
+                </p>
               </div>
-            ))}
-          </div>
-        </section>
 
-        <section
-          style={{
-            padding: 26,
-            borderRadius: 20,
-            textAlign: "center",
-            background: "rgba(255,213,74,0.12)",
-            border: "1px solid rgba(255,213,74,0.35)",
-            boxShadow: "0 10px 30px rgba(0,0,0,.2)",
-          }}
-        >
-          <h2 style={{ marginBottom: 12 }}>
-            Ready to Create a Memorable Community Event?
-          </h2>
+              <div
+                style={{
+                  padding: 16,
+                  borderRadius: 14,
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                <h3 style={{ marginTop: 0 }}>Special Occasion Recognition</h3>
+                <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                  Birthdays, anniversaries, and special milestones can be
+                  recognized at the beginning of the night to help people feel
+                  celebrated.
+                </p>
+              </div>
 
-          <p
+              <div
+                style={{
+                  padding: 16,
+                  borderRadius: 14,
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                <h3 style={{ marginTop: 0 }}>2 to 4 Warm-Up Songs</h3>
+                <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                  Tom can sing 2 to 4 songs to warm up the crowd, get smiles on
+                  faces, and create a fun atmosphere before the game begins.
+                </p>
+              </div>
+
+              <div
+                style={{
+                  padding: 16,
+                  borderRadius: 14,
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                <h3 style={{ marginTop: 0 }}>The Messed Up Game Live</h3>
+                <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                  Then the fun really begins with a lively, interactive game
+                  experience designed to get people laughing, thinking,
+                  remembering, and connecting.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section
             style={{
-              maxWidth: 760,
-              margin: "0 auto",
-              lineHeight: 1.7,
-              opacity: 0.94,
+              marginBottom: 24,
+              padding: 22,
+              borderRadius: 18,
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.1)",
             }}
           >
-            Let’s bring music, laughter, recognition, and The Messed Up Game to
-            your community center.
-          </p>
+            <h2 style={{ marginBottom: 14 }}>✨ Why Community Centers Love It</h2>
 
-          <div style={{ marginTop: 20 }}>
-            <a
-              href={CONTACT_EMAIL}
+            <div
               style={{
-                display: "inline-block",
-                padding: "13px 24px",
-                borderRadius: 12,
-                textDecoration: "none",
-                fontWeight: 800,
-                background: "#ffd54a",
-                color: "#111",
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+                gap: 14,
               }}
             >
-              Contact Tom About Booking
-            </a>
-          </div>
-        </section>
-      </div>
-    </main>
-  );
-}
-        <p style={{ maxWidth: 760, lineHeight: 1.7 }}>
-          Looking for a fun, memorable, family-friendly event that gets people
-          laughing, thinking, singing, and connecting? Wildman Tom B hosts a
-          lively game night featuring music, special occasion recognition,
-          crowd warm-up songs, and The Messed Up Game.
-        </p>
+              {[
+                "Family-friendly entertainment",
+                "Laughter and community bonding",
+                "Interactive, brain-boosting fun",
+                "Special attention for birthdays and milestones",
+                "Memorable moments people talk about later",
+                "Great atmosphere for photos and short videos",
+                "Positive local buzz and exposure",
+                "A unique event that stands out from the usual programming",
+              ].map((item) => (
+                <div
+                  key={item}
+                  style={{
+                    padding: 16,
+                    borderRadius: 14,
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </section>
 
-      </div>
-    </main>
-  );
-}
+          <section
+            style={{
+              padding: 26,
+              borderRadius: 20,
+              textAlign: "center",
+              background: "rgba(255,213,74,0.12)",
+              border: "1px solid rgba(255,213,74,0.35)",
+              boxShadow: "0 10px 30px rgba(0,0,0,.2)",
+            }}
+          >
+            <h2 style={{ marginBottom: 12 }}>
+              Ready to Create a Memorable Community Event?
+            </h2>
 
-  // ——— Sponsors screen ———
+            <p
+              style={{
+                maxWidth: 760,
+                margin: "0 auto",
+                lineHeight: 1.7,
+                opacity: 0.94,
+              }}
+            >
+              Let’s bring music, laughter, recognition, and The Messed Up Game to
+              your community center.
+            </p>
+
+            <div style={{ marginTop: 20 }}>
+              <a
+                href={CONTACT_EMAIL}
+                style={{
+                  display: "inline-block",
+                  padding: "13px 24px",
+                  borderRadius: 12,
+                  textDecoration: "none",
+                  fontWeight: 800,
+                  background: "#ffd54a",
+                  color: "#111",
+                }}
+              >
+                Contact Tom About Booking
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  // Sponsors screen
   if (mode === "sponsors") {
     return (
       <main style={pageStyle}>
@@ -1095,7 +1096,7 @@ if (mode === "communityCenters") {
           </nav>
 
           <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
-            ⭐ Our Sponsors & Advertisers
+            ⭐ Our Sponsors &amp; Advertisers
           </h1>
 
           <p style={{ opacity: 0.9, maxWidth: 760 }}>
@@ -1103,7 +1104,6 @@ if (mode === "communityCenters") {
             communities everywhere.
           </p>
 
-              {/* MOSH */}
           <section
             style={{
               maxWidth: 760,
@@ -1148,7 +1148,6 @@ if (mode === "communityCenters") {
               Visit MOSH (Official Site)
             </a>
 
-            {/* MOSH Photo Gallery (all photos link to MOSH site) */}
             <div
               style={{
                 marginTop: 14,
@@ -1202,8 +1201,6 @@ if (mode === "communityCenters") {
             </p>
           </section>
 
-
-          {/* Joyful Dog Lover */}
           <section
             style={{
               maxWidth: 760,
@@ -1257,185 +1254,167 @@ if (mode === "communityCenters") {
         </div>
       </main>
     );
-  } // ✅ end Sponsors screen
+  }
 
-// ✅ Home buttons row
-// ——— Home screen (default) ———
-return (
-  <main style={pageStyle}>
-    <div style={containerStyle}>
-      <header style={{ marginBottom: 18 }}>
-        <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-          The Messed Up Game™
-        </h1>
+  // Home screen
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <header style={{ marginBottom: 18 }}>
+          <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+            The Messed Up Game™
+          </h1>
 
-        <p style={{ marginTop: 8, opacity: 0.9 }}>
-          Family-friendly, hilarious, and brain-boosting — play live or solo.
-        </p>
+          <p style={{ marginTop: 8, opacity: 0.9 }}>
+            Family-friendly, hilarious, and brain-boosting — play live or solo.
+          </p>
 
-        <p style={{ marginTop: 6, opacity: 0.95 }}>
-          The Messed Up Game™ is a live hosted social party game created by Tom Butler.
-        </p>
-      </header>
+          <p style={{ marginTop: 6, opacity: 0.95 }}>
+            The Messed Up Game™ is a live hosted social party game created by Tom Butler.
+          </p>
+        </header>
 
-      {/* 🌍 Hiring Banner */}
-      <div
-        style={{
-          marginBottom: 16,
-          padding: "10px 14px",
-          borderRadius: 12,
-          textAlign: "center",
-          fontWeight: 900,
-          fontSize: 16,
-          background: "linear-gradient(90deg, #22c55e, #16a34a)",
-          color: "#041b0a",
-          boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
-          cursor: "pointer",
-        }}
-        onClick={() => setMode("newsletter")}
-      >
-        🌍 Now Hiring – Hosts & Sales Reps (Click)
-      </div>
-
-      {/* 🎵 Featured Songs */}
-      <section style={{ margin: "28px 0 24px" }}>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 18,
-            alignItems: "start",
+            marginBottom: 16,
+            padding: "10px 14px",
+            borderRadius: 12,
+            textAlign: "center",
+            fontWeight: 900,
+            fontSize: 16,
+            background: "linear-gradient(90deg, #22c55e, #16a34a)",
+            color: "#041b0a",
+            boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
+            cursor: "pointer",
           }}
+          onClick={() => setMode("newsletter")}
         >
-          {/* 🎂 NEW Birthday Promo Short */}
-          <div style={{ textAlign: "center" }}>
-            <h2 style={{ marginBottom: 10 }}>
-              🎂 The Best Birthday Gift Ever?
-            </h2>
+          🌍 Now Hiring – Hosts &amp; Sales Reps (Click)
+        </div>
 
-            <p style={{ opacity: 0.9 }}>
-              A 15-second birthday song from Dad.
-            </p>
+        <section style={{ margin: "28px 0 24px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: 18,
+              alignItems: "start",
+            }}
+          >
+            <div style={{ textAlign: "center" }}>
+              <h2 style={{ marginBottom: 10 }}>🎂 The Best Birthday Gift Ever?</h2>
 
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                paddingTop: "177.78%",
-                borderRadius: 16,
-                overflow: "hidden",
-                boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-                border: "1px solid rgba(255,255,255,.12)",
-              }}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/mLwoEIiM6XM"
-                title="Patrick's Birthday Song Promo"
+              <p style={{ opacity: 0.9 }}>
+                A 15-second birthday song from Dad.
+              </p>
+
+              <div
                 style={{
-                  position: "absolute",
-                  inset: 0,
+                  position: "relative",
                   width: "100%",
-                  height: "100%",
-                  border: 0,
+                  paddingTop: "177.78%",
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+                  border: "1px solid rgba(255,255,255,.12)",
                 }}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/mLwoEIiM6XM"
+                  title="Patrick's Birthday Song Promo"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                  }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+            <div style={{ textAlign: "center" }}>
+              <h2 style={{ marginBottom: 10 }}>🎉 Orson Wins The Messed Up Game!</h2>
+
+              <p style={{ opacity: 0.9 }}>
+                Grandpa sings a 16-second victory song.
+              </p>
+
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "177.78%",
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+                  border: "1px solid rgba(255,255,255,.12)",
+                }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/ZDxGMx3tGDk"
+                  title="Orson Wins The Messed Up Game"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                  }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
+              <p style={{ marginTop: 10, fontStyle: "italic", opacity: 0.8 }}>
+                Orson Ralph Butler — great-grandson of WWII B-17 tail gunner Ralph
+                Stanford Butler.
+              </p>
             </div>
           </div>
+        </section>
 
-    {/* 🎉 Orson Wins The Messed Up Game */}
-    <div style={{ textAlign: "center" }}>
-      <h2 style={{ marginBottom: 10 }}>
-        🎉 Orson Wins The Messed Up Game!
-      </h2>
-
-      <p style={{ opacity: 0.9 }}>
-        Grandpa sings a 16-second victory song.
-      </p>
-
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          paddingTop: "177.78%",
-          borderRadius: 16,
-          overflow: "hidden",
-          boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-          border: "1px solid rgba(255,255,255,.12)",
-        }}
-      >
-        <iframe
-          src="https://www.youtube.com/embed/ZDxGMx3tGDk"
-          title="Orson Wins The Messed Up Game"
+        <div
           style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            border: 0,
+            marginTop: 16,
+            padding: 14,
+            background: "rgba(255,255,255,0.05)",
+            borderRadius: 12,
+            border: "1px solid rgba(255,255,255,.12)",
+            textAlign: "center",
           }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
+        >
+          <p style={{ marginBottom: 8 }}>
+            🎶 Want a personalized birthday or victory song for someone special?
+          </p>
 
-      <p style={{ marginTop: 10, fontStyle: "italic", opacity: 0.8 }}>
-        Orson Ralph Butler — great-grandson of WWII B-17 tail gunner Ralph Stanford Butler.
-      </p>
-    </div>
-  </div>
+          <a
+            href="mailto:tom@gotbackuptomb.com"
+            style={{
+              display: "inline-block",
+              padding: "10px 18px",
+              background: "#22c55e",
+              color: "#041b0a",
+              fontWeight: 800,
+              borderRadius: 10,
+              textDecoration: "none",
+            }}
+          >
+            Request a Custom Birthday Song
+          </a>
+        </div>
 
-  {/* ⭐ Call To Action */}
-  <div
-    style={{
-      marginTop: 16,
-      padding: 14,
-      background: "rgba(255,255,255,0.05)",
-      borderRadius: 12,
-      border: "1px solid rgba(255,255,255,.12)",
-      textAlign: "center",
-    }}
-  >
-    <p style={{ marginBottom: 8 }}>
-      🎶 Want a personalized birthday or victory song for someone special?
-    </p>
+        <section style={{ margin: "30px 0", textAlign: "center" }}>
+          <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song (Full Version)</h2>
+          <PatrickSong />
+        </section>
 
-    <a
-      href="mailto:tom@gotbackuptomb.com"
-      style={{
-        display: "inline-block",
-        padding: "10px 18px",
-        background: "#22c55e",
-        color: "#041b0a",
-        fontWeight: 800,
-        borderRadius: 10,
-        textDecoration: "none",
-      }}
-    >
-      Request a Custom Birthday Song
-    </a>
-  </div>
-</section>
+        <div style={{ marginTop: 30 }}>
+          <UtahsAlright />
+        </div>
 
-    {/* 🎵 Full Birthday Song */}
-    <div style={{ textAlign: "center" }}>
-      <h2 style={{ marginBottom: 10 }}>
-        🎵 Patrick’s Birthday Song (Full Version)
-      </h2>
-
-      <PatrickSong />
-    </div>
-
-  </div>
-
-  {/* 🏅 Utah's Alright */}
-  <div style={{ marginTop: 30 }}>
-    <UtahsAlright />
-  </div>
-</section>
-      
-        {/* 🎥 What is The Messed Up Game? */}
         <section style={{ margin: "22px 0" }}>
           <h2
             style={{
@@ -1444,7 +1423,6 @@ return (
               fontWeight: 900,
             }}
           >
-            
             What Is The Messed Up Game?
           </h2>
 
@@ -1452,7 +1430,7 @@ return (
             style={{
               position: "relative",
               width: "100%",
-              paddingTop: "56.25%", // 16:9
+              paddingTop: "56.25%",
               borderRadius: 16,
               overflow: "hidden",
               boxShadow: "0 10px 30px rgba(0,0,0,.35)",
@@ -1475,67 +1453,66 @@ return (
           </div>
 
           <p style={{ marginTop: 12, opacity: 0.9 }}>
-            A simple, hilarious party game you can play anywhere — no cards
-            required.
+            A simple, hilarious party game you can play anywhere — no cards required.
           </p>
         </section>
-       <section style={{ margin: "30px 0", textAlign: "center" }}>
-  <h2>🎸 Wildman Tom B</h2>
-  <WildmanTomSong />
-</section>
-      
-{/* ✅ Home buttons row */}
-<div
-  style={{
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 10,
-    marginTop: 12,
-  }}
->
-  <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
-    🇬🇭 Got Backup + Ghana Opportunity
-  </button>
 
-  {/* NEW COMMUNITY CENTER BUTTON */}
-  <button
-    style={ghostButtonStyle}
-    onClick={() => setMode("communityCenters")}
-  >
-    🏘️ Community Centers
-  </button>
+        <section style={{ margin: "30px 0", textAlign: "center" }}>
+          <h2>🎸 Wildman Tom B</h2>
+          <WildmanTomSong />
+        </section>
 
-  <button
-    style={ghostButtonStyle}
-    onClick={() => setMode("ghanaPoster")}
-  >
-    🇬🇭 Ghana Poster
-  </button>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 10,
+            marginTop: 12,
+          }}
+        >
+          <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
+            🇬🇭 Got Backup + Ghana Opportunity
+          </button>
 
-  <a
-    href={SIGNUP_FORM_URL}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      ...buttonStyle,
-      textDecoration: "none",
-      display: "inline-flex",
-      alignItems: "center",
-    }}
-  >
-    🎲 Sign Up to Play Live
-  </a>
+          <button
+            style={ghostButtonStyle}
+            onClick={() => setMode("communityCenters")}
+          >
+            🏘️ Community Centers
+          </button>
 
-  <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-    Play Solo (vs Computer)
-  </button>
+          <button
+            style={ghostButtonStyle}
+            onClick={() => setMode("ghanaPoster")}
+          >
+            🇬🇭 Ghana Poster
+          </button>
 
-  <button
-    style={ghostButtonStyle}
-    onClick={() => setMode("newsletter")}
-  >
-    📰 Newsletter
-  </button>
+          <a
+            href={SIGNUP_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...buttonStyle,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            🎲 Sign Up to Play Live
+          </a>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
+            Play Solo (vs Computer)
+          </button>
+
+          <button
+            style={ghostButtonStyle}
+            onClick={() => setMode("newsletter")}
+          >
+            📰 Newsletter
+          </button>
+
           <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
             🪧 Hesperia Poster
           </button>
@@ -1569,7 +1546,6 @@ return (
           </a>
         </div>
 
-        {/* 🇬🇭 Ghana Pilot link (Home) */}
         <div style={{ marginTop: 12 }}>
           <a
             href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
@@ -1589,74 +1565,71 @@ return (
           </p>
         </div>
 
-          {/* Social links (Home page) */}
-          <div style={{ marginTop: 14, textAlign: "center" }}>
-            <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
-              Follow The Messed Up Game
-            </p>
+        <div style={{ marginTop: 14, textAlign: "center" }}>
+          <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
+            Follow The Messed Up Game
+          </p>
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: 10,
-                flexWrap: "wrap",
-              }}
-            >
-              {(SOCIAL_LINKS || []).map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    padding: "10px 14px",
-                    borderRadius: 999,
-                    textDecoration: "none",
-                    fontWeight: 800,
-                    border: "2px solid rgba(255,255,255,0.25)",
-                    background: "rgba(0,0,0,0.25)",
-                    color: "white",
-                  }}
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            {(SOCIAL_LINKS || []).map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  padding: "10px 14px",
+                  borderRadius: 999,
+                  textDecoration: "none",
+                  fontWeight: 800,
+                  border: "2px solid rgba(255,255,255,0.25)",
+                  background: "rgba(0,0,0,0.25)",
+                  color: "white",
+                }}
+              >
+                {s.label}
+              </a>
+            ))}
           </div>
-        </header>
-{/* 🤝 Community-Friendly Programming (No Advertising Required) */}
-<section
-  style={{
-    maxWidth: 900,
-    margin: "0 auto 22px",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.05)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-    textAlign: "center",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-    🏘️ Bring The Messed Up Game to Your Community Center
-  </h2>
+        </div>
 
-  <p style={{ maxWidth: 700, margin: "0 auto 14px", opacity: 0.95 }}>
-    Looking for a fun, brain-boosting event for your community center?
-    Wildman Tom B hosts an unforgettable night of music, laughter,
-    and The Messed Up Game.
-  </p>
+        <section
+          style={{
+            maxWidth: 900,
+            margin: "22px auto",
+            padding: 18,
+            borderRadius: 16,
+            border: "1px solid rgba(255,255,255,.14)",
+            background: "rgba(255,255,255,.05)",
+            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+            🏘️ Bring The Messed Up Game to Your Community Center
+          </h2>
 
-  <button
-    style={buttonStyle}
-    onClick={() => setMode("communityCenters")}
-  >
-    Learn More
-  </button>
-</section>
+          <p style={{ maxWidth: 700, margin: "0 auto 14px", opacity: 0.95 }}>
+            Looking for a fun, brain-boosting event for your community center?
+            Wildman Tom B hosts an unforgettable night of music, laughter, and
+            The Messed Up Game.
+          </p>
 
-        {/* Button under Hesperia poster on home */}
+          <button
+            style={buttonStyle}
+            onClick={() => setMode("communityCenters")}
+          >
+            Learn More
+          </button>
+        </section>
+
         <div style={{ textAlign: "center", margin: "8px 0 0" }}>
           <a
             href={BENEFITS_DOC_URL}
@@ -1678,7 +1651,6 @@ return (
           </a>
         </div>
 
-        {/* Benefits section on home */}
         <section
           id="benefits"
           style={{
@@ -1713,17 +1685,11 @@ return (
               </h3>
               <ul style={{ margin: 0, paddingLeft: 18 }}>
                 <li>Weekly 60–90 minute brain-boost game hour.</li>
+                <li>Up to <strong>40 residents</strong> can play in the room at once.</li>
+                <li>Up to <strong>9 players</strong> live online with Wildman Tom B.</li>
                 <li>
-                  Up to <strong>40 residents</strong> can play in the room at
-                  once.
-                </li>
-                <li>
-                  Up to <strong>9 players</strong> live online with Wildman Tom
-                  B.
-                </li>
-                <li>
-                  Host uses a big whiteboard to track names &amp; strikes (3
-                  strikes and you’re out, but you can stay and watch).
+                  Host uses a big whiteboard to track names &amp; strikes (3 strikes
+                  and you’re out, but you can stay and watch).
                 </li>
                 <li>
                   Solo players just click the link – no code needed. Reach{" "}
@@ -1738,18 +1704,9 @@ return (
               </h3>
               <ul style={{ margin: 0, paddingLeft: 18 }}>
                 <li>Family-friendly and faith-friendly fun.</li>
-                <li>
-                  Includes <strong>Books of the New Testament</strong> as a
-                  category.
-                </li>
-                <li>
-                  Great for seniors, youth nights, small groups &amp; game
-                  nights.
-                </li>
-                <li>
-                  Builds fellowship while waking up the amazing brain God gave
-                  us.
-                </li>
+                <li>Includes <strong>Books of the New Testament</strong> as a category.</li>
+                <li>Great for seniors, youth nights, small groups &amp; game nights.</li>
+                <li>Builds fellowship while waking up the amazing brain God gave us.</li>
               </ul>
             </div>
 
@@ -1789,7 +1746,6 @@ return (
           </p>
         </section>
 
-        {/* Featured video */}
         <section style={{ marginBottom: 22 }}>
           <div
             style={{
@@ -1818,7 +1774,6 @@ return (
           </div>
         </section>
 
-        {/* Quick links */}
         <section style={{ marginBottom: 22 }}>
           <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
             Quick Links
@@ -1836,4 +1791,3 @@ return (
     </main>
   );
 }
-
