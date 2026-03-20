@@ -1686,56 +1686,6 @@ return (
   </button>
 </section>
 
-        {/* Poster preview on home */}
-        <section
-          style={{
-            maxWidth: 900,
-            margin: "0 auto 22px",
-            padding: 16,
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,.12)",
-            background: "rgba(255,255,255,.03)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-          }}
-        >
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <button style={buttonStyle} onClick={() => setMode("poster")}>
-              View Poster
-            </button>
-
-            <a
-              href="/posters/hesperia-poster.webp"
-              target="_blank"
-              rel="noreferrer"
-              style={{ ...ghostButtonStyle, textDecoration: "none" }}
-            >
-              Open Full Size
-            </a>
-          </div>
-
-          <button
-            onClick={() => setMode("poster")}
-            style={{
-              marginTop: 14,
-              padding: 0,
-              width: "100%",
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-              borderRadius: 16,
-              overflow: "hidden",
-            }}
-            aria-label="View the Hesperia poster"
-          >
-            <img
-              src="/posters/hesperia-poster.webp"
-              alt="Hesperia poster preview"
-              style={{ width: "100%", height: "auto", display: "block" }}
-              loading="lazy"
-            />
-          </button>
-        </section>
-
         {/* Button under Hesperia poster on home */}
         <div style={{ textAlign: "center", margin: "8px 0 0" }}>
           <a
