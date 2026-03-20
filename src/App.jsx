@@ -18,7 +18,7 @@ export default function App() {
   const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
 
   const SOCIAL_LINKS = [
-    { label: "YouTube", href: "hpatricksttps://www.youtube.com/@Messedupgame" },
+    { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
     { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
     { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
     { label: "X", href: "https://x.com/saveplanetusa" },
@@ -1056,36 +1056,6 @@ if (mode === "communityCenters") {
     </main>
   );
 }
-  // ——— Community Centers screen ———
-if (mode === "communityCenters") {
-  return (
-    <main style={pageStyle}>
-      <div style={containerStyle}>
-        <nav
-          style={{
-            marginBottom: 16,
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 10,
-            flexWrap: "wrap",
-          }}
-        >
-          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
-            ← Back Home
-          </button>
-
-          <a
-            href={CONTACT_EMAIL}
-            style={{ ...buttonStyle, textDecoration: "none" }}
-          >
-            Contact Tom
-          </a>
-        </nav>
-
-        <h1 style={{ fontSize: "2rem", fontWeight: 900 }}>
-          🏘️ Bring The Messed Up Game to Your Community Center
-        </h1>
-
         <p style={{ maxWidth: 760, lineHeight: 1.7 }}>
           Looking for a fun, memorable, family-friendly event that gets people
           laughing, thinking, singing, and connecting? Wildman Tom B hosts a
