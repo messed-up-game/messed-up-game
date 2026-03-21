@@ -1465,7 +1465,89 @@ export default function App() {
     </a>
   </div>
 </div>
+{/* 🎵 MUSIC SECTION */}
+<div
+  style={{
+    margin: "30px 0",
+    padding: "28px 18px",
+    borderRadius: 18,
+    background: "linear-gradient(135deg, #111, #1e1e1e)",
+    color: "#fff",
+    textAlign: "center",
+    boxShadow: "0 10px 30px rgba(0,0,0,.28)",
+  }}
+>
+  <h2
+    style={{
+      margin: "0 0 10px",
+      fontSize: "2rem",
+      fontWeight: 900,
+      color: "#facc15",
+    }}
+  >
+    🎵 Music by Wildman Tom B
+  </h2>
 
+  <p
+    style={{
+      maxWidth: 760,
+      margin: "0 auto 18px",
+      lineHeight: 1.6,
+      opacity: 0.95,
+    }}
+  >
+    Custom birthday songs, victory songs, and music made to celebrate the people you love.
+    No signup needed — just press play.
+  </p>
+
+  {/* 🔘 Buttons */}
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      gap: 12,
+      marginTop: 16,
+      marginBottom: 24,
+    }}
+  >
+    <a
+      href="mailto:tom@gotbackuptomb.com?subject=Custom Song Request"
+      style={{
+        padding: "12px 18px",
+        background: "#eab308",
+        color: "#111",
+        fontWeight: 900,
+        borderRadius: 12,
+        textDecoration: "none",
+      }}
+    >
+      🎤 Request Your Song
+    </a>
+
+    <a
+      href="https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY"
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        padding: "12px 18px",
+        background: "#f97316",
+        color: "white",
+        fontWeight: 900,
+        borderRadius: 12,
+        textDecoration: "none",
+      }}
+    >
+      🎧 Hear Example
+    </a>
+  </div>
+
+  {/* 🎵 Featured Song */}
+  <div style={{ maxWidth: 700, margin: "0 auto" }}>
+    <h3 style={{ marginBottom: 10 }}>🎂 Patrick’s Birthday Song</h3>
+    <PatrickSong />
+  </div>
+</div>
         <section style={{ margin: "30px 0", textAlign: "center" }}>
           <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song (Full Version)</h2>
           <PatrickSong />
