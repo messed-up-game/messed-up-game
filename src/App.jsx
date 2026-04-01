@@ -103,8 +103,8 @@ export default function App() {
     }, 50);
   };
 
-  // G// Dodgers page
-if (mode === "dodgers") {
+  // Dodgers page
+  if (mode === "dodgers") {
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
@@ -223,7 +223,7 @@ if (mode === "dodgers") {
       </div>
     </main>
   );
-}hana Poster screen
+// Ghana Poster screen
   if (mode === "ghanaPoster") {
     return (
       <main style={pageStyle}>
