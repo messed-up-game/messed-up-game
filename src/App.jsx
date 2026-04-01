@@ -2075,12 +2075,31 @@ if (mode === "ghanaPoster") {
           </div>
         </section>
 
-        <section style={{ marginBottom: 22 }}>
-          <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
-            Quick Links
-          </h2>
-          <LinkGrid links={links} />
-        </section>
+<section style={{ marginBottom: 22 }}>
+  <div style={{ textAlign: "center", marginBottom: 20 }}>
+    <button
+      onClick={() => setMode("dodgers")}
+      style={{
+        background: "#1d4ed8",
+        color: "white",
+        fontSize: "18px",
+        padding: "14px 22px",
+        borderRadius: "12px",
+        border: "none",
+        fontWeight: "bold",
+        cursor: "pointer",
+        boxShadow: "0 6px 20px rgba(0,0,0,0.3)",
+      }}
+    >
+      ⚾ Dodgers Meal Deal + Bonus
+    </button>
+  </div>
+
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
+    Quick Links
+  </h2>
+  <LinkGrid links={links} />
+</section> 
 
         <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
           © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
