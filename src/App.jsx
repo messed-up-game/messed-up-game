@@ -223,18 +223,20 @@ export default function App() {
       </div>
     </main>
   );
+}
+
 // Ghana Poster screen
-  if (mode === "ghanaPoster") {
-    return (
-      <main style={pageStyle}>
-        <div style={containerStyle}>
-          <nav
-            style={{
-              marginBottom: 16,
-              display: "flex",
-              justifyContent: "space-between",
-              gap: 10,
-              flexWrap: "wrap",
+if (mode === "ghanaPoster") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 10,
+            flexWrap: "wrap",
             }}
           >
             <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
