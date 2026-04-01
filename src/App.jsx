@@ -53,6 +53,12 @@ export default function App() {
       affiliate: true,
     },
     {
+      title: "⚾ Dodgers Meal Deal + Bonus",
+      href: "#",
+      desc: "See the $7 Panda deal, custom songs, game night, and Got Backup bonus",
+      onClick: () => setMode("dodgers"),
+},
+{
       title: "MOSH Brain Bars",
       href: "https://moshlife.com/",
       desc: "Brain fuel sponsor 🧠",
@@ -97,7 +103,127 @@ export default function App() {
     }, 50);
   };
 
-  // Ghana Poster screen
+  // G// Dodgers page
+if (mode === "dodgers") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 10,
+            flexWrap: "wrap",
+          }}
+        >
+          <p style={{ marginTop: 12, opacity: 0.95, lineHeight: 1.5 }}>
+            Dodgers home win? Time to celebrate with food, fun, music, and memory protection.
+          </p>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+            ← Back Home
+          </button>
+        </nav>
+
+        <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+          ⚾ Dodgers Win? You Win.
+        </h1>
+
+        <p style={{ marginTop: 0, opacity: 0.9, fontSize: "1.1rem", lineHeight: 1.6 }}>
+          $7 Panda Deal + 30% OFF Custom Songs + Play The Messed Up Game + Got Backup Bonus
+        </p>
+
+        <section
+          style={{
+            maxWidth: 900,
+            margin: "30px auto 24px",
+            padding: "24px 20px",
+            borderRadius: 16,
+            background: "rgba(15,23,42,0.9)",
+            color: "#e5e7eb",
+            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
+            🍊 Dodgers Meal Deal
+          </h2>
+
+          <p style={{ textAlign: "center", marginBottom: 16, opacity: 0.95 }}>
+            Every time the Dodgers win at home, fans can grab a $7 Panda Plate the next day.
+          </p>
+
+          <p style={{ textAlign: "center", lineHeight: 1.7 }}>
+            Order through the Panda app or online, pay in the app, and skip the line.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: 900,
+            margin: "0 auto 24px",
+            padding: "24px 20px",
+            borderRadius: 16,
+            background: "rgba(15,23,42,0.9)",
+            color: "#e5e7eb",
+            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
+            🎤 Turn a Win Into a Memory
+          </h2>
+
+          <p style={{ textAlign: "center", lineHeight: 1.7 }}>
+            Get 30% OFF a custom song for birthdays, anniversaries, office fun, victories, or just because.
+            Use code <strong>DODGERS WIN</strong>.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: 900,
+            margin: "0 auto 24px",
+            padding: "24px 20px",
+            borderRadius: 16,
+            background: "rgba(15,23,42,0.9)",
+            color: "#e5e7eb",
+            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
+            🎮 Play The Messed Up Game™
+          </h2>
+
+          <p style={{ textAlign: "center", lineHeight: 1.7 }}>
+            Play live online, at home, at work, or at any special event.
+            Fun, hilarious, and brain-boosting.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: 900,
+            margin: "0 auto 24px",
+            padding: "24px 20px",
+            borderRadius: 16,
+            background: "rgba(15,23,42,0.9)",
+            color: "#e5e7eb",
+            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
+            ☁️ Got Backup Bonus
+          </h2>
+
+          <p style={{ textAlign: "center", lineHeight: 1.7 }}>
+            Protect your photos, videos, and memories with secure cloud backup and storage.
+            Ask Tom about how Got Backup can help keep your best moments safe.
+          </p>
+        </section>
+      </div>
+    </main>
+  );
+}hana Poster screen
   if (mode === "ghanaPoster") {
     return (
       <main style={pageStyle}>
