@@ -1951,7 +1951,65 @@ if (mode === "ghanaPoster") {
             Benefits for Seniors, Churches &amp; More
           </a>
         </div>
+<section
+  style={{
+    maxWidth: 900,
+    margin: "20px auto 30px",
+    textAlign: "center",
+    padding: "18px",
+    borderRadius: 18,
+    background: "rgba(255,255,255,.04)",
+    border: "1px solid rgba(255,255,255,.10)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <img
+    src="/posters/dodgers-poster.jpg"
+    alt="Dodgers Meal Deal poster"
+    onClick={() => setMode("dodgers")}
+    style={{
+      width: "100%",
+      maxWidth: 520,
+      height: "auto",
+      borderRadius: 16,
+      cursor: "pointer",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+    }}
+  />
 
+  <div style={{ marginTop: 14, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+    <button
+      onClick={() => setMode("dodgers")}
+      style={{
+        background: "#1d4ed8",
+        color: "white",
+        fontSize: "18px",
+        padding: "12px 20px",
+        borderRadius: "12px",
+        border: "none",
+        fontWeight: 800,
+        cursor: "pointer",
+      }}
+    >
+      ⚾ Dodgers Meal Deal + Custom Songs
+    </button>
+
+    <a
+      href="mailto:tombutler@messedupgame.com?subject=Custom Song Request"
+      style={{
+        background: "#22c55e",
+        color: "#041b0a",
+        fontSize: "18px",
+        padding: "12px 20px",
+        borderRadius: "12px",
+        textDecoration: "none",
+        fontWeight: 800,
+      }}
+    >
+      🎤 Request a Custom Song
+    </a>
+  </div>
+</section>
         <section
           id="benefits"
           style={{
