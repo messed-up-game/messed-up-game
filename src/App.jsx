@@ -1955,9 +1955,7 @@ if (mode === "ghanaPoster") {
           </a>
         </div>
 
-      ⚾ Dodgers Meal Deal + Custom Songs
-    </button>
-<div style={{ textAlign: "center", margin: "20px 0 30px" }}>
+     <div style={{ textAlign: "center", margin: "20px 0 30px" }}>
   <img
     src="/posters/dodgers-poster.jpg"
     alt="Dodgers $7 Panda Deal"
@@ -1971,41 +1969,6 @@ if (mode === "ghanaPoster") {
     }}
   />
 </div>
-    <a
-      href="mailto:tombutler@messedupgame.com?subject=Custom Song Request"
-      style={{
-        background: "#22c55e",
-        color: "#041b0a",
-        fontSize: "18px",
-        padding: "12px 20px",
-        borderRadius: "12px",
-        textDecoration: "none",
-        fontWeight: 800,
-      }}
-    >
-      🎤 Request a Custom Song
-    </a>
-  </div>
-</section>
-      ⚾ Dodgers Meal Deal + Custom Songs
-    </button>
-
-    <a
-      href="mailto:tombutler@messedupgame.com?subject=Custom Song Request"
-      style={{
-        background: "#22c55e",
-        color: "#041b0a",
-        fontSize: "18px",
-        padding: "12px 20px",
-        borderRadius: "12px",
-        textDecoration: "none",
-        fontWeight: 800,
-      }}
-    >
-      🎤 Request a Custom Song
-    </a>
-  </div>
-</section>
         <section
           id="benefits"
           style={{
