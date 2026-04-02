@@ -2135,7 +2135,32 @@ if (mode === "ghanaPoster") {
             to schedule a quick demo.
           </p>
         </section>
-
+<section
+  style={{
+    maxWidth: 900,
+    margin: "20px auto 30px",
+    textAlign: "center",
+    padding: "18px",
+    borderRadius: 18,
+    background: "rgba(255,255,255,.04)",
+    border: "1px solid rgba(255,255,255,.10)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <img
+    src="/posters/dodgers-poster.jpg"
+    alt="Dodgers $7 Panda Deal"
+    onClick={() => setMode("dodgers")}
+    style={{
+      width: "100%",
+      maxWidth: 520,
+      height: "auto",
+      borderRadius: 16,
+      cursor: "pointer",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+    }}
+  />
+</section>
         <section style={{ marginBottom: 22 }}>
           <div
             style={{
