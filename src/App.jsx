@@ -556,11 +556,11 @@ if (mode === "ghanaPoster") {
             </h2>
 
             <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-              Our mission is also about protecting what matters — including the
-              memories we create together. <strong>The Messed Up Game™</strong>{" "}<section id="newsletter">
-              wakes people up with laughter and helps improve cognitive function
-              because players have to remember what others said.
-            </p>
+  Our mission is also about protecting what matters — including the
+  memories we create together. <strong>The Messed Up Game™</strong>{" "}
+  wakes people up with laughter and helps improve cognitive function
+  because players have to remember what others said.
+</p>
 
             <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
               Learn more and play live:{" "}
