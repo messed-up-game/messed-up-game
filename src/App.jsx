@@ -1904,23 +1904,37 @@ if (mode === "ghanaPoster") {
           </div>
         </div>
 
-          <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-            🏘️ Bring The Messed Up Game to Your Community Center
-          </h2>
+         </div>
 
-          <p style={{ maxWidth: 700, margin: "0 auto 14px", opacity: 0.95 }}>
-            Looking for a fun, brain-boosting event for your community center?
-            Wildman Tom B hosts an unforgettable night of music, laughter, and
-            The Messed Up Game.
-          </p>
+<section
+  style={{
+    maxWidth: 900,
+    margin: "22px auto",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.14)",
+    background: "rgba(255,255,255,.05)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
+    🏘️ Bring The Messed Up Game to Your Community Center
+  </h2>
 
-          <button
-            style={buttonStyle}
-            onClick={() => setMode("communityCenters")}
-          >
-            Learn More
-          </button>
-        </section>
+  <p style={{ maxWidth: 700, margin: "0 auto 14px", opacity: 0.95 }}>
+    Looking for a fun, brain-boosting event for your community center?
+    Wildman Tom B hosts an unforgettable night of music, laughter, and
+    The Messed Up Game.
+  </p>
+
+  <button
+    style={buttonStyle}
+    onClick={() => setMode("communityCenters")}
+  >
+    Learn More
+  </button>
+</section>
 
         <div style={{ textAlign: "center", margin: "8px 0 0" }}>
           <a
