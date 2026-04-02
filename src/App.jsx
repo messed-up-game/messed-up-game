@@ -479,49 +479,24 @@ if (mode === "ghanaPoster") {
               Sign Up
             </a>
           </nav>
-<div style={{ textAlign: "center", margin: "20px 0 30px" }}>
-  <img
-    src="/posters/dodgers-poster.jpg"
-    alt="Dodgers $7 Panda Deal"
-    onClick={() => setMode("dodgers")}
-    style={{
-      width: "100%",
-      maxWidth: 520,
-      borderRadius: 16,
-      cursor: "pointer",
-      boxShadow: "0 10px 30px rgba(0,0,0,.4)",
-    }}
+<UtahsAlright />
+
+<section
+  id="newsletter"
+  style={{
+    borderRadius: 16,
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,.12)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+    background: "rgba(255,255,255,.03)",
+    padding: 18,
+  }}
+>
+  <div
+    id="got-backup-ghana"
+    aria-hidden="true"
+    style={{ scrollMarginTop: 90 }}
   />
-
-  <div style={{ marginTop: 12 }}>
-    <button
-      onClick={() => setMode("dodgers")}
-      style={{
-        background: "#1d4ed8",
-        color: "white",
-        fontSize: "18px",
-        padding: "12px 20px",
-        borderRadius: "10px",
-        border: "none",
-        fontWeight: "bold",
-        cursor: "pointer",
-      }}
-    >
-      
-          <UtahsAlright />
-
-          <section
-            id="newsletter"
-            style={{
-              borderRadius: 16,
-              overflow: "hidden",
-              border: "1px solid rgba(255,255,255,.12)",
-              boxShadow: "0 10px 24px rgba(0,0,0,.35)",
-              background: "rgba(255,255,255,.03)",
-              padding: 18,
-            }}
-          >
-            <div
               id="got-backup-ghana"
               aria-hidden="true"
               style={{ scrollMarginTop: 90 }}
@@ -582,7 +557,7 @@ if (mode === "ghanaPoster") {
 
             <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
               Our mission is also about protecting what matters — including the
-              memories we create together. <strong>The Messed Up Game™</strong>{" "}
+              memories we create together. <strong>The Messed Up Game™</strong>{" "}<section id="newsletter">
               wakes people up with laughter and helps improve cognitive function
               because players have to remember what others said.
             </p>
