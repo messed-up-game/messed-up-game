@@ -479,7 +479,38 @@ if (mode === "ghanaPoster") {
               Sign Up
             </a>
           </nav>
+<div style={{ textAlign: "center", margin: "20px 0 30px" }}>
+  <img
+    src="/posters/dodgers-poster.jpg"
+    alt="Dodgers $7 Panda Deal"
+    onClick={() => setMode("dodgers")}
+    style={{
+      width: "100%",
+      maxWidth: 520,
+      borderRadius: 16,
+      cursor: "pointer",
+      boxShadow: "0 10px 30px rgba(0,0,0,.4)",
+    }}
+  />
 
+  <div style={{ marginTop: 12 }}>
+    <button
+      onClick={() => setMode("dodgers")}
+      style={{
+        background: "#1d4ed8",
+        color: "white",
+        fontSize: "18px",
+        padding: "12px 20px",
+        borderRadius: "10px",
+        border: "none",
+        fontWeight: "bold",
+        cursor: "pointer",
+      }}
+    >
+      ⚾ Dodgers Meal Deal + Custom Songs
+    </button>
+  </div>
+</div>
           <UtahsAlright />
 
           <section
@@ -2134,24 +2165,6 @@ if (mode === "ghanaPoster") {
         </section>
 
 <section style={{ marginBottom: 22 }}>
-  <div style={{ textAlign: "center", marginBottom: 20 }}>
-    <button
-      onClick={() => setMode("dodgers")}
-      style={{
-        background: "#1d4ed8",
-        color: "white",
-        fontSize: "18px",
-        padding: "14px 22px",
-        borderRadius: "12px",
-        border: "none",
-        fontWeight: "bold",
-        cursor: "pointer",
-        boxShadow: "0 6px 20px rgba(0,0,0,0.3)",
-      }}
-    >
-      ⚾ Dodgers Meal Deal + Bonus
-    </button>
-  </div>
 
   <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
     Quick Links
