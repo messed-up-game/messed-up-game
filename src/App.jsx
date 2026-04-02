@@ -1904,18 +1904,6 @@ if (mode === "ghanaPoster") {
           </div>
         </div>
 
-        <section
-          style={{
-            maxWidth: 900,
-            margin: "22px auto",
-            padding: 18,
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,.14)",
-            background: "rgba(255,255,255,.05)",
-            boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-            textAlign: "center",
-          }}
-        >
           <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
             🏘️ Bring The Messed Up Game to Your Community Center
           </h2>
