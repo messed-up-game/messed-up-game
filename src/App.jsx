@@ -1982,59 +1982,10 @@ if (mode === "ghanaPoster") {
             Benefits for Seniors, Churches &amp; More
           </a>
         </div>
-<section
-  style={{
-    maxWidth: 900,
-    margin: "20px auto 30px",
-    textAlign: "center",
-    padding: "18px",
-    borderRadius: 18,
-    background: "rgba(255,255,255,.04)",
-    border: "1px solid rgba(255,255,255,.10)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <img
-    src="/posters/dodgers-poster.jpg"
-    alt="Dodgers Meal Deal poster"
-    onClick={() => setMode("dodgers")}
-    style={{
-      width: "100%",
-      maxWidth: 520,
-      height: "auto",
-      borderRadius: 16,
-      cursor: "pointer",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-    }}
-  />
 
-  <div style={{ marginTop: 14, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-    <button
-      onClick={() => setMode("dodgers")}
-      style={{
-        background: "#1d4ed8",
-        color: "white",
-        fontSize: "18px",
-        padding: "12px 20px",
-        borderRadius: "12px",
-        border: "none",
-        fontWeight: 800,
-        cursor: "pointer",
-      }}
-    >
-      <section
-  style={{
-    maxWidth: 900,
-    margin: "20px auto 30px",
-    textAlign: "center",
-    padding: "18px",
-    borderRadius: 18,
-    background: "rgba(255,255,255,.04)",
-    border: "1px solid rgba(255,255,255,.10)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  {/* 👇 THIS IS THE MISSING POSTER */}
+      ⚾ Dodgers Meal Deal + Custom Songs
+    </button>
+<div style={{ textAlign: "center", margin: "20px 0 30px" }}>
   <img
     src="/posters/dodgers-poster.jpg"
     alt="Dodgers $7 Panda Deal"
@@ -2042,30 +1993,12 @@ if (mode === "ghanaPoster") {
     style={{
       width: "100%",
       maxWidth: 520,
-      height: "auto",
       borderRadius: 16,
       cursor: "pointer",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+      boxShadow: "0 10px 30px rgba(0,0,0,.4)",
     }}
   />
-
-  <div style={{ marginTop: 14, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-    <button
-      onClick={() => setMode("dodgers")}
-      style={{
-        background: "#1d4ed8",
-        color: "white",
-        fontSize: "18px",
-        padding: "12px 20px",
-        borderRadius: "12px",
-        border: "none",
-        fontWeight: 800,
-        cursor: "pointer",
-      }}
-    >
-      ⚾ Dodgers Meal Deal + Custom Songs
-    </button>
-
+</div>
     <a
       href="mailto:tombutler@messedupgame.com?subject=Custom Song Request"
       style={{
@@ -2220,42 +2153,6 @@ if (mode === "ghanaPoster") {
       boxShadow: "0 10px 30px rgba(0,0,0,.35)",
     }}
   />
-</section>
-        <section style={{ marginBottom: 22 }}>
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              paddingTop: "56.25%",
-              borderRadius: 16,
-              overflow: "hidden",
-              boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-              border: "1px solid rgba(255,255,255,.08)",
-            }}
-          >
-            <iframe
-              title="Featured Video"
-              src={`https://www.youtube.com/embed/${FEATURE_VIDEO_ID}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                border: 0,
-              }}
-            />
-          </div>
-        </section>
-
-<section style={{ marginBottom: 22 }}>
-
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.4rem", fontWeight: 900 }}>
-    Quick Links
-  </h2>
-  <LinkGrid links={links} />
-</section> 
 
         <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
           © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
