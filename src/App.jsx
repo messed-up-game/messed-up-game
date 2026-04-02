@@ -507,10 +507,7 @@ if (mode === "ghanaPoster") {
         cursor: "pointer",
       }}
     >
-      ⚾ Dodgers Meal Deal + Custom Songs
-    </button>
-  </div>
-</div>
+      
           <UtahsAlright />
 
           <section
