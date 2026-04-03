@@ -1674,15 +1674,67 @@ if (mode === "ghanaPoster") {
   </div>
 
   {/* 🎵 Featured Song */}
-  <div style={{ maxWidth: 700, margin: "0 auto" }}>
-    <h3 style={{ marginBottom: 10 }}>🎂 Patrick’s Birthday Song</h3>
-    <PatrickSong />
+  <div style={{ textAlign: "center", margin: "20px 0 30px" }}>
+  <img
+    src="/posters/dodgers-poster.jpg"
+    alt="Dodgers $7 Panda Deal"
+    onClick={() => setMode("dodgers")}
+    style={{
+      width: "100%",
+      maxWidth: 520,
+      borderRadius: 16,
+      cursor: "pointer",
+      boxShadow: "0 10px 30px rgba(0,0,0,.4)",
+    }}
+  />
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      gap: 12,
+      marginTop: 16,
+      marginBottom: 24,
+    }}
+  >
+    <button
+      onClick={() => setMode("dodgers")}
+      style={{
+        padding: "12px 18px",
+        background: "#1d4ed8",
+        color: "white",
+        fontWeight: 900,
+        borderRadius: 12,
+        border: "none",
+        cursor: "pointer",
+      }}
+    >
+      ⚾ Dodgers Meal Deal + Custom Songs
+    </button>
+
+    <a
+      href="PASTE-YOUR-PANDA-REDEEM-VIDEO-LINK-HERE"
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        padding: "12px 18px",
+        background: "#22c55e",
+        color: "#041b0a",
+        fontWeight: 900,
+        borderRadius: 12,
+        textDecoration: "none",
+      }}
+    >
+      ▶️ How to Redeem the $7 Panda Deal
+    </a>
   </div>
 </div>
-        <section style={{ margin: "30px 0", textAlign: "center" }}>
-          <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song (Full Version)</h2>
-          <PatrickSong />
-        </section>
+
+<section style={{ margin: "30px 0", textAlign: "center" }}>
+  <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song (Full Version)</h2>
+  <PatrickSong />
+</section>
 
         <div style={{ marginTop: 30 }}>
           <UtahsAlright />
@@ -1958,19 +2010,7 @@ if (mode === "ghanaPoster") {
         </div>
 
      <div style={{ textAlign: "center", margin: "20px 0 30px" }}>
-  <img
-    src="/posters/dodgers-poster.jpg"
-    alt="Dodgers $7 Panda Deal"
-    onClick={() => setMode("dodgers")}
-    style={{
-      width: "100%",
-      maxWidth: 520,
-      borderRadius: 16,
-      cursor: "pointer",
-      boxShadow: "0 10px 30px rgba(0,0,0,.4)",
-    }}
-  />
-</div>
+ 
         <section
           id="benefits"
           style={{
@@ -2077,19 +2117,6 @@ if (mode === "ghanaPoster") {
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
   }}
 >
-  <img
-    src="/posters/dodgers-poster.jpg"
-    alt="Dodgers $7 Panda Deal"
-    onClick={() => setMode("dodgers")}
-    style={{
-      width: "100%",
-      maxWidth: 520,
-      height: "auto",
-      borderRadius: 16,
-      cursor: "pointer",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-    }}
-  />
 
         <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
           © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
