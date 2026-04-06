@@ -9,6 +9,7 @@ import WildmanTomSong from "./components/WildmanTomSong";
 import PatrickSong from "./components/PatrickSong";
 
 export default function App() {
+  const [showVideo, setShowVideo] = useState(false);
   const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
   const FEATURE_VIDEO_ID = "stZm5AH791I";
 
@@ -1539,6 +1540,7 @@ if (mode === "ghanaPoster") {
 
 {/* 🎶 Custom Song CTA Upgrade */}
 <div
+  id="custom-song"
   style={{
     marginTop: 16,
     padding: 18,
@@ -1713,21 +1715,20 @@ if (mode === "ghanaPoster") {
       ⚾ Dodgers Meal Deal + Custom Songs
     </button>
 
-    <a
-      href="PASTE-YOUR-PANDA-REDEEM-VIDEO-LINK-HERE"
-      target="_blank"
-      rel="noreferrer"
-      style={{
-        padding: "12px 18px",
-        background: "#22c55e",
-        color: "#041b0a",
-        fontWeight: 900,
-        borderRadius: 12,
-        textDecoration: "none",
-      }}
-    >
-      ▶️ How to Redeem the $7 Panda Deal
-    </a>
+    <button
+  onClick={() => setShowVideo(true)}
+  style={{
+    padding: "12px 18px",
+    background: "#22c55e",
+    color: "#041b0a",
+    fontWeight: 900,
+    borderRadius: 12,
+    border: "none",
+    cursor: "pointer",
+  }}
+>
+  ▶️ How to Redeem the $7 Panda Deal
+</button>
   </div>
 </div>
 
