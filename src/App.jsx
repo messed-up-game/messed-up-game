@@ -1509,36 +1509,7 @@ if (mode === "ghanaPoster") {
           </div>
         </section>
 
-        <div
-          style={{
-            marginTop: 16,
-            padding: 14,
-            background: "rgba(255,255,255,0.05)",
-            borderRadius: 12,
-            border: "1px solid rgba(255,255,255,.12)",
-            textAlign: "center",
-          }}
-        >
-          <p style={{ marginBottom: 8 }}>
-            🎶 Want a personalized birthday or victory song for someone special?
-          </p>
-
-          <a
-            href="mailto:tom@gotbackuptomb.com"
-            style={{
-              display: "inline-block",
-              padding: "10px 18px",
-              background: "#22c55e",
-              color: "#041b0a",
-              fontWeight: 800,
-              borderRadius: 10,
-              textDecoration: "none",
-            }}
-          >
-            </a>
-</div>
-
-{/* 🎶 Custom Song CTA Upgrade */}
+ {/* 🎶 Custom Song CTA Upgrade */}
 <div
   id="custom-song"
   style={{
@@ -1551,8 +1522,12 @@ if (mode === "ghanaPoster") {
     boxShadow: "0 10px 24px rgba(0,0,0,.25)",
   }}
 >
-  <p style={{ marginBottom: 10, fontSize: "1.05rem", fontWeight: 800 }}>
-    🎶 Want a personalized song for someone you love?
+  <h3 style={{ marginBottom: 10, color: "#facc15" }}>
+    ⚾ Dodgers Win? Get 30% OFF a Custom Song 🎤
+  </h3>
+
+  <p style={{ marginBottom: 10, fontWeight: 800 }}>
+    🎶 Want a personalized birthday or victory song for someone special?
   </p>
 
   <p style={{ marginBottom: 14, opacity: 0.9 }}>
@@ -1598,6 +1573,7 @@ if (mode === "ghanaPoster") {
     </a>
   </div>
 </div>
+
 {/* 🎵 MUSIC SECTION */}
 <div
   style={{
@@ -2136,7 +2112,14 @@ if (mode === "ghanaPoster") {
       }}
     >
       <button
-        onClick={() => setShowVideo(false)}
+        onClick={() => {
+  setShowVideo(false);
+  setTimeout(() => {
+    document.getElementById("custom-song")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  }, 200);
+}}
         style={{
           position: "absolute",
           top: 10,
