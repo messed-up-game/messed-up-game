@@ -2104,20 +2104,73 @@ if (mode === "ghanaPoster") {
     to schedule a quick demo.
   </p>
 </section>
-
 <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
   © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
   <a href={CONTACT_EMAIL} style={{ color: "white" }}>
     {CONTACT_EMAIL.replace("mailto:", "")}
   </a>
 </footer>
-        <footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
-          © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
-          <a href={CONTACT_EMAIL} style={{ color: "white" }}>
-            {CONTACT_EMAIL.replace("mailto:", "")}
-          </a>
-        </footer>
-      </div>
-    </main>
-  );
+
+{/* 🎬 VIDEO POPUP */}
+{showVideo && (
+  <div
+    style={{
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0,0,0,0.9)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 99999,
+      padding: 20,
+    }}
+  >
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        maxWidth: 420,
+        background: "#000",
+        borderRadius: 12,
+        overflow: "hidden",
+      }}
+    >
+      <button
+        onClick={() => setShowVideo(false)}
+        style={{
+          position: "absolute",
+          top: 10,
+          right: 10,
+          zIndex: 100000,
+          background: "rgba(0,0,0,0.7)",
+          color: "#fff",
+          border: "none",
+          borderRadius: 8,
+          padding: "8px 10px",
+          cursor: "pointer",
+        }}
+      >
+        ✖
+      </button>
+
+      <iframe
+        width="100%"
+        height="700"
+        src="https://www.youtube.com/embed/L6BqH4LOGog"
+        title="How to Redeem the $7 Panda Deal"
+        frameBorder="0"
+        allowFullScreen
+        style={{
+          width: "100%",
+          height: "700px",
+          border: 0,
+        }}
+      />
+    </div>
+  </div>
+)}
+
+</div>
+</main>
+);
 }
