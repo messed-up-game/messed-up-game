@@ -35,7 +35,115 @@ export default function App() {
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
   const [mode, setMode] = useState("home");
+  const MARKO_MAX_VIDEO =
+    "https://s3endpoint.markomax.com/markomax/64c42a5f-32e7-41f6-af35-7c792f0d6ab9/8ed4f916-a262-4bd3-aac0-f75777a95747.mp4";
 
+  const MarkoMaxSection = () => (
+    <section
+      style={{
+        maxWidth: 900,
+        margin: "28px auto 30px",
+        padding: "24px 20px",
+        borderRadius: 16,
+        background: "rgba(15,23,42,0.95)",
+        color: "#e5e7eb",
+        boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
+        textAlign: "center",
+      }}
+    >
+      <h2 style={{ fontSize: 30, marginBottom: 12 }}>
+        🚀 New GotBackup Marko Max Pro Marketing System
+      </h2>
+
+      <p
+        style={{
+          margin: "0 auto 18px",
+          maxWidth: 760,
+          fontSize: "1.05rem",
+          lineHeight: 1.6,
+          opacity: 0.96,
+        }}
+      >
+        Watch Joel Therien explain the opportunity and how the new tools can help
+        you grow with done-for-you funnels, automated follow-up, lead generation,
+        and a powerful income opportunity.
+      </p>
+
+      <video
+        controls
+        playsInline
+        style={{
+          width: "100%",
+          maxWidth: 520,
+          borderRadius: 14,
+          marginBottom: 18,
+          background: "#000",
+        }}
+      >
+        <source src={MARKO_MAX_VIDEO} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div
+        style={{
+          textAlign: "left",
+          maxWidth: 560,
+          margin: "0 auto 18px",
+          lineHeight: 1.9,
+        }}
+      >
+        <p>✅ Done-for-you funnels</p>
+        <p>✅ Automated follow-up</p>
+        <p>✅ Lead generation tools</p>
+        <p>✅ Proven system</p>
+        <p>✅ Incredible income opportunity for just $20/month</p>
+      </div>
+
+      <p style={{ fontWeight: 800, color: "#facc15", marginBottom: 18 }}>
+        🎁 Join our team and get a 2-for-1 custom song for that special person —
+        or a roast for your boss!
+      </p>
+
+      <div
+        style={{
+          display: "flex",
+          gap: 12,
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <a
+          href="https://gotbackuptomb.com"
+          style={{
+            display: "inline-block",
+            padding: "14px 22px",
+            background: "#facc15",
+            color: "#111827",
+            fontWeight: 900,
+            borderRadius: 12,
+            textDecoration: "none",
+          }}
+        >
+          👉 Join Got Backup Tom B
+        </a>
+
+        <a
+          href="mailto:tom@gotbackuptomb.com?subject=Tell%20me%20more%20about%20Marko%20Max%20Pro"
+          style={{
+            display: "inline-block",
+            padding: "14px 22px",
+            background: "#22c55e",
+            color: "#052e16",
+            fontWeight: 900,
+            borderRadius: 12,
+            textDecoration: "none",
+          }}
+        >
+          👉 Contact Tom
+        </a>
+      </div>
+    </section>
+  );
   const links = [
     {
       title: "🎲 Sign Up to Play Live",
