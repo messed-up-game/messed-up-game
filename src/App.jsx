@@ -266,49 +266,6 @@ export default function App() {
             Order through the Panda app or online, pay in the app, and skip the line.
           </p>
         </section>
-
-        <section
-          style={{
-            maxWidth: 900,
-            margin: "0 auto 24px",
-            padding: "24px 20px",
-            borderRadius: 16,
-            background: "rgba(15,23,42,0.9)",
-            color: "#e5e7eb",
-            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
-          }}
-        >
-          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
-            🎤 Turn a Win Into a Memory
-          </h2>
-
-          <p style={{ textAlign: "center", lineHeight: 1.7 }}>
-            Get 30% OFF a custom song for birthdays, anniversaries, office fun, victories, or just because.
-            Use code <strong>DODGERS WIN</strong>.
-          </p>
-        </section>
-
-        <section
-          style={{
-            maxWidth: 900,
-            margin: "0 auto 24px",
-            padding: "24px 20px",
-            borderRadius: 16,
-            background: "rgba(15,23,42,0.9)",
-            color: "#e5e7eb",
-            boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
-          }}
-        >
-          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
-            🎮 Play The Messed Up Game™
-          </h2>
-
-          <p style={{ textAlign: "center", lineHeight: 1.7 }}>
-            Play live online, at home, at work, or at any special event.
-            Fun, hilarious, and brain-boosting.
-          </p>
-        </section>
-
         <section
           style={{
             maxWidth: 900,
@@ -323,32 +280,7 @@ export default function App() {
           <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
             ☁️ Got Backup Bonus
           </h2>
-        </section>
 
-      </div>
-    </main>
-  );
-}
-
-// 👇 THIS IS YOUR HOME PAGE
-return (
-  <main style={pageStyle}>
-    <div style={containerStyle}>
-
-      <SocialBar links={SOCIAL_LINKS} />
-
-      <MarkoMaxSection />
-
-      <LinkGrid links={links} />
-
-      <UtahsAlright />
-      <WildmanTomSong />
-      <PatrickSong />
-      <GotBackupBannerAd />
-
-    </div>
-  </main>
-);
           <p style={{ textAlign: "center", lineHeight: 1.7 }}>
             Protect your photos, videos, and memories with secure cloud backup and storage.
             Ask Tom about how Got Backup can help keep your best moments safe.
@@ -359,6 +291,37 @@ return (
   );
 }
 
+return (
+  <main style={pageStyle}>
+    <div style={containerStyle}>
+      <SocialBar links={SOCIAL_LINKS} />
+
+      <MarkoMaxSection />
+
+      <LinkGrid links={links} />
+
+      <UtahsAlright />
+      <WildmanTomSong />
+      <PatrickSong />
+      <GotBackupBannerAd />
+    </div>
+  </main>
+);
+
+// Ghana Poster screen
+if (mode === "ghanaPoster") {
+  return (
+    <main style={pageStyle}>
+      <div style={containerStyle}>
+        <nav
+          style={{
+            marginBottom: 16,
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 10,
+            flexWrap: "wrap",
+          }}
+        >
 // Ghana Poster screen
 if (mode === "ghanaPoster") {
   return (
