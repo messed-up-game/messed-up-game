@@ -290,7 +290,58 @@ export default function App() {
     </main>
   );
 }
+  // Ghana Poster screen
+  if (mode === "ghanaPoster") {
+    return (
+      <main style={pageStyle}>
+        <div style={containerStyle}>
+          <nav
+            style={{
+              marginBottom: 16,
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            <button style={ghostButtonStyle} onClick={() => setMode("home")}>
+              ← Back Home
+            </button>
 
+            <a
+              href="/posters/ghana-poster.jpg"
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...buttonStyle, textDecoration: "none" }}
+            >
+              Open Full Size
+            </a>
+          </nav>
+
+          <h1 style={{ margin: "0 0 10px", fontSize: "2rem", fontWeight: 900 }}>
+            🇬🇭 Ghana Poster
+          </h1>
+
+          <div
+            style={{
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(255,255,255,.12)",
+              boxShadow: "0 10px 24px rgba(0,0,0,.35)",
+              background: "rgba(255,255,255,.03)",
+            }}
+          >
+            <img
+              src="/posters/ghana-poster.jpg"
+              alt="Ghana Poster"
+              style={{ width: "100%", height: "auto", display: "block" }}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </main>
+    );
+  }
   // Solo screen
   if (mode === "solo") {
     return (
@@ -473,10 +524,6 @@ export default function App() {
     aria-hidden="true"
     style={{ scrollMarginTop: 90 }}
   />
-              id="got-backup-ghana"
-              aria-hidden="true"
-              style={{ scrollMarginTop: 90 }}
-            />
 
             <h1 style={{ margin: "0 0 6px", fontSize: "1.9rem", fontWeight: 900 }}>
               A Global Mission: Protecting Memories, Building Opportunity 🌍💾
