@@ -112,9 +112,11 @@ export default function App() {
           flexWrap: "wrap",
         }}
       >
-        <a
-          href="https://gotbackuptomb.com"
-          style={{
+<a
+  href={SIGNUP_FORM_URL}
+  target="_blank"
+  rel="noreferrer"  
+  style={{
             display: "inline-block",
             padding: "14px 22px",
             background: "#facc15",
