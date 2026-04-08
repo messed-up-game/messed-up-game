@@ -16,7 +16,7 @@ export default function App() {
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
 
-  const CONTACT_EMAIL = "mailto:tombutler@messedupgame.com";
+  const CONTACT_EMAIL = "mailto:tom@gotbackuptomb.com";
 
   const SOCIAL_LINKS = [
     { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
@@ -323,7 +323,32 @@ export default function App() {
           <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
             ☁️ Got Backup Bonus
           </h2>
+        </section>
 
+      </div>
+    </main>
+  );
+}
+
+// 👇 THIS IS YOUR HOME PAGE
+return (
+  <main style={pageStyle}>
+    <div style={containerStyle}>
+
+      <SocialBar links={SOCIAL_LINKS} />
+
+      <MarkoMaxSection />
+
+      <LinkGrid links={links} />
+
+      <UtahsAlright />
+      <WildmanTomSong />
+      <PatrickSong />
+      <GotBackupBannerAd />
+
+    </div>
+  </main>
+);
           <p style={{ textAlign: "center", lineHeight: 1.7 }}>
             Protect your photos, videos, and memories with secure cloud backup and storage.
             Ask Tom about how Got Backup can help keep your best moments safe.
