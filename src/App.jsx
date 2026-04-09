@@ -113,9 +113,9 @@ export default function App() {
         }}
       >
 <a
-  href={SIGNUP_FORM_URL}
+  href="https://willbackyouup.bossstreet.com/get-started-now/"
   target="_blank"
-  rel="noreferrer"  
+  rel="noreferrer" 
   style={{
             display: "inline-block",
             padding: "14px 22px",
