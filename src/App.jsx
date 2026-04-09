@@ -157,12 +157,12 @@ export default function App() {
       href: SIGNUP_FORM_URL,
       desc: "Fill out the form to play",
     },
-    {
-      title: "Got Backup Tom B",
-      href: "https://gotbackuptomb.com",
-      desc: "Cloud backup & storage",
-      affiliate: true,
-    },
+  {
+  title: "🚀 Join Got Backup Tom B",
+  href: "https://willbackyouup.bossstreet.com/get-started-now/",
+  desc: "Watch Joel Therien explain the system and get started",
+  affiliate: true,
+},
     {
       title: "⚾ Dodgers Meal Deal + Bonus",
       href: "#",
