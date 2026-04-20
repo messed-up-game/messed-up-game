@@ -37,7 +37,94 @@ export default function App() {
   const [mode, setMode] = useState("home");
   const MARKO_MAX_VIDEO =
     "https://s3endpoint.markomax.com/markomax/64c42a5f-32e7-41f6-af35-7c792f0d6ab9/8ed4f916-a262-4bd3-aac0-f75777a95747.mp4";
+const ElonRoastHero = () => (
+  <section
+    style={{
+      maxWidth: 1000,
+      margin: "20px auto 10px",
+      padding: "24px 16px",
+      borderRadius: 18,
+      background: "linear-gradient(135deg, #020617, #0f172a)",
+      color: "#fff",
+      textAlign: "center",
+      boxShadow: "0 20px 50px rgba(0,0,0,0.45)",
+    }}
+  >
+    <h1 style={{ fontSize: 34, marginBottom: 10 }}>
+      😂 Elon Musk Roast Just Dropped 🚀
+    </h1>
 
+    <p style={{ opacity: 0.9, marginBottom: 18 }}>
+      If this made you laugh… you need to see this next 👇
+    </p>
+
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        maxWidth: 420,
+        margin: "0 auto 16px",
+        borderRadius: 14,
+        overflow: "hidden",
+      }}
+    >
+      <div style={{ paddingTop: "177.78%" }}>
+        <iframe
+          src="https://www.youtube.com/embed/ySkcD4M-QTw"
+          title="Elon Musk Roast"
+          allowFullScreen
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            border: 0,
+          }}
+        />
+      </div>
+    </div>
+
+    <div style={{ marginTop: 10 }}>
+      <a
+        href="https://youtu.be/ySkcD4M-QTw?si=9IEmFHj67kgj5db7"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          background: "#facc15",
+          color: "#000",
+          padding: "10px 18px",
+          borderRadius: 10,
+          fontWeight: "bold",
+          textDecoration: "none",
+          marginRight: 10,
+        }}
+      >
+        ▶ Watch on YouTube
+      </a>
+
+      <a
+        href="https://willbackyouup.bossstreet.com/get-started-now/"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          background: "#2563eb",
+          color: "#fff",
+          padding: "10px 18px",
+          borderRadius: 10,
+          fontWeight: "bold",
+          textDecoration: "none",
+        }}
+      >
+        🚀 Join My Team
+      </a>
+    </div>
+
+    <p style={{ marginTop: 14, fontSize: 14, opacity: 0.8 }}>
+      If I can make you laugh… I can help you build something bigger too.
+    </p>
+  </section>
+);
   const MarkoMaxSection = () => (
     <section
       style={{
