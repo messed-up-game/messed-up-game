@@ -28,7 +28,7 @@ export default function App() {
   { label: "SoundCloud", href: "https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY" },
 ];
 
-  const PRAYER_SHORT_URL = "https://www.youtube.com/@Messedupgame" },
+  const PRAYER_SHORT_URL = "https://www.youtube.com/@Messedupgame";
   const PRAYER_SHORT_ID = "tA4mF_4hBJs";
 
   const BENEFITS_DOC_URL =
