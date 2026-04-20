@@ -10,7 +10,7 @@ import PatrickSong from "./components/PatrickSong";
 
 export default function App() {
   const [showVideo, setShowVideo] = useState(false);
-  const CHANNEL_URL = "https://www.youtube.com/@Messedupgame";
+  const CHANNEL_URL = "https://www.youtube.com/@utahsalright";
   const FEATURE_VIDEO_ID = "stZm5AH791I";
 
   const SIGNUP_FORM_URL =
@@ -18,8 +18,8 @@ export default function App() {
 
   const CONTACT_EMAIL = "mailto:tom@gotbackuptomb.com";
 
- const SOCIAL_LINKS = [
-  { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
+const SOCIAL_LINKS = [
+  { label: "YouTube", href: CHANNEL_URL },
   { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
   { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
   { label: "X", href: "https://x.com/saveplanetusa" },
@@ -28,7 +28,7 @@ export default function App() {
   { label: "SoundCloud", href: "https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY" },
 ];
 
-  const PRAYER_SHORT_URL = "https://www.youtube.com/@Messedupgame";
+  const PRAYER_SHORT_URL = "https://www.youtube.com/@utahsalright";
   const PRAYER_SHORT_ID = "tA4mF_4hBJs";
 
   const BENEFITS_DOC_URL =
