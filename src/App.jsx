@@ -18,10 +18,11 @@ export default function App() {
 
   const CONTACT_EMAIL = "mailto:tom@gotbackuptomb.com";
 
-  const SOCIAL_LINKS = [
-    { label: "YouTube", href: "https://www.youtube.com/@Messedupgame";
-    { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
-    { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
+ const SOCIAL_LINKS = [
+  { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
+  { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
+  { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
+];
     { label: "X", href: "https://x.com/saveplanetusa" },
     { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
     { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
