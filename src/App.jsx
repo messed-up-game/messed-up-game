@@ -22,12 +22,11 @@ export default function App() {
   { label: "YouTube", href: "https://www.youtube.com/@Messedupgame" },
   { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
   { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
+  { label: "X", href: "https://x.com/saveplanetusa" },
+  { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
+  { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
+  { label: "SoundCloud", href: "https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY" },
 ];
-    { label: "X", href: "https://x.com/saveplanetusa" },
-    { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
-    { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
-    { label: "SoundCloud", href: "https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY" },
-  ];
 
   const PRAYER_SHORT_URL = "https://www.youtube.com/@Messedupgame" },
   const PRAYER_SHORT_ID = "tA4mF_4hBJs";
