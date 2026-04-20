@@ -1504,19 +1504,22 @@ const ElonRoastHero = () => (
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
-        <header style={{ marginBottom: 18 }}>
-          <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-            The Messed Up Game™
-          </h1>
+       <header style={{ marginBottom: 18 }}>
+  <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
+    The Messed Up Game™
+  </h1>
 
-          <p style={{ marginTop: 8, opacity: 0.9 }}>
-            Family-friendly, hilarious, and brain-boosting — play live or solo.
-          </p>
+  <p style={{ marginTop: 8, opacity: 0.9 }}>
+    Family-friendly, hilarious, and brain-boosting — play live or solo.
+  </p>
 
-          <p style={{ marginTop: 6, opacity: 0.95 }}>
-            The Messed Up Game™ is a live hosted social party game created by Tom Butler.
-          </p>
-        </header>
+  <p style={{ marginTop: 6, opacity: 0.95 }}>
+    The Messed Up Game™ is a live hosted social party game created by Tom Butler.
+  </p>
+</header>
+
+<ElonRoastHero />
+
 <MarkoMaxSection />
     <h2 style={{ fontSize: 30, marginBottom: 12 }}>
   💰 The #1 Income Opportunity + Memory Protection System
