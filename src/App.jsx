@@ -37,7 +37,7 @@ const SOCIAL_LINKS = [
   const [mode, setMode] = useState("home");
   const MARKO_MAX_VIDEO =
     "https://s3endpoint.markomax.com/markomax/64c42a5f-32e7-41f6-af35-7c792f0d6ab9/8ed4f916-a262-4bd3-aac0-f75777a95747.mp4";
-const Woods420Hero = () => (
+
   <section
     style={{
       maxWidth: 1000,
@@ -87,7 +87,8 @@ const Woods420Hero = () => (
   </section>
 );
 <Woods420Hero />  
-const ElonRoastHero = () => (
+<Woods420Hero />
+<ElonRoastHero />
   <section
     style={{
       maxWidth: 1000,
