@@ -37,6 +37,56 @@ const SOCIAL_LINKS = [
   const [mode, setMode] = useState("home");
   const MARKO_MAX_VIDEO =
     "https://s3endpoint.markomax.com/markomax/64c42a5f-32e7-41f6-af35-7c792f0d6ab9/8ed4f916-a262-4bd3-aac0-f75777a95747.mp4";
+const Woods420Hero = () => (
+  <section
+    style={{
+      maxWidth: 1000,
+      margin: "20px auto 10px",
+      padding: "24px 16px",
+      borderRadius: 18,
+      background: "linear-gradient(135deg, #064e3b, #022c22)",
+      color: "#fff",
+      textAlign: "center",
+      boxShadow: "0 20px 50px rgba(0,0,0,0.45)",
+    }}
+  >
+    <h1 style={{ fontSize: 34, marginBottom: 10 }}>
+      🌿 NEW: The Woods 420 Song 🎤
+    </h1>
+
+    <p style={{ opacity: 0.9, marginBottom: 18 }}>
+      A fun custom song inspired by The Woods in West Hollywood.
+    </p>
+
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        maxWidth: 420,
+        margin: "0 auto 16px",
+        borderRadius: 14,
+        overflow: "hidden",
+      }}
+    >
+      <div style={{ paddingTop: "177.78%" }}>
+        <iframe
+          src="https://www.youtube.com/embed/CzLkFmH2wMo"
+          title="The Woods 420 Song"
+          allowFullScreen
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            border: 0,
+          }}
+        />
+      </div>
+    </div>
+  </section>
+);
+<Woods420Hero />  
 const ElonRoastHero = () => (
   <section
     style={{
