@@ -7,6 +7,7 @@ import GotBackupBannerAd from "./components/GotBackupBannerAd";
 import UtahsAlright from "./components/UtahsAlright";
 import WildmanTomSong from "./components/WildmanTomSong";
 import PatrickSong from "./components/PatrickSong";
+import FeaturedVideos from "./components/FeaturedVideos";
 
 export default function App() {
   const [showVideo, setShowVideo] = useState(false);
