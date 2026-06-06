@@ -929,7 +929,9 @@ const MarkoMaxSection = () => (
 
           <GotBackupBannerAd />
 
-          <FeaturedVideos />
+          <div style={{color: "white", textAlign: "center"}}>
+  Featured Videos Test
+</div>
 
           <section
             style={{
