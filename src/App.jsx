@@ -1,4 +1,3 @@
-import ElonRoastHero from "./components/ElonRoastHero";
 // src/App.jsx
 import { useState } from "react";
 import SocialBar from "./components/SocialBar";
