@@ -1,3 +1,4 @@
+import ElonRoastHero from "./components/ElonRoastHero";
 // src/App.jsx
 import { useState } from "react";
 import SocialBar from "./components/SocialBar";
@@ -1434,8 +1435,6 @@ const MarkoMaxSection = () => (
     The Messed Up Game™ is a live hosted social party game created by Tom Butler.
   </p>
 </header>
-
-<ElonRoastHero />
 
 <MarkoMaxSection />
     <h2 style={{ fontSize: 30, marginBottom: 12 }}>
