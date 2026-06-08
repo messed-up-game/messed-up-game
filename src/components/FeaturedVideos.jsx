@@ -1,8 +1,16 @@
 export default function FeaturedVideos() {
   return (
-    <section>
-      <h2>🎬 Featured Videos</h2>
-      <p>Music, comedy, custom songs, and The Messed Up Game.</p>
-    </section>
+    <div
+      style={{
+        background: "red",
+        color: "white",
+        padding: "40px",
+        fontSize: "32px",
+        textAlign: "center",
+      }}
+    >
+      FEATURED VIDEOS IS RENDERING
+    </div>
   );
 }
+
