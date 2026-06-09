@@ -927,9 +927,7 @@ const MarkoMaxSection = () => (
             </blockquote>
           </section>
 
-          <GotBackupBannerAd />
-
-         <FeaturedVideos /> 
+          <GotBackupBannerAd /> 
 
           <section
             style={{
@@ -1432,8 +1430,6 @@ const MarkoMaxSection = () => (
     The Messed Up Game™ is a live hosted social party game created by Tom Butler.
   </p>
 </header>
-
-  </header>
 
 <FeaturedVideos />
 
