@@ -1433,10 +1433,15 @@ const MarkoMaxSection = () => (
   </p>
 </header>
 
+  </header>
+
+<FeaturedVideos />
+
 <MarkoMaxSection />
-    <h2 style={{ fontSize: 30, marginBottom: 12 }}>
+
+<h2 style={{ fontSize: 30, marginBottom: 12 }}>
   💰 The #1 Income Opportunity + Memory Protection System
-</h2>    
+</h2>
         <div
           style={{
             marginBottom: 16,
