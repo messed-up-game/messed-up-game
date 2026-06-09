@@ -1,15 +1,55 @@
 export default function FeaturedVideos() {
+  const videos = [
+    {
+      title: "🌿 The Woods 420 Song",
+      id: "CzLkFmH2wMo",
+    },
+    {
+      title: "😂 Elon Musk Roast",
+      id: "ySkcD4M-QTw",
+    },
+    {
+      title: "🎂 Patrick Birthday Song",
+      id: "mLwoEIiM6XM",
+    },
+    {
+      title: "🎉 Orson Wins The Messed Up Game",
+      id: "ZDxGMx3tGDk",
+    },
+  ];
+
   return (
-    <div
-      style={{
-        background: "red",
-        color: "white",
-        padding: 30,
-        textAlign: "center",
-        fontSize: 32,
-      }}
-    >
-      FEATURED VIDEOS WORKING
-    </div>
+    <section style={{ margin: "30px 0" }}>
+      <h2 style={{ textAlign: "center" }}>
+        🎬 Featured Videos
+      </h2>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+          gap: 20,
+        }}
+      >
+        {videos.map((video) => (
+          <div key={video.id}>
+            <iframe
+              src={`https://www.youtube.com/embed/${video.id}`}
+              title={video.title}
+              allowFullScreen
+              style={{
+                width: "100%",
+                height: "500px",
+                border: 0,
+              }}
+            />
+            <p style={{ textAlign: "center" }}>
+              {video.title}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
+
