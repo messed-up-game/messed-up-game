@@ -1430,7 +1430,56 @@ const MarkoMaxSection = () => (
     The Messed Up Game™ is a live hosted social party game created by Tom Butler.
   </p>
 </header>
+<div
+  style={{
+    textAlign: "center",
+    margin: "20px 0",
+  }}
+>
+  <h2>🏆 Live Championship Tournament</h2>
 
+  <p>
+  🏆 Only 9 players compete. Winner receives 90% of the prize pool.
+  Are you the Smartest Stranger in America?
+</p>
+
+  <a
+    hrefhttps://buy.stripe.com/eVq4gB9Wc3T90addPq2Ry00
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      padding: "18px 28px",
+      background: "#22c55e",
+      color: "#041b0a",
+      borderRadius: "12px",
+      fontWeight: "900",
+      textDecoration: "none",
+      fontSize: "24px",
+      marginRight: "10px",
+    }}
+  >
+    🎲 PLAY LIVE – $10 ENTRY
+  </a>
+
+  <a
+    href="https://youtube.com/@messedupgame"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      padding: "18px 28px",
+      background: "#dc2626",
+      color: "white",
+      borderRadius: "12px",
+      fontWeight: "900",
+      textDecoration: "none",
+      fontSize: "24px",
+    }}
+  >
+    📺 WATCH FREE
+  </a>
+</div>
 <FeaturedVideos />
 
 <MarkoMaxSection />
