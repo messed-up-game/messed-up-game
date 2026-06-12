@@ -1444,7 +1444,7 @@ const MarkoMaxSection = () => (
 </p>
 
   <a
-    href="https://buy.stripe.com/eVq4gB9Wc3T90addPq2Ry00"
+    https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01
     target="_blank"
     rel="noopener noreferrer"
     style={{
