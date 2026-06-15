@@ -1430,6 +1430,62 @@ const MarkoMaxSection = () => (
     The Messed Up Game™ is a live hosted social party game created by Tom Butler.
   </p>
 </header>
+
+<section
+  style={{
+    margin: "30px 0",
+    textAlign: "center",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.04)",
+  }}
+>
+  <h2>🎲 How To Play The Messed Up Game™</h2>
+
+  <p style={{ opacity: 0.9 }}>
+    Learn the rules in less than 30 seconds.
+  </p>
+
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      maxWidth: "400px",
+      margin: "0 auto",
+      paddingTop: "177.78%",
+      borderRadius: 16,
+      overflow: "hidden",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+      border: "1px solid rgba(255,255,255,.12)",
+    }}
+  >
+    <iframe
+      src="https://www.youtube.com/embed/RXin0S618tM"
+      title="How To Play The Messed Up Game"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+    />
+  </div>
+
+  <p style={{ marginTop: 15 }}>
+    ⏱️ 10 Seconds To Answer
+    <br />
+    ❌ Repeat An Answer? Strike
+    <br />
+    ❌ Can't Answer? Strike
+    <br />
+    🏆 Last Player Standing Wins
+  </p>
+</section>
+
 <div
   style={{
     textAlign: "center",
@@ -1444,7 +1500,8 @@ const MarkoMaxSection = () => (
 </p>
 
   <a
-    https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01
+    <a
+  href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
     target="_blank"
     rel="noopener noreferrer"
     style={{
@@ -1481,6 +1538,88 @@ const MarkoMaxSection = () => (
   </a>
 </div>
 <FeaturedVideos />
+
+<section
+  style={{
+    margin: "30px 0",
+    textAlign: "center",
+    padding: 18,
+    borderRadius: 16,
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(255,255,255,.04)",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2>🎲 How To Play The Messed Up Game™</h2>
+
+  <p style={{ opacity: 0.9 }}>
+    Learn the rules in less than 30 seconds!
+  </p>
+
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      maxWidth: "400px",
+      margin: "0 auto",
+      paddingTop: "177.78%",
+      borderRadius: 16,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.12)",
+      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
+    }}
+  >
+    <iframe
+      src="https://www.youtube.com/embed/RXin0S618tM"
+      title="How To Play The Messed Up Game"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+    />
+  </div>
+
+  <p
+    style={{
+      marginTop: 15,
+      fontSize: "18px",
+      lineHeight: 1.7,
+      fontWeight: "700",
+    }}
+  >
+    ⏱️ 10 Seconds To Answer
+    <br />
+    ❌ Repeat An Answer? Strike
+    <br />
+    ❌ Can't Answer? Strike
+    <br />
+    🏆 Last Player Standing Wins
+  </p>
+
+  <a
+    href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      marginTop: "15px",
+      padding: "14px 24px",
+      background: "#22c55e",
+      color: "#041b0a",
+      borderRadius: "12px",
+      fontWeight: "900",
+      textDecoration: "none",
+      fontSize: "20px",
+    }}
+  >
+    🎲 JOIN THE NEXT TOURNAMENT
+  </a>
+</section>
 
 <MarkoMaxSection />
 
