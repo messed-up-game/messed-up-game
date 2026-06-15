@@ -1500,10 +1500,10 @@ const MarkoMaxSection = () => (
 </p>
 
   <a
-    <a
   href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
-    target="_blank"
-    rel="noopener noreferrer"
+  target="_blank"
+  rel="noopener noreferrer"
+  
     style={{
       display: "inline-block",
       padding: "18px 28px",
