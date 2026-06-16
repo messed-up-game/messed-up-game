@@ -508,7 +508,6 @@ const MarkoMaxSection = () => (
               Sign Up
             </a>
           </nav>
-<UtahsAlright />
 
 <section
   id="newsletter"
