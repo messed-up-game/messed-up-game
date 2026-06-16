@@ -521,143 +521,6 @@ const MarkoMaxSection = () => (
   }}
 >
   <div
-    id="got-backup-ghana"
-    aria-hidden="true"
-    style={{ scrollMarginTop: 90 }}
-  />
-
-            <h1 style={{ margin: "0 0 6px", fontSize: "1.9rem", fontWeight: 900 }}>
-              A Global Mission: Protecting Memories, Building Opportunity 🌍💾
-            </h1>
-
-            <p style={{ margin: "0 0 14px", opacity: 0.9 }}>
-              A message from Got Backup President <strong>Joel Therien</strong> after
-              an incredible event in Accra, Ghana — and how it connects to our
-              mission with <strong>The Messed Up Game™</strong>.
-            </p>
-
-            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-              A Message from Our President
-            </h2>
-
-            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-              To our leadership family in Accra, Ghana — thank you from the bottom
-              of our hearts. We came to meet colleagues, and we left with a new
-              family. ❤️ Nearly <strong>800 people</strong> packed the room — and one
-              truth was clear: <strong>everyone has a phone… and everyone cares about
-              what’s on it.</strong>
-            </p>
-
-            <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-              <li>Photos &amp; videos</li>
-              <li>WhatsApp messages</li>
-              <li>Business files &amp; documents</li>
-              <li>Banking apps</li>
-            </ul>
-
-            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-              People immediately asked:{" "}
-              <strong>
-                “If I lose my phone or my computer crashes… my files are still safe?”
-              </strong>{" "}
-              That’s when it clicked —{" "}
-              <strong>devices can be replaced, memories and data can’t.</strong>
-            </p>
-
-            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-              Why Got Backup Works Anywhere
-            </h2>
-
-            <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-              <li>🌍 Works worldwide — if people use phones or computers, they need Got Backup</li>
-              <li>📱💻 Protects Android, iPhone, Windows, and Mac</li>
-              <li>💬 Simple message: “Lose the device, keep your photos and files.”</li>
-              <li>🚫 No shipping, no borders — 100% digital and instantly delivered</li>
-            </ul>
-
-            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-              How This Connects to The Messed Up Game™ 🧠😂
-            </h2>
-
-            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-  Our mission is also about protecting what matters — including the
-  memories we create together. <strong>The Messed Up Game™</strong>{" "}
-  wakes people up with laughter and helps improve cognitive function
-  because players have to remember what others said.
-</p>
-
-            <p style={{ margin: "0 0 12px", lineHeight: 1.6, opacity: 0.95 }}>
-              Learn more and play live:{" "}
-              <a
-                href="https://www.messedupgame.com"
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: "#7bdff6", textDecoration: "none" }}
-              >
-                www.messedupgame.com
-              </a>
-            </p>
-
-            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-              The Opportunity (Simple &amp; Powerful)
-            </h2>
-
-            <ul style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-              <li><strong>$20</strong> one-time yearly affiliate fee</li>
-              <li><strong>$9.97/month</strong></li>
-              <li><strong>6 TB</strong> total storage (split with 5 others = 500+ GB each)</li>
-              <li>
-                Gift protection to families (including in Ghana) so they never worry
-                about losing photos, videos, or documents
-              </li>
-            </ul>
-
-            <h2 style={{ margin: "16px 0 8px", fontSize: "1.25rem", fontWeight: 900 }}>
-              Your Next Steps
-            </h2>
-
-            <ol style={{ margin: "0 0 12px 18px", lineHeight: 1.6, opacity: 0.95 }}>
-              <li>Share the story from Ghana — people instantly understood Got Backup.</li>
-              <li>
-                Ask: <strong>“If your phone or computer died today… what would you lose?”</strong>
-              </li>
-              <li>Think global — anywhere there’s a device, there’s a Got Backup customer.</li>
-            </ol>
-
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 10 }}>
-              <a
-                href="https://willbackyouup.gotbackuptour.com"
-                target="_blank"
-                rel="noreferrer"
-                style={{ ...buttonStyle, textDecoration: "none" }}
-              >
-                Get Your Affiliate Link
-              </a>
-
-              <a
-                href="#top"
-                style={{ ...ghostButtonStyle, textDecoration: "none" }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                Back to Top ↑
-              </a>
-            </div>
-
-            <p style={{ marginTop: 14, opacity: 0.9 }}>
-              Questions? Email me at{" "}
-              <a
-                href={CONTACT_EMAIL}
-                style={{ color: "#7bdff6", textDecoration: "none" }}
-              >
-                {CONTACT_EMAIL.replace("mailto:", "")}
-              </a>
-              .
-            </p>
-          </section>
-
           <section
             id="now-hiring"
             style={{
@@ -860,7 +723,8 @@ fontSize: "20px",
 
   </a>
 </section>
-
+<h2>🏆 Live Championship Tournament</h2>
+  
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
           Read the latest updates, tournament announcements, and stories from Wildman Tom B.
           </p>
