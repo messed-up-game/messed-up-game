@@ -1518,108 +1518,45 @@ const MarkoMaxSection = () => (
   >
     🎲 PLAY LIVE – $10 ENTRY
   </a>
-
-  <a
-    href="https://youtube.com/@messedupgame"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: "inline-block",
-      padding: "18px 28px",
-      background: "#dc2626",
-      color: "white",
-      borderRadius: "12px",
-      fontWeight: "900",
-      textDecoration: "none",
-      fontSize: "24px",
-    }}
-  >
-    📺 WATCH FREE
-  </a>
-</div>
-<FeaturedVideos />
-
-<section
+<a
+  href="https://youtube.com/@messedupgame"
+  target="_blank"
+  rel="noopener noreferrer"
   style={{
-    margin: "30px 0",
-    textAlign: "center",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.04)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+    display: "inline-block",
+    padding: "18px 28px",
+    background: "#dc2626",
+    color: "white",
+    borderRadius: "12px",
+    fontWeight: "900",
+    textDecoration: "none",
+    fontSize: "24px",
   }}
 >
-  <h2>🎲 How To Play The Messed Up Game™</h2>
+  📺 WATCH FREE
+</a>
 
-  <p style={{ opacity: 0.9 }}>
-    Learn the rules in less than 30 seconds!
-  </p>
-
-  <div
+<div style={{ marginTop: "15px" }}>
+  <button
     style={{
-      position: "relative",
-      width: "100%",
-      maxWidth: "400px",
-      margin: "0 auto",
-      paddingTop: "177.78%",
-      borderRadius: 16,
-      overflow: "hidden",
-      border: "1px solid rgba(255,255,255,.12)",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-    }}
-  >
-    <iframe
-      src="https://www.youtube.com/embed/RXin0S618tM"
-      title="How To Play The Messed Up Game"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        border: 0,
-      }}
-    />
-  </div>
-
-  <p
-    style={{
-      marginTop: 15,
-      fontSize: "18px",
-      lineHeight: 1.7,
-      fontWeight: "700",
-    }}
-  >
-    ⏱️ 10 Seconds To Answer
-    <br />
-    ❌ Repeat An Answer? Strike
-    <br />
-    ❌ Can't Answer? Strike
-    <br />
-    🏆 Last Player Standing Wins
-  </p>
-
-  <a
-    href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: "inline-block",
-      marginTop: "15px",
       padding: "14px 24px",
-      background: "#22c55e",
-      color: "#041b0a",
+      background: "#facc15",
+      color: "#111827",
+      border: "none",
       borderRadius: "12px",
       fontWeight: "900",
-      textDecoration: "none",
+      cursor: "pointer",
       fontSize: "20px",
     }}
+    onClick={() => setMode("newsletter")}
   >
-    🎲 JOIN THE NEXT TOURNAMENT
-  </a>
-</section>
+    📰 Join Our Newsletter
+  </button>
+</div>
+  
+</div>
+        
+<FeaturedVideos />
 
 <MarkoMaxSection />
 
