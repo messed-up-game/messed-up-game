@@ -705,9 +705,165 @@ const MarkoMaxSection = () => (
           <h1 style={{ margin: "0 0 8px", fontSize: "2rem", fontWeight: 900 }}>
             📰 Newsletter
           </h1>
+<section
+  style={{
+    maxWidth: 850,
+    margin: "0 auto 24px",
+    padding: 24,
+    borderRadius: 16,
+    background: "rgba(34,197,94,.12)",
+    border: "2px solid #22c55e",
+    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
+  }}
+>
+  <h2>🎲 Why I Created The Messed Up Game™</h2>
+
+  <p>
+    Hi, I'm Tom Butler, also known as Wildman Tom B.
+  </p>
+
+  <p>
+    I created The Messed Up Game™ because I wanted a simple way to bring
+    people together. Too many people spend time looking at screens without
+    connecting with each other. I wanted a game that would create laughter,
+    challenge the mind, and help people make new friends.
+  </p>
+
+  <p>
+    The game is easy to learn but surprisingly challenging. Players have only
+    10 seconds to answer. Repeat an answer or get stuck and you earn a strike.
+    Three strikes and you're out.
+  </p>
+
+  <p>
+    My dream is to bring The Messed Up Game™ to families, churches, senior
+    communities, schools, restaurants, bars, and live online tournaments
+    throughout the world.
+  </p>
+
+  <p style={{ fontWeight: 800 }}>
+    Thank you for being part of the journey.
+  </p>
+
+  <p style={{ fontWeight: 900 }}>
+    — Wildman Tom B
+  </p>
+</section>
+
+<section
+  style={{
+    maxWidth: 700,
+    margin: "0 auto 24px",
+    padding: 24,
+    borderRadius: 16,
+    textAlign: "center",
+    background: "rgba(250,204,21,.15)",
+    border: "2px solid #facc15",
+  }}
+>
+  <h2>📰 Join Our Newsletter</h2>
+
+  <p>
+    Get tournament updates, sports picks, custom songs, faith inspiration,
+    and special announcements from Wildman Tom B.
+  </p>
+
+  <form
+    name="newsletter"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="newsletter" />
+    <input type="hidden" name="bot-field" />
+
+```
+<input
+  type="email"
+  name="email"
+  required
+  placeholder="Enter your email"
+  style={{
+    width: "100%",
+    maxWidth: "350px",
+    padding: "12px",
+    borderRadius: "10px",
+    marginBottom: "12px",
+  }}
+/>
+
+<br />
+
+<button
+  type="submit"
+  style={{
+    padding: "12px 24px",
+    background: "#22c55e",
+    color: "#041b0a",
+    border: "none",
+    borderRadius: "12px",
+    fontWeight: "900",
+    cursor: "pointer",
+  }}
+>
+  Join Newsletter
+</button>
+```
+
+  </form>
+</section>
+
+<section
+  style={{
+    maxWidth: 700,
+    margin: "0 auto 24px",
+    padding: 24,
+    borderRadius: 16,
+    textAlign: "center",
+    background: "rgba(34,197,94,.12)",
+    border: "2px solid #22c55e",
+  }}
+>
+  <h2>🏆 Live Championship Tournament</h2>
+
+  <p style={{ fontWeight: 800 }}>
+    🎲 Only 9 Players Compete
+  </p>
+
+  <p>
+    💵 $10 Entry Fee
+    <br />
+    🏆 Winner Receives 90% Of The Prize Pool
+    <br />
+    🎁 First Signup Receives A FREE Signed Deck
+  </p>
+
+<a
+href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
+target="_blank"
+rel="noopener noreferrer"
+style={{
+display: "inline-block",
+padding: "14px 24px",
+background: "#22c55e",
+color: "#041b0a",
+borderRadius: "12px",
+fontWeight: "900",
+textDecoration: "none",
+fontSize: "20px",
+}}
+
+>
+
+```
+🎲 REGISTER NOW
+```
+
+  </a>
+</section>
 
           <p style={{ opacity: 0.9, maxWidth: 700 }}>
-            Read the latest updates and stories. No signup required.
+          Read the latest updates, tournament announcements, and stories from Wildman Tom B.
           </p>
 
           <button
