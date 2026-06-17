@@ -1462,8 +1462,10 @@ fontSize: "20px",
 >
   <h2>🎲 How To Play The Messed Up Game™</h2>
 
-  <p style={{ opacity: 0.9 }}>
-    Learn the rules in less than 30 seconds.
+  <p style={{ opacity: 0.9, fontWeight: 700 }}>
+  Think fast. Laugh hard. Learn the game in 30 seconds.
+</p>
+  
   </p>
 
   <div
@@ -1480,7 +1482,7 @@ fontSize: "20px",
     }}
   >
     <iframe
-      src="https://www.youtube.com/embed/RXin0S618tM"
+      src="https://www.youtube.com/embed/ljT9CSzHVvU"
       title="How To Play The Messed Up Game"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
