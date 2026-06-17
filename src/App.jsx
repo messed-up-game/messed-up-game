@@ -520,7 +520,6 @@ const MarkoMaxSection = () => (
     padding: 18,
   }}
 >
-  <div
           <section
             id="now-hiring"
             style={{
