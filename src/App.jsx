@@ -1462,8 +1462,6 @@ fontSize: "20px",
   <p style={{ opacity: 0.9, fontWeight: 700 }}>
   Think fast. Laugh hard. Learn the game in 30 seconds.
 </p>
-  
-  </p>
 
   <div
     style={{
