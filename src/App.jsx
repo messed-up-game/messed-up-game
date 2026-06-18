@@ -956,44 +956,38 @@ fontSize: "20px",
               📩 Join the Newsletter (Optional)
             </h2>
 
-            <form
-              name="newsletter"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/?newsletter=success"
-            >
-              
-to:
+<form
+  name="newsletter"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/?newsletter=success"
+>
+  <input type="hidden" name="form-name" value="newsletter" />
+  <input type="hidden" name="bot-field" />
 
-```jsx
-<input type="hidden" name="form-name" value="newsletter" />
-<input type="hidden" name="bot-field" />
-
-<input
-  type="email"
-
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Enter your email"
-                  style={{
-                    flex: "1 1 260px",
-                    padding: "12px 14px",
-                    fontSize: 16,
-                    borderRadius: 12,
-                    border: "1px solid rgba(255,255,255,.18)",
-                    background: "rgba(0,0,0,.25)",
-                    color: "white",
-                  }}
-                />
-                <button type="submit" style={buttonStyle}>
-                  Join
-                </button>
-              </div>
-            </form>
+  <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+    <input
+     type="email"
+     name="email"
+     required
+     placeholder="Enter your email"
+     style={{
+       flex: "1 1 260px",
+       padding: "12px 14px",
+       fontSize: 16,
+       borderRadius: 12,
+       border: "1px solid rgba(255,255,255,.18)",
+       background: "rgba(0,0,0,.25)",
+       color: "white",
+     }}
+   />
+    
+   <button type="submit" style={buttonStyle}>
+     Join
+   </button>
+ </div>     
+</form>
           </section>
         </div>
       </main>
