@@ -669,8 +669,10 @@ marginBottom: "12px",
   Join Newsletter
 </button>
 
-</form>    
-    
+</form>
+
+</section>
+
 <section
   style={{
     maxWidth: 700,
