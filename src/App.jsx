@@ -622,38 +622,37 @@ const MarkoMaxSection = () => (
     border: "2px solid #facc15",
   }}
 >
-  <h2>📰 Join Our Newsletter</h2>
+<h2>📰 Join Our Newsletter</h2>
 
-  <p>
-    Get tournament updates, sports picks, custom songs, faith inspiration,
-    and special announcements from Wildman Tom B.
-  </p>
+<p>
+  Get tournament updates, sports picks, custom songs, faith inspiration,
+  and special announcements from Wildman Tom B.
+</p>
 
-  <form
-    name="newsletter"
-    method="POST"
-    data-netlify="true"
-    netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="form-name" value="newsletter" />
-    <input type="hidden" name="bot-field" />
+<form
+  name="newsletter"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="newsletter" />
+  <input type="hidden" name="bot-field" />
 
-```
 <input
-  type="email"
-  name="email"
-  required
-  placeholder="Enter your email"
-  style={{
-    width: "100%",
-    maxWidth: "350px",
-    padding: "12px",
-    borderRadius: "10px",
-    marginBottom: "12px",
-  }}
+type="email"
+name="email"
+required
+placeholder="Enter your email"
+style={{
+width: "100%",
+maxWidth: "350px",
+padding: "12px",
+borderRadius: "10px",
+marginBottom: "12px",
+}}
 />
 
-<br />
+  <br />
 
 <button
   type="submit"
@@ -669,11 +668,9 @@ const MarkoMaxSection = () => (
 >
   Join Newsletter
 </button>
-```
 
-  </form>
-</section>
-
+</form>    
+    
 <section
   style={{
     maxWidth: 700,
@@ -725,7 +722,14 @@ fontSize: "20px",
 </p>
 
 <button
-...
+  style={{
+    ...ghostButtonStyle,
+    display: "block",
+    maxWidth: 560,
+    margin: "6px auto 14px",
+    fontWeight: 900,
+  }}
+  onClick={() => setMode("sponsors")}
 >
   ⭐ Our Sponsors &amp; Advertisers
 </button>
@@ -957,8 +961,15 @@ fontSize: "20px",
               netlify-honeypot="bot-field"
               action="/?newsletter=success"
             >
-              <input type="hidden" name="form-name" value="newsletter" />
-              <input type="hidden" name="bot-field" />
+              
+to:
+
+```jsx
+<input type="hidden" name="form-name" value="newsletter" />
+<input type="hidden" name="bot-field" />
+
+<input
+  type="email"
 
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <input
