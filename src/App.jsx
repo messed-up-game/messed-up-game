@@ -988,12 +988,14 @@ fontSize: "20px",
    </button>
  </div>     
 </form>
-          </section>
-        </div>
-      </main>
-    );
-  }
+</section>
 
+</section> 
+
+</div>
+</main>
+);
+}
   // Community Centers screen
   if (mode === "communityCenters") {
     return (
