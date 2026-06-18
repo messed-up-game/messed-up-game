@@ -715,31 +715,20 @@ fontSize: "20px",
 }}
 
 >
-
-```
-🎲 REGISTER NOW
-```
-
+  🎲 REGISTER NOW
   </a>
-</section>
-<h2>🏆 Live Championship Tournament</h2>
   
-          <p style={{ opacity: 0.9, maxWidth: 700 }}>
-          Read the latest updates, tournament announcements, and stories from Wildman Tom B.
-          </p>
+</section>
 
-          <button
-            style={{
-              ...ghostButtonStyle,
-              display: "block",
-              maxWidth: 560,
-              margin: "6px auto 14px",
-              fontWeight: 900,
-            }}
-            onClick={() => setMode("sponsors")}
-          >
-            ⭐ Our Sponsors &amp; Advertisers
-          </button>
+<p style={{ opacity: 0.9, maxWidth: 700 }}>
+  Read the latest updates, tournament announcements, and stories from Wildman Tom B.
+</p>
+
+<button
+...
+>
+  ⭐ Our Sponsors &amp; Advertisers
+</button>
 
           <section
             style={{
