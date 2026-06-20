@@ -1573,7 +1573,24 @@ fontSize: "20px",
 </div>
         
 <FeaturedVideos />
+        
+<section style={{ margin: "30px 0", textAlign: "center" }}>
+  <h2>💪 Chuck Norris Strength — God Changes Lives!</h2>
+  <p style={{ fontSize: 18, fontWeight: 700 }}>
+    Wildman Tom B’s original song tribute to Chuck Norris, faith, and the power of God.
+    🔥 1,800+ views and growing!
+  </p>
 
+  <iframe
+    width="315"
+    height="560"
+    src="https://www.youtube.com/embed/bxBZ5UZvSek"
+    title="Chuck Norris Strength"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+</section>
 <MarkoMaxSection />
 
 <h2 style={{ fontSize: 30, marginBottom: 12 }}>
