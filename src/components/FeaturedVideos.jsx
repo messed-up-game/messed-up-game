@@ -1,18 +1,22 @@
 export default function FeaturedVideos() {
   const videos = [
     {
-      title: "🌿 The Woods 420 Song",
-      id: "CzLkFmH2wMo",
-    },
-    {
+  title: "🌿 The Woods Dispensary Song",
+  id: "gmiwPLcU2oo",
+},
+{
       title: "😂 Elon Musk Roast",
       id: "ySkcD4M-QTw",
     },
     {
+    title: "💪 Chuck Norris Strength — God Changes Lives",
+    id: "bxBZ5UZvSek",
+  },
+  {
       title: "🎂 Patrick Birthday Song",
       id: "mLwoEIiM6XM",
-    },
-    {
+  },
+  {
       title: "🎉 Orson Wins The Messed Up Game",
       id: "ZDxGMx3tGDk",
     },
