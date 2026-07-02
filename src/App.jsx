@@ -1433,673 +1433,390 @@ fontSize: "20px",
   return (
     <main style={pageStyle}>
       <div style={containerStyle}>
-       <header style={{ marginBottom: 18 }}>
-  <h1 style={{ margin: 0, fontSize: "2.1rem", fontWeight: 900 }}>
-    The Messed Up Game™
-  </h1>
-
-  <p style={{ marginTop: 8, opacity: 0.9 }}>
-    Family-friendly, hilarious, and brain-boosting — play live or solo.
-  </p>
-
-  <p style={{ marginTop: 6, opacity: 0.95 }}>
-    The Messed Up Game™ is a live hosted social party game created by Tom Butler.
-  </p>
-</header>
-
-<section
-  style={{
-    margin: "30px 0",
-    textAlign: "center",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.04)",
-  }}
->
-  <h2>🎲 How To Play The Messed Up Game™</h2>
-
-  <p style={{ opacity: 0.9, fontWeight: 700 }}>
-  Think fast. Laugh hard. Learn the game in 30 seconds.
-</p>
-
-  <div
-    style={{
-      position: "relative",
-      width: "100%",
-      maxWidth: "400px",
-      margin: "0 auto",
-      paddingTop: "177.78%",
-      borderRadius: 16,
-      overflow: "hidden",
-      boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-      border: "1px solid rgba(255,255,255,.12)",
-    }}
-  >
-    <iframe
-      src="https://www.youtube.com/embed/ljT9CSzHVvU"
-      title="How To Play The Messed Up Game"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        border: 0,
-      }}
-    />
-  </div>
-
-  <p style={{ marginTop: 15 }}>
-    ⏱️ 10 Seconds To Answer
-    <br />
-    ❌ Repeat An Answer? Strike
-    <br />
-    ❌ Can't Answer? Strike
-    <br />
-    🏆 Last Player Standing Wins
-  </p>
-</section>
-
-<div
-  style={{
-    textAlign: "center",
-    margin: "20px 0",
-  }}
->
-  <h2>🏆 Live Championship Tournament</h2>
-
-  <p>
-  🏆 Only 9 players compete. Winner receives 90% of the prize pool.
-  Are you the Smartest Stranger in America?
-</p>
-
-  <a
-  href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
-  target="_blank"
-  rel="noopener noreferrer"
-  
-    style={{
-      display: "inline-block",
-      padding: "18px 28px",
-      background: "#22c55e",
-      color: "#041b0a",
-      borderRadius: "12px",
-      fontWeight: "900",
-      textDecoration: "none",
-      fontSize: "24px",
-      marginRight: "10px",
-    }}
-  >
-    🎲 PLAY LIVE – $10 ENTRY
-  </a>
-<a
-  href="https://youtube.com/@messedupgame"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: "inline-block",
-    padding: "18px 28px",
-    background: "#dc2626",
-    color: "white",
-    borderRadius: "12px",
-    fontWeight: "900",
-    textDecoration: "none",
-    fontSize: "24px",
-  }}
->
-  📺 WATCH FREE
-</a>
-
-<div style={{ marginTop: "15px" }}>
-  <button
-    style={{
-      padding: "14px 24px",
-      background: "#facc15",
-      color: "#111827",
-      border: "none",
-      borderRadius: "12px",
-      fontWeight: "900",
-      cursor: "pointer",
-      fontSize: "20px",
-    }}
-    onClick={() => setMode("newsletter")}
-  >
-    📰 Join Our Newsletter
-  </button>
-</div>
-  
-</div>
-        
-<FeaturedVideos />
-        
-<section style={{ margin: "30px 0", textAlign: "center" }}>
-  <h2>💪 Chuck Norris Strength — God Changes Lives!</h2>
-  <p style={{ fontSize: 18, fontWeight: 700 }}>
-    Wildman Tom B’s original song tribute to Chuck Norris, faith, and the power of God.
-    🔥 1,800+ views and growing!
-  </p>
-
-  <iframe
-    width="315"
-    height="560"
-    src="https://www.youtube.com/embed/bxBZ5UZvSek"
-    title="Chuck Norris Strength"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  />
-</section>
-<MarkoMaxSection />
-
-<h2 style={{ fontSize: 30, marginBottom: 12 }}>
-  💰 The #1 Income Opportunity + Memory Protection System
-</h2>
-        <div
+        <section
           style={{
-            marginBottom: 16,
-            padding: "10px 14px",
-            borderRadius: 12,
-            textAlign: "center",
-            fontWeight: 900,
-            fontSize: 16,
-            background: "linear-gradient(90deg, #22c55e, #16a34a)",
-            color: "#041b0a",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
-            cursor: "pointer",
+            padding: "22px 0 12px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 14,
+            flexWrap: "wrap",
           }}
-          onClick={() => setMode("newsletter")}
         >
-          🌍 Now Hiring – Hosts &amp; Sales Reps (Click)
-        </div>
+          <div>
+            <p
+              style={{
+                margin: "0 0 6px",
+                color: "#facc15",
+                fontWeight: 900,
+                letterSpacing: 1.2,
+                textTransform: "uppercase",
+              }}
+            >
+              Wildman Tom B Productions
+            </p>
+            <h1 style={{ margin: 0, fontSize: "clamp(2.4rem, 8vw, 5.6rem)", lineHeight: 0.95, fontWeight: 950 }}>
+              Games. Music. Comedy. Faith.
+            </h1>
+          </div>
 
-        <section style={{ margin: "28px 0 24px" }}>
+          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+            📰 Join Newsletter
+          </button>
+        </section>
+
+        <section
+          style={{
+            margin: "10px 0 28px",
+            padding: "28px 20px",
+            borderRadius: 28,
+            background:
+              "radial-gradient(circle at top left, rgba(250,204,21,.24), transparent 34%), radial-gradient(circle at bottom right, rgba(34,197,94,.22), transparent 34%), rgba(255,255,255,.055)",
+            border: "1px solid rgba(255,255,255,.14)",
+            boxShadow: "0 24px 70px rgba(0,0,0,.38)",
+            overflow: "hidden",
+          }}
+        >
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: 18,
-              alignItems: "start",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 24,
+              alignItems: "center",
             }}
           >
-            <div style={{ textAlign: "center" }}>
-              <h2 style={{ marginBottom: 10 }}>🎂 The Best Birthday Gift Ever?</h2>
-
-              <p style={{ opacity: 0.9 }}>
-                A 15-second birthday song from Dad.
-              </p>
-
-              <div
+            <div>
+              <p
                 style={{
-                  position: "relative",
-                  width: "100%",
-                  paddingTop: "177.78%",
-                  borderRadius: 16,
-                  overflow: "hidden",
-                  boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-                  border: "1px solid rgba(255,255,255,.12)",
+                  display: "inline-block",
+                  margin: "0 0 14px",
+                  padding: "8px 12px",
+                  borderRadius: 999,
+                  background: "rgba(34,197,94,.16)",
+                  border: "1px solid rgba(34,197,94,.38)",
+                  color: "#bbf7d0",
+                  fontWeight: 900,
                 }}
               >
-                <iframe
-                  src="https://www.youtube.com/embed/mLwoEIiM6XM"
-                  title="Patrick's Birthday Song Promo"
+                🎲 The World's Most Entertaining 10 Seconds
+              </p>
+
+              <h2 style={{ margin: "0 0 14px", fontSize: "clamp(2rem, 6vw, 4.4rem)", lineHeight: 1, fontWeight: 950 }}>
+                Play live. Laugh hard. Win cash.
+              </h2>
+
+              <p style={{ margin: "0 0 18px", fontSize: "1.15rem", lineHeight: 1.65, opacity: 0.94, maxWidth: 660 }}>
+                Welcome to the home of <strong>The Messed Up Game™</strong>, original songs,
+                custom music gifts, comedy videos, Christian inspiration, and live entertainment
+                hosted by Wildman Tom B.
+              </p>
+
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
+                <a
+                  href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ ...buttonStyle, padding: "15px 20px", fontSize: 18, textDecoration: "none" }}
+                >
+                  🎲 Play Live — $10 Entry
+                </a>
+
+                <a
+                  href="https://youtube.com/@messedupgame"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: 0,
+                    ...ghostButtonStyle,
+                    padding: "15px 20px",
+                    fontSize: 18,
+                    textDecoration: "none",
+                    borderColor: "rgba(248,113,113,.5)",
+                    background: "rgba(220,38,38,.22)",
                   }}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                >
+                  📺 Watch Free
+                </a>
+
+                <a
+                  href="mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request"
+                  style={{ ...ghostButtonStyle, padding: "15px 20px", fontSize: 18, textDecoration: "none" }}
+                >
+                  🎤 Order a Custom Song
+                </a>
               </div>
+
+              <p style={{ marginTop: 16, color: "#facc15", fontWeight: 900 }}>
+                🏆 Only 9 players compete. Winner receives 90% of the prize pool.
+              </p>
             </div>
 
-            <div style={{ textAlign: "center" }}>
-              <h2 style={{ marginBottom: 10 }}>🎉 Orson Wins The Messed Up Game!</h2>
-
-              <p style={{ opacity: 0.9 }}>
-                Grandpa sings a 16-second victory song.
-              </p>
-
+            <div
+              style={{
+                padding: 14,
+                borderRadius: 24,
+                background: "rgba(0,0,0,.25)",
+                border: "1px solid rgba(255,255,255,.12)",
+                boxShadow: "0 18px 40px rgba(0,0,0,.35)",
+              }}
+            >
+              <h3 style={{ margin: "4px 0 12px", textAlign: "center", fontSize: "1.35rem" }}>
+                🎲 Learn the Game in 30 Seconds
+              </h3>
               <div
                 style={{
                   position: "relative",
                   width: "100%",
                   paddingTop: "177.78%",
-                  borderRadius: 16,
+                  borderRadius: 18,
                   overflow: "hidden",
-                  boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-                  border: "1px solid rgba(255,255,255,.12)",
+                  background: "#000",
                 }}
               >
                 <iframe
-                  src="https://www.youtube.com/embed/ZDxGMx3tGDk"
-                  title="Orson Wins The Messed Up Game"
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: 0,
-                  }}
+                  src="https://www.youtube.com/embed/ljT9CSzHVvU"
+                  title="How To Play The Messed Up Game"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
                 />
               </div>
-
-              <p style={{ marginTop: 10, fontStyle: "italic", opacity: 0.8 }}>
-                Orson Ralph Butler — great-grandson of WWII B-17 tail gunner Ralph
-                Stanford Butler.
-              </p>
             </div>
           </div>
         </section>
 
- {/* 🎶 Custom Song CTA Upgrade */}
-<div
-  id="custom-song"
-  style={{
-    marginTop: 16,
-    padding: 18,
-    background: "rgba(255,255,255,0.06)",
-    borderRadius: 14,
-    border: "1px solid rgba(255,255,255,.12)",
-    textAlign: "center",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h3 style={{ marginBottom: 10, color: "#facc15" }}>
-    ⚾ Dodgers Win? Get 30% OFF a Custom Song 🎤
-  </h3>
-
-  <p style={{ marginBottom: 10, fontWeight: 800 }}>
-    🎶 Want a personalized birthday or victory song for someone special?
-  </p>
-
-  <p style={{ marginBottom: 14, opacity: 0.9 }}>
-    Birthdays • Anniversaries • Victory Songs • Tributes
-  </p>
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: 10,
-      flexWrap: "wrap",
-    }}
-  >
-    <a
-      href="mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request"
-      style={{
-        padding: "12px 18px",
-        background: "#22c55e",
-        color: "#041b0a",
-        fontWeight: 900,
-        borderRadius: 12,
-        textDecoration: "none",
-      }}
-    >
-      🎤 Request Your Song
-    </a>
-
-    <a
-      href="https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY"
-      target="_blank"
-      rel="noreferrer"
-      style={{
-        padding: "12px 18px",
-        background: "#f97316",
-        color: "white",
-        fontWeight: 900,
-        borderRadius: 12,
-        textDecoration: "none",
-      }}
-    >
-      🎧 Hear Example
-    </a>
-  </div>
-</div>
-
-{/* 🎵 MUSIC SECTION */}
-<div
-  style={{
-    margin: "30px 0",
-    padding: "28px 18px",
-    borderRadius: 18,
-    background: "linear-gradient(135deg, #111, #1e1e1e)",
-    color: "#fff",
-    textAlign: "center",
-    boxShadow: "0 10px 30px rgba(0,0,0,.28)",
-  }}
->
-  <h2
-    style={{
-      margin: "0 0 10px",
-      fontSize: "2rem",
-      fontWeight: 900,
-      color: "#facc15",
-    }}
-  >
-    🎵 Music by Wildman Tom B
-  </h2>
-
-  <p
-    style={{
-      maxWidth: 760,
-      margin: "0 auto 18px",
-      lineHeight: 1.6,
-      opacity: 0.95,
-    }}
-  >
-    Custom birthday songs, victory songs, and music made to celebrate the people you love.
-    No signup needed — just press play.
-  </p>
-
-  {/* 🔘 Buttons */}
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: 12,
-      marginTop: 16,
-      marginBottom: 24,
-    }}
-  >
-    <a
-      href="mailto:tom@gotbackuptomb.com?subject=Custom Song Request"
-      style={{
-        padding: "12px 18px",
-        background: "#eab308",
-        color: "#111",
-        fontWeight: 900,
-        borderRadius: 12,
-        textDecoration: "none",
-      }}
-    >
-      🎤 Request Your Song
-    </a>
-
-    <a
-      href="https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY"
-      target="_blank"
-      rel="noreferrer"
-      style={{
-        padding: "12px 18px",
-        background: "#f97316",
-        color: "white",
-        fontWeight: 900,
-        borderRadius: 12,
-        textDecoration: "none",
-      }}
-    >
-      🎧 Hear Example
-    </a>
-  </div>
-
-  {/* 🎵 Featured Song */}
-  <div style={{ textAlign: "center", margin: "20px 0 30px" }}>
-  <img
-    src="/posters/dodgers-poster.jpg"
-    alt="Dodgers $7 Panda Deal"
-    onClick={() => setMode("dodgers")}
-    style={{
-      width: "100%",
-      maxWidth: 520,
-      borderRadius: 16,
-      cursor: "pointer",
-      boxShadow: "0 10px 30px rgba(0,0,0,.4)",
-    }}
-  />
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: 12,
-      marginTop: 16,
-      marginBottom: 24,
-    }}
-  >
-    <button
-      onClick={() => setMode("dodgers")}
-      style={{
-        padding: "12px 18px",
-        background: "#1d4ed8",
-        color: "white",
-        fontWeight: 900,
-        borderRadius: 12,
-        border: "none",
-        cursor: "pointer",
-      }}
-    >
-      ⚾ Dodgers Meal Deal + Custom Songs
-    </button>
-
-    <button
-  onClick={() => setShowVideo(true)}
-  style={{
-    padding: "12px 18px",
-    background: "#22c55e",
-    color: "#041b0a",
-    fontWeight: 900,
-    borderRadius: 12,
-    border: "none",
-    cursor: "pointer",
-  }}
->
-  ▶️ How to Redeem the $7 Panda Deal
-</button>
-  </div>
-</div>
-
-<section style={{ margin: "30px 0", textAlign: "center" }}>
-  <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song (Full Version)</h2>
-  <PatrickSong />
-</section>
-
-        <div style={{ marginTop: 30 }}>
-          <UtahsAlright />
-        </div>
-
-        <section style={{ margin: "22px 0" }}>
-          <h2
-            style={{
-              margin: "0 0 10px",
-              fontSize: "1.5rem",
-              fontWeight: 900,
-            }}
-          >
-            What Is The Messed Up Game?
-          </h2>
-
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              paddingTop: "56.25%",
-              borderRadius: 16,
-              overflow: "hidden",
-              boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-              border: "1px solid rgba(255,255,255,.12)",
-            }}
-          >
-            <iframe
-              title="What Is The Messed Up Game"
-              src="https://www.youtube.com/embed/ju6fYT3K9tQ"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+        <section
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+            gap: 16,
+            margin: "0 0 28px",
+          }}
+        >
+          {[
+            {
+              icon: "🎲",
+              title: "The Messed Up Game",
+              text: "Fast, funny, live tournaments for families, churches, seniors, companies, restaurants, and online players.",
+              action: "Play Solo",
+              onClick: () => setMode("solo"),
+            },
+            {
+              icon: "🎵",
+              title: "Custom Songs",
+              text: "Birthdays, anniversaries, victory songs, tributes, roasts, and one-of-a-kind musical gifts.",
+              action: "Request a Song",
+              href: "mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request",
+            },
+            {
+              icon: "🎤",
+              title: "Live Events",
+              text: "Book Wildman Tom B for corporate events, community centers, churches, fundraisers, sports teams, and parties.",
+              action: "Book Tom",
+              href: CONTACT_EMAIL,
+            },
+            {
+              icon: "🙏",
+              title: "Faith & Inspiration",
+              text: "Original Christian music, encouraging videos, and uplifting messages about hope, grace, and never giving up.",
+              action: "Watch Videos",
+              href: CHANNEL_URL,
+            },
+          ].map((card) => (
+            <div
+              key={card.title}
               style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                border: 0,
+                padding: 20,
+                borderRadius: 18,
+                background: "rgba(255,255,255,.055)",
+                border: "1px solid rgba(255,255,255,.12)",
+                boxShadow: "0 12px 28px rgba(0,0,0,.25)",
               }}
-            />
+            >
+              <div style={{ fontSize: 34, marginBottom: 8 }}>{card.icon}</div>
+              <h3 style={{ margin: "0 0 8px", fontSize: "1.25rem" }}>{card.title}</h3>
+              <p style={{ margin: "0 0 16px", opacity: 0.9, lineHeight: 1.55 }}>{card.text}</p>
+              {card.onClick ? (
+                <button style={ghostButtonStyle} onClick={card.onClick}>{card.action}</button>
+              ) : (
+                <a href={card.href} target={card.href?.startsWith("http") ? "_blank" : undefined} rel="noreferrer" style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-block" }}>
+                  {card.action}
+                </a>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <FeaturedVideos />
+
+        <section
+          style={{
+            margin: "34px 0",
+            padding: "24px 18px",
+            borderRadius: 22,
+            background: "rgba(250,204,21,.11)",
+            border: "1px solid rgba(250,204,21,.35)",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", fontSize: "2rem", color: "#facc15" }}>
+            🏆 Live Championship Tournament
+          </h2>
+          <p style={{ maxWidth: 760, margin: "0 auto 18px", lineHeight: 1.65, opacity: 0.95 }}>
+            9 players. 10 seconds to answer. Three strikes and you're out. Last player standing wins
+            90% of the prize pool. Are you the Smartest Stranger in America?
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
+            <a
+              href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ ...buttonStyle, textDecoration: "none", padding: "15px 22px", fontSize: 18 }}
+            >
+              🎲 Register Now
+            </a>
+            <button style={{ ...ghostButtonStyle, padding: "15px 22px", fontSize: 18 }} onClick={() => setMode("solo")}>
+              Practice Solo
+            </button>
+          </div>
+        </section>
+
+        <section
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: 18,
+            alignItems: "start",
+            margin: "30px 0",
+          }}
+        >
+          <div style={{ padding: 18, borderRadius: 18, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.12)", textAlign: "center" }}>
+            <h2 style={{ marginTop: 0 }}>🎂 Custom Songs That People Remember</h2>
+            <p style={{ opacity: 0.92, lineHeight: 1.55 }}>
+              A personalized song can turn a birthday, anniversary, wedding, retirement, or victory into a memory people keep forever.
+            </p>
+            <div style={{ position: "relative", width: "100%", paddingTop: "177.78%", borderRadius: 16, overflow: "hidden", background: "#000" }}>
+              <iframe
+                src="https://www.youtube.com/embed/mLwoEIiM6XM"
+                title="Patrick's Birthday Song Promo"
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <a
+              href="mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request"
+              style={{ ...buttonStyle, display: "inline-block", marginTop: 14, textDecoration: "none" }}
+            >
+              🎤 Request Your Song
+            </a>
           </div>
 
-          <p style={{ marginTop: 12, opacity: 0.9 }}>
-            A simple, hilarious party game you can play anywhere — no cards required.
-          </p>
+          <div style={{ padding: 18, borderRadius: 18, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.12)", textAlign: "center" }}>
+            <h2 style={{ marginTop: 0 }}>🎧 Hear a Custom Song Example</h2>
+            <p style={{ opacity: 0.92, lineHeight: 1.55 }}>
+              Listen to the style, heart, and personality that goes into a Wildman Tom B custom song.
+            </p>
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wildman-tom-b/lucky-to-have-you&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+              style={{ borderRadius: 12, marginTop: 10 }}
+            />
+            <div style={{ marginTop: 16 }}>
+              <a
+                href="https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY"
+                target="_blank"
+                rel="noreferrer"
+                style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-block" }}
+              >
+                🎧 More on SoundCloud
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ margin: "30px 0", textAlign: "center" }}>
+          <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song — Full Version</h2>
+          <PatrickSong />
         </section>
 
         <section style={{ margin: "30px 0", textAlign: "center" }}>
           <h2>🎸 Wildman Tom B</h2>
           <WildmanTomSong />
         </section>
-<section
-  style={{
-    margin: "30px 0",
-    textAlign: "center",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.12)",
-    background: "rgba(255,255,255,.04)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-  }}
->
-  <h2 style={{ marginBottom: 10 }}>
-    🎧 Hear What a $95 Custom Song Sounds Like
-  </h2>
 
-  <iframe
-    width="100%"
-    height="166"
-    scrolling="no"
-    frameBorder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wildman-tom-b/lucky-to-have-you&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-    style={{
-      borderRadius: 12,
-      marginTop: 10,
-    }}
-  />
+        <div style={{ marginTop: 30 }}>
+          <UtahsAlright />
+        </div>
 
-  <p style={{ marginTop: 10, opacity: 0.8 }}>
-    🎶 Custom songs for the people you love ❤️
-  </p>
-</section>
-        <div
+        <section style={{ margin: "30px 0", textAlign: "center" }}>
+          <h2>💪 Chuck Norris Strength — God Changes Lives!</h2>
+          <p style={{ fontSize: 18, fontWeight: 700 }}>
+            Wildman Tom B’s original song tribute to Chuck Norris, faith, and the power of God.
+          </p>
+          <iframe
+            width="315"
+            height="560"
+            src="https://www.youtube.com/embed/bxBZ5UZvSek"
+            title="Chuck Norris Strength"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </section>
+
+        <section
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 10,
-            marginTop: 12,
+            margin: "34px 0",
+            padding: "24px 18px",
+            borderRadius: 22,
+            background: "rgba(34,197,94,.10)",
+            border: "1px solid rgba(34,197,94,.32)",
+            textAlign: "center",
           }}
         >
-          <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>
-            🇬🇭 Got Backup + Ghana Opportunity
-          </button>
-
-          <button
-            style={ghostButtonStyle}
-            onClick={() => setMode("communityCenters")}
-          >
-            🏘️ Community Centers
-          </button>
-
-          <button
-            style={ghostButtonStyle}
-            onClick={() => setMode("ghanaPoster")}
-          >
-            🇬🇭 Ghana Poster
-          </button>
-
-          <a
-            href={SIGNUP_FORM_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...buttonStyle,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            🎲 Sign Up to Play Live
-          </a>
-
-          <button style={ghostButtonStyle} onClick={() => setMode("solo")}>
-            Play Solo (vs Computer)
-          </button>
-
-          <button
-            style={ghostButtonStyle}
-            onClick={() => setMode("newsletter")}
-          >
-            📰 Newsletter
-          </button>
-
-          <button style={ghostButtonStyle} onClick={() => setMode("poster")}>
-            🪧 Hesperia Poster
-          </button>
-
-          <a
-            href={PRAYER_SHORT_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...ghostButtonStyle,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            🙏 Mark Wahlberg Prayer
-          </a>
-
-          <a
-            href={CHANNEL_URL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...ghostButtonStyle,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            YouTube Channel
-          </a>
-        </div>
-
-        <div style={{ marginTop: 12 }}>
-          <a
-            href="https://docs.google.com/document/d/1yvYkjTuWzVMmb6W9V4j6mNO88rYbE45FI0LY8dq3jr4/edit?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              ...ghostButtonStyle,
-              display: "inline-block",
-              textDecoration: "none",
-            }}
-          >
-            🇬🇭 Weekly Play at Royal Olive Court (Ghana)
-          </a>
-
-          <p style={{ marginTop: 8, opacity: 0.85, fontSize: 14 }}>
-            Local printing • Weekly play • Community sponsors
+          <h2 style={{ marginTop: 0 }}>🏘️ Bring The Messed Up Game to Your Community</h2>
+          <p style={{ maxWidth: 760, margin: "0 auto 18px", opacity: 0.94, lineHeight: 1.65 }}>
+            A fun, brain-boosting, family-friendly live event for senior homes, churches, schools,
+            corporate teams, restaurants, bars, and fundraisers.
           </p>
-        </div>
+          <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
+            <button style={buttonStyle} onClick={() => setMode("communityCenters")}>Learn More</button>
+            <a href={BENEFITS_DOC_URL} target="_blank" rel="noreferrer" style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-block" }}>
+              Benefits for Seniors, Churches & More
+            </a>
+          </div>
+        </section>
+
+        <MarkoMaxSection />
+
+        <section
+          style={{
+            margin: "28px 0",
+            padding: 20,
+            borderRadius: 18,
+            background: "rgba(255,255,255,.04)",
+            border: "1px solid rgba(255,255,255,.12)",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ marginTop: 0 }}>Quick Links</h2>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
+            <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>📰 Newsletter</button>
+            <button style={ghostButtonStyle} onClick={() => setMode("sponsors")}>⭐ Sponsors</button>
+            <button style={ghostButtonStyle} onClick={() => setMode("poster")}>🪧 Hesperia Poster</button>
+            <button style={ghostButtonStyle} onClick={() => setMode("ghanaPoster")}>🇬🇭 Ghana Poster</button>
+            <button style={ghostButtonStyle} onClick={goToGhanaOpportunity}>🇬🇭 Got Backup + Ghana</button>
+            <button style={ghostButtonStyle} onClick={() => setMode("dodgers")}>⚾ Dodgers Deal</button>
+          </div>
+        </section>
 
         <div style={{ marginTop: 14, textAlign: "center" }}>
-          <p style={{ margin: "10px 0 8px", fontWeight: 800 }}>
-            Follow The Messed Up Game
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: 10,
-              flexWrap: "wrap",
-            }}
-          >
+          <p style={{ margin: "10px 0 8px", fontWeight: 900 }}>Follow The Messed Up Game</p>
+          <div style={{ display: "flex", justifyContent: "center", gap: 10, flexWrap: "wrap" }}>
             {(SOCIAL_LINKS || []).map((s) => (
               <a
                 key={s.label}
@@ -2122,227 +1839,57 @@ fontSize: "20px",
           </div>
         </div>
 
-         </div>
+        <footer style={{ marginTop: 34, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,.12)", opacity: 0.78, fontSize: 13, textAlign: "center" }}>
+          © {new Date().getFullYear()} Wildman Tom B Productions • The Messed Up Game™ • Contact:{" "}
+          <a href={CONTACT_EMAIL} style={{ color: "white" }}>
+            {CONTACT_EMAIL.replace("mailto:", "")}
+          </a>
+        </footer>
 
-<section
-  style={{
-    maxWidth: 900,
-    margin: "22px auto",
-    padding: 18,
-    borderRadius: 16,
-    border: "1px solid rgba(255,255,255,.14)",
-    background: "rgba(255,255,255,.05)",
-    boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-    textAlign: "center",
-  }}
->
-  <h2 style={{ margin: "0 0 10px", fontSize: "1.5rem", fontWeight: 900 }}>
-    🏘️ Bring The Messed Up Game to Your Community Center
-  </h2>
-
-  <p style={{ maxWidth: 700, margin: "0 auto 14px", opacity: 0.95 }}>
-    Looking for a fun, brain-boosting event for your community center?
-    Wildman Tom B hosts an unforgettable night of music, laughter, and
-    The Messed Up Game.
-  </p>
-
-  <button
-    style={buttonStyle}
-    onClick={() => setMode("communityCenters")}
-  >
-    Learn More
-  </button>
-</section>
-
-        <div style={{ textAlign: "center", margin: "8px 0 0" }}>
-          <a
-            href={BENEFITS_DOC_URL}
-            target="_blank"
-            rel="noreferrer"
+        {showVideo && (
+          <div
             style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              borderRadius: 999,
-              fontWeight: 700,
-              fontSize: 18,
-              textDecoration: "none",
-              background: "#facc15",
-              color: "#111827",
-              boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0,0,0,0.9)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 99999,
+              padding: 20,
             }}
           >
-            Benefits for Seniors, Churches &amp; More
-          </a>
-        </div>
-
- <section
-  id="benefits"
-  style={{
-    maxWidth: 900,
-    margin: "40px auto 60px",
-    padding: "24px 20px",
-    borderRadius: 16,
-    background: "rgba(15,23,42,0.9)",
-    color: "#e5e7eb",
-    boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
-  }}
->
-  <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
-    How The Messed Up Game Helps Your Community
-  </h2>
-
-  <p style={{ textAlign: "center", marginBottom: 20, opacity: 0.9 }}>
-    Fun, fast, and brain-boosting for seniors, churches, schools, bars
-    &amp; more.
-  </p>
-
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: 18,
-    }}
-  >
-    <div>
-      <h3 style={{ fontSize: 20, marginBottom: 6 }}>
-        Senior Homes &amp; Communities
-      </h3>
-      <ul style={{ margin: 0, paddingLeft: 18 }}>
-        <li>Weekly 60–90 minute brain-boost game hour.</li>
-        <li>Up to <strong>40 residents</strong> can play in the room at once.</li>
-        <li>Up to <strong>9 players</strong> live online with Wildman Tom B.</li>
-        <li>
-          Host uses a big whiteboard to track names &amp; strikes (3 strikes
-          and you’re out, but you can stay and watch).
-        </li>
-        <li>
-          Solo players just click the link – no code needed. Reach{" "}
-          <strong>50 points</strong> and earn a free deck!
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 style={{ fontSize: 20, marginBottom: 6 }}>
-        Churches &amp; Faith Groups
-      </h3>
-      <ul style={{ margin: 0, paddingLeft: 18 }}>
-        <li>Family-friendly and faith-friendly fun.</li>
-        <li>Includes <strong>Books of the New Testament</strong> as a category.</li>
-        <li>Great for seniors, youth nights, small groups &amp; game nights.</li>
-        <li>Builds fellowship while waking up the amazing brain God gave us.</li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 style={{ fontSize: 20, marginBottom: 6 }}>
-        Schools &amp; Youth Programs
-      </h3>
-      <ul style={{ margin: 0, paddingLeft: 18 }}>
-        <li>Supports memory, vocabulary, and quick thinking.</li>
-        <li>Works for classrooms, after-school programs, and clubs.</li>
-        <li>Kids love the speed; teachers love the engagement.</li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 style={{ fontSize: 20, marginBottom: 6 }}>
-        Bars, Cafés &amp; Social Venues
-      </h3>
-      <ul style={{ margin: 0, paddingLeft: 18 }}>
-        <li>A fresh spin on traditional trivia night.</li>
-        <li>Keeps guests hanging out longer and talking to each other.</li>
-        <li>Easy to run with a host, a whiteboard, and prizes.</li>
-        <li>Perfect for theme nights, tournaments, or sponsor tie-ins.</li>
-      </ul>
-    </div>
-  </div>
-
-  <p style={{ marginTop: 24, textAlign: "center" }}>
-    Want to see how this could work in your place? Email{" "}
-    <a
-      href="mailto:tom@messedupgame.com"
-      style={{ color: "#facc15", fontWeight: 600 }}
-    >
-      tom@messedupgame.com
-    </a>{" "}
-    to schedule a quick demo.
-  </p>
-</section>
-<footer style={{ marginTop: 28, opacity: 0.75, fontSize: 12 }}>
-  © {new Date().getFullYear()} Messed Up Game • Contact:{" "}
-  <a href={CONTACT_EMAIL} style={{ color: "white" }}>
-    {CONTACT_EMAIL.replace("mailto:", "")}
-  </a>
-</footer>
-
-{/* 🎬 VIDEO POPUP */}
-{showVideo && (
-  <div
-    style={{
-      position: "fixed",
-      inset: 0,
-      background: "rgba(0,0,0,0.9)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      zIndex: 99999,
-      padding: 20,
-    }}
-  >
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        maxWidth: 420,
-        background: "#000",
-        borderRadius: 12,
-        overflow: "hidden",
-      }}
-    >
-      <button
-        onClick={() => {
-  setShowVideo(false);
-  setTimeout(() => {
-    document.getElementById("custom-song")?.scrollIntoView({
-      behavior: "smooth"
-    });
-  }, 200);
-}}
-        style={{
-          position: "absolute",
-          top: 10,
-          right: 10,
-          zIndex: 100000,
-          background: "rgba(0,0,0,0.7)",
-          color: "#fff",
-          border: "none",
-          borderRadius: 8,
-          padding: "8px 10px",
-          cursor: "pointer",
-        }}
-      >
-        ✖
-      </button>
-
-      <iframe
-        width="100%"
-        height="700"
-        src="https://www.youtube.com/embed/L6BqH4LOGog"
-        title="How to Redeem the $7 Panda Deal"
-        frameBorder="0"
-        allowFullScreen
-        style={{
-          width: "100%",
-          height: "700px",
-          border: 0,
-        }}
-      />
-    </div>
-  </div>
-)}
-
-</div>
-</main>
-);
+            <div style={{ position: "relative", width: "100%", maxWidth: 420, background: "#000", borderRadius: 12, overflow: "hidden" }}>
+              <button
+                onClick={() => setShowVideo(false)}
+                style={{
+                  position: "absolute",
+                  top: 10,
+                  right: 10,
+                  zIndex: 100000,
+                  background: "rgba(0,0,0,0.7)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 8,
+                  padding: "8px 10px",
+                  cursor: "pointer",
+                }}
+              >
+                ✖
+              </button>
+              <iframe
+                width="100%"
+                height="700"
+                src="https://www.youtube.com/embed/L6BqH4LOGog"
+                title="How to Redeem the $7 Panda Deal"
+                frameBorder="0"
+                allowFullScreen
+                style={{ width: "100%", height: "700px", border: 0 }}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+    </main>
+  );
 }
