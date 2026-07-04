@@ -1560,7 +1560,7 @@ fontSize: "20px",
               }}
             >
               <h3 style={{ margin: "4px 0 12px", textAlign: "center", fontSize: "1.35rem" }}>
-                🎲 Learn the Game in 30 Seconds
+                🙏 I Can Only Imagine
               </h3>
               <div
                 style={{
@@ -1573,7 +1573,7 @@ fontSize: "20px",
                 }}
               >
                 <iframe
-                  src="https://www.youtube.com/embed/ljT9CSzHVvU"
+                  src="https://www.youtube.com/embed/hkz9XYmm7Bc"
                   title="How To Play The Messed Up Game"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
