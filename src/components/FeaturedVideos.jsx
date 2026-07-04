@@ -1,22 +1,26 @@
 export default function FeaturedVideos() {
   const videos = [
     {
-  title: "🌿 The Woods Dispensary Song",
-  id: "gmiwPLcU2oo",
-},
-{
+      title: "🙏 I Can Only Imagine — Tom Butler",
+      id: "hkz9XYmm7Bc",
+    },
+    {
+      title: "🌿 The Woods Dispensary Song",
+      id: "gmiwPLcU2oo",
+    },
+    {
       title: "😂 Elon Musk Roast",
       id: "ySkcD4M-QTw",
     },
     {
-    title: "💪 Chuck Norris Strength — God Changes Lives",
-    id: "bxBZ5UZvSek",
-  },
-  {
+      title: "💪 Chuck Norris Strength — God Changes Lives",
+      id: "bxBZ5UZvSek",
+    },
+    {
       title: "🎂 Patrick Birthday Song",
       id: "mLwoEIiM6XM",
-  },
-  {
+    },
+    {
       title: "🎉 Orson Wins The Messed Up Game",
       id: "ZDxGMx3tGDk",
     },
@@ -25,7 +29,7 @@ export default function FeaturedVideos() {
   return (
     <section style={{ margin: "30px 0" }}>
       <h2 style={{ textAlign: "center" }}>
-        🎬 Featured Videos
+        ⭐ Featured by Wildman Tom B
       </h2>
 
       <div
@@ -47,9 +51,7 @@ export default function FeaturedVideos() {
                 border: 0,
               }}
             />
-            <p style={{ textAlign: "center" }}>
-              {video.title}
-            </p>
+            <p style={{ textAlign: "center" }}>{video.title}</p>
           </div>
         ))}
       </div>
