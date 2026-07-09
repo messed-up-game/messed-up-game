@@ -5,6 +5,14 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# 1) ACME challenge passthrough (must be ABOVE the SPA rule)
+[[redirects]]
+  from = "/.well-known/acme-challenge/*"
+  to = "/acme/:splat"
+  status = 200
+  force = true
+
+# 2) SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
