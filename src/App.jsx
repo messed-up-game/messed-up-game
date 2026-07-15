@@ -13,7 +13,7 @@ import FeaturedVideos from "./components/FeaturedVideos";
 export default function App() {
   const [showVideo, setShowVideo] = useState(false);
   const CHANNEL_URL = "https://www.youtube.com/@messedupgame";
-  const FEATURE_VIDEO_ID = "stZm5AH791I"
+  const FEATURE_VIDEO_ID = "2U2pEKCuFRs";
 
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
