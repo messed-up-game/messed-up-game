@@ -1551,38 +1551,74 @@ fontSize: "20px",
               </p>
             </div>
 
-            <div
-              style={{
-                padding: 14,
-                borderRadius: 24,
-                background: "rgba(0,0,0,.25)",
-                border: "1px solid rgba(255,255,255,.12)",
-                boxShadow: "0 18px 40px rgba(0,0,0,.35)",
-              }}
-            >
-              <h3 style={{ margin: "4px 0 12px", textAlign: "center", fontSize: "1.35rem" }}>
-                🙏 I Can Only Imagine
-              </h3>
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  paddingTop: "177.78%",
-                  borderRadius: 18,
-                  overflow: "hidden",
-                  background: "#000",
-                }}
-              >
-                <iframe
-                  src="https://www.youtube.com/embed/hkz9XYmm7Bc"
-                  title="How To Play The Messed Up Game"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-                />
-              </div>
-            </div>
-          </div>
+        <div
+  style={{
+    padding: 14,
+    borderRadius: 24,
+    background: "rgba(0,0,0,.25)",
+    border: "1px solid rgba(255,255,255,.12)",
+    boxShadow: "0 18px 40px rgba(0,0,0,.35)",
+  }}
+>
+  <h3
+    style={{
+      margin: "4px 0 4px",
+      textAlign: "center",
+      fontSize: "1.5rem",
+      color: "#facc15",
+      fontWeight: 900,
+    }}
+  >
+    ✝️ Featured Worship Video
+  </h3>
+
+  <h4
+    style={{
+      margin: "0 0 8px",
+      textAlign: "center",
+      fontSize: "1.15rem",
+      fontWeight: 700,
+    }}
+  >
+    From Patience to Grace
+  </h4>
+
+  <p
+    style={{
+      textAlign: "center",
+      margin: "0 0 12px",
+      opacity: 0.9,
+      fontStyle: "italic",
+    }}
+  >
+    A Worship Medley Born at the 2002 Winter Olympics
+  </p>
+
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      paddingTop: "177.78%",
+      borderRadius: 18,
+      overflow: "hidden",
+      background: "#000",
+    }}
+  >
+    <iframe
+      src={`https://www.youtube.com/embed/${FEATURE_VIDEO_ID}`}
+      title="From Patience to Grace"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        border: 0,
+      }}
+    />
+  </div>
+</div>   
         </section>
 
         <section
