@@ -1,7 +1,7 @@
 // src/components/MessedUpGameSoloVsComputer.jsx
 
-import { useState } from "react";
-// All categories used in solo mode
+import { useEffect, useMemo, useState } from "react";
+
 const CATEGORIES = [
   "Colors",
   "Animals",
@@ -29,10 +29,17 @@ const CATEGORIES = [
   "Zoo Animals",
   "Family Members",
   "Board Games",
-  "Christmas Movies",
-  "Books of the New Testament"
+  "Books of the New Testament",
 ];
-// Optional built-in answer lists (auto-check for some categories)
+
+const LEVELS = [
+  { level: 1, name: "Easy", target: 5, seconds: 10 },
+  { level: 2, name: "Warm-Up", target: 5, seconds: 10 },
+  { level: 3, name: "Getting Tougher", target: 5, seconds: 10 },
+  { level: 4, name: "Brain Burner", target: 5, seconds: 10 },
+  { level: 5, name: "Champion", target: 5, seconds: 10 },
+];
+
 const OBVIOUS_WRONG = new Set([
   "steak",
   "pork",
@@ -41,15 +48,21 @@ const OBVIOUS_WRONG = new Set([
   "california",
   "texas",
 ]);
+
 const VALID_ANSWERS = {
   "Ice Cream Flavors": new Set([
     "vanilla",
     "chocolate",
     "strawberry",
     "mint chocolate chip",
+    "rocky road",
+    "cookies and cream",
+    "cookie dough",
+    "butter pecan",
+    "neapolitan",
   ]),
 
-  "Fruits": new Set([
+  Fruits: new Set([
     "apple",
     "banana",
     "orange",
@@ -115,7 +128,7 @@ const VALID_ANSWERS = {
     "revelation",
   ]),
 
-  "Animals": new Set([
+  Animals: new Set([
     "dog",
     "cat",
     "horse",
@@ -132,6 +145,14 @@ const VALID_ANSWERS = {
     "elephant",
     "giraffe",
     "zebra",
+    "monkey",
+    "ape",
+    "gorilla",
+    "wolf",
+    "fox",
+    "deer",
+    "rabbit",
+    "mouse",
   ]),
 
   "Breakfast Foods": new Set([
@@ -151,7 +172,7 @@ const VALID_ANSWERS = {
     "orange juice",
   ]),
 
-  "Cookies": new Set([
+  Cookies: new Set([
     "chocolate chip",
     "oatmeal raisin",
     "peanut butter",
@@ -180,14 +201,16 @@ const VALID_ANSWERS = {
 };
 
 function getRandomCategory(current) {
-
   if (CATEGORIES.length === 1) return CATEGORIES[0];
   let next = current;
   while (!next || next === current) {
-    const idx = Math.floor(Math.random() * CATEGORIES.length);
-    next = CATEGORIES[idx];
+    next = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
   }
   return next;
+}
+
+function normalize(text) {
+  return text.trim().toLowerCase();
 }
 
 export default function MessedUpGameSoloVsComputer() {
@@ -198,16 +221,117 @@ export default function MessedUpGameSoloVsComputer() {
   const [usedAnswers, setUsedAnswers] = useState([]);
   const [strikes, setStrikes] = useState(0);
   const [score, setScore] = useState(0);
-  const [message, setMessage] = useState(
-    "Type an answer that fits the category. Don’t repeat answers. 3 strikes and the round is over."
-  );
+
+  const [level, setLevel] = useState(() => {
+    const saved = Number(localStorage.getItem("mug-solo-level"));
+    return saved >= 1 && saved <= 5 ? saved : 1;
+  });
+
+  const [levelCorrect, setLevelCorrect] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [champion, setChampion] = useState(false);
+  const [message, setMessage] = useState(
+    "Get 5 correct answers to level up. Don’t repeat. 3 strikes and you’re out."
+  );
+
+  const levelInfo = useMemo(
+    () => LEVELS.find((item) => item.level === level) || LEVELS[0],
+    [level]
+  );
+
+  const [timeLeft, setTimeLeft] = useState(levelInfo.seconds);
 
   const maxStrikes = 3;
 
+  useEffect(() => {
+    localStorage.setItem("mug-solo-level", String(level));
+  }, [level]);
+
+  useEffect(() => {
+    setTimeLeft(levelInfo.seconds);
+  }, [category, level, levelInfo.seconds]);
+
+  useEffect(() => {
+    if (gameOver || champion) return;
+
+    if (timeLeft <= 0) {
+      const newStrikes = strikes + 1;
+      setStrikes(newStrikes);
+      setAnswer("");
+
+      if (newStrikes >= maxStrikes) {
+        setGameOver(true);
+        setMessage("⏰ Time ran out. That was strike 3 — game over!");
+      } else {
+        setMessage(`⏰ Time ran out. Strike ${newStrikes}! Try the next one.`);
+        setTimeLeft(levelInfo.seconds);
+      }
+      return;
+    }
+
+    const timer = setTimeout(() => setTimeLeft((prev) => prev - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [
+    timeLeft,
+    gameOver,
+    champion,
+    strikes,
+    levelInfo.seconds,
+  ]);
+
+  const registerStrike = (text) => {
+    const newStrikes = strikes + 1;
+    setStrikes(newStrikes);
+    setAnswer("");
+
+    if (newStrikes >= maxStrikes) {
+      setGameOver(true);
+      setMessage(`${text} Strike 3 — game over!`);
+    } else {
+      setMessage(`${text} Strike ${newStrikes}!`);
+      setTimeLeft(levelInfo.seconds);
+    }
+  };
+
+  const registerCorrect = (key) => {
+    const newLevelCorrect = levelCorrect + 1;
+
+    setUsedAnswers((prev) => [...prev, key]);
+    setScore((prev) => prev + 1);
+    setAnswer("");
+
+    if (newLevelCorrect >= levelInfo.target) {
+      if (level >= LEVELS.length) {
+        setLevelCorrect(levelInfo.target);
+        setChampion(true);
+        setMessage(
+          "🏆 CHAMPION! You completed Level 5 of The Messed Up Game!"
+        );
+      } else {
+        const nextLevel = level + 1;
+        setLevel(nextLevel);
+        setLevelCorrect(0);
+        setCategory((current) => getRandomCategory(current));
+        setUsedAnswers([]);
+        setMessage(
+          `🎉 LEVEL UP! Welcome to Level ${nextLevel}: ${LEVELS[nextLevel - 1].name}!`
+        );
+      }
+    } else {
+      setLevelCorrect(newLevelCorrect);
+      setMessage(
+        `✅ Correct! ${newLevelCorrect} of ${levelInfo.target} toward Level ${
+          level >= LEVELS.length ? "Champion" : level + 1
+        }.`
+      );
+    }
+
+    setTimeLeft(levelInfo.seconds);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (gameOver) return;
+    if (gameOver || champion) return;
 
     const trimmed = answer.trim();
     if (!trimmed) {
@@ -215,94 +339,41 @@ export default function MessedUpGameSoloVsComputer() {
       return;
     }
 
-    const key = `${category.toLowerCase()}::${trimmed.toLowerCase()}`;
+    const normalized = normalize(trimmed);
+    const key = `${category.toLowerCase()}::${normalized}`;
 
-    // ❌ strike for repeat answers
     if (usedAnswers.includes(key)) {
-      const newStrikes = strikes + 1;
-      setStrikes(newStrikes);
-      if (newStrikes >= maxStrikes) {
-        setGameOver(true);
-        setMessage(
-          "❌ 3 strikes — game over! Click 'Play Again' to start a new round."
-        );
-      } else {
-        setMessage(`❌ Already used that answer. Strike ${newStrikes}!`);
-      }
-      setAnswer("");
+      registerStrike("❌ You already used that answer.");
       return;
     }
 
-    // 🔍 auto-check for Fruits
     const validSet = VALID_ANSWERS[category];
-        // 🚫 Light sanity check for categories we don't auto-validate (like Bathroom)
-    if (!validSet && OBVIOUS_WRONG.has(trimmed.toLowerCase())) {
-      const newStrikes = strikes + 1;
-      setStrikes(newStrikes);
-      if (newStrikes >= maxStrikes) {
-        setGameOver(true);
-        setMessage("❌ That clearly doesn’t fit. 3 strikes — game over!");
-      } else {
-        setMessage(`❌ That clearly doesn’t fit “${category}”. Strike ${newStrikes}!`);
-      }
-      setAnswer("");
+
+    if (!validSet && OBVIOUS_WRONG.has(normalized)) {
+      registerStrike(`❌ That clearly doesn’t fit “${category}”.`);
       return;
     }
 
-    if (validSet && !validSet.has(trimmed.toLowerCase())) {
-      const newStrikes = strikes + 1;
-      setStrikes(newStrikes);
-      if (newStrikes >= maxStrikes) {
-        setGameOver(true);
-        setMessage(
-          "❌ That doesn’t look like it fits this category. 3 strikes — game over!"
-        );
-      } else {
-        setMessage(
-          `❌ That probably doesn’t fit “${category}”. Strike ${newStrikes}!`
-        );
-      }
-      setAnswer("");
+    if (validSet && !validSet.has(normalized)) {
+      registerStrike(`❌ That doesn’t look like it fits “${category}”.`);
       return;
     }
 
-    // ✅ New, unique, acceptable answer
-    setUsedAnswers((prev) => [...prev, key]);
-    setScore((prev) => prev + 1);
-
-    if (validSet) {
-      setMessage("✅ Nice one! That fits the category — keep going!");
-    } else {
-      setMessage(
-        "✅ Nice one! If it fits the category, keep going. If not, be honest and give yourself a strike."
-      );
-    }
-
-    setAnswer("");
+    registerCorrect(key);
   };
 
   const handleNextCategory = () => {
-    if (gameOver) return;
+    if (gameOver || champion) return;
     setCategory((current) => getRandomCategory(current));
-    setMessage(
-      "🔁 New category! Type an answer and then judge yourself fairly."
-    );
-    setAnswer("");
     setUsedAnswers([]);
+    setAnswer("");
+    setMessage("🔁 New category! Your level progress stays with you.");
+    setTimeLeft(levelInfo.seconds);
   };
 
   const handleGiveStrike = () => {
-    if (gameOver) return;
-    const newStrikes = strikes + 1;
-    setStrikes(newStrikes);
-    if (newStrikes >= maxStrikes) {
-      setGameOver(true);
-      setMessage(
-        "❌ Honest call! That deserves a strike — and that was your 3rd. Game over!"
-      );
-    } else {
-      setMessage(`⚠️ Honest call. Strike ${newStrikes}. Keep going!`);
-    }
+    if (gameOver || champion) return;
+    registerStrike("⚠️ Honest call.");
   };
 
   const handlePlayAgain = () => {
@@ -311,13 +382,21 @@ export default function MessedUpGameSoloVsComputer() {
     setUsedAnswers([]);
     setStrikes(0);
     setScore(0);
-    setMessage(
-      "New game! Type answers that fit the category. Don’t repeat. 3 strikes and you’re out."
-    );
+    setLevelCorrect(0);
+    setLevel(1);
     setGameOver(false);
+    setChampion(false);
+    setTimeLeft(LEVELS[0].seconds);
+    setMessage(
+      "New game! Get 5 correct answers to level up. 3 strikes and you’re out."
+    );
   };
 
-  // ——— styles ———
+  const progressDots = Array.from(
+    { length: levelInfo.target },
+    (_, index) => (index < levelCorrect ? "⭐" : "○")
+  ).join(" ");
+
   const page = {
     minHeight: "100vh",
     padding: "24px 12px 40px",
@@ -336,16 +415,26 @@ export default function MessedUpGameSoloVsComputer() {
     border: "1px solid rgba(148, 163, 184, 0.5)",
   };
 
-  const title = { fontSize: 30, fontWeight: 800, marginBottom: 4 };
+  const title = { fontSize: 30, fontWeight: 900, marginBottom: 4 };
   const subtitle = { opacity: 0.9, marginBottom: 18, lineHeight: 1.4 };
-  const categoryLabel = { fontSize: 16, marginBottom: 6, opacity: 0.9 };
+
   const categoryBox = {
-    padding: "10px 14px",
-    borderRadius: 10,
-    background: "rgba(15,23,42,.8)",
-    border: "1px solid rgba(148,163,184,.5)",
-    fontSize: 18,
-    fontWeight: 700,
+    padding: "14px 16px",
+    borderRadius: 12,
+    background: "rgba(2,132,199,.12)",
+    border: "1px solid rgba(56,189,248,.55)",
+    fontSize: 22,
+    fontWeight: 900,
+    textAlign: "center",
+  };
+
+  const levelBox = {
+    marginBottom: 16,
+    padding: 16,
+    borderRadius: 14,
+    background: "rgba(250,204,21,.10)",
+    border: "1px solid rgba(250,204,21,.45)",
+    textAlign: "center",
   };
 
   const statsRow = {
@@ -357,7 +446,7 @@ export default function MessedUpGameSoloVsComputer() {
   };
 
   const statPill = {
-    padding: "6px 12px",
+    padding: "7px 12px",
     borderRadius: 999,
     fontSize: 14,
     display: "flex",
@@ -377,21 +466,21 @@ export default function MessedUpGameSoloVsComputer() {
   const input = {
     flex: 1,
     minWidth: 220,
-    padding: "10px 12px",
+    padding: "12px 14px",
     borderRadius: 10,
     border: "1px solid rgba(148,163,184,.7)",
     background: "rgba(15,23,42,0.9)",
     color: "#e5e7eb",
-    fontSize: 15,
+    fontSize: 16,
   };
 
   const primaryButton = {
-    padding: "10px 16px",
+    padding: "11px 16px",
     borderRadius: 10,
     border: "none",
     background: "#0ea5e9",
     color: "#0f172a",
-    fontWeight: 800,
+    fontWeight: 900,
     cursor: "pointer",
     minWidth: 110,
   };
@@ -407,33 +496,20 @@ export default function MessedUpGameSoloVsComputer() {
     minWidth: 140,
   };
 
-  const messageStyle = {
-    marginTop: 14,
-    fontSize: 14,
-    lineHeight: 1.4,
-    opacity: 0.95,
-  };
-
-  const backRow = {
-    padding: "10px 12px 4px",
-    maxWidth: 900,
-    margin: "0 auto",
-  };
-
   const backButton = {
     padding: "8px 14px",
     borderRadius: 999,
     border: "1px solid rgba(148,163,184,.7)",
     background: "rgba(15,23,42,0.95)",
     color: "#e5e7eb",
-    fontWeight: 600,
+    fontWeight: 700,
     cursor: "pointer",
     fontSize: 14,
   };
 
   return (
     <section style={page}>
-      <div style={backRow}>
+      <div style={{ padding: "10px 12px 4px", maxWidth: 900, margin: "0 auto" }}>
         <button
           type="button"
           style={backButton}
@@ -446,83 +522,116 @@ export default function MessedUpGameSoloVsComputer() {
       </div>
 
       <div style={card}>
-        <h1 style={title}>Solo Practice Mode</h1>
+        <h1 style={title}>🎲 The Messed Up Game — Level Challenge</h1>
         <p style={subtitle}>
-          Practice your Messed Up Game brain — no host needed. Don’t repeat
-          answers. Be honest when you deserve a strike.
+          Get 5 correct answers to move up a level. You have 10 seconds for each
+          answer. Don’t repeat. 3 strikes and you’re out.
         </p>
 
-        <div>
-          <div style={categoryLabel}>Current category</div>
-          <div style={categoryBox}>{category}</div>
-
-          <div style={statsRow}>
-            <div style={statPill}>✅ Score: {score}</div>
-            <div style={statPill}>
-              ❌ Strikes: {strikes} / {maxStrikes}
-            </div>
-            <div style={statPill}>
-              🧠 Unique answers: {usedAnswers.length}
-            </div>
+        <div style={levelBox}>
+          <div style={{ fontSize: 14, fontWeight: 800, opacity: 0.9 }}>
+            LEVEL {level}
           </div>
-
-          <form onSubmit={handleSubmit}>
-            <label style={{ display: "block", marginTop: 8 }}>
-              <span style={{ fontSize: 14, opacity: 0.9 }}>Your answer:</span>
-              <div style={formRow}>
-                <input
-                  style={input}
-                  value={answer}
-                  onChange={(e) => setAnswer(e.target.value)}
-                  disabled={gameOver}
-                  placeholder="Type your answer and hit Enter or Submit"
-                />
-
-                <button
-                  type="submit"
-                  style={primaryButton}
-                  disabled={gameOver}
-                >
-                  Submit
-                </button>
-
-                <button
-                  type="button"
-                  style={secondaryButton}
-                  onClick={handleNextCategory}
-                  disabled={gameOver}
-                >
-                  New Category
-                </button>
-
-                <button
-                  type="button"
-                  style={secondaryButton}
-                  onClick={handleGiveStrike}
-                  disabled={gameOver}
-                >
-                  Give Myself a Strike
-                </button>
-
-                {gameOver && (
-                  <button
-                    type="button"
-                    style={{
-                      ...primaryButton,
-                      background: "#22c55e",
-                      color: "#022c22",
-                    }}
-                    onClick={handlePlayAgain}
-                  >
-                    Play Again
-                  </button>
-                )}
-              </div>
-            </label>
-          </form>
-
-          <div style={messageStyle}>{message}</div>
+          <div style={{ fontSize: 28, fontWeight: 950 }}>
+            {levelInfo.name}
+          </div>
+          <div style={{ fontSize: 26, marginTop: 8 }}>{progressDots}</div>
+          <div style={{ marginTop: 6, fontWeight: 800 }}>
+            {levelCorrect} of {levelInfo.target} correct
+          </div>
         </div>
+
+        <div style={{ fontSize: 14, opacity: 0.9, marginBottom: 6 }}>
+          Current category
+        </div>
+        <div style={categoryBox}>{category}</div>
+
+        <div style={statsRow}>
+          <div style={statPill}>⏱️ Time: {timeLeft}s</div>
+          <div style={statPill}>✅ Total Score: {score}</div>
+          <div style={statPill}>
+            ❌ Strikes: {strikes} / {maxStrikes}
+          </div>
+          <div style={statPill}>🧠 Unique: {usedAnswers.length}</div>
+        </div>
+
+        {!champion && (
+          <form onSubmit={handleSubmit}>
+            <div style={formRow}>
+              <input
+                style={input}
+                value={answer}
+                onChange={(e) => setAnswer(e.target.value)}
+                disabled={gameOver}
+                autoFocus
+                placeholder="Type your answer..."
+              />
+
+              <button
+                type="submit"
+                style={primaryButton}
+                disabled={gameOver}
+              >
+                Submit
+              </button>
+
+              <button
+                type="button"
+                style={secondaryButton}
+                onClick={handleNextCategory}
+                disabled={gameOver}
+              >
+                New Category
+              </button>
+
+              <button
+                type="button"
+                style={secondaryButton}
+                onClick={handleGiveStrike}
+                disabled={gameOver}
+              >
+                Give Myself a Strike
+              </button>
+            </div>
+          </form>
+        )}
+
+        {(gameOver || champion) && (
+          <button
+            type="button"
+            style={{
+              ...primaryButton,
+              marginTop: 14,
+              background: "#22c55e",
+              color: "#022c22",
+            }}
+            onClick={handlePlayAgain}
+          >
+            Play Again From Level 1
+          </button>
+        )}
+
+        <div
+          style={{
+            marginTop: 16,
+            padding: "12px 14px",
+            borderRadius: 12,
+            background: champion
+              ? "rgba(250,204,21,.14)"
+              : "rgba(255,255,255,.04)",
+            border: "1px solid rgba(255,255,255,.10)",
+            lineHeight: 1.5,
+            fontWeight: champion ? 900 : 700,
+          }}
+        >
+          {message}
+        </div>
+
+        <p style={{ marginTop: 14, fontSize: 13, opacity: 0.72 }}>
+          Some categories are automatically checked. For open-ended categories,
+          use the honor system and give yourself a strike if an answer does not
+          truly fit.
+        </p>
       </div>
     </section>
   );
