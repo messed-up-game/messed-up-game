@@ -1,3 +1,6 @@
+MessedUpGameSoloVsComputer_v2.jsx
+
+
 // src/components/MessedUpGameSoloVsComputer.jsx
 
 import { useEffect, useMemo, useState } from "react";
@@ -214,9 +217,7 @@ function normalize(text) {
 }
 
 export default function MessedUpGameSoloVsComputer() {
-  const [category, setCategory] = useState(
-    CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)]
-  );
+  const [category, setCategory] = useState("Animals");
   const [answer, setAnswer] = useState("");
   const [usedAnswers, setUsedAnswers] = useState([]);
   const [strikes, setStrikes] = useState(0);
@@ -228,10 +229,11 @@ export default function MessedUpGameSoloVsComputer() {
   });
 
   const [levelCorrect, setLevelCorrect] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [champion, setChampion] = useState(false);
   const [message, setMessage] = useState(
-    "Get 5 correct answers to level up. Don’t repeat. 3 strikes and you’re out."
+    "Press START GAME when you’re ready. Level 1 begins with Animals."
   );
 
   const levelInfo = useMemo(
@@ -252,7 +254,7 @@ export default function MessedUpGameSoloVsComputer() {
   }, [category, level, levelInfo.seconds]);
 
   useEffect(() => {
-    if (gameOver || champion) return;
+    if (!gameStarted || gameOver || champion) return;
 
     if (timeLeft <= 0) {
       const newStrikes = strikes + 1;
@@ -273,6 +275,7 @@ export default function MessedUpGameSoloVsComputer() {
     return () => clearTimeout(timer);
   }, [
     timeLeft,
+    gameStarted,
     gameOver,
     champion,
     strikes,
@@ -329,9 +332,24 @@ export default function MessedUpGameSoloVsComputer() {
     setTimeLeft(levelInfo.seconds);
   };
 
+  const handleStartGame = () => {
+    setCategory("Animals");
+    setGameStarted(true);
+    setGameOver(false);
+    setChampion(false);
+    setStrikes(0);
+    setScore(0);
+    setLevel(1);
+    setLevelCorrect(0);
+    setUsedAnswers([]);
+    setAnswer("");
+    setTimeLeft(LEVELS[0].seconds);
+    setMessage("🐶 Level 1: Animals! Name an animal before the timer hits zero.");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (gameOver || champion) return;
+    if (!gameStarted || gameOver || champion) return;
 
     const trimmed = answer.trim();
     if (!trimmed) {
@@ -363,7 +381,7 @@ export default function MessedUpGameSoloVsComputer() {
   };
 
   const handleNextCategory = () => {
-    if (gameOver || champion) return;
+    if (!gameStarted || gameOver || champion) return;
     setCategory((current) => getRandomCategory(current));
     setUsedAnswers([]);
     setAnswer("");
@@ -372,23 +390,24 @@ export default function MessedUpGameSoloVsComputer() {
   };
 
   const handleGiveStrike = () => {
-    if (gameOver || champion) return;
+    if (!gameStarted || gameOver || champion) return;
     registerStrike("⚠️ Honest call.");
   };
 
   const handlePlayAgain = () => {
-    setCategory(CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)]);
+    setCategory("Animals");
     setAnswer("");
     setUsedAnswers([]);
     setStrikes(0);
     setScore(0);
     setLevelCorrect(0);
     setLevel(1);
+    setGameStarted(false);
     setGameOver(false);
     setChampion(false);
     setTimeLeft(LEVELS[0].seconds);
     setMessage(
-      "New game! Get 5 correct answers to level up. 3 strikes and you’re out."
+      "Press START GAME when you’re ready. Level 1 begins with Animals."
     );
   };
 
@@ -524,8 +543,9 @@ export default function MessedUpGameSoloVsComputer() {
       <div style={card}>
         <h1 style={title}>🎲 The Messed Up Game — Level Challenge</h1>
         <p style={subtitle}>
-          Get 5 correct answers to move up a level. You have 10 seconds for each
-          answer. Don’t repeat. 3 strikes and you’re out.
+          Level 1 starts with Animals. Press START GAME when you’re ready.
+          Then you have 10 seconds for each answer. Get 5 correct to level up.
+          Don’t repeat. 3 strikes and you’re out.
         </p>
 
         <div style={levelBox}>
@@ -547,7 +567,9 @@ export default function MessedUpGameSoloVsComputer() {
         <div style={categoryBox}>{category}</div>
 
         <div style={statsRow}>
-          <div style={statPill}>⏱️ Time: {timeLeft}s</div>
+          <div style={statPill}>
+            ⏱️ Time: {gameStarted ? `${timeLeft}s` : "READY"}
+          </div>
           <div style={statPill}>✅ Total Score: {score}</div>
           <div style={statPill}>
             ❌ Strikes: {strikes} / {maxStrikes}
@@ -555,7 +577,25 @@ export default function MessedUpGameSoloVsComputer() {
           <div style={statPill}>🧠 Unique: {usedAnswers.length}</div>
         </div>
 
-        {!champion && (
+        {!gameStarted && !gameOver && !champion && (
+          <button
+            type="button"
+            style={{
+              ...primaryButton,
+              width: "100%",
+              marginTop: 6,
+              padding: "16px 20px",
+              fontSize: 20,
+              background: "#22c55e",
+              color: "#052e16",
+            }}
+            onClick={handleStartGame}
+          >
+            ▶ START GAME
+          </button>
+        )}
+
+        {gameStarted && !champion && (
           <form onSubmit={handleSubmit}>
             <div style={formRow}>
               <input
@@ -607,7 +647,7 @@ export default function MessedUpGameSoloVsComputer() {
             }}
             onClick={handlePlayAgain}
           >
-            Play Again From Level 1
+            Reset to Level 1
           </button>
         )}
 
