@@ -466,7 +466,7 @@ setUsedAnswers([]);
     borderRadius: 999,
     fontSize: 14,
     display: "flex",
-    alignItems: "center",
+    alignItems: "start",
     gap: 6,
     background: "rgba(15,23,42,0.9)",
     border: "1px solid rgba(148,163,184,.5)",
@@ -556,7 +556,7 @@ setUsedAnswers([]);
           <div style={{ marginTop: 6, fontWeight: 800 }}>
             {levelCorrect} of {levelInfo.target} correct
           </div>
-        </div>
+        </div
 
         <div style={{ fontSize: 14, opacity: 0.9, marginBottom: 6 }}>
           Current category
