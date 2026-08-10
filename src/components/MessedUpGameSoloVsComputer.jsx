@@ -1,6 +1,3 @@
-MessedUpGameSoloVsComputer_v2.jsx
-
-
 // src/components/MessedUpGameSoloVsComputer.jsx
 
 import { useEffect, useMemo, useState } from "react";
@@ -32,7 +29,7 @@ const CATEGORIES = [
   "Zoo Animals",
   "Family Members",
   "Board Games",
-  "Books of the New Testament",
+  "Animals A-to-Z",
 ];
 
 const LEVELS = [
