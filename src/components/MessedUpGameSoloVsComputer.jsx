@@ -556,7 +556,7 @@ setUsedAnswers([]);
           <div style={{ marginTop: 6, fontWeight: 800 }}>
             {levelCorrect} of {levelInfo.target} correct
           </div>
-        </div
+        </div>
 
         <div style={{ fontSize: 14, opacity: 0.9, marginBottom: 6 }}>
           Current category
