@@ -309,10 +309,10 @@ export default function MessedUpGameSoloVsComputer() {
         );
       } else {
         const nextLevel = level + 1;
-        setLevel(nextLevel);
-        setLevelCorrect(0);
-        setCategory((current) => getRandomCategory(current));
-        setUsedAnswers([]);
+setLevel(nextLevel);
+setLevelCorrect(0);
+setCategory("Animals");
+setUsedAnswers([]);
         setMessage(
           `🎉 LEVEL UP! Welcome to Level ${nextLevel}: ${LEVELS[nextLevel - 1].name}!`
         );
