@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 
 const CATEGORIES = [
-  "Colors",
   "Animals",
+  "Colors",
+  "Breakfast Foods",
   "Fruits",
   "Vegetables",
   "Candy Bars",
@@ -23,7 +24,6 @@ const CATEGORIES = [
   "Things that are Hot",
   "Things that are Cold",
   "Things that Fly",
-  "Breakfast Foods",
   "Types of Nuts",
   "Weather Types",
   "Zoo Animals",
@@ -33,18 +33,17 @@ const CATEGORIES = [
 ];
 
 const LEVELS = [
-  { level: 1, name: "Easy", target: 5, seconds: 10 },
-  { level: 2, name: "Warm-Up", target: 5, seconds: 10 },
-  { level: 3, name: "Getting Tougher", target: 5, seconds: 10 },
-  { level: 4, name: "Brain Burner", target: 5, seconds: 10 },
-  { level: 5, name: "Champion", target: 5, seconds: 10 },
+  { level: 1, name: "Easy", target: 5, seconds: 20 },
+  { level: 2, name: "Warm-Up", target: 5, seconds: 20 },
+  { level: 3, name: "Getting Tougher", target: 5, seconds: 20 },
+  { level: 4, name: "Brain Burner", target: 5, seconds: 20 },
+  { level: 5, name: "Champion", target: 5, seconds: 20 },
 ];
 
 const OBVIOUS_WRONG = new Set([
   "steak",
   "pork",
   "beef",
-  "chicken",
   "california",
   "texas",
 ]);
