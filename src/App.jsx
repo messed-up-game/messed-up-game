@@ -1436,7 +1436,7 @@ fontSize: "20px",
       <div style={containerStyle}>
         <section
           style={{
-            padding: "22px 0 12px",
+            padding: "8px 0 6px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -1468,8 +1468,8 @@ fontSize: "20px",
 
         <section
           style={{
-            margin: "10px 0 28px",
-            padding: "28px 20px",
+            margin: "0 0 10px",
+            padding: "16px 20px",
             borderRadius: 28,
             background:
               "radial-gradient(circle at top left, rgba(250,204,21,.24), transparent 34%), radial-gradient(circle at bottom right, rgba(34,197,94,.22), transparent 34%), rgba(255,255,255,.055)",
