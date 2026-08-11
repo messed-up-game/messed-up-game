@@ -408,7 +408,7 @@ setUsedAnswers([]);
     setUsedAnswers([]);
     setAnswer("");
     setTimeLeft(LEVELS[0].seconds);
-    setMessage("🐶 Level 1: Animals! Name an animal before the timer hits zero.");
+    setMessage("🐶 Level 1: Animals! You have 20 seconds to name an animal.");
   };
 
   const handleSubmit = (e) => {
@@ -445,13 +445,18 @@ setUsedAnswers([]);
   };
 
   const handleNextCategory = () => {
-    if (!gameStarted || gameOver || champion) return;
-    setCategory((current) => getRandomCategory(current));
-    setUsedAnswers([]);
-    setAnswer("");
-    setMessage("🔁 New category! Your level progress stays with you.");
-    setTimeLeft(levelInfo.seconds);
-  };
+  if (!gameStarted || gameOver || champion) return;
+
+  const currentIndex = CATEGORIES.indexOf(category);
+  const nextIndex = (currentIndex + 1) % CATEGORIES.length;
+  const nextCategory = CATEGORIES[nextIndex];
+
+  setCategory(nextCategory);
+  setUsedAnswers([]);
+  setAnswer("");
+  setMessage(`🔁 New category: ${nextCategory}! Your level progress stays with you.`);
+  setTimeLeft(levelInfo.seconds);
+};
 
   const handleGiveStrike = () => {
     if (!gameStarted || gameOver || champion) return;
@@ -608,7 +613,7 @@ setUsedAnswers([]);
         <h1 style={title}>🎲 The Messed Up Game — Level Challenge</h1>
         <p style={subtitle}>
           Level 1 starts with Animals. Press START GAME when you’re ready.
-          Then you have 10 seconds for each answer. Get 5 correct to level up.
+          Then you have 20 seconds for each answer. Get 5 correct to level up.
           Don’t repeat. 3 strikes and you’re out.
         </p>
 
