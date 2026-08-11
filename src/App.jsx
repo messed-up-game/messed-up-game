@@ -623,7 +623,7 @@ const MarkoMaxSection = () => (
     border: "2px solid #facc15",
   }}
 >
-<h2>📰 Join Our Newsletter</h2>
+<h2>📰 Subscribe to Our Newsletter</h2>
 
 <p>
   Get tournament updates, sports picks, custom songs, faith inspiration,
@@ -667,7 +667,7 @@ marginBottom: "12px",
     cursor: "pointer",
   }}
 >
-  Join Newsletter
+  
 </button>
 
 </form>
@@ -1462,7 +1462,7 @@ fontSize: "20px",
           </div>
 
           <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
-            📰 Join Newsletter
+            📰 Subscribe to Our Newsletter
           </button>
         </section>
 
