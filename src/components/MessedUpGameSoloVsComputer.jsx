@@ -379,7 +379,6 @@ export default function MessedUpGameSoloVsComputer() {
 setLevel(nextLevel);
 setLevelCorrect(0);
 setCategory("Animals");
-setUsedAnswers([]);
         setMessage(
           `🎉 LEVEL UP! Welcome to Level ${nextLevel}: ${LEVELS[nextLevel - 1].name}!`
         );
@@ -444,7 +443,7 @@ setUsedAnswers([]);
     registerCorrect(key);
   };
 
-  const handleNextCategory = () => {
+const handleNextCategory = () => {
   if (!gameStarted || gameOver || champion) return;
 
   const currentIndex = CATEGORIES.indexOf(category);
@@ -452,9 +451,10 @@ setUsedAnswers([]);
   const nextCategory = CATEGORIES[nextIndex];
 
   setCategory(nextCategory);
-  setUsedAnswers([]);
   setAnswer("");
-  setMessage(`🔁 New category: ${nextCategory}! Your level progress stays with you.`);
+  setMessage(
+    `🔁 New category: ${nextCategory}! Your level progress stays with you.`
+  );
   setTimeLeft(levelInfo.seconds);
 };
 
