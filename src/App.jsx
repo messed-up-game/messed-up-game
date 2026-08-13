@@ -354,7 +354,7 @@ const MarkoMaxSection = () => (
             style={{
               display: "flex",
               gap: 10,
-              alignItems: "center",
+              alignItems: "start",
               justifyContent: "space-between",
               marginBottom: 16,
               flexWrap: "wrap",
@@ -1560,7 +1560,7 @@ fontSize: "20px",
             padding: "4px 0 2px",
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "start",
             gap: 14,
             flexWrap: "wrap",
           }}
@@ -1585,8 +1585,67 @@ fontSize: "20px",
           <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
             📰 Subscribe to Our Newsletter
           </button>
-        </section>
+         </section>
+<section
+  style={{
+    maxWidth: 900,
+    margin: "6px auto 10px",
+    padding: 12,
+    borderRadius: 16,
+    background: "rgba(34,197,94,.12)",
+    border: "2px solid #22c55e",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ margin: "0 0 8px", fontWeight: 950 }}>
+    🌱 Acorns $1,100 Limited-Time Opportunity
+  </h2>
 
+  <p style={{ margin: "0 0 10px", lineHeight: 1.5 }}>
+    Check out the current Acorns referral opportunity. See the official
+    requirements, deadline, and eligibility details before signing up.
+  </p>
+
+ <a
+  href="https://acorns.com/share/?shareable_code=QBM5GUN&first_name=Tom&friend_reward=5"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "block",
+    textDecoration: "none",
+  }}
+>
+  <img
+    src="/acorns-1100-deal.png"
+    alt="Acorns $1,100 limited-time opportunity"
+    style={{
+      width: "100%",
+      maxWidth: 650,
+      height: "auto",
+      display: "block",
+      margin: "0 auto 12px",
+      borderRadius: 14,
+    }}
+  />
+</a>
+
+<a
+  href="https://acorns.com/share/?shareable_code=QBM5GUN&first_name=Tom&friend_reward=5"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "inline-block",
+    padding: "12px 20px",
+    borderRadius: 10,
+    background: "#22c55e",
+    color: "#052e16",
+    fontWeight: 950,
+    textDecoration: "none",
+  }}
+>
+  🌱 See the Acorns Offer
+</a>
+</section>
         <section
           style={{
             margin: "0 0 6px",
@@ -1604,7 +1663,7 @@ fontSize: "20px",
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
               gap: 24,
-              alignItems: "center",
+              alignItems: "start",
             }}
           >
             <div>
