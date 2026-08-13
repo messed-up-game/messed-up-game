@@ -233,7 +233,7 @@ Animals: new Set([
 "monkey",
 "ape",
 "gorilla",
-"wolf"
+"wolf",
 "fox",
 "deer",
 "moose",
