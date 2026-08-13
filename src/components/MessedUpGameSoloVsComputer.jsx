@@ -299,7 +299,114 @@ Animals: new Set([
 "worm",
 "x-ray tetra",
 "xerus",
-"yak",  
+"yak",
+"bird",
+"fish",
+"insect",
+"reptile",
+"amphibian",
+"mammal",
+"aardvark",
+"anteater",
+"armadillo",
+"badger",
+"beaver",
+"boar",
+"bobcat",
+"bull",
+"calf",
+"chinchilla",
+"chipmunk",
+"coyote",
+"elk",
+"ferret",
+"gazelle",
+"gerbil",
+"gopher",
+"groundhog",
+"hamster",
+"hedgehog",
+"jackal",
+"lemur",
+"meerkat",
+"mink",
+"mole",
+"mongoose",
+"opossum",
+"possum",
+"platypus",
+"porcupine",
+"ram",
+"reindeer",
+"skunk",
+"sloth",
+"vole",
+"weasel",
+"wildebeest",
+"wolverine",
+"baboon",
+"chimpanzee",
+"orangutan",
+"hen",
+"rooster",
+"chick",
+"blue jay",
+"cardinal",
+"canary",
+"crane",
+"cuckoo",
+"finch",
+"flamingo",
+"heron",
+"hummingbird",
+"magpie",
+"ostrich",
+"pelican",
+"puffin",
+"raven",
+"seagull",
+"sparrow",
+"stork",
+"swallow",
+"swan",
+"woodpecker",
+"boa",
+"chameleon",
+"cobra",
+"gecko",
+"python",
+"salamander",
+"tortoise",
+"clam",
+"eel",
+"lobster",
+"manta ray",
+"oyster",
+"pufferfish",
+"ray",
+"seahorse",
+"shrimp",
+"squid",
+"starfish",
+"stingray",
+"swordfish",
+"tuna",
+"beetle",
+"butterfly",
+"caterpillar",
+"centipede",
+"cockroach",
+"cricket",
+"dragonfly",
+"fly",
+"grasshopper",
+"ladybug",
+"mosquito",
+"moth",
+"spider",
+"tarantula",
+"termite",
+"wasp",  
 ]),
   Colors: new Set([
   "red",
@@ -391,7 +498,35 @@ function getNextCategory(current) {
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 function normalize(text) {
-  return text.trim().toLowerCase();
+  let value = text.trim().toLowerCase();
+
+  const irregularPlurals = {
+    mice: "mouse",
+    geese: "goose",
+    feet: "foot",
+    teeth: "tooth",
+    children: "child",
+  };
+
+  if (irregularPlurals[value]) {
+    return irregularPlurals[value];
+  }
+
+  if (value.endsWith("ies") && value.length > 3) {
+    return value.slice(0, -3) + "y";
+  }
+
+  if (
+    value.endsWith("s") &&
+    !value.endsWith("ss") &&
+    !value.endsWith("us") &&
+    value.length > 3
+  ) {
+    return value.slice(0, -1);
+  }
+
+  return value;
+}
 }
 
 export default function MessedUpGameSoloVsComputer() {
