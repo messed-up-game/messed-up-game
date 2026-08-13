@@ -525,8 +525,7 @@ function normalize(text) {
     return value.slice(0, -1);
   }
 
-  return value;
-}
+return value;
 }
 
 export default function MessedUpGameSoloVsComputer() {
