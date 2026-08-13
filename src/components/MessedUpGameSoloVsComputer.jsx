@@ -29,7 +29,6 @@ const CATEGORIES = [
   "Zoo Animals",
   "Family Members",
   "Board Games",
-  "Animals A-to-Z",
 ];
 
 const LEVELS = [
@@ -189,6 +188,31 @@ const VALID_ANSWERS = {
   "lizard",
   "frog",
   "turtle",
+  "ant",
+"bat",
+"bee",
+"crab",
+"dove",
+"emu",
+"falcon",
+"goose",
+"iguana",
+"jellyfish",
+"newt",
+"narwhal",
+"octopus",
+"quail",
+"quokka",
+"robin",
+"scorpion",
+"toad",
+"urchin",
+"vulture",
+"walrus",
+"worm",
+"x-ray tetra",
+"xerus",
+"yak",  
 ]),
   Colors: new Set([
   "red",
@@ -267,20 +291,28 @@ const VALID_ANSWERS = {
   ]),
 };
 
-function getRandomCategory(current) {
-  if (CATEGORIES.length === 1) return CATEGORIES[0];
-  let next = current;
-  while (!next || next === current) {
-    next = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+function getNextCategory(current) {
+  const currentIndex = CATEGORIES.indexOf(current);
+
+  if (currentIndex === -1 || currentIndex === CATEGORIES.length - 1) {
+    return CATEGORIES[0];
   }
-  return next;
+
+  return CATEGORIES[currentIndex + 1];
 }
+
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 function normalize(text) {
   return text.trim().toLowerCase();
 }
 
 export default function MessedUpGameSoloVsComputer() {
+  const [playMode, setPlayMode] = useState("single");
+const [letterIndex, setLetterIndex] = useState(0);
+
+const currentLetter = LETTERS[letterIndex];
+  
   const [category, setCategory] = useState("Animals");
   const [answer, setAnswer] = useState("");
   const [usedAnswers, setUsedAnswers] = useState([]);
@@ -297,7 +329,7 @@ export default function MessedUpGameSoloVsComputer() {
   const [gameOver, setGameOver] = useState(false);
   const [champion, setChampion] = useState(false);
   const [message, setMessage] = useState(
-    "Press START GAME when you’re ready. Level 1 begins with Animals."
+    "Choose Single Category or A-to-Z Challenge, then press START GAME. You have 20 seconds for each answer."
   );
 
   const levelInfo = useMemo(
@@ -360,88 +392,141 @@ export default function MessedUpGameSoloVsComputer() {
     }
   };
 
-  const registerCorrect = (key) => {
-    const newLevelCorrect = levelCorrect + 1;
+ const registerCorrect = (key) => {
+  const newLevelCorrect = levelCorrect + 1;
 
-    setUsedAnswers((prev) => [...prev, key]);
-    setScore((prev) => prev + 1);
-    setAnswer("");
+  setUsedAnswers((prev) => [...prev, key]);
+  setScore((prev) => prev + 1);
+  setAnswer("");
 
-    if (newLevelCorrect >= levelInfo.target) {
-      if (level >= LEVELS.length) {
-        setLevelCorrect(levelInfo.target);
-        setChampion(true);
-        setMessage(
-          "🏆 CHAMPION! You completed Level 5 of The Messed Up Game!"
-        );
-      } else {
-        const nextLevel = level + 1;
-setLevel(nextLevel);
-setLevelCorrect(0);
-setCategory("Animals");
-        setMessage(
-          `🎉 LEVEL UP! Welcome to Level ${nextLevel}: ${LEVELS[nextLevel - 1].name}!`
-        );
-      }
-    } else {
-      setLevelCorrect(newLevelCorrect);
+  if (playMode === "atoz") {
+    if (letterIndex >= LETTERS.length - 1) {
+      setChampion(true);
       setMessage(
-        `✅ Correct! ${newLevelCorrect} of ${levelInfo.target} toward Level ${
-          level >= LEVELS.length ? "Champion" : level + 1
-        }.`
+        "🏆 A-to-Z CHAMPION! You made it all the way from A to Z!"
+      );
+      return;
+    }
+
+    setLetterIndex((prev) => prev + 1);
+    setMessage(
+      `✅ Correct! Next letter: ${LETTERS[letterIndex + 1]}.`
+    );
+    setTimeLeft(levelInfo.seconds);
+    return;
+  }
+
+  if (newLevelCorrect >= levelInfo.target) {
+    if (level >= LEVELS.length) {
+      setLevelCorrect(levelInfo.target);
+      setChampion(true);
+      setMessage(
+        "🏆 CHAMPION! You completed Level 5 of The Messed Up Game!"
+      );
+    } else {
+      const nextLevel = level + 1;
+
+      setLevel(nextLevel);
+      setLevelCorrect(0);
+      setCategory("Animals");
+
+      setMessage(
+        `🎉 LEVEL UP! Welcome to Level ${nextLevel}: ${
+          LEVELS[nextLevel - 1].name
+        }!`
       );
     }
+  } else {
+    setLevelCorrect(newLevelCorrect);
 
-    setTimeLeft(levelInfo.seconds);
-  };
+    setMessage(
+      `✅ Correct! ${newLevelCorrect} of ${levelInfo.target} toward Level ${
+        level >= LEVELS.length ? "Champion" : level + 1
+      }.`
+    );
+  }
 
-  const handleStartGame = () => {
-    setCategory("Animals");
-    setGameStarted(true);
-    setGameOver(false);
-    setChampion(false);
-    setStrikes(0);
-    setScore(0);
-    setLevel(1);
-    setLevelCorrect(0);
-    setUsedAnswers([]);
-    setAnswer("");
-    setTimeLeft(LEVELS[0].seconds);
-    setMessage("🐶 Level 1: Animals! You have 20 seconds to name an animal.");
-  };
+  setTimeLeft(levelInfo.seconds);
+};
+  
+const handleStartGame = () => {
+  setCategory("Animals");
+  setGameStarted(true);
+  setGameOver(false);
+  setChampion(false);
+  setStrikes(0);
+  setScore(0);
+  setLevel(1);
+  setLevelCorrect(0);
+  setUsedAnswers([]);
+  setAnswer("");
+  setLetterIndex(0);
+  setTimeLeft(LEVELS[0].seconds);
 
+  if (playMode === "atoz") {
+    setMessage(
+      "🔤 A-to-Z Challenge! Letter A — name an animal beginning with A."
+    );
+  } else {
+    setMessage(
+      "🐶 Level 1: Animals! You have 20 seconds to name an animal."
+    );
+  }
+};
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!gameStarted || gameOver || champion) return;
+  e.preventDefault();
+  if (!gameStarted || gameOver || champion) return;
 
-    const trimmed = answer.trim();
-    if (!trimmed) {
-      setMessage("⚠️ Please type an answer first.");
-      return;
-    }
+  const trimmed = answer.trim();
 
-    const normalized = normalize(trimmed);
-    const key = `${category.toLowerCase()}::${normalized}`;
+  if (!trimmed) {
+    setMessage("⚠️ Please type an answer first.");
+    return;
+  }
 
-    if (usedAnswers.includes(key)) {
-      registerStrike("❌ You already used that answer.");
-      return;
-    }
+  const normalized = normalize(trimmed);
+  const key = `${category.toLowerCase()}::${normalized}`;
 
-    const validSet = VALID_ANSWERS[category];
+  if (usedAnswers.includes(key)) {
+    registerStrike("❌ You already used that answer.");
+    return;
+  }
 
-    if (!validSet && OBVIOUS_WRONG.has(normalized)) {
-      registerStrike(`❌ That clearly doesn’t fit “${category}”.`);
+  const validSet = VALID_ANSWERS[category];
+
+  if (playMode === "atoz") {
+    const requiredLetter = currentLetter.toLowerCase();
+
+    if (!normalized.startsWith(requiredLetter)) {
+      registerStrike(
+        `❌ Your answer must start with the letter ${currentLetter}.`
+      );
       return;
     }
 
     if (validSet && !validSet.has(normalized)) {
-      registerStrike(`❌ That doesn’t look like it fits “${category}”.`);
+      registerStrike(
+        `❌ That doesn’t look like a valid animal beginning with ${currentLetter}.`
+      );
       return;
     }
 
     registerCorrect(key);
-  };
+    return;
+  }
+
+  if (!validSet && OBVIOUS_WRONG.has(normalized)) {
+    registerStrike(`❌ That clearly doesn’t fit “${category}”.`);
+    return;
+  }
+
+  if (validSet && !validSet.has(normalized)) {
+    registerStrike(`❌ That doesn’t look like it fits “${category}”.`);
+    return;
+  }
+
+  registerCorrect(key);
+};
 
 const handleNextCategory = () => {
   if (!gameStarted || gameOver || champion) return;
@@ -464,21 +549,23 @@ const handleNextCategory = () => {
   };
 
   const handlePlayAgain = () => {
-    setCategory("Animals");
-    setAnswer("");
-    setUsedAnswers([]);
-    setStrikes(0);
-    setScore(0);
-    setLevelCorrect(0);
-    setLevel(1);
-    setGameStarted(false);
-    setGameOver(false);
-    setChampion(false);
-    setTimeLeft(LEVELS[0].seconds);
-    setMessage(
-      "Press START GAME when you’re ready. Level 1 begins with Animals."
-    );
-  };
+  setCategory("Animals");
+  setAnswer("");
+  setUsedAnswers([]);
+  setStrikes(0);
+  setScore(0);
+  setLevelCorrect(0);
+  setLevel(1);
+  setGameStarted(false);
+  setGameOver(false);
+  setChampion(false);
+  setLetterIndex(0);
+  setTimeLeft(LEVELS[0].seconds);
+
+  setMessage(
+    "Choose Single Category or A-to-Z Challenge, then press START GAME. You have 20 seconds for each answer."
+  );
+};
 
   const progressDots = Array.from(
     { length: levelInfo.target },
@@ -647,22 +734,79 @@ const handleNextCategory = () => {
         </div>
 
         {!gameStarted && !gameOver && !champion && (
-          <button
-            type="button"
-            style={{
-              ...primaryButton,
-              width: "100%",
-              marginTop: 6,
-              padding: "16px 20px",
-              fontSize: 20,
-              background: "#22c55e",
-              color: "#052e16",
-            }}
-            onClick={handleStartGame}
-          >
-            ▶ START GAME
-          </button>
-        )}
+  <>
+    <div
+      style={{
+        display: "flex",
+        gap: 12,
+        justifyContent: "center",
+        flexWrap: "wrap",
+        margin: "14px 0",
+      }}
+    >
+      <button
+        type="button"
+        style={{
+          ...secondaryButton,
+          background:
+            playMode === "single"
+              ? "#22c55e"
+              : "rgba(255,255,255,.08)",
+          color: playMode === "single" ? "#052e16" : "white",
+          fontWeight: 900,
+        }}
+        onClick={() => {
+          setPlayMode("single");
+          setLetterIndex(0);
+          setMessage(
+            "🎯 Single Category selected. Press START GAME when you’re ready."
+          );
+        }}
+      >
+        🎯 Single Category
+      </button>
+
+      <button
+        type="button"
+        style={{
+          ...secondaryButton,
+          background:
+            playMode === "atoz"
+              ? "#facc15"
+              : "rgba(255,255,255,.08)",
+          color: playMode === "atoz" ? "#422006" : "white",
+          fontWeight: 900,
+        }}
+        onClick={() => {
+          setPlayMode("atoz");
+          setCategory("Animals");
+          setLetterIndex(0);
+          setMessage(
+            "🔤 A-to-Z Challenge selected. Start with A and work your way to Z!"
+          );
+        }}
+      >
+        🔤 A-to-Z Challenge
+      </button>
+    </div>
+
+    <button
+      type="button"
+      style={{
+        ...primaryButton,
+        width: "100%",
+        marginTop: 6,
+        padding: "16px 20px",
+        fontSize: 20,
+        background: "#22c55e",
+        color: "#052e16",
+      }}
+      onClick={handleStartGame}
+    >
+      ▶ START GAME
+    </button>
+  </>
+)}
 
         {gameStarted && !champion && (
           <form onSubmit={handleSubmit}>
