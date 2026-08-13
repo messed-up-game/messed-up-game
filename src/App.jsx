@@ -649,7 +649,7 @@ width: "100%",
 maxWidth: "350px",
 padding: "12px",
 borderRadius: "10px",
-marginBottom: "12px",
+marginBottom: "6,"
 }}
 />
 
@@ -784,9 +784,130 @@ fontSize: "20px",
               target="_blank"
               rel="noreferrer"
               style={{
-                display: "inline-block",
-                marginTop: 12,
-                padding: "10px 14px",
+  display: "inline-block",
+  marginTop: 4,
+  padding: "10px 14px",
+  borderRadius: 10,
+  background: "#0ea5e9",
+  color: "#0f172a",
+  fontWeight: 900,
+  textDecoration: "none",
+}}
+            </p>
+            <h1 style={{ margin: 0, fontSize: "clamp(2.4rem, 8vw, 5.6rem)", lineHeight: 0.95, fontWeight: 950 }}>
+              Games. Music. Comedy. Faith.
+            </h1>
+          </div>
+
+          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+            📰 Subscribe to Our Newsletter
+          </button>
+        </section>
+
+        <section
+          style={{
+            margin: "0 0 6px",
+            padding: "8px 16px",
+            borderRadius: 28,
+            background:
+              "radial-gradient(circle at top left, rgba(250,204,21,.24), transparent 34%), radial-gradient(circle at bottom right, rgba(34,197,94,.22), transparent 34%), rgba(255,255,255,.055)",
+            border: "1px solid rgba(255,255,255,.14)",
+            boxShadow: "0 24px 70px rgba(0,0,0,.38)",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 24,
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <p
+                style={{
+                  display: "inline-block",
+                  margin: "0 0 14px",
+                  padding: "8px 12px",
+                  borderRadius: 999,
+                  background: "rgba(34,197,94,.16)",
+                  border: "1px solid rgba(34,197,94,.38)",
+                  color: "#bbf7d0",
+                  fontWeight: 900,
+                }}
+              >
+                🎲 The World's Most Entertaining 20 Seconds
+              </p>
+
+              <h2 style={{ margin: "0 0 8px",fontSize: "clamp(2rem, 6vw, 4.4rem)", lineHeight: 1, fontWeight: 950 }}>
+                Play live. Laugh hard. Win cash.
+              </h2>
+
+              <p style={{ margin: "0 0 10px", fontSize: "1.15rem", lineHeight: 1.65, opacity: 0.94, maxWidth: 660 }}>
+                Welcome to the home of <strong>The Messed Up Game™</strong>, original songs,
+                custom music gifts, comedy videos, Christian inspiration, and live entertainment
+                hosted by Wildman Tom B.
+              </p>
+
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8 }}>
+                <a
+                  href="https://buy.stripe.com/cNifZj3xO4Xd4qt26I2Ry01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ ...buttonStyle, padding: "15px 20px", fontSize: 18, textDecoration: "none" }}
+                >
+                  🎲 Play Live — $10 Entry
+                </a>
+
+                <a
+                  href="https://youtube.com/@messedupgame"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    ...ghostButtonStyle,
+                    padding: "15px 20px",
+                    fontSize: 18,
+                    textDecoration: "none",
+                    borderColor: "rgba(248,113,113,.5)",
+                    background: "rgba(220,38,38,.22)",
+                  }}
+                >
+                  📺 Watch Free
+                </a>
+
+                <a
+                  href="mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request"
+                  style={{ ...ghostButtonStyle, padding: "15px 20px", fontSize: 18, textDecoration: "none" }}
+                >
+                  🎤 Order a Custom Song
+                </a>
+              </div>
+
+              <p style={{ marginTop: 16, color: "#facc15", fontWeight: 900 }}>
+                🏆 Only 9 players compete. Winner receives 90% of the prize pool.
+              </p>
+            </div>
+
+        <div
+  style={{
+    padding: 14,
+    borderRadius: 24,
+    background: "rgba(0,0,0,.25)",
+    border: "1px solid rgba(255,255,255,.12)",
+    boxShadow: "0 18px 40px rgba(0,0,0,.35)",
+  }}
+>
+  <h3
+    style={{
+      margin: "4px 0 4px",
+      textAlign: "center",
+      fontSize: "1.5rem",
+      color: "#facc15",
+      fontWeight: 900,
+    }}
+  >
+    ✝️ Featured Worship Video
                 borderRadius: 12,
                 textDecoration: "none",
                 fontWeight: 900,
@@ -1468,8 +1589,8 @@ fontSize: "20px",
 
         <section
           style={{
-            margin: "4px 0 12px",
-            padding: "12px 20px",
+            margin: "0 0 6px",
+        padding: "8px 16px",
             borderRadius: 28,
             background:
               "radial-gradient(circle at top left, rgba(250,204,21,.24), transparent 34%), radial-gradient(circle at bottom right, rgba(34,197,94,.22), transparent 34%), rgba(255,255,255,.055)",
@@ -1490,7 +1611,7 @@ fontSize: "20px",
               <p
                 style={{
                   display: "inline-block",
-                  margin: "0 0 14px",
+                  margin: "0 0 6px",
                   padding: "8px 12px",
                   borderRadius: 999,
                   background: "rgba(34,197,94,.16)",
@@ -1499,10 +1620,10 @@ fontSize: "20px",
                   fontWeight: 900,
                 }}
               >
-                🎲 The World's Most Entertaining 10 Seconds
+                🎲 The World's Most Entertaining 20 Seconds
               </p>
 
-              <h2 style={{ margin: "0 0 14px", fontSize: "clamp(2rem, 6vw, 4.4rem)", lineHeight: 1, fontWeight: 950 }}>
+              <h2 style={{ margin: "0 0 6px", fontSize: "clamp(2rem, 6vw, 4.4rem)", lineHeight: 1, fontWeight: 950 }}>
                 Play live. Laugh hard. Win cash.
               </h2>
 
