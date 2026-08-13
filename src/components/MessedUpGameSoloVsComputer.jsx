@@ -46,7 +46,34 @@ const OBVIOUS_WRONG = new Set([
   "california",
   "texas",
 ]);
-
+const ANIMALS_A_TO_Z = {
+  A: ["aardvark", "alligator", "alpaca", "ant", "anteater", "ape", "armadillo"],
+  B: ["baboon", "badger", "bat", "bear", "beaver", "bee", "bison", "bobcat", "buffalo"],
+  C: ["camel", "cat", "cheetah", "chicken", "chimpanzee", "chipmunk", "cobra", "cow", "coyote", "crab", "crocodile"],
+  D: ["deer", "dog", "dolphin", "donkey", "dove", "dragonfly", "duck"],
+  E: ["eagle", "eel", "elephant", "elk", "emu"],
+  F: ["falcon", "fawn", "ferret", "finch", "fish", "flamingo", "fly", "fox", "frog"],
+  G: ["gazelle", "gecko", "gerbil", "giraffe", "goat", "goose", "gorilla", "grasshopper"],
+  H: ["hamster", "hawk", "hedgehog", "hen", "heron", "hippo", "hippopotamus", "horse", "hummingbird", "hyena"],
+  I: ["iguana", "insect"],
+  J: ["jackal", "jaguar", "jellyfish"],
+  K: ["kangaroo", "kid", "kitten", "koala"],
+  L: ["ladybug", "lamb", "lemur", "leopard", "lion", "lizard", "llama", "lobster"],
+  M: ["magpie", "mammal", "manta ray", "meerkat", "mice", "mink", "mole", "mongoose", "monkey", "moose", "mosquito", "moth", "mouse", "mule"],
+  N: ["narwhal", "newt", "nightingale"],
+  O: ["octopus", "opossum", "orangutan", "ostrich", "otter", "owl", "ox", "oyster"],
+  P: ["panda", "panther", "parrot", "peacock", "pelican", "penguin", "pig", "pigeon", "platypus", "porcupine", "possum", "puffin", "puppy", "python"],
+  Q: ["quail", "quetzal", "quokka"],
+  R: ["rabbit", "raccoon", "ram", "rat", "raven", "reindeer", "reptile", "rhino", "rhinoceros", "robin", "rooster"],
+  S: ["salamander", "scorpion", "seagull", "seal", "seahorse", "shark", "sheep", "shrimp", "skunk", "sloth", "snake", "sparrow", "spider", "squid", "squirrel", "starfish", "stingray", "stork", "swan"],
+  T: ["tarantula", "termite", "tiger", "toad", "tortoise", "tuna", "turkey", "turtle"],
+  U: ["urchin", "umbrellabird"],
+  V: ["vole", "vulture"],
+  W: ["walrus", "wasp", "weasel", "whale", "wildebeest", "wolf", "wolverine", "woodpecker", "worm"],
+  X: ["x-ray tetra", "xerus"],
+  Y: ["yak"],
+  Z: ["zebra"],
+};
 const VALID_ANSWERS = {
   "Ice Cream Flavors": new Set([
     "vanilla",
