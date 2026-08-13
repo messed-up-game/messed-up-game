@@ -779,21 +779,23 @@ fontSize: "20px",
               />
             </div>
 
-            <a
-              href={PRAYER_SHORT_URL}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-  display: "inline-block",
-  marginTop: 4,
-  padding: "10px 14px",
-  borderRadius: 10,
-  background: "#0ea5e9",
-  color: "#0f172a",
-  fontWeight: 900,
-  textDecoration: "none",
-}}
-            </p>
+           <a
+  href={PRAYER_SHORT_URL}
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "inline-block",
+    marginTop: 4,
+    padding: "10px 14px",
+    borderRadius: 10,
+    background: "#0ea5e9",
+    color: "#0f172a",
+    fontWeight: 900,
+    textDecoration: "none",
+  }}
+>
+  🙏 Watch Prayer
+</a>
             <h1 style={{ margin: 0, fontSize: "clamp(2.4rem, 8vw, 5.6rem)", lineHeight: 0.95, fontWeight: 950 }}>
               Games. Music. Comedy. Faith.
             </h1>
@@ -1577,15 +1579,26 @@ fontSize: "20px",
             >
               Wildman Tom B Productions
             </p>
-            <h1 style={{ margin: 0, fontSize: "clamp(2.4rem, 8vw, 5.6rem)", lineHeight: 0.95, fontWeight: 950 }}>
-              Games. Music. Comedy. Faith.
-            </h1>
-          </div>
+            
+            <h1 
+  style={{ 
+    margin: 0, 
+    fontSize: "clamp(2.4rem, 8vw, 5.6rem)", 
+    lineHeight: 0.95, 
+    fontWeight: 950,
+  }}
+>
+  Games. Music. Comedy. Faith.
+</h1>
+</div>
 
-          <button style={ghostButtonStyle} onClick={() => setMode("newsletter")}>
+          <button 
+            style={ghostButtonStyle} 
+            onClick={() => setMode("newsletter")}
+          >
             📰 Subscribe to Our Newsletter
           </button>
-         </section>
+        </section>
 <section
   style={{
     maxWidth: 900,
