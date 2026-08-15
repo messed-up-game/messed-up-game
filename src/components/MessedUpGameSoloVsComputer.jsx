@@ -676,8 +676,7 @@ const currentLetter = LETTERS[letterIndex];
 
       setLevel(nextLevel);
       setLevelCorrect(0);
-      setCategory("Animals");
-
+     
       setMessage(
         `🎉 LEVEL UP! Welcome to Level ${nextLevel}: ${
           LEVELS[nextLevel - 1].name
@@ -698,7 +697,6 @@ const currentLetter = LETTERS[letterIndex];
 };
   
 const handleStartGame = () => {
-  setCategory("Animals");
   setGameStarted(true);
   setGameOver(false);
   setChampion(false);
@@ -716,10 +714,12 @@ const handleStartGame = () => {
       "🔤 A-to-Z Challenge! Letter A — name an animal beginning with A."
     );
   } else {
-    setMessage(
-      "🐶 Level 1: Animals! You have 20 seconds to name an animal."
-    );
-  }
+  setMessage(
+    category === "Colors"
+      ? "🎨 Level 1: Colors! You have 20 seconds to name a color."
+      : "🐶 Level 1: Animals! You have 20 seconds to name an animal."
+  );
+}
 };
   const handleSubmit = (e) => {
   e.preventDefault();
@@ -997,21 +997,48 @@ const handleNextCategory = () => {
         style={{
           ...secondaryButton,
           background:
-            playMode === "single"
+            playMode === "single" && category === "Animals"
               ? "#22c55e"
               : "rgba(255,255,255,.08)",
-          color: playMode === "single" ? "#052e16" : "white",
+          color:
+            playMode === "single" && category === "Animals"
+              ? "#052e16"
+              : "white",
           fontWeight: 900,
         }}
         onClick={() => {
           setPlayMode("single");
+          setCategory("Animals");
           setLetterIndex(0);
           setMessage(
-            "🎯 Single Category selected. Press START GAME when you’re ready."
+            "🐶 Animals selected. Press START GAME when you’re ready."
           );
         }}
       >
-        🎯 Single Category
+        🐶 Animals
+      </button>
+
+      <button
+        type="button"
+        style={{
+          ...secondaryButton,
+          background:
+            playMode === "single" && category === "Colors"
+              ? "#a855f7"
+              : "rgba(255,255,255,.08)",
+          color: "white",
+          fontWeight: 900,
+        }}
+        onClick={() => {
+          setPlayMode("single");
+          setCategory("Colors");
+          setLetterIndex(0);
+          setMessage(
+            "🎨 Colors selected. Press START GAME when you’re ready."
+          );
+        }}
+      >
+        🎨 Colors
       </button>
 
       <button
@@ -1034,7 +1061,7 @@ const handleNextCategory = () => {
           );
         }}
       >
-        🔤 A-to-Z Challenge
+        🔤 Animals A-to-Z
       </button>
     </div>
 
