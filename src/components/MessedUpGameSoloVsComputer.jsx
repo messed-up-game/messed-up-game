@@ -74,6 +74,39 @@ const ANIMALS_A_TO_Z = {
   Y: ["yak"],
   Z: ["zebra"],
 };
+const ANIMALS_A_TO_Z = {
+  // your animal A-Z list
+};
+
+const COLORS_A_TO_Z = {
+  A: ["amber", "amethyst", "apricot", "aqua", "aquamarine", "azure"],
+  B: ["baby blue", "baby pink", "beige", "black", "blue", "bronze", "brown", "burgundy"],
+  C: ["cerulean", "champagne", "charcoal", "chartreuse", "chocolate", "cobalt", "copper", "coral", "cream", "crimson", "cyan"],
+  D: ["dark blue", "dark green", "dark orange", "dark red", "deep pink"],
+  E: ["ebony", "eggshell", "emerald"],
+  F: ["firebrick", "forest green", "fuchsia"],
+  G: ["gold", "goldenrod", "gray", "green", "grey"],
+  H: ["honeydew", "hot pink"],
+  I: ["indigo", "ivory"],
+  J: ["jade", "jet black"],
+  K: ["khaki"],
+  L: ["lavender", "lemon", "light blue", "light green", "light pink", "lilac", "lime"],
+  M: ["magenta", "maize", "maroon", "mauve", "mint", "mustard"],
+  N: ["navy", "navy blue"],
+  O: ["ochre", "off white", "olive", "orange", "orchid"],
+  P: ["peach", "pearl", "periwinkle", "pink", "plum", "purple"],
+  Q: ["quartz", "queen blue"],
+  R: ["red", "rose", "rose gold", "royal blue", "ruby", "rust"],
+  S: ["sage", "salmon", "sand", "sapphire", "scarlet", "sea green", "seafoam", "silver", "sky blue", "slate"],
+  T: ["tan", "taupe", "teal", "turquoise"],
+  U: ["umber", "ultramarine"],
+  V: ["vermilion", "violet"],
+  W: ["wheat", "white", "wine"],
+  X: ["xanadu"],
+  Y: ["yellow", "yellow green"],
+  Z: ["zaffre", "zinnwaldite brown"],
+};
+
 const VALID_ANSWERS = {
   "Ice Cream Flavors": new Set([
     "vanilla",
@@ -437,36 +470,195 @@ Animals: new Set([
 ]),
   Colors: new Set([
   "red",
-  "blue",
-  "green",
-  "yellow",
   "orange",
+  "yellow",
+  "green",
+  "blue",
+  "indigo",
+  "violet",
   "purple",
   "pink",
+  "brown",
   "black",
   "white",
-  "brown",
   "gray",
   "grey",
-  "gold",
-  "silver",
-  "violet",
-  "indigo",
-  "turquoise",
-  "teal",
-  "navy",
-  "maroon",
+
+  "alice blue",
+  "antique white",
+  "aqua",
+  "aquamarine",
+  "azure",
   "beige",
-  "tan",
+  "bisque",
+  "blanched almond",
+  "blue violet",
+  "burlywood",
+  "cadet blue",
+  "chartreuse",
+  "chocolate",
   "coral",
-  "lavender",
-  "magenta",
+  "cornflower blue",
+  "cornsilk",
+  "crimson",
   "cyan",
+  "dark blue",
+  "dark cyan",
+  "dark goldenrod",
+  "dark gray",
+  "dark grey",
+  "dark green",
+  "dark khaki",
+  "dark magenta",
+  "dark olive green",
+  "dark orange",
+  "dark orchid",
+  "dark red",
+  "dark salmon",
+  "dark sea green",
+  "dark slate blue",
+  "dark slate gray",
+  "dark slate grey",
+  "dark turquoise",
+  "dark violet",
+  "deep pink",
+  "deep sky blue",
+  "dim gray",
+  "dim grey",
+  "dodger blue",
+  "firebrick",
+  "floral white",
+  "forest green",
+  "fuchsia",
+  "gainsboro",
+  "ghost white",
+  "gold",
+  "goldenrod",
+  "green yellow",
+  "honeydew",
+  "hot pink",
+  "indian red",
+  "ivory",
+  "khaki",
+  "lavender",
+  "lavender blush",
+  "lawn green",
+  "lemon chiffon",
+  "light blue",
+  "light coral",
+  "light cyan",
+  "light goldenrod yellow",
+  "light gray",
+  "light grey",
+  "light green",
+  "light pink",
+  "light salmon",
+  "light sea green",
+  "light sky blue",
+  "light slate gray",
+  "light slate grey",
+  "light steel blue",
+  "light yellow",
   "lime",
+  "lime green",
+  "linen",
+  "magenta",
+  "maroon",
+  "medium aquamarine",
+  "medium blue",
+  "medium orchid",
+  "medium purple",
+  "medium sea green",
+  "medium slate blue",
+  "medium spring green",
+  "medium turquoise",
+  "medium violet red",
+  "midnight blue",
+  "mint cream",
+  "misty rose",
+  "moccasin",
+  "navajo white",
+  "navy",
+  "old lace",
   "olive",
-  "peach",
+  "olive drab",
+  "orange red",
+  "orchid",
+  "pale goldenrod",
+  "pale green",
+  "pale turquoise",
+  "pale violet red",
+  "papaya whip",
+  "peach puff",
+  "peru",
+  "plum",
+  "powder blue",
+  "rebecca purple",
+  "rosy brown",
+  "royal blue",
+  "saddle brown",
+  "salmon",
+  "sandy brown",
+  "sea green",
+  "seashell",
+  "sienna",
+  "silver",
+  "sky blue",
+  "slate blue",
+  "slate gray",
+  "slate grey",
+  "snow",
+  "spring green",
+  "steel blue",
+  "tan",
+  "teal",
+  "thistle",
+  "tomato",
+  "turquoise",
+  "wheat",
+  "white smoke",
+  "yellow green",
+
+  "amber",
+  "apricot",
+  "baby blue",
+  "baby pink",
+  "bronze",
+  "burgundy",
+  "cerulean",
+  "champagne",
+  "charcoal",
+  "cobalt",
+  "copper",
   "cream",
-]),
+  "emerald",
+  "eggshell",
+  "jade",
+  "lilac",
+  "maize",
+  "mauve",
+  "mint",
+  "mustard",
+  "ochre",
+  "off white",
+  "peach",
+  "pearl",
+  "periwinkle",
+  "rose",
+  "rose gold",
+  "ruby",
+  "rust",
+  "sage",
+  "sapphire",
+  "scarlet",
+  "seafoam",
+  "seafoam green",
+  "sky blue",
+  "slate",
+  "taupe",
+  "vermilion",
+  "wine",
+]);
   "Breakfast Foods": new Set([
     "eggs",
     "bacon",
@@ -525,6 +717,48 @@ function getNextCategory(current) {
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 function normalize(text) {
+  function isValidColorAnswer(answer) {
+  const value = answer.trim().toLowerCase();
+  const colors = VALID_ANSWERS.Colors;
+
+  // Exact recognized color
+  if (colors.has(value)) {
+    return true;
+  }
+
+  const shadeModifiers = [
+    "light",
+    "dark",
+    "bright",
+    "deep",
+    "pale",
+    "soft",
+    "neon",
+    "pastel",
+    "vivid",
+    "muted",
+    "dusty",
+    "electric",
+    "fluorescent",
+    "metallic",
+    "warm",
+    "cool",
+    "very light",
+    "very dark",
+  ];
+
+  for (const modifier of shadeModifiers) {
+    if (value.startsWith(`${modifier} `)) {
+      const baseColor = value.slice(modifier.length + 1);
+
+      if (colors.has(baseColor)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
   let value = text.trim().toLowerCase();
 
   const irregularPlurals = {
@@ -710,16 +944,22 @@ const handleStartGame = () => {
   setTimeLeft(LEVELS[0].seconds);
 
   if (playMode === "atoz") {
-    setMessage(
-      "🔤 A-to-Z Challenge! Letter A — name an animal beginning with A."
-    );
+    if (category === "Colors" || category === "Colors A-to-Z") {
+      setMessage(
+        "🌈 Colors A-to-Z Challenge! Letter A — name a color beginning with A."
+      );
+    } else {
+      setMessage(
+        "🐶 Animals A-to-Z Challenge! Letter A — name an animal beginning with A."
+      );
+    }
   } else {
-  setMessage(
-    category === "Colors"
-      ? "🎨 Level 1: Colors! You have 20 seconds to name a color."
-      : "🐶 Level 1: Animals! You have 20 seconds to name an animal."
-  );
-}
+    setMessage(
+      category === "Colors"
+        ? "🎨 Level 1: Colors! You have 20 seconds to name a color."
+        : "🐶 Level 1: Animals! You have 20 seconds to name an animal."
+    );
+  }
 };
   const handleSubmit = (e) => {
   e.preventDefault();
@@ -742,39 +982,37 @@ const handleStartGame = () => {
 
   const validSet = VALID_ANSWERS[category];
 
-  if (playMode === "atoz") {
-    const requiredLetter = currentLetter.toLowerCase();
+if (playMode === "atoz") {
+  const requiredLetter = currentLetter.toLowerCase();
 
-    if (!normalized.startsWith(requiredLetter)) {
-      registerStrike(
-        `❌ Your answer must start with the letter ${currentLetter}.`
-      );
-      return;
-    }
-
-    if (validSet && !validSet.has(normalized)) {
-      registerStrike(
-        `❌ That doesn’t look like a valid animal beginning with ${currentLetter}.`
-      );
-      return;
-    }
-
-    registerCorrect(key);
+  if (!normalized.startsWith(requiredLetter)) {
+    registerStrike(
+      `❌ Your answer must start with the letter ${currentLetter}.`
+    );
     return;
   }
 
-  if (!validSet && OBVIOUS_WRONG.has(normalized)) {
-    registerStrike(`❌ That clearly doesn’t fit “${category}”.`);
-    return;
-  }
+  const validAnswersForLetter =
+    category === "Colors"
+      ? COLORS_A_TO_Z[currentLetter]
+      : ANIMALS_A_TO_Z[currentLetter];
 
-  if (validSet && !validSet.has(normalized)) {
-    registerStrike(`❌ That doesn’t look like it fits “${category}”.`);
+  const isValid = validAnswersForLetter
+    ? validAnswersForLetter.includes(normalized)
+    : false;
+
+  if (!isValid) {
+    const categoryName = category === "Colors" ? "color" : "animal";
+
+    registerStrike(
+      `❌ That doesn’t look like a valid ${categoryName} beginning with ${currentLetter}.`
+    );
     return;
   }
 
   registerCorrect(key);
-};
+  return;
+} 
 
 const handleNextCategory = () => {
   if (!gameStarted || gameOver || champion) return;
