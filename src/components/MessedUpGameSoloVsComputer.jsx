@@ -713,35 +713,6 @@ function getNextCategory(current) {
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-  "Board Games": new Set([
-    "chess",
-    "checkers",
-    "monopoly",
-    "scrabble",
-    "clue",
-    "sorry",
-    "risk",
-    "pictionary",
-    "battleship",
-    "connect four",
-    "yahtzee",
-    "catan",
-    "ticket to ride",
-  ]),
-};
-
-function getNextCategory(current) {
-  const currentIndex = CATEGORIES.indexOf(current);
-
-  if (currentIndex === -1 || currentIndex === CATEGORIES.length - 1) {
-    return CATEGORIES[0];
-  }
-
-  return CATEGORIES[currentIndex + 1];
-}
-
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
 function normalize(text) {
   let value = text.trim().toLowerCase();
 
