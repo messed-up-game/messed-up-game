@@ -74,9 +74,6 @@ const ANIMALS_A_TO_Z = {
   Y: ["yak"],
   Z: ["zebra"],
 };
-const ANIMALS_A_TO_Z = {
-  // your animal A-Z list
-};
 
 const COLORS_A_TO_Z = {
   A: ["amber", "amethyst", "apricot", "aqua", "aquamarine", "azure"],
@@ -656,10 +653,10 @@ Animals: new Set([
   "sky blue",
   "slate",
   "taupe",
-  "vermilion",
-  "wine",
-]);
-  "Breakfast Foods": new Set([
+ "vermilion",
+"wine",
+]),
+"Breakfast Foods": new Set([
     "eggs",
     "bacon",
     "sausage",
@@ -716,12 +713,70 @@ function getNextCategory(current) {
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
+  "Board Games": new Set([
+    "chess",
+    "checkers",
+    "monopoly",
+    "scrabble",
+    "clue",
+    "sorry",
+    "risk",
+    "pictionary",
+    "battleship",
+    "connect four",
+    "yahtzee",
+    "catan",
+    "ticket to ride",
+  ]),
+};
+
+function getNextCategory(current) {
+  const currentIndex = CATEGORIES.indexOf(current);
+
+  if (currentIndex === -1 || currentIndex === CATEGORIES.length - 1) {
+    return CATEGORIES[0];
+  }
+
+  return CATEGORIES[currentIndex + 1];
+}
+
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
 function normalize(text) {
-  function isValidColorAnswer(answer) {
+  let value = text.trim().toLowerCase();
+
+  const irregularPlurals = {
+    mice: "mouse",
+    geese: "goose",
+    feet: "foot",
+    teeth: "tooth",
+    children: "child",
+  };
+
+  if (irregularPlurals[value]) {
+    return irregularPlurals[value];
+  }
+
+  if (value.endsWith("ies") && value.length > 3) {
+    return value.slice(0, -3) + "y";
+  }
+
+  if (
+    value.endsWith("s") &&
+    !value.endsWith("ss") &&
+    !value.endsWith("us") &&
+    value.length > 3
+  ) {
+    return value.slice(0, -1);
+  }
+
+  return value;
+}
+
+function isValidColorAnswer(answer) {
   const value = answer.trim().toLowerCase();
   const colors = VALID_ANSWERS.Colors;
 
-  // Exact recognized color
   if (colors.has(value)) {
     return true;
   }
@@ -759,39 +814,9 @@ function normalize(text) {
 
   return false;
 }
-  let value = text.trim().toLowerCase();
-
-  const irregularPlurals = {
-    mice: "mouse",
-    geese: "goose",
-    feet: "foot",
-    teeth: "tooth",
-    children: "child",
-  };
-
-  if (irregularPlurals[value]) {
-    return irregularPlurals[value];
-  }
-
-  if (value.endsWith("ies") && value.length > 3) {
-    return value.slice(0, -3) + "y";
-  }
-
-  if (
-    value.endsWith("s") &&
-    !value.endsWith("ss") &&
-    !value.endsWith("us") &&
-    value.length > 3
-  ) {
-    return value.slice(0, -1);
-  }
-
-return value;
-}
-
 export default function MessedUpGameSoloVsComputer() {
   const [playMode, setPlayMode] = useState("single");
-const [letterIndex, setLetterIndex] = useState(0);
+  const [letterIndex, setLetterIndex] = useState(0);
 
 const currentLetter = LETTERS[letterIndex];
   
