@@ -1302,11 +1302,14 @@ const handleNextCategory = () => {
         type="button"
         style={{
           ...secondaryButton,
-          background:
-            playMode === "atoz"
-              ? "#facc15"
-              : "rgba(255,255,255,.08)",
-          color: playMode === "atoz" ? "#422006" : "white",
+         background:
+  playMode === "atoz" && category === "Animals"
+    ? "#facc15"
+    : "rgba(255,255,255,.08)",
+color:
+  playMode === "atoz" && category === "Animals"
+    ? "#422006"
+    : "white",
           fontWeight: 900,
         }}
         onClick={() => {
@@ -1320,6 +1323,28 @@ const handleNextCategory = () => {
       >
         🔤 Animals A-to-Z
       </button>
+      <button
+  type="button"
+  style={{
+    ...secondaryButton,
+    background:
+      playMode === "atoz" && category === "Colors"
+        ? "#a855f7"
+        : "rgba(255,255,255,.08)",
+    color: "white",
+    fontWeight: 900,
+  }}
+  onClick={() => {
+    setPlayMode("atoz");
+    setCategory("Colors");
+    setLetterIndex(0);
+    setMessage(
+      "🌈 Colors A-to-Z selected. Start with A and work your way to Z!"
+    );
+  }}
+>
+  🌈 Colors A-to-Z
+</button>
     </div>
 
     <button
@@ -1339,7 +1364,7 @@ const handleNextCategory = () => {
     </button>
   </>
 )}
-
+  
         {gameStarted && !champion && (
           <form onSubmit={handleSubmit}>
             <div style={formRow}>
