@@ -958,8 +958,8 @@ const handleStartGame = () => {
   }
 };
   const handleSubmit = (e) => {
-  e.preventDefault();
-  if (!gameStarted || gameOver || champion) return;
+    e.preventDefault();
+    if (!gameStarted || gameOver || champion) return;
 
   const trimmed = answer.trim();
 
@@ -1006,9 +1006,32 @@ if (playMode === "atoz") {
     return;
   }
 
+    registerCorrect(key);
+    return;
+}
+
+if (category === "Colors") {
+  if (!isValidColorAnswer(normalized)) {
+    registerStrike(`❌ That doesn’t look like it fits “Colors”.`);
+    return;
+  }
+
   registerCorrect(key);
   return;
-} 
+}
+
+if (!validSet && OBVIOUS_WRONG.has(normalized)) {
+  registerStrike(`❌ That clearly doesn’t fit “${category}”.`);
+  return;
+}
+
+if (validSet && !validSet.has(normalized)) {
+  registerStrike(`❌ That doesn’t look like it fits “${category}”.`);
+  return;
+}
+
+registerCorrect(key);
+};
 
 const handleNextCategory = () => {
   if (!gameStarted || gameOver || champion) return;
