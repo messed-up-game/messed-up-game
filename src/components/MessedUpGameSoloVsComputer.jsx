@@ -103,7 +103,353 @@ const COLORS_A_TO_Z = {
   Y: ["yellow", "yellow green"],
   Z: ["zaffre", "zinnwaldite brown"],
 };
+const BREAKFAST_A_TO_Z = {
+  A: [
+    "apple",
+    "apple juice",
+    "apple fritter",
+    "apple turnover",
+    "avocado",
+    "avocado toast",
+    "acai bowl",
+    "almond butter",
+    "almonds",
+    "arepa",
+  ],
 
+  B: [
+    "bacon",
+    "bagel",
+    "bagel and cream cheese",
+    "bagel and lox",
+    "banana",
+    "banana bread",
+    "banana muffin",
+    "baked beans",
+    "baked tomato",
+    "bacon and eggs",
+    "bacon egg and cheese",
+    "bear claw",
+    "beans",
+    "beans on toast",
+    "beignet",
+    "belgian waffle",
+    "biscuits",
+    "biscuits and gravy",
+    "black coffee",
+    "black pudding",
+    "blackberries",
+    "blintz",
+    "blintzes",
+    "blueberries",
+    "blueberry muffin",
+    "boiled eggs",
+    "bran muffin",
+    "bread",
+    "breakfast bowl",
+    "breakfast burrito",
+    "breakfast burger",
+    "breakfast casserole",
+    "breakfast cereal bar",
+    "breakfast enchiladas",
+    "breakfast hash",
+    "breakfast nachos",
+    "breakfast pizza",
+    "breakfast quesadilla",
+    "breakfast salad",
+    "breakfast sandwich",
+    "breakfast skillet",
+    "breakfast slider",
+    "breakfast taco",
+    "breakfast tacos",
+    "breakfast tostada",
+    "breakfast wrap",
+    "buttered toast",
+  ],
+
+  C: [ 
+    "canadian bacon",
+    "cantaloupe",
+    "cappuccino",
+    "cereal",
+    "chapati",
+    "cheese",
+    "cheese toast",
+    "chia pudding",
+    "chicken and waffles",
+    "chicken fried steak",
+    "chilaquiles",
+    "chocolate chip muffin",
+    "chocolate milk",
+    "chorizo",
+    "churros",
+    "cinnamon bun",
+    "cinnamon roll",
+    "cinnamon toast",
+    "clementine",
+    "coffee",
+    "coffee cake",
+    "cold cereal",
+    "congee",
+    "corn muffin",
+    "cornbread",
+    "corned beef hash",
+    "cottage cheese",
+    "country fried steak",
+    "country gravy",
+    "cranberry juice",
+    "cream cheese",
+    "cream of rice",
+    "cream of wheat",
+    "crepe",
+    "crepes",
+    "croissant",
+    "croque madame",
+    "croque monsieur",
+  ],
+
+  D: [
+    "danish",
+    "dates",
+    "deviled eggs",
+    "donut",
+    "doughnut",
+    "dosa",
+  ],
+
+  E: [
+    "egg bites",
+    "egg mcmuffin",
+    "egg sandwich",
+    "egg whites",
+    "eggs",
+    "eggs and bacon",
+    "eggs and sausage",
+    "eggs and toast",
+    "eggs benedict",
+    "eggs florentine",
+    "english muffin",
+    "espresso",
+  ],
+
+  F: [
+    "falafel",
+    "fig",
+    "french toast",
+    "fried eggs",
+    "fried mushrooms",
+    "fried potatoes",
+    "fried tomato",
+    "fritter",
+    "fruit",
+    "fruit bowl",
+    "fruit salad",
+    "fruit yogurt",
+    "full english breakfast",
+    "ful medames",
+  ],
+
+  G: [
+    "granola",
+    "granola bar",
+    "granola bowl",
+    "grapefruit",
+    "grapefruit juice",
+    "grapes",
+    "greek yogurt",
+    "grilled cheese",
+    "grits",
+  ],
+
+  H: [
+    "halwa",
+    "ham",
+    "ham and eggs",
+    "ham egg and cheese",
+    "hard boiled eggs",
+    "hash",
+    "hash browns",
+    "herring",
+    "home fries",
+    "honey",
+    "honeydew",
+    "hot cereal",
+    "hot chocolate",
+    "hot tea",
+    "hotcakes",
+    "huevos rancheros",
+    "hummus",
+  ],
+
+  I: [
+    "iced coffee",
+    "iced tea",
+    "idli",
+  ],
+
+  J: [
+    "jam",
+    "jelly",
+    "johnnycakes",
+    "juice",
+  ],
+
+  K: [
+    "kiwi",
+    "kolache",
+  ],
+
+  L: [
+    "labneh",
+    "latte",
+    "lox",
+  ],
+
+  M: [
+    "mango",
+    "maple syrup",
+    "marmalade",
+    "melon",
+    "menemen",
+    "milk",
+    "mocha",
+    "muffin",
+    "muesli",
+    "mushrooms",
+  ],
+
+  N: [
+    "naan",
+    "nectarine",
+    "nuts",
+  ],
+
+  O: [
+    "oatmeal",
+    "omelet",
+    "omelette",
+    "orange",
+    "orange juice",
+    "over easy eggs",
+    "over hard eggs",
+    "over medium eggs",
+    "overnight oats",
+  ],
+
+  P: [
+    "pancake",
+    "pancakes",
+    "pancakes and bacon",
+    "pan dulce",
+    "papaya",
+    "paratha",
+    "parfait",
+    "pastry",
+    "peach",
+    "peanut butter",
+    "pear",
+    "pecans",
+    "pineapple",
+    "pita",
+    "poached eggs",
+    "poha",
+    "porridge",
+    "pork roll",
+    "potato pancakes",
+    "potatoes",
+    "protein bar",
+    "protein shake",
+    "pudding",
+    "pumpkin bread",
+  ],
+
+  Q: [
+    "quiche",
+  ],
+
+  R: [
+    "raisin toast",
+    "raisins",
+    "raspberries",
+    "refried beans",
+    "rice",
+    "rice and eggs",
+    "rice porridge",
+    "rice pudding",
+    "roll",
+    "rosti",
+  ],
+
+  S: [
+    "sardines",
+    "sausage",
+    "sausage egg and cheese",
+    "sausage gravy",
+    "sausage links",
+    "sausage patties",
+    "scone",
+    "scrambled eggs",
+    "scrapple",
+    "shakshuka",
+    "shrimp and grits",
+    "smoothie",
+    "smoothie bowl",
+    "smoked fish",
+    "smoked salmon",
+    "soft boiled eggs",
+    "souffle",
+    "sourdough toast",
+    "spam",
+    "steak",
+    "steak and eggs",
+    "strawberries",
+    "strudel",
+    "sunny side up eggs",
+  ],
+
+  T: [
+    "tamale",
+    "tamales",
+    "tater tots",
+    "tea",
+    "texas toast",
+    "toast",
+    "tomato juice",
+    "tortilla",
+    "turkey bacon",
+    "turkey sausage",
+    "turnover",
+  ],
+
+  U: [
+    "upma",
+  ],
+
+  V: [
+    "vanilla yogurt",
+  ],
+
+  W: [
+    "waffle",
+    "waffles",
+    "waffles and sausage",
+    "walnuts",
+    "watermelon",
+  ],
+
+  X: [
+    "xigua",
+  ],
+
+  Y: [
+    "yogurt",
+    "yogurt parfait",
+  ],
+
+  Z: [
+    "zucchini bread",
+  ],
+};
 const VALID_ANSWERS = {
   "Ice Cream Flavors": new Set([
     "vanilla",
@@ -940,9 +1286,13 @@ const handleStartGame = () => {
   setTimeLeft(LEVELS[0].seconds);
 
   if (playMode === "atoz") {
-    if (category === "Colors" || category === "Colors A-to-Z") {
+    if (category === "Colors") {
       setMessage(
         "🌈 Colors A-to-Z Challenge! Letter A — name a color beginning with A."
+      );
+    } else if (category === "Breakfast Foods") {
+      setMessage(
+        "🍳 Breakfast Foods A-to-Z Challenge! Letter A — name a breakfast food beginning with A."
       );
     } else {
       setMessage(
@@ -950,11 +1300,19 @@ const handleStartGame = () => {
       );
     }
   } else {
-    setMessage(
-      category === "Colors"
-        ? "🎨 Level 1: Colors! You have 20 seconds to name a color."
-        : "🐶 Level 1: Animals! You have 20 seconds to name an animal."
-    );
+    if (category === "Colors") {
+      setMessage(
+        "🎨 Level 1: Colors! You have 20 seconds to name a color."
+      );
+    } else if (category === "Breakfast Foods") {
+      setMessage(
+        "🍳 Level 1: Breakfast Foods! You have 20 seconds to name a breakfast food."
+      );
+    } else {
+      setMessage(
+        "🐶 Level 1: Animals! You have 20 seconds to name an animal."
+      );
+    }
   }
 };
   const handleSubmit = (e) => {
@@ -978,37 +1336,6 @@ const handleStartGame = () => {
 
   const validSet = VALID_ANSWERS[category];
 
-if (playMode === "atoz") {
-  const requiredLetter = currentLetter.toLowerCase();
-
-  if (!normalized.startsWith(requiredLetter)) {
-    registerStrike(
-      `❌ Your answer must start with the letter ${currentLetter}.`
-    );
-    return;
-  }
-
-  const validAnswersForLetter =
-    category === "Colors"
-      ? COLORS_A_TO_Z[currentLetter]
-      : ANIMALS_A_TO_Z[currentLetter];
-
-  const isValid = validAnswersForLetter
-    ? validAnswersForLetter.includes(normalized)
-    : false;
-
-  if (!isValid) {
-    const categoryName = category === "Colors" ? "color" : "animal";
-
-    registerStrike(
-      `❌ That doesn’t look like a valid ${categoryName} beginning with ${currentLetter}.`
-    );
-    return;
-  }
-
-    registerCorrect(key);
-    return;
-}
 
 if (category === "Colors") {
   if (!isValidColorAnswer(normalized)) {
@@ -1345,6 +1672,50 @@ color:
 >
   🌈 Colors A-to-Z
 </button>
+   <button
+  type="button"
+  style={{
+    ...secondaryButton,
+    background:
+      playMode === "single" && category === "Breakfast Foods"
+        ? "#f59e0b"
+        : "rgba(255,255,255,.08)",
+    color: "white",
+    fontWeight: 900,
+  }}
+  onClick={() => {
+    setPlayMode("single");
+    setCategory("Breakfast Foods");
+    setMessage(
+      "🍳 Breakfast Foods selected. Press START GAME when you're ready!"
+    );
+  }}
+>
+  🍳 Breakfast Foods
+</button>
+
+<button
+  type="button"
+  style={{
+    ...secondaryButton,
+    background:
+      playMode === "atoz" && category === "Breakfast Foods"
+        ? "#f59e0b"
+        : "rgba(255,255,255,.08)",
+    color: "white",
+    fontWeight: 900,
+  }}
+  onClick={() => {
+    setPlayMode("atoz");
+    setCategory("Breakfast Foods");
+    setLetterIndex(0);
+    setMessage(
+      "🍳 Breakfast Foods A-to-Z selected. Start with A and work your way to Z!"
+    );
+  }}
+>
+  🍳 Breakfast Foods A-to-Z
+</button>   
     </div>
 
     <button
@@ -1376,23 +1747,24 @@ color:
                 autoFocus
                 placeholder="Type your answer..."
               />
-
+              
               <button
-                type="submit"
-                style={primaryButton}
-                disabled={gameOver}
-              >
-                Submit
-              </button>
-
-              <button
-                type="button"
-                style={secondaryButton}
-                onClick={handleNextCategory}
-                disabled={gameOver}
-              >
-                New Category
-              </button>
+  type="submit"
+  style={primaryButton}
+  disabled={gameOver}
+>
+  Submit
+</button>
+              {playMode === "single" && (
+  <button
+    type="button"
+    style={secondaryButton}
+    onClick={handleNextCategory}
+    disabled={gameOver}
+  >
+    New Category
+  </button>
+)}
 
               <button
                 type="button"
