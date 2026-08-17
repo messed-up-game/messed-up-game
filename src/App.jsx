@@ -1295,53 +1295,67 @@ fontSize: "20px",
   }}
 >
   <h2 style={{ margin: "0 0 8px", fontWeight: 950 }}>
-    🌱 Acorns $1,100 Limited-Time Opportunity
+    🎲 The New Solo Messed Up Game
   </h2>
 
   <p style={{ margin: "0 0 10px", lineHeight: 1.5 }}>
-    Check out the current Acorns referral opportunity. See the official
-    requirements, deadline, and eligibility details before signing up.
+    Play Solo with 3 categories: Animals, Colors, and Breakfast Foods.
+    You have 20 seconds per answer, and 3 strikes and you’re out!
   </p>
 
- <a
-  href="https://acorns.com/share/?shareable_code=QBM5GUN&first_name=Tom&friend_reward=5"
-  target="_blank"
-  rel="noreferrer"
-  style={{
-    display: "block",
-    textDecoration: "none",
-  }}
->
-  <img
-    src="/acorns-1100-deal.png"
-    alt="Acorns $1,100 limited-time opportunity"
+  <a
+    href="https://www.messedupgame.com"
     style={{
-      width: "100%",
-      maxWidth: 650,
-      height: "auto",
       display: "block",
-      margin: "0 auto 12px",
-      borderRadius: 14,
+      textDecoration: "none",
     }}
-  />
-</a>
+  >
+    <img
+      src="/3-category-mug-poster.png"
+      alt="Solo Messed Up Game with Animals, Colors, and Breakfast Foods"
+      style={{
+        width: "100%",
+        maxWidth: 650,
+        height: "auto",
+        display: "block",
+        margin: "0 auto 12px",
+        borderRadius: 14,
+      }}
+    />
+  </a>
 
-<a
-  href="https://acorns.com/share/?shareable_code=QBM5GUN&first_name=Tom&friend_reward=5"
-  target="_blank"
-  rel="noreferrer"
-  style={{
-    display: "inline-block",
-    padding: "12px 20px",
-    borderRadius: 10,
-    background: "#22c55e",
-    color: "#052e16",
-    fontWeight: 950,
-    textDecoration: "none",
-  }}
->
-  🌱 See the Acorns Offer
-</a>
+  <div
+    style={{
+      margin: "12px auto",
+      padding: "14px",
+      borderRadius: 14,
+      background: "rgba(15,23,42,.85)",
+      color: "white",
+      fontWeight: 900,
+      lineHeight: 1.5,
+    }}
+  >
+    🐶 Animals • 🌈 Colors • 🍳 Breakfast Foods
+    <br />
+    ⏱️ 20 Seconds Per Answer • ❌ 3 Strikes and You’re Out
+    <br />
+    🏆 Contest Winner Gets $90 + A FREE Messed Up Game Deck!
+  </div>
+
+  <a
+    href="https://www.messedupgame.com"
+    style={{
+      display: "inline-block",
+      padding: "12px 20px",
+      borderRadius: 10,
+      background: "#22c55e",
+      color: "#052e16",
+      fontWeight: 950,
+      textDecoration: "none",
+    }}
+  >
+    ▶ Play the Solo Game
+  </a>
 </section>
         <section
           style={{
