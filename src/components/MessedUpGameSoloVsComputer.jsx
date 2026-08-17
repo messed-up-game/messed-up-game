@@ -222,6 +222,7 @@ const BREAKFAST_A_TO_Z = {
     "egg mcmuffin",
     "egg sandwich",
     "egg whites",
+    "egg",
     "eggs",
     "eggs and bacon",
     "eggs and sausage",
@@ -1815,8 +1816,9 @@ const handleStartGame = () => {
     return;
   }
 
-  const normalized = normalize(trimmed);
-  const key = `${category.toLowerCase()}::${normalized}`;
+  const rawAnswer = trimmed.toLowerCase();
+const normalized = normalize(trimmed);
+const key = `${category.toLowerCase()}::${normalized}`;
 
   if (usedAnswers.includes(key)) {
     registerStrike("❌ You already used that answer.");
@@ -1841,7 +1843,11 @@ if (!validSet && OBVIOUS_WRONG.has(normalized)) {
   return;
 }
 
-if (validSet && !validSet.has(normalized)) {
+if (
+  validSet &&
+  !validSet.has(rawAnswer) &&
+  !validSet.has(normalized)
+) {
   registerStrike(`❌ That doesn’t look like it fits “${category}”.`);
   return;
 }
