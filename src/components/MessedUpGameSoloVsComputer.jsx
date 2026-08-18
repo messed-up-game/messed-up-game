@@ -1633,10 +1633,7 @@ const currentLetter = LETTERS[letterIndex];
   const [strikes, setStrikes] = useState(0);
   const [score, setScore] = useState(0);
 
-  const [level, setLevel] = useState(() => {
-    const saved = Number(localStorage.getItem("mug-solo-level"));
-    return saved >= 1 && saved <= 5 ? saved : 1;
-  });
+  const [level, setLevel] = useState(1);
 
   const [levelCorrect, setLevelCorrect] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
@@ -1654,10 +1651,6 @@ const currentLetter = LETTERS[letterIndex];
   const [timeLeft, setTimeLeft] = useState(levelInfo.seconds);
 
   const maxStrikes = 3;
-
-  useEffect(() => {
-    localStorage.setItem("mug-solo-level", String(level));
-  }, [level]);
 
   useEffect(() => {
     setTimeLeft(levelInfo.seconds);
