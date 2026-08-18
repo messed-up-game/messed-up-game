@@ -1303,9 +1303,22 @@ fontSize: "20px",
     You have 20 seconds per answer, and 3 strikes and you’re out!
   </p>
 
-  <a
-    href="https://www.messedupgame.com"
-    style={{
+ <button
+  type="button"
+  onClick={() => setMode("solo")}
+  style={{
+    display: "inline-block",
+    padding: "12px 20px",
+    borderRadius: 10,
+    background: "#22c55e",
+    color: "#052e16",
+    fontWeight: 950,
+    border: "none",
+    cursor: "pointer",
+  }}
+>
+  ▶ Play the Solo Game
+</button>
       display: "block",
       textDecoration: "none",
     }}
@@ -1341,10 +1354,32 @@ fontSize: "20px",
     <br />
     🏆 Contest Winner Gets $90 + A FREE Messed Up Game Deck!
   </div>
-
-  <a
-    href="https://www.messedupgame.com"
+<button
+  type="button"
+  onClick={() => setMode("solo")}
+  style={{
+    display: "block",
+    width: "100%",
+    padding: 0,
+    border: "none",
+    background: "transparent",
+    cursor: "pointer",
+  }}
+>
+  <img
+    src="/3-category-mug-poster.png"
+    alt="Solo Messed Up Game with Animals, Colors, and Breakfast Foods"
     style={{
+      width: "100%",
+      maxWidth: 650,
+      height: "auto",
+      display: "block",
+      margin: "0 auto 12px",
+      borderRadius: 14,
+    }}
+  />
+</button>
+  style={{
       display: "inline-block",
       padding: "12px 20px",
       borderRadius: 10,
