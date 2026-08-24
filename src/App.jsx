@@ -3,7 +3,6 @@ import { useState } from "react";
 import SocialBar from "./components/SocialBar";
 import LinkGrid from "./components/LinkGrid";
 import MessedUpGameSoloVsComputer from "./components/MessedUpGameSoloVsComputer";
-import GotBackupBannerAd from "./components/GotBackupBannerAd";
 import UtahsAlright from "./components/UtahsAlright";
 
 import WildmanTomSong from "./components/WildmanTomSong";
@@ -18,15 +17,12 @@ export default function App() {
   const SIGNUP_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSfqJPAGUKaNWNvolnoEQFRYGmpu6Y2_UyLkGDzfun3hf2RinQ/viewform?usp=header";
 
-  const CONTACT_EMAIL = "mailto:tom@gotbackuptomb.com";
+  const CONTACT_EMAIL = "mailto:tombmarketing@gmail.com";
 
 const SOCIAL_LINKS = [
   { label: "YouTube", href: CHANNEL_URL },
-  { label: "Instagram", href: "https://www.instagram.com/messed_up_game/" },
-  { label: "Facebook", href: "https://www.facebook.com/messedupgametomb/" },
   { label: "X", href: "https://x.com/saveplanetusa" },
   { label: "TikTok", href: "https://www.tiktok.com/@messedupgamelivewildman" },
-  { label: "Threads", href: "https://www.threads.net/@messed_up_game" },
   { label: "SoundCloud", href: "https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY" },
 ];
 
@@ -37,39 +33,9 @@ const SOCIAL_LINKS = [
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
   const [mode, setMode] = useState("home");
-  const MARKO_MAX_VIDEO =
-    "https://s3endpoint.markomax.com/markomax/64c42a5f-32e7-41f6-af35-7c792f0d6ab9/8ed4f916-a262-4bd3-aac0-f75777a95747.mp4";
-const MarkoMaxSection = () => (
-    <section
-      style={{
-        maxWidth: 900,
-        margin: "28px auto 30px",
-        padding: "24px 20px",
-        borderRadius: 16,
-        background: "rgba(15,23,42,0.95)",
-        color: "#e5e7eb",
-        boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
-        textAlign: "center",
-      }}
-    >
+ 
       <h2 style={{ fontSize: 30, marginBottom: 12 }}>
-        🚀 New GotBackup Marko Max Pro Marketing System
-      </h2>
-
-      <p
-        style={{
-          margin: "0 auto 18px",
-          maxWidth: 760,
-          fontSize: "1.05rem",
-          lineHeight: 1.6,
-          opacity: 0.96,
-        }}
-      >
-        Watch Joel Therien explain the opportunity and how the new tools can help
-        you grow with done-for-you funnels, automated follow-up, lead generation,
-        and a powerful income opportunity.
-      </p>
-
+        
       <video
         controls
         playsInline
@@ -81,27 +47,9 @@ const MarkoMaxSection = () => (
           background: "#000",
         }}
       >
-        <source src={MARKO_MAX_VIDEO} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div
-        style={{
-          textAlign: "left",
-          maxWidth: 560,
-          margin: "0 auto 18px",
-          lineHeight: 1.9,
-        }}
-      >
-        <p>✅ Done-for-you funnels</p>
-        <p>✅ Automated follow-up</p>
-        <p>✅ Lead generation tools</p>
-        <p>✅ Proven system</p>
-        <p>✅ Incredible income opportunity for just $20/month</p>
-      </div>
-
+  
       <p style={{ fontWeight: 800, color: "#facc15", marginBottom: 18 }}>
-        🎁 Join our team and get a 2-for-1 custom song for that special person —
+        🎁 Subscribe to our newsleter for a changce to win a custom song written and recorded for that special person —
         or a roast for your boss!
       </p>
 
@@ -127,12 +75,6 @@ const MarkoMaxSection = () => (
             textDecoration: "none",
           }}
         >
-          👉 Join Got Backup Tom B
-        </a>
-
-        <a
-          href="mailto:tom@gotbackuptomb.com?subject=Tell%20me%20more%20about%20Marko%20Max%20Pro"
-          style={{
             display: "inline-block",
             padding: "14px 22px",
             background: "#22c55e",
@@ -159,11 +101,7 @@ const MarkoMaxSection = () => (
       desc: "Fill out the form to play",
     },
   {
-  title: "🚀 Join Got Backup Tom B",
-  href: "https://willbackyouup.bossstreet.com/get-started-now/",
-  desc: "Watch Joel Therien explain the system and get started",
-  affiliate: true,
-},
+
     {
       title: "⚾ Dodgers Meal Deal + Bonus",
       href: "#",
@@ -243,7 +181,7 @@ const MarkoMaxSection = () => (
         </h1>
 
         <p style={{ marginTop: 0, opacity: 0.9, fontSize: "1.1rem", lineHeight: 1.6 }}>
-          $7 Panda Deal + 30% OFF Custom Songs + Play The Messed Up Game + Got Backup Bonus
+          $7 Panda Deal + 30% OFF Custom Songs + Play The Messed Up Game
         </p>
 
         <section
@@ -280,9 +218,6 @@ const MarkoMaxSection = () => (
             boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
           }}
         >
-          <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>
-            ☁️ Got Backup Bonus
-          </h2>
 
           <p style={{ textAlign: "center", lineHeight: 1.7 }}>
             Protect your photos, videos, and memories with secure cloud backup and storage.
@@ -685,7 +620,7 @@ marginBottom: "6,"
     border: "2px solid #22c55e",
   }}
 >
-  <h2>🏆 Live Championship Tournament</h2>
+  <h2>🏆 Live play Tournament for all </h2>
 
   <p style={{ fontWeight: 800 }}>
     🎲 Only 9 Players Compete
@@ -696,7 +631,7 @@ marginBottom: "6,"
     <br />
     🏆 Winner Receives 90% Of The Prize Pool
     <br />
-    🎁 First Signup Receives A FREE Signed Deck
+    🎁 Winner also Receives A FREE Signed Deck
   </p>
 
 <a
@@ -749,61 +684,7 @@ fontSize: "20px",
             }}
           >
             <h2 style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}>
-              🙏 Prayer for Strength (Mark Wahlberg)
-            </h2>
-
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                paddingTop: "177.78%",
-                borderRadius: 14,
-                overflow: "hidden",
-                border: "1px solid rgba(255,255,255,.10)",
-                boxShadow: "0 10px 24px rgba(0,0,0,.35)",
-                background: "rgba(0,0,0,.35)",
-              }}
-            >
-              <iframe
-                title="Mark Wahlberg Prayer Short"
-                src={`https://www.youtube.com/embed/${PRAYER_SHORT_ID}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: 0,
-                }}
-              />
-            </div>
-
-           <a
-  href={PRAYER_SHORT_URL}
-  target="_blank"
-  rel="noreferrer"
-  style={{
-    display: "inline-block",
-    marginTop: 4,
-    padding: "10px 14px",
-    borderRadius: 10,
-    background: "#0ea5e9",
-    color: "#0f172a",
-    fontWeight: 900,
-    textDecoration: "none",
-  }}
->
-  🙏 Watch Prayer
-</a>
-          </section>
-
-          <SocialBar />
-        </section>
-      </div>
-    </main>
-  );
-}
+              
   // Community Centers screen
   if (mode === "communityCenters") {
     return (
@@ -935,7 +816,7 @@ fontSize: "20px",
               >
                 <h3 style={{ marginTop: 0 }}>2 to 4 Warm-Up Songs</h3>
                 <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
-                  Tom can sing 2 to 4 songs to warm up the crowd, get smiles on
+                  Tom can sing 2 to 4 songs to warm up the crowd, bring smiles to
                   faces, and create a fun atmosphere before the game begins.
                 </p>
               </div>
@@ -950,6 +831,7 @@ fontSize: "20px",
               >
                 <h3 style={{ marginTop: 0 }}>The Messed Up Game Live</h3>
                 <p style={{ marginBottom: 0, lineHeight: 1.65, opacity: 0.92 }}>
+                  Players can also choose to play solo against the computer and Random A to Z! 
                   Then the fun really begins with a lively, interactive game
                   experience designed to get people laughing, thinking,
                   remembering, and connecting.
@@ -1081,7 +963,7 @@ fontSize: "20px",
           </h1>
 
           <p style={{ opacity: 0.9, maxWidth: 760 }}>
-            Thanks to our amazing sponsors who help us bring brain-boosting fun to
+            Now looking for sponsors who want to help us bring brain-boosting fun to
             communities everywhere.
           </p>
 
@@ -1640,39 +1522,12 @@ fontSize: "20px",
               />
             </div>
             <a
-              href="mailto:tom@gotbackuptomb.com?subject=Custom%20Song%20Request"
+              href="mailto:tombutlerproductions@gmail.com?subject=Custom%20Song%20Request"
               style={{ ...buttonStyle, display: "inline-block", marginTop: 14, textDecoration: "none" }}
             >
               🎤 Request Your Song
             </a>
           </div>
-
-          <div style={{ padding: 18, borderRadius: 18, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.12)", textAlign: "center" }}>
-            <h2 style={{ marginTop: 0 }}>🎧 Hear a Custom Song Example</h2>
-            <p style={{ opacity: 0.92, lineHeight: 1.55 }}>
-              Listen to the style, heart, and personality that goes into a Wildman Tom B custom song.
-            </p>
-            <iframe
-              width="100%"
-              height="166"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wildman-tom-b/lucky-to-have-you&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-              style={{ borderRadius: 12, marginTop: 10 }}
-            />
-            <div style={{ marginTop: 16 }}>
-              <a
-                href="https://on.soundcloud.com/r6Jg7Ur7MGpm44giOY"
-                target="_blank"
-                rel="noreferrer"
-                style={{ ...ghostButtonStyle, textDecoration: "none", display: "inline-block" }}
-              >
-                🎧 More on SoundCloud
-              </a>
-            </div>
-          </div>
-        </section>
 
         <section style={{ margin: "30px 0", textAlign: "center" }}>
           <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song — Full Version</h2>
@@ -1726,8 +1581,6 @@ fontSize: "20px",
             </a>
           </div>
         </section>
-
-        <MarkoMaxSection />
 
         <section
           style={{
