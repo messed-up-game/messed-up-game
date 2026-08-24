@@ -33,7 +33,29 @@ const SOCIAL_LINKS = [
     "https://docs.google.com/document/d/1_Ly_ar7Hq-gzW7DM5bHNBv6Pc9TQg5boYjSiB95polk/view";
 
   const [mode, setMode] = useState("home");
- 
+ const links = [
+  {
+    title: "🎲 Sign Up to Play Live",
+    href: SIGNUP_FORM_URL,
+    desc: "We’ll send your private StreamYard link before we go live (first 9 on camera)",
+  },
+  {
+    title: "Messed Up Game — Sign Up",
+    href: SIGNUP_FORM_URL,
+    desc: "Fill out the form to play",
+  },
+  {
+    title: "⚾ Dodgers Meal Deal + Bonus",
+    href: "#",
+    desc: "See the $7 Panda deal, custom songs, game night, and Got Backup bonus",
+    onClick: () => setMode("dodgers"),
+  },
+  {
+    title: "MOSH Brain Bars",
+    href: "https://moshlife.com/",
+    desc: "Brain fuel sponsor 🧠",
+  },
+];
       <h2 style={{ fontSize: 30, marginBottom: 12 }}>
   Messed Up Game
 </h2>
