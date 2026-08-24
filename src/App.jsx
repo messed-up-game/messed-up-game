@@ -35,23 +35,26 @@ const SOCIAL_LINKS = [
   const [mode, setMode] = useState("home");
  
       <h2 style={{ fontSize: 30, marginBottom: 12 }}>
-        
-      <video
-        controls
-        playsInline
-        style={{
-          width: "100%",
-          maxWidth: 520,
-          borderRadius: 14,
-          marginBottom: 18,
-          background: "#000",
-        }}
-      >
-  
-      <p style={{ fontWeight: 800, color: "#facc15", marginBottom: 18 }}>
-        🎁 Subscribe to our newsleter for a changce to win a custom song written and recorded for that special person —
-        or a roast for your boss!
-      </p>
+  Messed Up Game
+</h2>
+
+<video
+  controls
+  playsInline
+  style={{
+    width: "100%",
+    maxWidth: 520,
+    borderRadius: 14,
+    marginBottom: 18,
+    background: "#000",
+  }}
+>
+</video>
+
+<p style={{ fontWeight: 800, color: "#facc15", marginBottom: 18 }}>
+  🎁 Subscribe to our newsletter for a chance to win a custom song written and recorded for that special person —
+  or a roast for your boss!
+</p>
 
       <div
         style={{
@@ -64,28 +67,34 @@ const SOCIAL_LINKS = [
 <a
   href="https://willbackyouup.bossstreet.com/get-started-now/"
   target="_blank"
-  rel="noreferrer" 
+  rel="noreferrer"
   style={{
-            display: "inline-block",
-            padding: "14px 22px",
-            background: "#facc15",
-            color: "#111827",
-            fontWeight: 900,
-            borderRadius: 12,
-            textDecoration: "none",
-          }}
-        >
-            display: "inline-block",
-            padding: "14px 22px",
-            background: "#22c55e",
-            color: "#052e16",
-            fontWeight: 900,
-            borderRadius: 12,
-            textDecoration: "none",
-          }}
-        >
-          👉 Contact Tom
-        </a>
+    display: "inline-block",
+    padding: "14px 22px",
+    background: "#facc15",
+    color: "#111827",
+    fontWeight: 900,
+    borderRadius: 12,
+    textDecoration: "none",
+  }}
+>
+  👉 Get Started
+</a>
+
+<a
+  href={CONTACT_EMAIL}
+  style={{
+    display: "inline-block",
+    padding: "14px 22px",
+    background: "#22c55e",
+    color: "#052e16",
+    fontWeight: 900,
+    borderRadius: 12,
+    textDecoration: "none",
+  }}
+>
+  👉 Contact Tom
+</a>
       </div>
     </section>
   );
@@ -101,8 +110,6 @@ const SOCIAL_LINKS = [
       desc: "Fill out the form to play",
     },
   {
-
-    {
       title: "⚾ Dodgers Meal Deal + Bonus",
       href: "#",
       desc: "See the $7 Panda deal, custom songs, game night, and Got Backup bonus",
