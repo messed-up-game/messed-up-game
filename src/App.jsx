@@ -526,7 +526,7 @@ width: "100%",
 maxWidth: "350px",
 padding: "12px",
 borderRadius: "10px",
-marginBottom: "6,"
+marginBottom: "6px",
 }}
 />
 
@@ -614,19 +614,11 @@ fontSize: "20px",
   ⭐ Our Sponsors &amp; Advertisers
 </button>
 
-          <section
-            style={{
-              maxWidth: 420,
-              margin: "16px auto",
-              padding: 16,
-              borderRadius: 16,
-              border: "1px solid rgba(255,255,255,.14)",
-              background: "rgba(255,255,255,.04)",
-              boxShadow: "0 10px 24px rgba(0,0,0,.25)",
-            }}
-          >
-            <h2 style={{ margin: "0 0 10px", fontSize: "1.25rem", fontWeight: 900 }}>
-              
+        </section>
+      </div>
+    </main>
+  );
+}              
   // Community Centers screen
   if (mode === "communityCenters") {
     return (
