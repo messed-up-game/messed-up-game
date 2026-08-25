@@ -1446,15 +1446,7 @@ fontSize: "20px",
             <p style={{ opacity: 0.92, lineHeight: 1.55 }}>
               A personalized song can turn a birthday, anniversary, wedding, retirement, or victory into a memory people keep forever.
             </p>
-            <div style={{ position: "relative", width: "100%", paddingTop: "177.78%", borderRadius: 16, overflow: "hidden", background: "#000" }}>
-              <iframe
-                src="https://www.youtube.com/embed/mLwoEIiM6XM"
-                title="Patrick's Birthday Song Promo"
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+            
             <a
               href="mailto:tombutlerproductions@gmail.com?subject=Custom%20Song%20Request"
               style={{ ...buttonStyle, display: "inline-block", marginTop: 14, textDecoration: "none" }}
