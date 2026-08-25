@@ -1463,6 +1463,8 @@ fontSize: "20px",
             </a>
           </div>
 
+        </section>
+
         <section style={{ margin: "30px 0", textAlign: "center" }}>
           <h2 style={{ marginBottom: 10 }}>🎵 Patrick’s Birthday Song — Full Version</h2>
           <PatrickSong />
