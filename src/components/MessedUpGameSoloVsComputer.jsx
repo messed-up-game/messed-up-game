@@ -2024,6 +2024,28 @@ const handleNextCategory = () => {
           Don’t repeat. 3 strikes and you’re out.
         </p>
 
+        <a
+          href="https://www.youtube.com/watch?v=FP2GVcwX0e8"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            width: "100%",
+            boxSizing: "border-box",
+            margin: "12px 0 16px",
+            padding: "14px 18px",
+            borderRadius: 12,
+            background: "#facc15",
+            color: "#422006",
+            fontSize: 17,
+            fontWeight: 900,
+            textAlign: "center",
+            textDecoration: "none",
+          }}
+        >
+          🎵 Play “It Comes From Loving You” — Wildman Tom B
+        </a>
+
         <div style={levelBox}>
           <div style={{ fontSize: 14, fontWeight: 800, opacity: 0.9 }}>
             LEVEL {level}
