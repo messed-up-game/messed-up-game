@@ -1,6 +1,6 @@
 // src/components/MessedUpGameSoloVsComputer.jsx
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const CATEGORIES = [
   "Animals",
@@ -1639,6 +1639,7 @@ const currentLetter = LETTERS[letterIndex];
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [champion, setChampion] = useState(false);
+  const audioRef = useRef(null);
   const [message, setMessage] = useState(
     "Choose Single Category or A-to-Z Challenge, then press START GAME. You have 20 seconds for each answer."
   );
@@ -1651,6 +1652,31 @@ const currentLetter = LETTERS[letterIndex];
   const [timeLeft, setTimeLeft] = useState(levelInfo.seconds);
 
   const maxStrikes = 3;
+
+  useEffect(() => {
+    const song = new Audio("/audio/it-comes-from-loving-you.mp3");
+    song.preload = "metadata";
+    song.loop = true;
+    song.volume = 0.75;
+    audioRef.current = song;
+
+    return () => {
+      song.pause();
+      song.removeAttribute("src");
+      song.load();
+      audioRef.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!gameOver && !champion) return;
+
+    const song = audioRef.current;
+    if (song) {
+      song.pause();
+      song.currentTime = 0;
+    }
+  }, [gameOver, champion]);
 
   useEffect(() => {
     setTimeLeft(levelInfo.seconds);
@@ -1756,6 +1782,14 @@ const currentLetter = LETTERS[letterIndex];
 };
   
 const handleStartGame = () => {
+  const song = audioRef.current;
+  if (song) {
+    song.currentTime = 0;
+    song.play().catch((error) => {
+      console.warn("The song could not start automatically:", error);
+    });
+  }
+
   setGameStarted(true);
   setGameOver(false);
   setChampion(false);
@@ -2024,27 +2058,23 @@ const handleNextCategory = () => {
           Don’t repeat. 3 strikes and you’re out.
         </p>
 
-        <a
-          href="https://www.youtube.com/watch?v=FP2GVcwX0e8"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
           style={{
-            display: "block",
             width: "100%",
             boxSizing: "border-box",
             margin: "12px 0 16px",
-            padding: "14px 18px",
+            padding: "12px 16px",
             borderRadius: 12,
-            background: "#facc15",
-            color: "#422006",
-            fontSize: 17,
-            fontWeight: 900,
+            background: "rgba(250,204,21,.14)",
+            border: "1px solid rgba(250,204,21,.35)",
+            color: "#fef3c7",
+            fontSize: 16,
+            fontWeight: 800,
             textAlign: "center",
-            textDecoration: "none",
           }}
         >
-          🎵 Play “It Comes From Loving You” — Wildman Tom B
-        </a>
+          🎵 “It Comes From Loving You” starts when you press START GAME — audio only.
+        </div>
 
         <div style={levelBox}>
           <div style={{ fontSize: 14, fontWeight: 800, opacity: 0.9 }}>
