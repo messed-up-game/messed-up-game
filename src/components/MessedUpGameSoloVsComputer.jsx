@@ -1,6 +1,6 @@
 // src/components/MessedUpGameSoloVsComputer.jsx
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const CATEGORIES = [
   "Animals",
@@ -1639,6 +1639,8 @@ const currentLetter = LETTERS[letterIndex];
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [champion, setChampion] = useState(false);
+  const audioRef = useRef(null);
+  
   const [message, setMessage] = useState(
     "Choose Single Category or A-to-Z Challenge, then press START GAME. You have 20 seconds for each answer."
   );
@@ -1651,6 +1653,19 @@ const currentLetter = LETTERS[letterIndex];
   const [timeLeft, setTimeLeft] = useState(levelInfo.seconds);
 
   const maxStrikes = 3;
+  
+  useEffect(() => {
+  const song = new Audio("/grace-crossed-the-line.mp3");
+  song.preload = "metadata";
+  song.loop = true;
+  song.volume = 0.75;
+  audioRef.current = song;
+
+  return () => {
+    song.pause();
+    audioRef.current = null;
+  };
+}, []);
 
   useEffect(() => {
     setTimeLeft(levelInfo.seconds);
@@ -1756,6 +1771,14 @@ const currentLetter = LETTERS[letterIndex];
 };
   
 const handleStartGame = () => {
+  const song = audioRef.current;
+
+if (song) {
+  song.currentTime = 0;
+  song.play().catch((error) => {
+    console.log("Audio could not start:", error);
+  });
+}  
   setGameStarted(true);
   setGameOver(false);
   setChampion(false);
